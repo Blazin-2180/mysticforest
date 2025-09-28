@@ -1,6 +1,3 @@
 res://Scenes/slime.tscn
-res://Scripts/slime_state_machine.gd
-res://Scripts/slime.gd
 res://Scripts/player.gd
-res://Scenes/area_1.tscn
-res://Scripts/slime_state_wander.gd
+res://Scripts/slime.gd

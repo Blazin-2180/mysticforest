@@ -1,11 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://ex424qjj2be3"]
+[gd_scene load_steps=19 format=3 uid="uid://ex424qjj2be3"]
 
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/slime.gd" id="1_5gljc"]
 [ext_resource type="Texture2D" uid="uid://cdyi0xpnhdbew" path="res://Sprites/characters/slime.png" id="1_jokqx"]
-[ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="2_swwnm"]
 [ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/slime_state_machine.gd" id="3_vblni"]
 [ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/slime_state_idle.gd" id="4_e388w"]
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/slime_state_wander.gd" id="5_r4o34"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vblni"]
+radius = 6.0
 
 [sub_resource type="Animation" id="Animation_aiwxb"]
 length = 0.001
@@ -197,12 +199,6 @@ _data = {
 &"walk_up": SubResource("Animation_e388w")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_vblni"]
-radius = 6.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_5gljc"]
-radius = 6.0827627
-
 [node name="Slime" type="CharacterBody2D"]
 collision_layer = 64
 collision_mask = 129
@@ -214,16 +210,15 @@ texture = ExtResource("1_jokqx")
 hframes = 7
 vframes = 13
 
-[node name="SlimeAnimations" type="AnimationPlayer" parent="SlimeSprite"]
-root_node = NodePath("../..")
+[node name="SlimeCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_vblni")
+
+[node name="SlimeAnimations" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_5gljc")
 }
 autoplay = "idle_down"
-
-[node name="SlimeCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
-shape = SubResource("CircleShape2D_vblni")
 
 [node name="SlimeStateMachine" type="Node" parent="."]
 script = ExtResource("3_vblni")
@@ -236,10 +231,3 @@ after_idle_state = NodePath("../Wander")
 script = ExtResource("5_r4o34")
 state_animation_duration = 0.6
 next_state = NodePath("../Idle")
-
-[node name="HitBox" parent="." instance=ExtResource("2_swwnm")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, -6)
-shape = SubResource("CircleShape2D_5gljc")
-debug_color = Color(0.80116045, 0, 0.19151422, 0.41960785)

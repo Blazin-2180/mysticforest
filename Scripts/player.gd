@@ -17,17 +17,17 @@ signal direction_changed ( new_direction : Vector2 )
 
 func _ready() -> void:
 	GlobalPlayerManager.player = self
-	state_machine.initialise( self )
+	state_machine.initialise ( self )
 	pass
 
 func _process( _delta : float ) -> void:
 	direction = Vector2 (
-		Input.get_axis("left", "right"),
-		Input.get_axis("up", "down")
+		Input.get_axis ( "left", "right" ),
+		Input.get_axis ( "up", "down" )
 	).normalized()
 	pass
 
-func _physics_process( _delta : float) -> void:
+func _physics_process( _delta : float ) -> void:
 	move_and_slide()
 
 func set_direction() -> bool :

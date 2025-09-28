@@ -1,5 +1,0 @@
-res://Scenes/player.tscn
-res://Scripts/state_attack.gd
-res://Scripts/player.gd
-res://Scenes/area_1.tscn
-res://GeneralNodes/HurtBox/hurt_box.tscn

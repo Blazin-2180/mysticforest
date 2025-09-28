@@ -1,7 +1,7 @@
 class_name SlimeStateMachine extends Node
 
 # Variables
-var states : Array [ SlimeState]
+var states : Array [ SlimeState ]
 var prev_state : SlimeState
 var current_state : SlimeState
 

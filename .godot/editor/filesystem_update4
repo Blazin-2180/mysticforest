@@ -1,3 +1,5 @@
 res://Scenes/slime.tscn
 res://Scripts/player.gd
 res://Scripts/slime.gd
+res://Scripts/slime_state_machine.gd
+res://Scripts/slime_state_wander.gd

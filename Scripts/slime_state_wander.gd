@@ -32,7 +32,7 @@ func exit() -> void :
 	
 # What happens during the process update in this state 
 func process ( _delta : float ) -> SlimeState :
-	_timer = _delta
+	_timer -= _delta
 	if _timer < 0:
 		return next_state
 	return null

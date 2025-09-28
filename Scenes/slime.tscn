@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ex424qjj2be3"]
+[gd_scene load_steps=21 format=3 uid="uid://ex424qjj2be3"]
 
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/slime.gd" id="1_5gljc"]
 [ext_resource type="Texture2D" uid="uid://cdyi0xpnhdbew" path="res://Sprites/characters/slime.png" id="1_jokqx"]
@@ -6,6 +6,82 @@
 [ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/slime_state_machine.gd" id="3_vblni"]
 [ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/slime_state_idle.gd" id="4_e388w"]
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/slime_state_wander.gd" id="5_r4o34"]
+
+[sub_resource type="Animation" id="Animation_aiwxb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlimeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_r4o34"]
+resource_name = "attack_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlimeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [42, 43, 44, 45, 46, 47]
+}
+
+[sub_resource type="Animation" id="Animation_y26kt"]
+resource_name = "attack_side"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlimeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [49, 50, 51, 52, 53, 54]
+}
+
+[sub_resource type="Animation" id="Animation_c7ij5"]
+resource_name = "attack_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlimeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [56, 57, 58, 59, 60, 61]
+}
+
+[sub_resource type="Animation" id="Animation_psnrq"]
+resource_name = "death"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlimeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [62, 63, 64, 65]
+}
 
 [sub_resource type="Animation" id="Animation_swwnm"]
 resource_name = "idle_down"
@@ -22,21 +98,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_aiwxb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SlimeSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_paq7w"]
@@ -118,67 +179,6 @@ tracks/0/keys = {
 "values": [35, 36, 37, 38, 39, 40]
 }
 
-[sub_resource type="Animation" id="Animation_r4o34"]
-resource_name = "attack_down"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SlimeSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [42, 43, 44, 45, 46, 47]
-}
-
-[sub_resource type="Animation" id="Animation_y26kt"]
-resource_name = "attack_side"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SlimeSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [49, 50, 51, 52, 53, 54]
-}
-
-[sub_resource type="Animation" id="Animation_c7ij5"]
-resource_name = "attack_up"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SlimeSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [56, 57, 58, 59, 60, 61]
-}
-
-[sub_resource type="Animation" id="Animation_psnrq"]
-resource_name = "death"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SlimeSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [62, 63, 64, 65]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gljc"]
 _data = {
 &"RESET": SubResource("Animation_aiwxb"),
@@ -197,7 +197,12 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_vblni"]
 radius = 6.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gljc"]
+radius = 6.0827627
+
 [node name="Slime" type="CharacterBody2D"]
+collision_layer = 64
+collision_mask = 129
 script = ExtResource("1_5gljc")
 
 [node name="SlimeSprite" type="Sprite2D" parent="."]
@@ -229,3 +234,8 @@ script = ExtResource("5_r4o34")
 next_state = NodePath("../Idle")
 
 [node name="HitBox" parent="." instance=ExtResource("2_swwnm")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_5gljc")
+debug_color = Color(0.80116045, 0, 0.19151422, 0.41960785)

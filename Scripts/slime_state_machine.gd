@@ -31,7 +31,6 @@ func inititalise ( _slime : Slime) -> void :
 		change_state(states[0])
 		process_mode = Node.PROCESS_MODE_INHERIT
 
-
 func change_state ( new_state : SlimeState ) -> void :
 	#Check the state we are switching to is not the same as the current one
 	if new_state == null || new_state == current_state :

@@ -1,0 +1,7 @@
+res://Scenes/slime.tscn
+res://Scripts/slime_state_machine.gd
+res://Scripts/state_walk.gd
+res://Scripts/slime_state_idle.gd
+res://Scripts/slime_state_wander.gd
+res://Scripts/slime.gd
+res://Scenes/player.tscn

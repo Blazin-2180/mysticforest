@@ -2,7 +2,6 @@ class_name State_Attack extends State
 
 # Variables
 var attacking : bool = false
-#hello
 @export_range(1, 20, 0.5) var decelerate_speed : float = 5.0
 
 # References

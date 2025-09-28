@@ -16,6 +16,7 @@ var cardinal_direction : Vector2 = Vector2.DOWN
 signal direction_changed ( new_direction : Vector2 )
 
 func _ready() -> void:
+	GlobalPlayerManager.player = self
 	state_machine.initialise( self )
 	pass
 

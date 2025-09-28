@@ -9,19 +9,19 @@ func _ready() -> void :
 	process_mode = Node.PROCESS_MODE_DISABLED
 	pass
 
-func _process ( _delta: float ) -> void :
-	change_state(current_state.process( _delta ) )
+func _process ( delta: float ) -> void :
+	change_state(current_state.process( delta ) )
 	pass
 
-func _physics_process ( _delta : float) -> void :
-	change_state(current_state.physics ( _delta ))
+func _physics_process ( delta : float ) -> void :
+	change_state( current_state.physics ( delta ) )
 	pass
 
 func inititalise ( _slime : Slime) -> void :
 	states = []
 	for c in get_children():
 		if c is SlimeState :
-			states.append(c)
+			states.append( c )
 	for s in states : 
 		s.slime = _slime
 		s.slime_state_machine = self

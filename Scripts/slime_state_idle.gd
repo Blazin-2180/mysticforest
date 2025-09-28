@@ -13,8 +13,8 @@ var _timer : float = 0.0
 func init() -> void :
 	pass
 
-#func _ready() -> void :
-	#pass
+func _ready() -> void :
+	pass
 
 # What happens when the enemy enters this state
 func enter() -> void :

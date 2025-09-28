@@ -1,7 +1,7 @@
 class_name Slime extends CharacterBody2D
 
 signal direction_changed (new_direction : Vector2)
-#signal ENEMY_DAMAGED()
+signal enemy_damaged()
 
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
@@ -34,6 +34,7 @@ func set_direction ( _new_direction : Vector2 ) -> bool :
 	direction = _new_direction
 	if direction == Vector2.ZERO :
 		return false
+		
 	var direction_id : int = int(round(
 		(direction + cardinal_direction * 0.1).angle()
 		/ TAU * DIR_4.size()

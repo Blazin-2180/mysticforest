@@ -136,6 +136,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_5gljc"]
 resource_name = "walk_down"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -151,6 +152,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_vblni"]
 resource_name = "walk_side"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -166,6 +168,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_e388w"]
 resource_name = "walk_up"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -231,6 +234,7 @@ after_idle_state = NodePath("../Wander")
 
 [node name="Wander" type="Node" parent="SlimeStateMachine" node_paths=PackedStringArray("next_state")]
 script = ExtResource("5_r4o34")
+state_animation_duration = 0.6
 next_state = NodePath("../Idle")
 
 [node name="HitBox" parent="." instance=ExtResource("2_swwnm")]

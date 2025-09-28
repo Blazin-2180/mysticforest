@@ -1,0 +1,10 @@
+Node2D
+Node
+TileMapLayer
+CollisionShape2D
+Area2D
+Sprite2D
+AnimationPlayer
+Camera2D
+AnimatedSprite2D
+CharacterBody2D

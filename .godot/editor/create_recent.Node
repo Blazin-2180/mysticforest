@@ -1,12 +1,13 @@
+GPUParticles2D
+Sprite2D
+AnimationPlayer
+Camera2D
 AudioStreamPlayer2D
 HurtBox
 Node
 Node2D
 CollisionShape2D
-AnimationPlayer
-Sprite2D
 CharacterBody2D
 TileMapLayer
 Area2D
-Camera2D
 AnimatedSprite2D

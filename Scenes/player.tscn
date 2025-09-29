@@ -246,6 +246,10 @@ script = ExtResource("6_3smsa")
 
 [node name="AttackHurtBox" parent="Interactions" instance=ExtResource("7_8erm5")]
 unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 64
+monitoring = false
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/AttackHurtBox"]
 position = Vector2(0, 4)
@@ -254,6 +258,7 @@ debug_color = Color(0.9324755, 0.23330879, 0.3061124, 0.41960785)
 
 [node name="HitBox" parent="Interactions" instance=ExtResource("8_8erm5")]
 position = Vector2(0, 5)
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/HitBox"]
 position = Vector2(0, -10)

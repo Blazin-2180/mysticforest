@@ -12,6 +12,6 @@ func _process( _delta : float ) -> void:
 # Will detect if area is a hitbox
 func AreaEntered ( a : Area2D ) -> void:
 	if a is HitBox :
-		print("Take Damage : ", damage)
+		print( "Take Damage : ", damage )
 		a.take_damage ( damage )
 	pass

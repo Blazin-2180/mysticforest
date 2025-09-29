@@ -17,7 +17,7 @@ var invulnerable : bool = false
 @onready var animation_player : AnimationPlayer = $SlimeAnimations
 @onready var sprite : Sprite2D = $SlimeSprite
 @onready var hit_box: HitBox = $HitBox
-#sa@onready var hurt_box: HurtBox = $HurtBox
+#@onready var hurt_box: HurtBox = $HurtBox
 @onready var slime_state_machine: Node = $SlimeStateMachine
 
 func _ready() -> void:

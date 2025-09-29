@@ -1,10 +1,11 @@
+HurtBox
+Node
+Node2D
 CollisionShape2D
 AudioStreamPlayer2D
-Node
 AnimationPlayer
 Sprite2D
 CharacterBody2D
-Node2D
 TileMapLayer
 Area2D
 Camera2D

@@ -5,14 +5,13 @@ var attacking : bool = false
 @export_range(1, 20, 0.5) var decelerate_speed : float = 5.0
 
 # References
-#@onready var player_sprite: AnimatedSprite2D = $"../../PlayerSprite"
 @onready var player_sprite: Sprite2D = $"../../Player_Sprite"
 @onready var attack_animation: AnimationPlayer = $"../../Player_Sprite/AnimationPlayer"
 
 @onready var walk: State_Walk = $"../Walk"
 @onready var idle : State_Idle = $"../Idle"
 
-@onready var attack_hurt_box: HitBox = %AttackHurtBox
+@onready var attack_hurt_box: HurtBox = %AttackHurtBox
 
 # What happens when the player enters this state
 func enter() -> void:

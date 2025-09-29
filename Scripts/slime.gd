@@ -17,7 +17,7 @@ var invulnerable : bool = false
 @onready var animation_player : AnimationPlayer = $SlimeAnimations
 @onready var sprite : Sprite2D = $SlimeSprite
 @onready var hit_box: HitBox = $HitBox
-#@onready var hurt_box: HurtBox = $HurtBox
+@onready var hurt_box: HurtBox = $HurtBox
 @onready var slime_state_machine: Node = $SlimeStateMachine
 
 func _ready() -> void:
@@ -72,3 +72,4 @@ func _take_damage ( damage : int ) -> void :
 		enemy_damaged.emit()
 	else:
 		enemy_death.emit()
+	

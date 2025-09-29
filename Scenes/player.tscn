@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://ojxvkmnppmxj" path="res://Sprites/characters/player.png" id="2_6t5aa"]
-[ext_resource type="Script" uid="uid://gt670px4pvgo" path="res://GeneralNodes/HitBox/hit_box.gd" id="3_3smsa"]
+[ext_resource type="Script" uid="uid://cff6uhn8k12mm" path="res://GeneralNodes/HurtBox/hurt_box.gd" id="3_8erm5"]
 [ext_resource type="Script" uid="uid://di2d8abdhau6n" path="res://Scripts/player_state_machine.gd" id="3_vgqql"]
 [ext_resource type="Script" uid="uid://pdebiy7r1fvw" path="res://Scripts/state_idle.gd" id="4_fkybt"]
 [ext_resource type="Script" uid="uid://brxrr4qykfen4" path="res://Scripts/state_walk.gd" id="5_fkybt"]
@@ -227,7 +227,8 @@ libraries = {
 
 [node name="AttackHurtBox" type="Area2D" parent="Player_Sprite"]
 unique_name_in_owner = true
-script = ExtResource("3_3smsa")
+monitorable = false
+script = ExtResource("3_8erm5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player_Sprite/AttackHurtBox"]
 position = Vector2(0, 12)
@@ -247,8 +248,10 @@ script = ExtResource("5_fkybt")
 script = ExtResource("6_3smsa")
 
 [node name="HitBox" parent="." instance=ExtResource("8_8erm5")]
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+visible = false
 position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_f1ek2")
 debug_color = Color(0.604196, 0.4956571, 0.5966518, 0.41960785)

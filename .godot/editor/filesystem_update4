@@ -1,9 +1,8 @@
-res://default_bus_layout.tres
-res://Scenes/slime.tscn
-res://Scenes/slime_state_stun.gd
-res://Scripts/slime.gd
-res://Scenes/player.tscn
 res://Scripts/state_attack.gd
-res://Scripts/slime_state_death.gd
-res://Scripts/player.gd
+res://Scenes/player.tscn
 res://GeneralNodes/HitBox/hit_box.gd
+res://GeneralNodes/HurtBox/hurt_box.gd
+res://GeneralNodes/HitBox/hit_box.tscn
+res://GeneralNodes/HurtBox/hurt_box.tscn
+res://Scripts/slime.gd
+res://Scenes/slime.tscn

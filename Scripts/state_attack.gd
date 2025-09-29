@@ -20,7 +20,6 @@ func enter() -> void:
 	attack_animation.play( "attack_" + player.animation_direction () )
 	attack_animation.animation_finished.connect ( end_attack )
 	attacking = true
-	print( attacking )
 	attack_hurt_box.monitoring = true
 	pass
 
@@ -28,7 +27,6 @@ func enter() -> void:
 func exit() -> void:
 	attack_animation.animation_finished.disconnect ( end_attack )
 	attacking = false
-	print( attacking )
 	# delays the attack animation
 	await get_tree().create_timer(0.075).timeout
 	# resets the hurtbox
@@ -56,4 +54,3 @@ func handle_input ( _event : InputEvent ) -> State :
 # Setting Attack state back to false once Attacking has ended
 func end_attack ( _new_animation_name : String ) -> void :
 	attacking = false
-	print(attacking)

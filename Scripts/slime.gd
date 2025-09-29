@@ -1,12 +1,13 @@
 class_name Slime extends CharacterBody2D
 
 signal direction_changed (new_direction : Vector2)
-#signal enemy_damaged()
+signal enemy_damaged()
+signal enemy_death()
 
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
 # Set enemy HP
-@export var HP : int = 3
+@export var hp : int = 3
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
@@ -15,12 +16,14 @@ var invulnerable : bool = false
 
 @onready var animation_player : AnimationPlayer = $SlimeAnimations
 @onready var sprite : Sprite2D = $SlimeSprite
-#@onready var hitbox : HitBox = $HitBox
+@onready var hit_box: HitBox = $HitBox
+#@onready var hurt_box: HurtBox = $HurtBox
 @onready var slime_state_machine: Node = $SlimeStateMachine
 
 func _ready() -> void:
 	slime_state_machine.inititalise ( self )
 	player = GlobalPlayerManager.player
+	hit_box.damaged.connect( _take_damage )
 	pass
 
 func _process ( _delta : float ) -> void:
@@ -60,3 +63,12 @@ func animation_direction () -> String :
 		return 'up'
 	else : 
 		return 'side'
+
+func _take_damage ( damage : int ) -> void :
+	if invulnerable == true:
+		return
+	hp -= damage
+	if hp > 0:
+		enemy_damaged.emit()
+	else:
+		enemy_death.emit()

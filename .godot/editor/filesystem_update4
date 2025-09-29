@@ -1,8 +1,0 @@
-res://Scenes/area_1.tscn
-res://Scenes/player.tscn
-res://Scripts/player.gd
-res://Scripts/state_attack.gd
-res://GeneralNodes/HurtBox/hurt_box.gd
-res://Scripts/slime.gd
-res://Scenes/slime.tscn
-res://Scripts/player_interactions.gd

@@ -9,5 +9,5 @@ func _process( _delta: float ) -> void:
 	pass
 
 func take_damage ( damage : int ) -> void :
-	print("TakeDamage : ", damage )
+	print( "TakeDamage : ", damage )
 	damaged.emit( damage )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d3qi426qtce4j"]
+[gd_scene load_steps=25 format=3 uid="uid://d3qi426qtce4j"]
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://ojxvkmnppmxj" path="res://Sprites/characters/player.png" id="2_6t5aa"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://brxrr4qykfen4" path="res://Scripts/state_walk.gd" id="5_fkybt"]
 [ext_resource type="Script" uid="uid://b0q88dv6he4lg" path="res://Scripts/state_attack.gd" id="6_3smsa"]
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="7_8erm5"]
+[ext_resource type="Script" uid="uid://brnei34e0nbiu" path="res://Scripts/player_interactions.gd" id="7_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="8_8erm5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1htnp"]
@@ -243,6 +244,7 @@ script = ExtResource("5_fkybt")
 script = ExtResource("6_3smsa")
 
 [node name="Interactions" type="Node2D" parent="."]
+script = ExtResource("7_f1ek2")
 
 [node name="AttackHurtBox" parent="Interactions" instance=ExtResource("7_8erm5")]
 unique_name_in_owner = true

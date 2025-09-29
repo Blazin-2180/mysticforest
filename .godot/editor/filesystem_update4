@@ -5,3 +5,4 @@ res://Scripts/state_attack.gd
 res://GeneralNodes/HurtBox/hurt_box.gd
 res://Scripts/slime.gd
 res://Scenes/slime.tscn
+res://Scripts/player_interactions.gd

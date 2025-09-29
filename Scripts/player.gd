@@ -39,7 +39,7 @@ func set_direction() -> bool :
 	if new_direction == cardinal_direction :
 		return false
 	cardinal_direction = new_direction
-	direction_changed.emit( new_direction)
+	direction_changed.emit ( new_direction )
 	player_sprite.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
 	return true
 

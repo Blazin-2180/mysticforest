@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=25 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="PackedScene" uid="uid://d3qi426qtce4j" path="res://Scenes/Player/player.tscn" id="1_cuj55"]
 [ext_resource type="Texture2D" uid="uid://d0pu8hjyc86ad" path="res://Sprites/tilesets/decor_8x8.png" id="2_yajbp"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dtuify18dehpn" path="res://Sprites/tilesets/decor_16x16.png" id="8_ytlwl"]
 [ext_resource type="PackedScene" uid="uid://ex424qjj2be3" path="res://Scenes/Enemies/slime.tscn" id="9_di6ls"]
 [ext_resource type="PackedScene" uid="uid://w4wsau01imdh" path="res://Scenes/Bonbon/bonbon.tscn" id="12_jvt31"]
+[ext_resource type="PackedScene" uid="uid://cg717qsjfk2io" path="res://Scenes/Enemies/angry_floof.tscn" id="13_krnxw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yajbp"]
 texture = ExtResource("3_55jl6")
@@ -665,3 +666,8 @@ tile_set = SubResource("TileSet_5p0fg")
 z_as_relative = false
 y_sort_enabled = true
 position = Vector2(227, 148)
+
+[node name="AngryFloof" parent="." instance=ExtResource("13_krnxw")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(288, 246)

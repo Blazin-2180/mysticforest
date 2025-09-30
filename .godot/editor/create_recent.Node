@@ -1,12 +1,12 @@
+AnimationPlayer
+Sprite2D
+CollisionShape2D
+CharacterBody2D
 Label
 TextureProgressBar
 Control
 CanvasLayer
 FollowComponent
-AnimationPlayer
-Sprite2D
-CollisionShape2D
-CharacterBody2D
 ProgressBar
 Node
 GPUParticles2D

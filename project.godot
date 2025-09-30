@@ -70,6 +70,7 @@ jump={
 
 2d_physics/layer_1="Player"
 2d_navigation/layer_1="Ground"
+2d_physics/layer_2="Bonbon"
 2d_navigation/layer_2="Fences"
 2d_physics/layer_7="Enemies"
 2d_physics/layer_8="World"

@@ -2,3 +2,4 @@ res://Scripts/Player/player.gd
 res://Scenes/Player/player.tscn
 res://health_ui.gd
 res://Scenes/Areas/area_1.tscn
+res://Scenes/Enemies/angry_floof.tscn

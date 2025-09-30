@@ -1,6 +1,11 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=19 format=4 uid="uid://bpvi0vlqqdiw1"]
+=======
+[gd_scene load_steps=24 format=4 uid="uid://bpvi0vlqqdiw1"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://d3qi426qtce4j" path="res://Scenes/player.tscn" id="1_cuj55"]
+[ext_resource type="PackedScene" uid="uid://bal7g1dcxr2nr" path="res://Scenes/bonbon.tscn" id="2_7sldb"]
 [ext_resource type="Texture2D" uid="uid://d0pu8hjyc86ad" path="res://Sprites/tilesets/decor_8x8.png" id="2_yajbp"]
 [ext_resource type="Texture2D" uid="uid://duiwlam6j7xkw" path="res://Sprites/tilesets/water1.png" id="3_6lqvh"]
 [ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="3_55jl6"]
@@ -615,7 +620,23 @@ y_sort_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_cuj55")]
 z_as_relative = false
 y_sort_enabled = true
+<<<<<<< Updated upstream
 position = Vector2(575, 323)
+=======
+position = Vector2(255, 151)
+
+[node name="Bonbon" parent="." instance=ExtResource("2_7sldb")]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(220, 148)
+motion_mode = 1
+target_path = NodePath("../Player")
+follow_distance = 1.0
+
+[node name="Slime" parent="." instance=ExtResource("9_di6ls")]
+z_as_relative = false
+position = Vector2(164, 139)
+>>>>>>> Stashed changes
 
 [node name="Objects" type="TileMapLayer" parent="."]
 z_as_relative = false

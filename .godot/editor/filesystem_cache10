@@ -1,4 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
+<<<<<<< Updated upstream
 ::res://::1759107514
 default_bus_layout.tres::AudioBusLayout::4607572780211055496::1759106548::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::5303250123786392844::1759106548::1759106548::1::::<><><>0<>0<>66d50139fac29e5d34c31f0e0530bceb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -26,10 +27,42 @@ slime.tscn::PackedScene::330046620437197232::1759106548::0::1::::<><><>0<>0<><>:
 player.gd::GDScript::6402283799125146141::1759106548::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
 player_state_machine.gd::GDScript::7776752083410826379::1759106548::0::1::::PlayerStateMachine<>Node<><>0<>0<><>::
 slime.gd::GDScript::4499592939716897484::1759106548::0::1::::Slime<>CharacterBody2D<><>0<>0<><>::
+=======
+::res://::1759186973
+default_bus_layout.tres::AudioBusLayout::4607572780211055496::1759106548::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D/CompressedTexture2D::5303250123786392844::1759106548::1759106548::1::::<><><>0<>0<>66d50139fac29e5d34c31f0e0530bceb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Audio/::1759186835
+attack_swoosh.wav::AudioStreamWAV::4049451707065746830::1759186626::1759186626::1::::<><><>0<>0<>51da43ed123ed2a419d9ec53920afa43<>res://.godot/imported/attack_swoosh.wav-695343f518d1c8806a3b0b7cdfd22141.sample::
+slime.wav::AudioStreamWAV::4808176760585853014::1759106548::1759106548::1::::<><><>0<>0<>d04570b050f3e257cac2131f41994ecd<>res://.godot/imported/slime.wav-5dc772fcdf3d44cf55bd9f37042884a4.sample::
+slimedeath.wav::AudioStreamWAV::4130150605702832971::1759106548::1759106548::1::::<><><>0<>0<>5febb223ee91450014d4ec91a6bd4eef<>res://.godot/imported/slimedeath.wav-b8796a015eb700b9aea30d4a317ee2a1.sample::
+::res://editor/::1759107512
+::res://export_templates/::1759107512
+::res://feature_profiles/::1759107512
+::res://GeneralNodes/::1759186835
+::res://GeneralNodes/HitBox/::1759186835
+hit_box.gd::GDScript::462296948676249494::1759186626::0::1::::HitBox<>Area2D<><>0<>0<><>::
+hit_box.tscn::PackedScene::8052446519293319770::1759108173::0::1::::<><><>0<>0<><>::uid://gt670px4pvgo::::res://GeneralNodes/HitBox/hit_box.gd
+::res://GeneralNodes/HurtBox/::1759186835
+hurt_box.gd::GDScript::5136025806260215520::1759186626::0::1::::HurtBox<>Area2D<><>0<>0<><>::
+hurt_box.tscn::PackedScene::6163197102463776893::1759186626::0::1::::<><><>0<>0<><>::uid://cff6uhn8k12mm::::res://GeneralNodes/HurtBox/hurt_box.gd
+::res://Globals/::1759107514
+global_level_manager.gd::GDScript::4356619154973315429::1759106548::0::1::::<>Node<><>0<>0<><>::
+global_player_manager.gd::GDScript::6829512893203737909::1759106548::0::1::::<>Node<><>0<>0<><>::
+::res://Scenes/::1759186835
+area_1.tscn::PackedScene::3483136772620273918::1759186626::0::1::::<><><>0<>0<><>::uid://d3qi426qtce4j::::res://Scenes/player.tscn<>uid://d0pu8hjyc86ad::::res://Sprites/tilesets/decor_8x8.png<>uid://duiwlam6j7xkw::::res://Sprites/tilesets/water1.png<>uid://cih6cvq3sf7sm::::res://Sprites/tilesets/fences.png<>uid://c05qpq287rlpj::::res://Sprites/tilesets/grass.png<>uid://bx1bsn6c7lhqo::::res://Sprites/tilesets/plains.png<>uid://ob8ngenog7yv::::res://Sprites/objects/chest_01.png<>uid://bvuypmm65o0nf::::res://Sprites/objects/chest_02.png<>uid://dqyyvndovkqj4::::res://Sprites/objects/objects.png<>uid://dtuify18dehpn::::res://Sprites/tilesets/decor_16x16.png<>uid://ex424qjj2be3::::res://Scenes/slime.tscn
+player.tscn::PackedScene::9158118707746372211::1759186626::0::1::::<><><>0<>0<><>::uid://cxhkxcxap15bd::::res://Scripts/player.gd<>uid://ojxvkmnppmxj::::res://Sprites/characters/player.png<>uid://di2d8abdhau6n::::res://Scripts/player_state_machine.gd<>uid://pdebiy7r1fvw::::res://Scripts/state_idle.gd<>uid://brxrr4qykfen4::::res://Scripts/state_walk.gd<>uid://b0q88dv6he4lg::::res://Scripts/state_attack.gd<>uid://ct2q7q6w76wi4::::res://GeneralNodes/HurtBox/hurt_box.tscn<>uid://brnei34e0nbiu::::res://Scripts/player_interactions.gd<>uid://dmywvab54r883::::res://GeneralNodes/HitBox/hit_box.tscn<>uid://bxxt437inie8m::::res://Audio/attack_swoosh.wav
+slime.tscn::PackedScene::330046620437197232::1759186626::0::1::::<><><>0<>0<><>::uid://b5dvvx5p3kq2g::::res://Scripts/slime.gd<>uid://cdyi0xpnhdbew::::res://Sprites/characters/slime.png<>uid://by3w8hqduffhb::::res://Audio/slimedeath.wav<>uid://bb2jhgt0uk7te::::res://Scripts/slime_state_machine.gd<>uid://bohona2q58fhi::::res://Scripts/slime_state_idle.gd<>uid://cuo1rq0p738w0::::res://Scripts/slime_state_wander.gd<>uid://brrsbrj7v7ght::::res://Scripts/slime_state_stun.gd<>uid://bmsalek0e3su7::::res://Scripts/slime_state_death.gd<>uid://ct2q7q6w76wi4::::res://GeneralNodes/HurtBox/hurt_box.tscn<>uid://dmywvab54r883::::res://GeneralNodes/HitBox/hit_box.tscn
+::res://Scripts/::1759186835
+player.gd::GDScript::6402283799125146141::1759186626::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+player_interactions.gd::GDScript::3606726606333528288::1759186626::0::1::::PlayerInteractions<>Node2D<><>0<>0<><>::
+player_state_machine.gd::GDScript::7776752083410826379::1759106548::0::1::::PlayerStateMachine<>Node<><>0<>0<><>::
+slime.gd::GDScript::4499592939716897484::1759186626::0::1::::Slime<>CharacterBody2D<><>0<>0<><>::
+>>>>>>> Stashed changes
 slime_state.gd::GDScript::9189975584012547313::1759106548::0::1::::SlimeState<>Node<><>0<>0<><>::
 slime_state_death.gd::GDScript::3265865477339317200::1759106548::0::1::::SlimeStateDeath<>SlimeState<><>0<>0<><>::
 slime_state_idle.gd::GDScript::3384388434601546162::1759106548::0::1::::SlimeStateIdle<>SlimeState<><>0<>0<><>::
 slime_state_machine.gd::GDScript::2512907025837407610::1759106548::0::1::::SlimeStateMachine<>Node<><>0<>0<><>::
+<<<<<<< Updated upstream
 slime_state_stun.gd::GDScript::3615821047305822761::1759106548::0::1::::SlimeStateStun<>SlimeState<><>0<>0<><>::
 slime_state_wander.gd::GDScript::6207129408731144201::1759106548::0::1::::SlimeStateWander<>SlimeState<><>0<>0<><>::
 state.gd::GDScript::363252486847358156::1759106548::0::1::::State<>Node<><>0<>0<><>::
@@ -39,6 +72,18 @@ state_walk.gd::GDScript::3628175810254479535::1759106548::0::1::::State_Walk<>St
 ::res://script_templates/::1759107512
 ::res://Sprites/::1759107460
 ::res://Sprites/characters/::1759107460
+=======
+slime_state_stun.gd::GDScript::3615821047305822761::1759186626::0::1::::SlimeStateStun<>SlimeState<><>0<>0<><>::
+slime_state_wander.gd::GDScript::6207129408731144201::1759106548::0::1::::SlimeStateWander<>SlimeState<><>0<>0<><>::
+state.gd::GDScript::363252486847358156::1759106548::0::1::::State<>Node<><>0<>0<><>::
+state_attack.gd::GDScript::4176234602098008736::1759186626::0::1::::State_Attack<>State<><>0<>0<><>::
+state_idle.gd::GDScript::1059270900337422676::1759106548::0::1::::State_Idle<>State<><>0<>0<><>::
+state_walk.gd::GDScript::3628175810254479535::1759106548::0::1::::State_Walk<>State<><>0<>0<><>::
+::res://script_templates/::1759107512
+::res://Sprites/::1759107514
+::res://Sprites/characters/::1759187986
+Bonbon2D.png::CompressedTexture2D::5854881766748439439::1759187986::1759187986::1::::<><><>0<>0<>ff1ec703706c86af805a7dab26a0b99a<>res://.godot/imported/Bonbon2D.png-d8da8efd104f09aaf79a0d432b9cd053.ctex::
+>>>>>>> Stashed changes
 player.png::CompressedTexture2D/CompressedTexture2D::1002657747607087055::1759106548::1759106548::1::::<><><>0<>0<>46b6dd3a447f152536792a7bb6264a64<>res://.godot/imported/player.png-722aa68fdcb10cb08b1e697d35b2c8a6.ctex::
 skeleton.png::CompressedTexture2D/CompressedTexture2D::4666915343444864644::1759106548::1759106548::1::::<><><>0<>0<>10d4c28818d17f1e1dc10478df29e3c5<>res://.godot/imported/skeleton.png-88674f527580095898df74e3191abe3d.ctex::
 skeleton_swordless.png::CompressedTexture2D/CompressedTexture2D::1392808440180884977::1759106548::1759106548::1::::<><><>0<>0<>71514a70be4c74943e8b0908ec02f7c8<>res://.godot/imported/skeleton_swordless.png-a5a39d7671687fdfb8c46c20740bb0f1.ctex::
@@ -72,7 +117,11 @@ water6.png::CompressedTexture2D/CompressedTexture2D::8847125117136023374::175910
 water-sheet.png::CompressedTexture2D/CompressedTexture2D::3907898358317839177::1759106548::1759106548::1::::<><><>0<>0<>c1ad60f44416058cdfdf878344d69189<>res://.godot/imported/water-sheet.png-8edecdfb5099649dafb2e0615ce03ecb.ctex::
 water_decorations.png::CompressedTexture2D/CompressedTexture2D::3214024108863786265::1759106548::1759106548::1::::<><><>0<>0<>167a5c7e4221468ec33b5bd9a05cd819<>res://.godot/imported/water_decorations.png-65ce426777be790523ce10686c336bda.ctex::
 water_lillies.png::CompressedTexture2D/CompressedTexture2D::4983865806610190984::1759106548::1759106548::1::::<><><>0<>0<>5fa55600c71a3f52f6a9400135f2b74b<>res://.godot/imported/water_lillies.png-f0b362581b559e8205d1ab6644801464.ctex::
+<<<<<<< Updated upstream
 ::res://Sprites/tilesets/floors/::1759106548
+=======
+::res://Sprites/tilesets/floors/::1759107512
+>>>>>>> Stashed changes
 carpet.png::CompressedTexture2D/CompressedTexture2D::1477352297114201606::1759106548::1759106548::1::::<><><>0<>0<>6b6143e6d9768877e2f14ab986aced37<>res://.godot/imported/carpet.png-0f7d15bd8ef9e4121667a866e7e08665.ctex::
 flooring.png::CompressedTexture2D/CompressedTexture2D::1562903187896482733::1759106548::1759106548::1::::<><><>0<>0<>cde32fa1d3e1e3e2d3e47dbcbfc9fffb<>res://.godot/imported/flooring.png-86377ba8d7a7033e0f62904bccfb30ef.ctex::
 wooden.png::CompressedTexture2D/CompressedTexture2D::4816987290132912686::1759106548::1759106548::1::::<><><>0<>0<>f82bb1a54b74da4501b624d4de2e2960<>res://.godot/imported/wooden.png-f9b98ed0b0ddda622c667d219c26ec40.ctex::
@@ -80,4 +129,8 @@ wooden.png::CompressedTexture2D/CompressedTexture2D::4816987290132912686::175910
 walls.png::CompressedTexture2D/CompressedTexture2D::6903939065909313730::1759106548::1759106548::1::::<><><>0<>0<>05675bd694e0117c1823eda1f6c4ab57<>res://.godot/imported/walls.png-2220324612355b42fb72e2f08f0e1793.ctex::
 wooden_door.png::CompressedTexture2D/CompressedTexture2D::5117504798898136928::1759106548::1759106548::1::::<><><>0<>0<>a484835402a226375e60ca12140c7bb0<>res://.godot/imported/wooden_door.png-0fc226f2f7ed5f9ea308534fb35ad277.ctex::
 wooden_door_b.png::CompressedTexture2D/CompressedTexture2D::2972286330376951526::1759106548::1759106548::1::::<><><>0<>0<>8e45fd5d73af7b382984d31eb6b0bc57<>res://.godot/imported/wooden_door_b.png-02493c4d2885631d744f0714db05b180.ctex::
+<<<<<<< Updated upstream
 ::res://text_editor_themes/::1759106875
+=======
+::res://text_editor_themes/::1759107512
+>>>>>>> Stashed changes

@@ -7,7 +7,7 @@ signal enemy_death()
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
 # Set enemy HP
-@export var hp : int = 3
+@export var health_points : int = 3
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
@@ -23,7 +23,7 @@ var invulnerable : bool = false
 func _ready() -> void:
 	slime_state_machine.inititalise ( self )
 	player = GlobalPlayerManager.player
-	hit_box.damaged.connect( _take_damage )
+	hit_box.damaged.connect( take_damage )
 	pass
 
 func _process ( _delta : float ) -> void:
@@ -64,12 +64,21 @@ func animation_direction () -> String :
 	else : 
 		return 'side'
 
-func _take_damage ( damage : int ) -> void :
+func take_damage ( damage : int ) -> void :
 	if invulnerable == true:
 		return
+<<<<<<< Updated upstream
 	hp -= damage
 	if hp > 0:
 		enemy_damaged.emit()
 	else:
 		enemy_death.emit()
 	
+=======
+	health_points -= damage
+	if health_points > 0 :
+		enemy_damaged.emit()
+	else:
+		enemy_death.emit()
+	print (health_points)
+>>>>>>> Stashed changes

@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://bal7g1dcxr2nr"]
+
+[ext_resource type="Script" uid="uid://b1mfi2vkegynl" path="res://Scripts/bonbon.gd" id="1_dq2fn"]
+[ext_resource type="Texture2D" uid="uid://cpofbuwwsvqf4" path="res://Sprites/characters/Bonbon2D.png" id="1_nfxdu"]
+
+[sub_resource type="Animation" id="Animation_nfxdu"]
+resource_name = "idle_down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_dq2fn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wu5cf"]
+_data = {
+&"RESET": SubResource("Animation_dq2fn"),
+&"idle_down": SubResource("Animation_nfxdu")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dq2fn"]
+radius = 8.062258
+
+[node name="Bonbon" type="CharacterBody2D"]
+collision_mask = 192
+script = ExtResource("1_dq2fn")
+
+[node name="Bonbon_Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -9)
+texture = ExtResource("1_nfxdu")
+hframes = 5
+
+[node name="Bonbon_Animation_Player" type="AnimationPlayer" parent="Bonbon_Sprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_wu5cf")
+}
+autoplay = "idle_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_dq2fn")

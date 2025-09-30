@@ -9,8 +9,13 @@
 [ext_resource type="Script" uid="uid://b0q88dv6he4lg" path="res://Scripts/state_attack.gd" id="6_3smsa"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="8_8erm5"]
 
+<<<<<<< Updated upstream
 [sub_resource type="CircleShape2D" id="CircleShape2D_1htnp"]
 radius = 4.12311
+=======
+[sub_resource type="CircleShape2D" id="CircleShape2D_tx1dd"]
+radius = 6.0
+>>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="Animation_8erm5"]
 length = 0.001
@@ -211,7 +216,11 @@ script = ExtResource("1_cvnsp")
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, -5)
+<<<<<<< Updated upstream
 shape = SubResource("CircleShape2D_1htnp")
+=======
+shape = SubResource("CircleShape2D_tx1dd")
+>>>>>>> Stashed changes
 
 [node name="Player_Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -19)
@@ -247,10 +256,30 @@ script = ExtResource("5_fkybt")
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("6_3smsa")
 
+<<<<<<< Updated upstream
 [node name="HitBox" parent="." instance=ExtResource("8_8erm5")]
+=======
+[node name="Interactions" type="Node2D" parent="."]
+script = ExtResource("7_f1ek2")
+
+[node name="AttackHurtBox" parent="Interactions" instance=ExtResource("7_8erm5")]
+unique_name_in_owner = true
+position = Vector2(0, 7)
+collision_layer = 0
+collision_mask = 64
+>>>>>>> Stashed changes
 monitoring = false
 
+<<<<<<< Updated upstream
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/AttackHurtBox"]
+position = Vector2(0, -12)
+shape = SubResource("CircleShape2D_8erm5")
+debug_color = Color(0.9324755, 0.23330879, 0.3061124, 0.41960785)
+
+[node name="HitBox" parent="Interactions" instance=ExtResource("8_8erm5")]
+>>>>>>> Stashed changes
 visible = false
 position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_f1ek2")

@@ -40,7 +40,7 @@ func _on_enemy_damaged () -> void :
 func _on_animation_finished ( _a : String ) -> void :
 	_animation_finished = true
 
-func _exit() -> void:
+func exit() -> void:
 	slime.invulnerable = false
 	slime.animation_player.animation_finished.disconnect( _on_animation_finished )
 	pass

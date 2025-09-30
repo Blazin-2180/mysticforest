@@ -12,5 +12,9 @@ func _process(_delta: float) -> void:
 # Will detect if area is a hitbox
 func AreaEntered ( a : Area2D) -> void:
 	if a is HitBox :
+<<<<<<< Updated upstream
 		a.TakeDamage( damage )
+=======
+		a.take_damage ( damage )
+>>>>>>> Stashed changes
 	pass

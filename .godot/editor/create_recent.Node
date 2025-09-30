@@ -1,9 +1,21 @@
+<<<<<<< Updated upstream
 CollisionShape2D
 AudioStreamPlayer2D
 Node
 AnimationPlayer
 Sprite2D
 CharacterBody2D
+=======
+AnimationPlayer
+CollisionShape2D
+Sprite2D
+CharacterBody2D
+GPUParticles2D
+Camera2D
+AudioStreamPlayer2D
+HurtBox
+Node
+>>>>>>> Stashed changes
 Node2D
 TileMapLayer
 Area2D

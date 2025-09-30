@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=29 format=3 uid="uid://ex424qjj2be3"]
+=======
+[gd_scene load_steps=30 format=3 uid="uid://ex424qjj2be3"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/slime.gd" id="1_5gljc"]
 [ext_resource type="Texture2D" uid="uid://cdyi0xpnhdbew" path="res://Sprites/characters/slime.png" id="1_jokqx"]
@@ -86,37 +90,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [56, 57, 58, 59, 60, 61]
 }
-
-[sub_resource type="Animation" id="Animation_psnrq"]
-resource_name = "death"
-length = 0.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SlimeSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [84, 85, 86, 87, 88]
-}
-tracks/1/type = "audio"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("3_r4o34")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_swwnm"]
 resource_name = "idle_down"
@@ -322,13 +295,108 @@ tracks/0/keys = {
 "values": [35, 36, 37, 38, 39, 40]
 }
 
+[sub_resource type="Animation" id="Animation_psnrq"]
+resource_name = "death_down"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlimeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [84, 85, 86, 87, 88]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_r4o34")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_10642"]
+resource_name = "death_side"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlimeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [84, 85, 86, 87, 88]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_r4o34")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_uu7bc"]
+resource_name = "death_up"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlimeSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [84, 85, 86, 87, 88]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_r4o34")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gljc"]
 _data = {
 &"RESET": SubResource("Animation_aiwxb"),
 &"attack_down": SubResource("Animation_r4o34"),
 &"attack_side": SubResource("Animation_y26kt"),
 &"attack_up": SubResource("Animation_c7ij5"),
-&"death": SubResource("Animation_psnrq"),
+&"death_down": SubResource("Animation_psnrq"),
+&"death_side": SubResource("Animation_10642"),
+&"death_up": SubResource("Animation_uu7bc"),
 &"idle_down": SubResource("Animation_swwnm"),
 &"idle_side": SubResource("Animation_paq7w"),
 &"idle_up": SubResource("Animation_f4si1"),

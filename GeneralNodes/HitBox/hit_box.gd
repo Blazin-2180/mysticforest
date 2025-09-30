@@ -7,6 +7,12 @@ func _ready() -> void:
 
 func _process( _delta : float ) -> void:
 	pass
+<<<<<<< Updated upstream
 func TakeDamage( damage : int ) -> void :
 	#print("take damage ", damage)
 	damaged.emit(damage)
+=======
+
+func take_damage ( damage : int ) -> void :
+	damaged.emit( damage )
+>>>>>>> Stashed changes

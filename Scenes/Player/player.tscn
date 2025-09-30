@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d3qi426qtce4j"]
+[gd_scene load_steps=35 format=3 uid="uid://d3qi426qtce4j"]
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://ojxvkmnppmxj" path="res://Sprites/characters/player.png" id="2_6t5aa"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://brnei34e0nbiu" path="res://Scripts/Player/player_interactions.gd" id="7_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="8_8erm5"]
 [ext_resource type="AudioStream" uid="uid://cfw3oxul2l2r4" path="res://Audio/player_hit.wav" id="11_oikmp"]
+[ext_resource type="PackedScene" uid="uid://b2dsmm14jobve" path="res://GUI/Player_HUD/player_hud.tscn" id="12_oikmp"]
 
 [sub_resource type="Animation" id="Animation_8erm5"]
 length = 0.001
@@ -377,16 +378,12 @@ _data = {
 &"default": SubResource("Animation_r5xpd")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_74mp2"]
-bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oikmp"]
-bg_color = Color(0.81263417, 0.16849923, 0, 1)
-
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 192
 motion_mode = 1
 script = ExtResource("1_cvnsp")
+
+[node name="PlayerHUD" parent="." instance=ExtResource("12_oikmp")]
 
 [node name="Player_Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -17)
@@ -448,42 +445,9 @@ debug_color = Color(0.604196, 0.4956571, 0.5966518, 0.41960785)
 bus = &"SFX"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
 
 [node name="EffectAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_aqm4k")
 }
-
-[node name="HealthBar" type="ProgressBar" parent="."]
-z_as_relative = false
-y_sort_enabled = true
-custom_minimum_size = Vector2(100, 20)
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -920.0
-offset_top = 488.0
-offset_right = -820.0
-offset_bottom = 508.0
-grow_vertical = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_74mp2")
-theme_override_styles/fill = SubResource("StyleBoxFlat_oikmp")
-max_value = 6.0
-show_percentage = false
-
-[node name="HealthPoints" type="Label" parent="HealthBar"]
-top_level = true
-z_as_relative = false
-y_sort_enabled = true
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 45.0
-offset_top = -59.0
-offset_right = 88.0
-offset_bottom = -36.0
-grow_vertical = 0
-text = "99/99"
-horizontal_alignment = 1
-vertical_alignment = 1

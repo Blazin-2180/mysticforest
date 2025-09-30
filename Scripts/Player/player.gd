@@ -10,8 +10,8 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 @onready var hit_box : HitBox = $Interactions/HitBox
 @onready var player_sprite : Sprite2D = $Player_Sprite
 @onready var state_machine : PlayerStateMachine = $StateMachine
-@onready var health_bar : ProgressBar = $HealthBar
-@onready var hp_label : Label = $HealthBar/HealthPoints
+@onready var health_bar: ProgressBar = $Control/HealthBar
+@onready var hp_label: Label = $Control/HealthBar/HealthPoints
 
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
@@ -27,7 +27,7 @@ func _ready() -> void:
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
 	update_health_points(99)
-	health_bar.value = max_health_points
+	#health_bar.value = max_health_points
 	pass
 
 func _process( _delta : float ) -> void:

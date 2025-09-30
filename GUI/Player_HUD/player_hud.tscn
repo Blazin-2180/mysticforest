@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2dsmm14jobve"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hai4"]
+bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhte5"]
+bg_color = Color(0.81263417, 0.16849923, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HealthBar" type="ProgressBar" parent="Control"]
+z_as_relative = false
+y_sort_enabled = true
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -50.0
+offset_right = 119.0
+offset_bottom = -30.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_2hai4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xhte5")
+max_value = 6.0
+show_percentage = false
+
+[node name="HealthPoints" type="Label" parent="Control/HealthBar"]
+top_level = true
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 45.0
+offset_top = -52.0
+offset_right = 88.0
+offset_bottom = -29.0
+grow_vertical = 0
+text = "99/99"
+horizontal_alignment = 1
+vertical_alignment = 1

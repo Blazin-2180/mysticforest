@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1759254757
+::res://::1759255439
 default_bus_layout.tres::AudioBusLayout::4607572780211055496::1759230622::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::5303250123786392844::1759230622::1759230622::1::::<><><>0<>0<>66d50139fac29e5d34c31f0e0530bceb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://Audio/::1759241361
@@ -18,15 +18,14 @@ hurt_box.tscn::PackedScene::6163197102463776893::1759230649::0::1::::<><><>0<>0<
 global_level_manager.gd::GDScript::4356619154973315429::1759230621::0::1::::<>Node<><>0<>0<><>::
 global_player_manager.gd::GDScript::6829512893203737909::1759230621::0::1::::<>Node<><>0<>0<><>::
 ::res://GUI/::1759243930
-::res://GUI/Player_HUD/::1759254651
-HealthBar.tscn::PackedScene::8820056466581520371::1759254651::0::1::::<><><>0<>0<><>::
+::res://GUI/Player_HUD/::1759254770
 ::res://Scenes/::1759240885
 ::res://Scenes/Areas/::1759240885
 area_1.tscn::PackedScene::3483136772620273918::1759240884::0::1::::<><><>0<>0<><>::uid://d3qi426qtce4j::::res://Scenes/Player/player.tscn<>uid://d0pu8hjyc86ad::::res://Sprites/tilesets/decor_8x8.png<>uid://duiwlam6j7xkw::::res://Sprites/tilesets/water1.png<>uid://cih6cvq3sf7sm::::res://Sprites/tilesets/fences.png<>uid://c05qpq287rlpj::::res://Sprites/tilesets/grass.png<>uid://bx1bsn6c7lhqo::::res://Sprites/tilesets/plains.png<>uid://ob8ngenog7yv::::res://Sprites/objects/chest_01.png<>uid://bvuypmm65o0nf::::res://Sprites/objects/chest_02.png<>uid://dqyyvndovkqj4::::res://Sprites/objects/objects.png<>uid://dtuify18dehpn::::res://Sprites/tilesets/decor_16x16.png<>uid://ex424qjj2be3::::res://Scenes/Enemies/slime.tscn
 ::res://Scenes/Enemies/::1759243824
 slime.tscn::PackedScene::330046620437197232::1759243824::0::1::::<><><>0<>0<><>::uid://b5dvvx5p3kq2g::::res://Scripts/Enemies/enemy.gd<>uid://cdyi0xpnhdbew::::res://Sprites/characters/slime.png<>uid://by3w8hqduffhb::::res://Audio/slimedeath.wav<>uid://bb2jhgt0uk7te::::res://Scripts/Enemies/enemy_state_machine.gd<>uid://bohona2q58fhi::::res://Scripts/Enemies/enemy_state_idle.gd<>uid://cuo1rq0p738w0::::res://Scripts/Enemies/enemy_state_wander.gd<>uid://brrsbrj7v7ght::::res://Scripts/Enemies/enemy_state_stun.gd<>uid://bmsalek0e3su7::::res://Scripts/Enemies/enemy_state_death.gd<>uid://ct2q7q6w76wi4::::res://GeneralNodes/HurtBox/hurt_box.tscn<>uid://dmywvab54r883::::res://GeneralNodes/HitBox/hit_box.tscn
-::res://Scenes/Player/::1759254723
-player.tscn::PackedScene::9158118707746372211::1759254723::0::1::::<><><>0<>0<><>::uid://cxhkxcxap15bd::::res://Scripts/Player/player.gd<>uid://ojxvkmnppmxj::::res://Sprites/characters/player.png<>uid://di2d8abdhau6n::::res://Scripts/Player/player_state_machine.gd<>uid://pdebiy7r1fvw::::res://Scripts/Player/state_idle.gd<>uid://brxrr4qykfen4::::res://Scripts/Player/state_walk.gd<>uid://b0q88dv6he4lg::::res://Scripts/Player/state_attack.gd<>uid://ct2q7q6w76wi4::::res://GeneralNodes/HurtBox/hurt_box.tscn<>uid://bdu7hwutibfjb::::res://Scripts/Player/state_stun.gd<>uid://brnei34e0nbiu::::res://Scripts/Player/player_interactions.gd<>uid://dmywvab54r883::::res://GeneralNodes/HitBox/hit_box.tscn<>uid://cfw3oxul2l2r4::::res://Audio/player_hit.wav
+::res://Scenes/Player/::1759255428
+player.tscn::PackedScene::9158118707746372211::1759255428::0::1::::<><><>0<>0<><>::uid://cxhkxcxap15bd::::res://Scripts/Player/player.gd<>uid://ojxvkmnppmxj::::res://Sprites/characters/player.png<>uid://di2d8abdhau6n::::res://Scripts/Player/player_state_machine.gd<>uid://pdebiy7r1fvw::::res://Scripts/Player/state_idle.gd<>uid://brxrr4qykfen4::::res://Scripts/Player/state_walk.gd<>uid://b0q88dv6he4lg::::res://Scripts/Player/state_attack.gd<>uid://ct2q7q6w76wi4::::res://GeneralNodes/HurtBox/hurt_box.tscn<>uid://bdu7hwutibfjb::::res://Scripts/Player/state_stun.gd<>uid://brnei34e0nbiu::::res://Scripts/Player/player_interactions.gd<>uid://dmywvab54r883::::res://GeneralNodes/HitBox/hit_box.tscn<>uid://cfw3oxul2l2r4::::res://Audio/player_hit.wav
 ::res://Scripts/::1759240838
 ::res://Scripts/Enemies/::1759243824
 enemy.gd::GDScript::4499592939716897484::1759243815::0::1::::Enemy<>CharacterBody2D<><>0<>0<><>::
@@ -37,8 +36,8 @@ enemy_state_machine.gd::GDScript::2512907025837407610::1759243815::0::1::::Enemy
 enemy_state_stun.gd::GDScript::3615821047305822761::1759243640::0::1::::EnemyStateStun<>EnemyState<><>0<>0<><>::
 enemy_state_wander.gd::GDScript::6207129408731144201::1759243640::0::1::::EnemyStateWander<>EnemyState<><>0<>0<><>::
 ::res://Scripts/Enemies/Slime/::1759243824
-::res://Scripts/Player/::1759254691
-player.gd::GDScript::6402283799125146141::1759254691::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
+::res://Scripts/Player/::1759255229
+player.gd::GDScript::6402283799125146141::1759255229::0::1::::Player<>CharacterBody2D<><>0<>0<><>::
 player_interactions.gd::GDScript::3606726606333528288::1759231723::0::1::::PlayerInteractions<>Node2D<><>0<>0<><>::
 player_state_machine.gd::GDScript::7776752083410826379::1759246293::0::1::::PlayerStateMachine<>Node<><>0<>0<><>::
 state.gd::GDScript::363252486847358156::1759246293::0::1::::State<>Node<><>0<>0<><>::

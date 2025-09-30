@@ -5,14 +5,13 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
-@onready var animation_player: AnimationPlayer = $Player_Sprite/AnimationPlayer
-@onready var effect_animation_player: AnimationPlayer = $EffectAnimationPlayer
-@onready var hit_box: HitBox = $Interactions/HitBox
-@onready var player_sprite: Sprite2D = $Player_Sprite
-@onready var state_machine: PlayerStateMachine = $StateMachine
-@onready var health_bar: ProgressBar = $HealthBar
-@onready var hp_label: Label = $HealthBar/HealthPoints
-
+@onready var animation_player : AnimationPlayer = $Player_Sprite/AnimationPlayer
+@onready var effect_animation_player : AnimationPlayer = $EffectAnimationPlayer
+@onready var hit_box : HitBox = $Interactions/HitBox
+@onready var player_sprite : Sprite2D = $Player_Sprite
+@onready var state_machine : PlayerStateMachine = $StateMachine
+@onready var health_bar : ProgressBar = $HealthBar
+@onready var hp_label : Label = $HealthBar/HealthPoints
 
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN

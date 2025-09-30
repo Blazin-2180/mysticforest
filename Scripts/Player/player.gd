@@ -28,7 +28,6 @@ func _ready() -> void:
 	hit_box.damaged.connect ( take_damage )
 	update_health_points(99)
 	health_bar.value = max_health_points
-
 	pass
 
 func _process( _delta : float ) -> void:
@@ -87,7 +86,7 @@ func take_damage ( hurt_box : HurtBox ) -> void :
 
 func update_health_points ( delta : int) -> void :
 	health_points = clampi ( health_points + delta, 0, max_health_points )
-	print(health_points)
+	print("Player : ", health_points)
 	pass
 
 func make_invulnerable ( _duration : float = 1.0 ) -> void : 

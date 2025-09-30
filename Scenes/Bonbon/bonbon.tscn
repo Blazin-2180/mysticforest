@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://w4wsau01imdh"]
+
+[ext_resource type="Script" uid="uid://bq44bkm2ypj4" path="res://Scripts/Bonbon/bonbon.gd" id="1_gyb0e"]
+[ext_resource type="Texture2D" uid="uid://cpofbuwwsvqf4" path="res://Sprites/characters/Bonbon2D.png" id="2_gkg5h"]
+[ext_resource type="Script" uid="uid://b5i1eu7g70j2e" path="res://Scripts/follow_component.gd" id="3_gkg5h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5xsa5"]
+radius = 6.0
+
+[sub_resource type="Animation" id="Animation_1fi7f"]
+resource_name = "idle_down"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BonbonSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_gfh6v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BonbonSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sefvo"]
+_data = {
+&"RESET": SubResource("Animation_gfh6v"),
+&"idle_down": SubResource("Animation_1fi7f")
+}
+
+[node name="Bonbon" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 192
+script = ExtResource("1_gyb0e")
+
+[node name="BonbonCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -5)
+shape = SubResource("CircleShape2D_5xsa5")
+
+[node name="BonbonSprite" type="Sprite2D" parent="."]
+position = Vector2(-2, -9)
+texture = ExtResource("2_gkg5h")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BonbonSprite"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_sefvo")
+}
+autoplay = "idle_down"
+
+[node name="FollowComponent" type="Node" parent="."]
+script = ExtResource("3_gkg5h")
+metadata/_custom_type_script = "uid://b5i1eu7g70j2e"

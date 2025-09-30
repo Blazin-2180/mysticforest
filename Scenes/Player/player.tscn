@@ -12,10 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="8_8erm5"]
 [ext_resource type="AudioStream" uid="uid://cfw3oxul2l2r4" path="res://Audio/player_hit.wav" id="11_oikmp"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tx1dd"]
-radius = 4.0
-height = 14.0
-
 [sub_resource type="Animation" id="Animation_8erm5"]
 length = 0.001
 tracks/0/type = "value"
@@ -305,11 +301,14 @@ _data = {
 &"walk_up": SubResource("Animation_ukyrk")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_74mp2"]
+radius = 5.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_8erm5"]
 radius = 7.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f1ek2"]
-radius = 5.0
+radius = 4.0
 
 [sub_resource type="Animation" id="Animation_ks1b7"]
 length = 0.001
@@ -389,13 +388,8 @@ collision_mask = 192
 motion_mode = 1
 script = ExtResource("1_cvnsp")
 
-[node name="PlayerCollision" type="CollisionShape2D" parent="."]
-y_sort_enabled = true
-position = Vector2(0, -7)
-shape = SubResource("CapsuleShape2D_tx1dd")
-
 [node name="Player_Sprite" type="Sprite2D" parent="."]
-position = Vector2(0, -19)
+position = Vector2(0, -17)
 texture = ExtResource("2_6t5aa")
 hframes = 6
 vframes = 10
@@ -405,6 +399,11 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_igrcy")
 }
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_74mp2")
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("3_vgqql")
@@ -426,7 +425,7 @@ script = ExtResource("7_f1ek2")
 
 [node name="AttackHurtBox" parent="Interactions" instance=ExtResource("7_8erm5")]
 unique_name_in_owner = true
-position = Vector2(0, -4)
+position = Vector2(0, -5)
 collision_layer = 0
 collision_mask = 64
 monitoring = false
@@ -437,12 +436,11 @@ shape = SubResource("CircleShape2D_8erm5")
 debug_color = Color(0.9324755, 0.23330879, 0.3061124, 0.41960785)
 
 [node name="HitBox" parent="Interactions" instance=ExtResource("8_8erm5")]
-position = Vector2(0, 5)
+position = Vector2(0, -5)
 collision_mask = 0
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/HitBox"]
-position = Vector2(0, -10)
 shape = SubResource("CircleShape2D_f1ek2")
 debug_color = Color(0.604196, 0.4956571, 0.5966518, 0.41960785)
 
@@ -460,17 +458,14 @@ libraries = {
 z_as_relative = false
 y_sort_enabled = true
 custom_minimum_size = Vector2(100, 20)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -229.0
-offset_top = 114.0
-offset_right = -129.0
-offset_bottom = 134.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -920.0
+offset_top = 488.0
+offset_right = -820.0
+offset_bottom = 508.0
+grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_74mp2")
 theme_override_styles/fill = SubResource("StyleBoxFlat_oikmp")
 max_value = 6.0
@@ -480,11 +475,15 @@ show_percentage = false
 top_level = true
 z_as_relative = false
 y_sort_enabled = true
-layout_mode = 0
-offset_left = 10.0
-offset_top = 258.0
-offset_right = 110.0
-offset_bottom = 281.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 45.0
+offset_top = -59.0
+offset_right = 88.0
+offset_bottom = -36.0
+grow_vertical = 0
 text = "99/99"
 horizontal_alignment = 1
 vertical_alignment = 1

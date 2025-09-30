@@ -5,18 +5,26 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
+@onready var animation_player: AnimationPlayer = $Player_Sprite/AnimationPlayer
+@onready var effect_animation_player: AnimationPlayer = $EffectAnimationPlayer
+@onready var hit_box: HitBox = $Interactions/HitBox
 @onready var player_sprite: Sprite2D = $Player_Sprite
 @onready var state_machine: PlayerStateMachine = $StateMachine
-@onready var animation_player: AnimationPlayer = $Player_Sprite/AnimationPlayer
 
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
+var invulnerable = false
+var health_points : int = 6
+var max_health_points : int = 6
 
 signal direction_changed ( new_direction : Vector2 )
+signal player_damaged ( hurt_box : HurtBox )
 
 func _ready() -> void:
 	GlobalPlayerManager.player = self
 	state_machine.initialise ( self )
+	hit_box.damaged.connect ( take_damage )
+	update_health_points(99)
 	pass
 
 func _process( _delta : float ) -> void:
@@ -56,3 +64,28 @@ func animation_direction () -> String :
 		return "up"
 	else : 
 		return "side"
+
+func take_damage ( hurt_box : HurtBox ) -> void :
+	if invulnerable == true :
+		return
+	update_health_points( -hurt_box.damage )
+	
+	if health_points > 0 :
+		player_damaged.emit ( hurt_box )
+	else : 
+		player_damaged.emit ( hurt_box )
+		update_health_points ( 99 )
+	pass
+
+func update_health_points ( delta : int) -> void :
+	health_points = clampi ( health_points + delta, 0, max_health_points )
+	print(health_points)
+	pass
+
+func make_invulnerable ( _duration : float = 1.0 ) -> void : 
+	invulnerable = true
+	hit_box.monitoring = false
+	await get_tree().create_timer( _duration ).timeout
+	invulnerable = false
+	hit_box.monitoring = true
+	pass

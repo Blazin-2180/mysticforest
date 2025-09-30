@@ -1,13 +1,13 @@
-class_name Slime extends CharacterBody2D
+class_name Enemy extends CharacterBody2D
 
 signal direction_changed ( new_direction : Vector2 )
-signal enemy_damaged()
-signal enemy_death()
+signal enemy_damaged(hurt_box : HurtBox)
+signal enemy_death(hurt_box : HurtBox)
 
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
 # Set enemy HP
-@export var hp : int = 3
+@export var health_points : int = 3
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
@@ -18,10 +18,10 @@ var invulnerable : bool = false
 @onready var sprite : Sprite2D = $SlimeSprite
 @onready var hit_box: HitBox = $HitBox
 #@onready var hurt_box: HurtBox = $HurtBox
-@onready var slime_state_machine: Node = $SlimeStateMachine
+@onready var enemy_state_machine: Node = $EnemyStateMachine
 
 func _ready() -> void:
-	slime_state_machine.inititalise ( self )
+	enemy_state_machine.inititalise ( self )
 	player = GlobalPlayerManager.player
 	hit_box.damaged.connect( _take_damage )
 	pass
@@ -64,11 +64,12 @@ func animation_direction () -> String :
 	else : 
 		return 'side'
 
-func _take_damage ( damage : int ) -> void :
+func _take_damage ( hurt_box : HurtBox ) -> void :
 	if invulnerable == true:
 		return
-	hp -= damage
-	if hp > 0 :
-		enemy_damaged.emit()
+	health_points -= hurt_box.damage
+	if health_points > 0 :
+		enemy_damaged.emit( hurt_box )
 	else:
-		enemy_death.emit()
+		enemy_death.emit( hurt_box )
+	print( health_points )

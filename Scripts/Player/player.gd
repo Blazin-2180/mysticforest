@@ -27,7 +27,7 @@ func _ready() -> void:
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
 	update_health_points(99)
-	#health_bar.value = max_health_points
+	health_bar.value = max_health_points
 	pass
 
 func _process( _delta : float ) -> void:

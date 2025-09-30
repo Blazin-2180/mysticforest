@@ -10,8 +10,8 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 @onready var hit_box : HitBox = $Interactions/HitBox
 @onready var player_sprite : Sprite2D = $Player_Sprite
 @onready var state_machine : PlayerStateMachine = $StateMachine
-@onready var health_bar: ProgressBar = $Control/HealthBar
-@onready var hp_label: Label = $Control/HealthBar/HealthPoints
+@onready var health_bar: ProgressBar = $Control/HealthBar # Have tried linking this via the Canvas Layer scene and the Player Scene
+@onready var hp_label: Label = $Control/HealthBar/HealthPoints # Have tried linking this via the Canvas Layer scene and the Player Scene
 
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN

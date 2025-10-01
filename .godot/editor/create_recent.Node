@@ -1,14 +1,14 @@
+CollisionShape2D
+Area2D
+FollowComponent
 AnimationPlayer
 Sprite2D
-CollisionShape2D
 CharacterBody2D
 Label
 TextureProgressBar
 Control
 CanvasLayer
-FollowComponent
 ProgressBar
 Node
 GPUParticles2D
 Camera2D
-AudioStreamPlayer2D

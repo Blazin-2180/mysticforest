@@ -1,0 +1,35 @@
+CREDITS
+
+Michael Games : YouTube and Discord Team
+Game Endeavour : YouTube and Asset Pack
+MakerTech : YouTube
+
+TO BE INCLUDED IN THE GAME
+
+Story / Quests
+Bonbon as a follower character who can dig up items or sniff out hidden locations
+Inventory System
+Enemies / Drop Items
+Equipable items
+Item stacking
+Action Bar
+Skills / Skill Tree
+Experience / Level up
+Player stats
+Day / Night Cycle
+Map
+Fast Travel
+Save points
+Auto load
+Give character a name
+Menu
+Artwork
+Controller support
+
+ASSETS 
+
+Mytic Forest asset pack from itch.io. 
+
+---
+Resprite
+Procreate

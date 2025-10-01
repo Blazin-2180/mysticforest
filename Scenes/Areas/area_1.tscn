@@ -663,6 +663,7 @@ tile_map_data = PackedByteArray("AAAdABAABAADAAEAAAAeABEAAwAAAAAAAAAfABEAAwAAAAA
 tile_set = SubResource("TileSet_5p0fg")
 
 [node name="Bonbon" parent="." instance=ExtResource("12_jvt31")]
+visible = false
 z_as_relative = false
 y_sort_enabled = true
 position = Vector2(227, 148)

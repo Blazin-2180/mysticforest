@@ -14,8 +14,8 @@ var direction : Vector2 = Vector2.ZERO
 var player : Player
 var invulnerable : bool = false
 
-@onready var animation_player : AnimationPlayer = $SlimeAnimations
-@onready var sprite : Sprite2D = $SlimeSprite
+@onready var animation_player : AnimationPlayer = $EnemyAnimations
+@onready var sprite : Sprite2D = $EnemySprite
 @onready var hit_box: HitBox = $HitBox
 #@onready var hurt_box: HurtBox = $HurtBox
 @onready var enemy_state_machine: Node = $EnemyStateMachine

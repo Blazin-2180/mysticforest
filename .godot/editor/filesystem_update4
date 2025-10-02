@@ -4,3 +4,11 @@ res://Scenes/Bonbon/bonbon.tscn
 res://Scenes/Player/player.tscn
 res://Scenes/Enemies/angry_floof.tscn
 res://Scripts/Player/state_attack.gd
+res://Scenes/Areas/area_1.tscn
+res://Scripts/follow_component.gd
+res://Scripts/Enemies/enemy.gd
+res://Scenes/Enemies/slime.tscn
+res://GUI/Player_HUD/player_hud.gd
+res://Globals/global_player_manager.gd
+res://Globals/player_hud.gd
+res://Scripts/Player/player_hud.gd

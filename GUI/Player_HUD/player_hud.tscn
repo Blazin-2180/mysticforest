@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2dsmm14jobve"]
+[gd_scene load_steps=4 format=3 uid="uid://b2dsmm14jobve"]
+
+[ext_resource type="Script" uid="uid://bsnsaia4q1dws" path="res://Globals/player_hud.gd" id="1_xhte5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hai4"]
 bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
@@ -7,6 +9,7 @@ bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
 bg_color = Color(0.81263417, 0.16849923, 0, 1)
 
 [node name="PlayerHUD" type="CanvasLayer"]
+script = ExtResource("1_xhte5")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

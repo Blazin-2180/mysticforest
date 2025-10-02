@@ -7,7 +7,11 @@ signal enemy_death(hurt_box : HurtBox)
 const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 
 # Set enemy HP
+@export var enemy_name : String = "Enemy"
 @export var health_points : int = 3
+@export var level : int = 1
+@export var experience_points : int = 1
+@export var aggressive : bool = false
 
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
@@ -17,13 +21,13 @@ var invulnerable : bool = false
 @onready var animation_player : AnimationPlayer = $EnemyAnimations
 @onready var sprite : Sprite2D = $EnemySprite
 @onready var hit_box: HitBox = $HitBox
-#@onready var hurt_box: HurtBox = $HurtBox
 @onready var enemy_state_machine: Node = $EnemyStateMachine
 
 func _ready() -> void:
 	enemy_state_machine.inititalise ( self )
 	player = GlobalPlayerManager.player
 	hit_box.damaged.connect( _take_damage )
+	experience_points = level * 2
 	pass
 
 func _process ( _delta : float ) -> void:

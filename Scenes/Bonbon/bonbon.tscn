@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://w4wsau01imdh"]
+[gd_scene load_steps=9 format=3 uid="uid://w4wsau01imdh"]
 
 [ext_resource type="Script" uid="uid://bq44bkm2ypj4" path="res://Scripts/Bonbon/bonbon.gd" id="1_gyb0e"]
 [ext_resource type="Texture2D" uid="uid://cpofbuwwsvqf4" path="res://Sprites/characters/Bonbon2D.png" id="2_gkg5h"]
+[ext_resource type="Script" uid="uid://be7u36jqs6ewc" path="res://Scripts/follow_component.gd" id="3_gkg5h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5xsa5"]
 radius = 6.0
@@ -44,17 +45,20 @@ _data = {
 &"idle_down": SubResource("Animation_1fi7f")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyb0e"]
+radius = 51.009804
+
 [node name="Bonbon" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 192
+collision_mask = 193
 script = ExtResource("1_gyb0e")
 
 [node name="BonbonCollision" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -5)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_5xsa5")
 
 [node name="BonbonSprite" type="Sprite2D" parent="."]
-position = Vector2(-2, -9)
+position = Vector2(0, -9)
 texture = ExtResource("2_gkg5h")
 hframes = 5
 
@@ -64,3 +68,17 @@ libraries = {
 &"": SubResource("AnimationLibrary_sefvo")
 }
 autoplay = "idle_down"
+
+[node name="FollowComponent" type="Node" parent="."]
+script = ExtResource("3_gkg5h")
+
+[node name="FollowArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FollowArea"]
+position = Vector2(0, -21)
+shape = SubResource("CircleShape2D_gyb0e")
+debug_color = Color(0.61086506, 0.5322444, 0.2444644, 0.41960785)
+
+[connection signal="body_entered" from="FollowArea" to="FollowComponent" method="_on_follow_area_body_entered"]
+[connection signal="body_exited" from="FollowArea" to="FollowComponent" method="_on_follow_area_body_exited"]

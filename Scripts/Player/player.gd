@@ -1,6 +1,5 @@
 class_name Player extends CharacterBody2D
 
-
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
@@ -10,23 +9,30 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 @onready var hit_box : HitBox = $Interactions/HitBox
 @onready var player_sprite : Sprite2D = $Player_Sprite
 @onready var state_machine : PlayerStateMachine = $StateMachine
-@onready var health_bar: ProgressBar = $Control/HealthBar
-@onready var hp_label: Label = $Control/HealthBar/HealthPoints
+#@onready var health_bar: ProgressBar = $Control/HealthBar
+#@onready var hp_label: Label = $Control/HealthBar/HealthPoints
+
+@export var character_name : String = "Cob"
+@export var level : int = 1
+@export var attack : int = 1
+@export var defence : int = 1
+@export var movement_speed : int = 400
 
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
 var invulnerable = false
-var health_points : int = 6
-var max_health_points : int = 6
+#var health_points : int = 6
+#var max_health_points : int = 6
+var experience : float = 0.0
 
 signal direction_changed ( new_direction : Vector2 )
 signal player_damaged ( hurt_box : HurtBox )
 
 func _ready() -> void:
-	GlobalPlayerManager.player = self
+	GlobalPlayerManager.player = self	
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
-	update_health_points(99)
+	GlobalPlayerManager.update_health_points(99)
 	pass
 
 func _process( _delta : float ) -> void:
@@ -70,23 +76,23 @@ func animation_direction () -> String :
 func take_damage ( hurt_box : HurtBox ) -> void :
 	if invulnerable == true :
 		return
-	update_health_points( -hurt_box.damage )
+	GlobalPlayerManager.update_health_points( -hurt_box.damage )
 	
-	if health_points > 0 :
+	if GlobalPlayerManager.health_points > 0 :
 		player_damaged.emit ( hurt_box )
 	else : 
 		player_damaged.emit ( hurt_box )
-		update_health_points ( 99 )
+		GlobalPlayerManager.update_health_points ( 99 )
 	pass
 
-func update_health_points ( delta : int) -> void :
-	health_points = clampi ( health_points + delta, 0, max_health_points )
-	# Update the health bar
-	#health_bar.value = health_points
-	#hp_label.text = str(health_points, "/", max_health_points)
-	#Debug
-	print("Player : ", health_points)
-	pass
+#func update_health_points ( delta : int) -> void :
+	#health_points = clampi ( health_points + delta, 0, max_health_points )
+	## Update the health bar
+	##health_bar.value = health_points
+	##hp_label.text = str(health_points, "/", max_health_points)
+	##Debug
+	#print("Player : ", health_points)
+	#pass
 
 func make_invulnerable ( _duration : float = 1.0 ) -> void : 
 	invulnerable = true

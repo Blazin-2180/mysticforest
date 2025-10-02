@@ -441,10 +441,14 @@ _data = {
 radius = 51.009804
 
 [node name="AngryFloof" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_layer = 64
-collision_mask = 3
+collision_mask = 195
 script = ExtResource("1_wohw0")
+enemy_name = "Angry Floof"
 health_points = 5
+experience_points = 2
+aggressive = true
 
 [node name="HurtBox" parent="." instance=ExtResource("1_ggggf")]
 position = Vector2(0, -14)

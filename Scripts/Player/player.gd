@@ -80,15 +80,6 @@ func take_damage ( hurt_box : HurtBox ) -> void :
 		player_damaged.emit ( hurt_box )
 	pass
 
-#func update_health_points ( delta : int) -> void :
-	#health_points = clampi ( health_points + delta, 0, max_health_points )
-	## Update the health bar
-	##health_bar.value = health_points
-	##hp_label.text = str(health_points, "/", max_health_points)
-	##Debug
-	#print("Player : ", health_points)
-	#pass
-
 func make_invulnerable ( _duration : float = 1.0 ) -> void : 
 	invulnerable = true
 	hit_box.monitoring = false

@@ -10,8 +10,8 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 @onready var hit_box : HitBox = $Interactions/HitBox
 @onready var player_sprite : Sprite2D = $Player_Sprite
 @onready var state_machine : PlayerStateMachine = $StateMachine
-#@onready var health_bar: ProgressBar = $Control/HealthBar # Have tried linking this via the Canvas Layer scene and the Player Scene
-#@onready var hp_label: Label = $Control/HealthBar/HealthPoints # Have tried linking this via the Canvas Layer scene and the Player Scene
+@onready var health_bar: ProgressBar = $Control/HealthBar
+@onready var hp_label: Label = $Control/HealthBar/HealthPoints
 
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
@@ -27,7 +27,6 @@ func _ready() -> void:
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
 	update_health_points(99)
-	#health_bar.value = max_health_points
 	pass
 
 func _process( _delta : float ) -> void:
@@ -75,17 +74,17 @@ func take_damage ( hurt_box : HurtBox ) -> void :
 	
 	if health_points > 0 :
 		player_damaged.emit ( hurt_box )
-		#health_bar.value = health_points
-		#hp_label.text = str(health_points, "/", max_health_points)
 	else : 
 		player_damaged.emit ( hurt_box )
 		update_health_points ( 99 )
-		#health_bar.value = health_points
-		#hp_label.text = str(health_points, "/", max_health_points)
 	pass
 
 func update_health_points ( delta : int) -> void :
 	health_points = clampi ( health_points + delta, 0, max_health_points )
+	# Update the health bar
+	#health_bar.value = health_points
+	#hp_label.text = str(health_points, "/", max_health_points)
+	#Debug
 	print("Player : ", health_points)
 	pass
 

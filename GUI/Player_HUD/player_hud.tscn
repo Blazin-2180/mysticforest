@@ -6,7 +6,7 @@ bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhte5"]
 bg_color = Color(0.81263417, 0.16849923, 0, 1)
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="PlayerHUD" type="CanvasLayer"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -15,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="HealthBar" type="ProgressBar" parent="Control"]
 z_as_relative = false

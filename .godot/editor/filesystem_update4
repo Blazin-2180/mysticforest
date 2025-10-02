@@ -1,0 +1,6 @@
+res://Scripts/Player/player.gd
+res://GUI/Player_HUD/player_hud.tscn
+res://Scenes/Bonbon/bonbon.tscn
+res://Scenes/Player/player.tscn
+res://Scenes/Enemies/angry_floof.tscn
+res://Scripts/Player/state_attack.gd

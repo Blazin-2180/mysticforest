@@ -24,9 +24,9 @@ func enter() -> void:
 func exit() -> void:
 	attack_animation.animation_finished.disconnect ( end_attack )
 	attacking = false
-	# delays the attack animation
+	#delays the attack animation
 	#await get_tree().create_timer(0.075).timeout
-	# resets the hurtbox
+	#resets the hurtbox
 	attack_hurt_box.monitoring = false
 	pass
 

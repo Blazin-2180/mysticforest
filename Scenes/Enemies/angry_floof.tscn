@@ -73,7 +73,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("EnemySprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -114,7 +114,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("EnemySprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -155,7 +155,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("EnemySprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -181,7 +181,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_62558"]
 resource_name = "stun_down"
 length = 0.8
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -222,7 +221,7 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_8ggiy"]
 resource_name = "stun_side"
 length = 0.8
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -263,7 +262,7 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_ys3wi"]
 resource_name = "stun_up"
 length = 0.8
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -319,7 +318,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("EnemySprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -360,7 +359,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("EnemySprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -401,7 +400,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("EnemySprite:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true

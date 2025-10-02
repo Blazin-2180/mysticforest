@@ -3,3 +3,6 @@ res://Scripts/Player/player.gd
 res://Scenes/Enemies/angry_floof.tscn
 res://Scripts/Enemies/enemy.gd
 res://Scenes/Areas/area_1.tscn
+res://notes.txt
+res://Globals/global_player_manager.gd
+res://Scenes/Player/player.tscn

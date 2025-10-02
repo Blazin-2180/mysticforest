@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://d3qi426qtce4j"]
+[gd_scene load_steps=37 format=3 uid="uid://d3qi426qtce4j"]
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://ojxvkmnppmxj" path="res://Sprites/characters/player.png" id="2_6t5aa"]
@@ -120,22 +120,6 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0.06666668)
 }
 tracks/1/use_blend = true
-
-[sub_resource type="Animation" id="Animation_qqcod"]
-resource_name = "death"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player_Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [54, 55, 56]
-}
 
 [sub_resource type="Animation" id="Animation_3smsa"]
 resource_name = "idle_down"
@@ -281,13 +265,63 @@ tracks/0/keys = {
 "values": [30, 31, 32, 33, 34, 35]
 }
 
+[sub_resource type="Animation" id="Animation_qqcod"]
+resource_name = "death_side"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [54, 55, 56]
+}
+
+[sub_resource type="Animation" id="Animation_oikmp"]
+resource_name = "death_up"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [54, 55, 56]
+}
+
+[sub_resource type="Animation" id="Animation_aqm4k"]
+resource_name = "death_down"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [54, 55, 56]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_igrcy"]
 _data = {
 &"RESET": SubResource("Animation_8erm5"),
 &"attack_down": SubResource("Animation_7dp3o"),
 &"attack_side": SubResource("Animation_h4iuc"),
 &"attack_up": SubResource("Animation_fd4e3"),
-&"death": SubResource("Animation_qqcod"),
+&"death_down": SubResource("Animation_aqm4k"),
+&"death_side": SubResource("Animation_qqcod"),
+&"death_up": SubResource("Animation_oikmp"),
 &"idle_down": SubResource("Animation_3smsa"),
 &"idle_side": SubResource("Animation_f1ek2"),
 &"idle_up": SubResource("Animation_tx1dd"),

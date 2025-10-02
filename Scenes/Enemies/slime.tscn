@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ex424qjj2be3"]
+[gd_scene load_steps=31 format=3 uid="uid://ex424qjj2be3"]
 
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_5gljc"]
 [ext_resource type="Texture2D" uid="uid://cdyi0xpnhdbew" path="res://Sprites/characters/slime.png" id="1_jokqx"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/Enemies/enemy_state_machine.gd" id="3_vblni"]
 [ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/Enemies/enemy_state_idle.gd" id="4_e388w"]
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="5_r4o34"]
+[ext_resource type="AudioStream" uid="uid://card765jpk5dy" path="res://Audio/slime.wav" id="6_wkjhq"]
 [ext_resource type="Script" uid="uid://brrsbrj7v7ght" path="res://Scripts/Enemies/enemy_state_stun.gd" id="8_c7ij5"]
 [ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/Enemies/enemy_state_death.gd" id="9_c7ij5"]
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="9_psnrq"]
@@ -42,18 +43,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_r4o34"]
@@ -272,18 +261,21 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
 }
-tracks/2/type = "value"
+tracks/2/type = "audio"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/path = NodePath("AudioStreamPlayer2D")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_wkjhq")
+}],
+"times": PackedFloat32Array(0)
 }
+tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_555id"]
 resource_name = "stun_side"
@@ -300,18 +292,21 @@ tracks/0/keys = {
 "update": 1,
 "values": [70, 71, 72]
 }
-tracks/1/type = "value"
+tracks/1/type = "audio"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/path = NodePath("AudioStreamPlayer2D")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_wkjhq")
+}],
+"times": PackedFloat32Array(0)
 }
+tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_xq7bh"]
 resource_name = "stun_up"
@@ -328,18 +323,21 @@ tracks/0/keys = {
 "update": 1,
 "values": [77, 78, 79]
 }
-tracks/1/type = "value"
+tracks/1/type = "audio"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/1/path = NodePath("AudioStreamPlayer2D")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_wkjhq")
+}],
+"times": PackedFloat32Array(0)
 }
+tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_5gljc"]
 resource_name = "walk_down"

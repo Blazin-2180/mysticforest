@@ -76,4 +76,4 @@ func _take_damage ( hurt_box : HurtBox ) -> void :
 		enemy_damaged.emit( hurt_box )
 	else:
 		enemy_death.emit( hurt_box )
-	print( health_points )
+	print( enemy_name, " : ", health_points )

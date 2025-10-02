@@ -31,7 +31,6 @@ func _ready() -> void:
 	pass
 
 func _process( _delta : float ) -> void:
-	print(GlobalPlayerManager.health_points)
 	direction = Vector2 (
 		Input.get_axis ( "left", "right" ),
 		Input.get_axis ( "up", "down" )

@@ -13,8 +13,10 @@
 [ext_resource type="Script" uid="uid://be7u36jqs6ewc" path="res://Scripts/follow_component.gd" id="11_1du7y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ojc5"]
+radius = 14.035668
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8j4vx"]
+radius = 14.0
 
 [sub_resource type="Animation" id="Animation_w6e41"]
 length = 0.001
@@ -221,7 +223,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_8ggiy"]
 resource_name = "stun_side"
 length = 0.8
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -262,7 +263,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_ys3wi"]
 resource_name = "stun_up"
 length = 0.8
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -451,21 +451,19 @@ experience_points = 2
 aggressive = true
 
 [node name="HurtBox" parent="." instance=ExtResource("1_ggggf")]
-position = Vector2(0, -14)
+position = Vector2(0, -21)
 damage = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_3ojc5")
 debug_color = Color(0.9875826, 0.06837226, 0.22504988, 0.41960785)
 
 [node name="HitBox" parent="." instance=ExtResource("2_wohw0")]
-position = Vector2(0, -14)
+position = Vector2(0, -21)
 collision_layer = 64
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_3ojc5")
 debug_color = Color(0.49352223, 0.54548895, 0.5766261, 0.41960785)
 

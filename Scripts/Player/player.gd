@@ -9,8 +9,6 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 @onready var hit_box : HitBox = $Interactions/HitBox
 @onready var player_sprite : Sprite2D = $Player_Sprite
 @onready var state_machine : PlayerStateMachine = $StateMachine
-#@onready var health_bar: ProgressBar = $Control/HealthBar
-#@onready var hp_label: Label = $Control/HealthBar/HealthPoints
 
 @export var character_name : String = "Cob"
 @export var level : int = 1
@@ -21,21 +19,19 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
 var invulnerable = false
-#var health_points : int = 6
-#var max_health_points : int = 6
 var experience : float = 0.0
 
 signal direction_changed ( new_direction : Vector2 )
 signal player_damaged ( hurt_box : HurtBox )
 
 func _ready() -> void:
-	GlobalPlayerManager.player = self	
+	GlobalPlayerManager.player = self
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
-	GlobalPlayerManager.update_health_points(99)
 	pass
 
 func _process( _delta : float ) -> void:
+	print(GlobalPlayerManager.health_points)
 	direction = Vector2 (
 		Input.get_axis ( "left", "right" ),
 		Input.get_axis ( "up", "down" )
@@ -76,13 +72,12 @@ func animation_direction () -> String :
 func take_damage ( hurt_box : HurtBox ) -> void :
 	if invulnerable == true :
 		return
-	GlobalPlayerManager.update_health_points( -hurt_box.damage )
+	GlobalPlayerManager.reduce_health_points( hurt_box.damage )
 	
 	if GlobalPlayerManager.health_points > 0 :
 		player_damaged.emit ( hurt_box )
 	else : 
 		player_damaged.emit ( hurt_box )
-		GlobalPlayerManager.update_health_points ( 99 )
 	pass
 
 #func update_health_points ( delta : int) -> void :

@@ -1,10 +1,10 @@
 [gd_scene load_steps=30 format=3 uid="uid://cg717qsjfk2io"]
 
-[ext_resource type="Texture2D" uid="uid://bvv5ax08n7bpw" path="res://Sprites/characters/Angryfloofs_.png" id="1_d0kam"]
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="1_ggggf"]
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_wohw0"]
 [ext_resource type="Texture2D" uid="uid://0qh1wqvewbvb" path="res://Sprites/characters/Shadow.png" id="2_w6e41"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="2_wohw0"]
+[ext_resource type="Texture2D" uid="uid://or7hg5s6ftf5" path="res://Sprites/characters/Angryfloofs2.png" id="4_fkw3n"]
 [ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/Enemies/enemy_state_machine.gd" id="5_1du7y"]
 [ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/Enemies/enemy_state_idle.gd" id="6_fkw3n"]
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="7_62558"]
@@ -570,7 +570,7 @@ collision_layer = 64
 collision_mask = 195
 script = ExtResource("1_wohw0")
 enemy_name = "Angry Floof"
-health_points = 5
+health_points = 4
 experience_points = 2
 aggressive = true
 
@@ -593,7 +593,7 @@ debug_color = Color(0.49352223, 0.54548895, 0.5766261, 0.41960785)
 
 [node name="EnemySprite" type="Sprite2D" parent="."]
 position = Vector2(0, -20)
-texture = ExtResource("1_d0kam")
+texture = ExtResource("4_fkw3n")
 hframes = 4
 vframes = 3
 

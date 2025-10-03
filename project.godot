@@ -30,6 +30,10 @@ window/size/window_width_override=960
 window/size/window_height_override=540
 window/stretch/scale=2.0
 
+[editor]
+
+movie_writer/movie_file="C:/Users/blazi/Desktop/GameRecordings.avi"
+
 [input]
 
 left={

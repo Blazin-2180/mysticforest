@@ -11,3 +11,6 @@ res://Levels/Area02/area_2.tscn
 res://Levels/player_spawn.tscn
 res://Scripts/player_spawn.gd
 res://Scripts/level.gd
+res://Levels/level_transition.tscn
+res://Scripts/level_transition.gd
+res://Globals/global_level_manager.gd

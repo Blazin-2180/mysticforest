@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=27 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/level.gd" id="1_yorsq"]
 [ext_resource type="PackedScene" uid="uid://w4wsau01imdh" path="res://Scenes/Bonbon/bonbon.tscn" id="2_yorsq"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dtuify18dehpn" path="res://Sprites/tilesets/decor_16x16.png" id="12_b1xxe"]
 [ext_resource type="PackedScene" uid="uid://sx10ttkyxwwi" path="res://Levels/player_spawn.tscn" id="13_2bwmu"]
 [ext_resource type="PackedScene" uid="uid://cg717qsjfk2io" path="res://Scenes/Enemies/angry_floof.tscn" id="13_hmyxr"]
+[ext_resource type="PackedScene" uid="uid://dgytq2fju16h8" path="res://Levels/level_transition.tscn" id="15_nvsy8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wpi7"]
 texture = ExtResource("4_bjddp")
@@ -637,7 +638,6 @@ sources/5 = SubResource("TileSetAtlasSource_3u6la")
 sources/6 = SubResource("TileSetAtlasSource_3jev2")
 
 [node name="Area_1" type="Node2D"]
-z_index = -5
 y_sort_enabled = true
 script = ExtResource("1_yorsq")
 
@@ -674,3 +674,11 @@ z_index = 1
 z_as_relative = false
 y_sort_enabled = true
 position = Vector2(430, 128)
+
+[node name="LevelTransition" parent="." instance=ExtResource("15_nvsy8")]
+z_as_relative = false
+position = Vector2(464, 299)
+level = "uid://bkoe6mc2kiurv"
+target_transition_area = "LevelTransition2"
+side = 3
+snap_to_grid = true

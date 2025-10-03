@@ -1,1 +1,3 @@
 res://Levels/Area01/area_1.tscn
+res://Levels/Area02/area_2.tscn
+res://Scripts/level_transition.gd

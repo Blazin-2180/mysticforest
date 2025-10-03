@@ -35,7 +35,9 @@ func _ready() -> void:
 
 	await GlobalLevelManager.level_loaded
 	monitoring = true
-
+	
+	await get_tree().physics_frame
+	await get_tree().physics_frame
 	body_entered.connect( _player_entered )
 	
 	pass

@@ -22,6 +22,7 @@ var invulnerable : bool = false
 @onready var sprite : Sprite2D = $EnemySprite
 @onready var hit_box: HitBox = $HitBox
 @onready var enemy_state_machine: Node = $EnemyStateMachine
+@onready var damage_numbers_origin = $DamageNumbersOrigin
 
 func _ready() -> void:
 	enemy_state_machine.inititalise ( self )
@@ -72,6 +73,7 @@ func _take_damage ( hurt_box : HurtBox ) -> void :
 	if invulnerable == true:
 		return
 	health_points -= hurt_box.damage
+	DamageNumbers.display_numbers(hurt_box.damage, damage_numbers_origin.global_position)
 	if health_points > 0 :
 		enemy_damaged.emit( hurt_box )
 	else:

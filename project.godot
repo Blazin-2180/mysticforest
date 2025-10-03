@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 GlobalLevelManager="*res://Globals/global_level_manager.gd"
 GlobalPlayerManager="*res://Globals/global_player_manager.gd"
 PlayerHud="*res://GUI/Player_HUD/player_hud.tscn"
+DamageNumbers="*res://Globals/damage_numbers.gd"
 
 [display]
 

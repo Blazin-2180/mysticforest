@@ -62,7 +62,7 @@ func get_offset() -> Vector2 :
 			offset.x = player_position.x - global_position.x
 			offset.y = 8
 			if side == SIDE.TOP :
-				offset.y *= -1				
+				offset.y *= -1
 	return offset
 
 #Update collision shape

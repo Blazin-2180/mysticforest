@@ -1,16 +1,1 @@
-res://Scenes/Player/player.tscn
-res://Globals/damage_numbers.gd
-res://GUI/Player_HUD/damage_numbers.tscn
-res://Scenes/Enemies/slime.tscn
-res://Scenes/Enemies/angry_floof.tscn
-res://Scripts/Enemies/enemy.gd
-res://Levels/Area02/Area02.tscn
 res://Levels/Area01/area_1.tscn
-res://Globals/global_player_manager.gd
-res://Levels/Area02/area_2.tscn
-res://Levels/player_spawn.tscn
-res://Scripts/player_spawn.gd
-res://Scripts/level.gd
-res://Levels/level_transition.tscn
-res://Scripts/level_transition.gd
-res://Globals/global_level_manager.gd

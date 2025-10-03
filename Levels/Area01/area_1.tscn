@@ -642,7 +642,6 @@ y_sort_enabled = true
 script = ExtResource("1_yorsq")
 
 [node name="Bonbon" parent="." instance=ExtResource("2_yorsq")]
-visible = false
 z_as_relative = false
 y_sort_enabled = true
 position = Vector2(204, 175)
@@ -677,8 +676,7 @@ position = Vector2(430, 128)
 
 [node name="LevelTransition" parent="." instance=ExtResource("15_nvsy8")]
 z_as_relative = false
-position = Vector2(464, 299)
+position = Vector2(463, 304)
 level = "uid://bkoe6mc2kiurv"
 target_transition_area = "LevelTransition2"
 side = 3
-snap_to_grid = true

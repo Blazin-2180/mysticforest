@@ -10,3 +10,4 @@ res://GUI/PauseMenu/pause_menu.gd
 res://Globals/global_save_manager.gd
 res://Scenes/Levels/save_point.tscn
 res://Globals/global_player_manager.gd
+res://Scenes/Levels/save_point.gd

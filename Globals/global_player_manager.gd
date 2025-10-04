@@ -12,7 +12,7 @@ func _ready() -> void:
 	await get_tree().create_timer(0.2).timeout
 	player_spawned = true
 	pass
-	
+
 func reduce_health_points ( num : int ) -> void :
 	health_points -= num
 	PlayerHud.update_health_points()
@@ -26,7 +26,7 @@ func add_player_instance () -> void :
 func set_health(health_points : int, max_health_points : int ) -> void:
 	max_health_points = max_health_points
 	health_points = health_points
-	reduce_health_points(0)
+	PlayerHud.update_health_points()
 
 func set_player_position( _new_position : Vector2) -> void :
 	player.global_position = _new_position

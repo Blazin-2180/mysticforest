@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfw0dhtlicetb"]
+[gd_scene load_steps=9 format=3 uid="uid://bfw0dhtlicetb"]
 
+[ext_resource type="Script" uid="uid://djwhdoc66scxm" path="res://Scenes/Levels/save_point.gd" id="1_0al6s"]
 [ext_resource type="Texture2D" uid="uid://cfayijdeea8b" path="res://Sprites/objects/Save _Point.png" id="1_6885w"]
+[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="3_qxvqr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6885w"]
 radius = 6.0
@@ -62,6 +64,7 @@ _data = {
 y_sort_enabled = true
 collision_layer = 64
 collision_mask = 65
+script = ExtResource("1_0al6s")
 
 [node name="save_point" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -81,3 +84,19 @@ libraries = {
 &"": SubResource("AnimationLibrary_k0xnv")
 }
 autoplay = "unsaved"
+
+[node name="GameSaved" type="Label" parent="."]
+z_index = 1
+offset_left = 123.0
+offset_top = 1.0
+offset_right = 223.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("3_qxvqr")
+theme_override_font_sizes/font_size = 5
+text = "Game Saved!"
+
+[node name="Timer" type="Timer" parent="GameSaved"]
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="GameSaved/Timer" to="." method="_on_timer_timeout"]

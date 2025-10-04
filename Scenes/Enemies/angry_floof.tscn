@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="7_62558"]
 [ext_resource type="Script" uid="uid://brrsbrj7v7ght" path="res://Scripts/Enemies/enemy_state_stun.gd" id="8_8ggiy"]
 [ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/Enemies/enemy_state_death.gd" id="9_ys3wi"]
-[ext_resource type="Script" uid="uid://be7u36jqs6ewc" path="res://Scripts/follow_component.gd" id="11_1du7y"]
+[ext_resource type="Script" uid="uid://be7u36jqs6ewc" path="res://Scripts/Enemies/follow_component.gd" id="11_1du7y"]
 [ext_resource type="PackedScene" uid="uid://chfp0fpb1rxx8" path="res://GUI/Player_HUD/damage_numbers.tscn" id="12_fkw3n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ojc5"]

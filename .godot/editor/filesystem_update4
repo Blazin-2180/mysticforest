@@ -6,3 +6,7 @@ res://GUI/scene_transition/scene_transition.tscn
 res://Globals/global_level_manager.gd
 res://GUI/scene_transition/scene_transition.gd
 res://Scripts/Enemies/enemy_state_death.gd
+res://Levels/area_1.tscn
+res://Levels/area_2.tscn
+res://Scenes/Levels/area_2.tscn
+res://Scenes/Levels/area_1.tscn

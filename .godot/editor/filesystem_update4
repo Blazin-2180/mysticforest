@@ -5,3 +5,6 @@ res://Scenes/Levels/area_1.tscn
 res://Globals/global_level_manager.gd
 res://Scripts/Levels/level_tile_map.gd
 res://Scripts/Player/player_camera.gd
+res://GUI/PauseMenu/pause_menu.tscn
+res://GUI/PauseMenu/pause_menu.gd
+res://Globals/global_save_manager.gd

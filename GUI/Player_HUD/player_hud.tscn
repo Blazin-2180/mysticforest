@@ -9,6 +9,7 @@ bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
 bg_color = Color(0.81263417, 0.16849923, 0, 1)
 
 [node name="PlayerHUD" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_xhte5")
 
 [node name="Control" type="Control" parent="."]

@@ -25,13 +25,14 @@ func enter() -> void :
 func process ( _delta : float ) -> EnemyState :
 	enemy.velocity -= enemy.velocity * decelerate_speed * _delta
 	return null
-	
+
 func physics( _delta : float ) -> EnemyState :
 	return null
 	
 func _on_enemy_death ( hurt_box : HurtBox ) -> void :
 	_damage_position = hurt_box.global_position
 	enemy_state_machine.change_state( self )
+	hurt_box.monitoring = false # This is working but is also bringing up an error E 0:00:05:140   enemy_state_death.gd:35 @ _on_enemy_death(): Function blocked during in/out signal. Use set_deferred("monitoring", true/false).
 
 func _on_animation_finished ( _a : String ) -> void :
 	enemy.queue_free()

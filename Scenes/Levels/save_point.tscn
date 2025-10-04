@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://bfw0dhtlicetb"]
+
+[ext_resource type="Texture2D" uid="uid://cfayijdeea8b" path="res://Sprites/objects/Save _Point.png" id="1_6885w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6885w"]
+radius = 6.0
+height = 15.999999
+
+[sub_resource type="Animation" id="Animation_0al6s"]
+resource_name = "unsaved"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("save_point:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_qxvqr"]
+resource_name = "saved"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("save_point:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_134lc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("save_point:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k0xnv"]
+_data = {
+&"RESET": SubResource("Animation_134lc"),
+&"saved": SubResource("Animation_qxvqr"),
+&"unsaved": SubResource("Animation_0al6s")
+}
+
+[node name="SavePoint" type="Area2D"]
+y_sort_enabled = true
+collision_layer = 64
+collision_mask = 65
+
+[node name="save_point" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -16)
+texture = ExtResource("1_6885w")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -6)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_6885w")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_k0xnv")
+}
+autoplay = "unsaved"

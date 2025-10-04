@@ -11,3 +11,9 @@ res://Globals/global_save_manager.gd
 res://Scenes/Levels/save_point.tscn
 res://Globals/global_player_manager.gd
 res://Scenes/Levels/save_point.gd
+res://GUI/Player_HUD/player_hud.tscn
+res://Scripts/Player/state_death.gd
+res://Scripts/Player/state_stun.gd
+res://Scripts/Player/player.gd
+res://Scripts/Player/player_hud.gd
+res://Globals/player_hud.gd

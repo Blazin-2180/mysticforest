@@ -1,0 +1,17 @@
+res://GeneralNodes/HitBox/hit_box.tscn::7d70b68d0836fdc54dc10f64c7641002::1759422413::res://.godot/exported/133200997/export-c48e1dc3719ea0a9b865671c5b8251a4-hit_box.scn
+res://GeneralNodes/HurtBox/hurt_box.tscn::d8952711ef4421d0b67f96f8ae6d4797::1759422413::res://.godot/exported/133200997/export-5ece68a42ef2c2aa655a3913c4e99c94-hurt_box.scn
+res://GUI/PauseMenu/pause_menu.tscn::2bc5776445a05161108ba2e40947b330::1759594379::res://.godot/exported/133200997/export-27ab87633993d0ca1e18c135b91313b4-pause_menu.scn
+res://GUI/Player_HUD/damage_numbers.tscn::933ee8a1de3dabc8572861789c507bf1::1759498678::res://.godot/exported/133200997/export-da8f0ebdc4f317be782d46efb00f2c9d-damage_numbers.scn
+res://GUI/Player_HUD/player_hud.tscn::011d64e0b2138b00a45aa85183f0b738::1759536066::res://.godot/exported/133200997/export-cbcc6415dcbe919fae0e800a419e6131-player_hud.scn
+res://GUI/scene_transition/scene_transition.tscn::5da7d4d88f5b1099c9a4f6dd99648df7::1759536975::res://.godot/exported/133200997/export-98e8bddd913e02f7d93cc1685d9378aa-scene_transition.scn
+res://Scenes/Bonbon/bonbon.tscn::30b60f1dc243e0ed1bdb25b5ac68186e::1759538701::res://.godot/exported/133200997/export-d035d2fb7d8c46243b0c142ab26e2037-bonbon.scn
+res://Scenes/Enemies/angry_floof.tscn::b6121034ca093ced367b70f81603c234::1759538701::res://.godot/exported/133200997/export-650f5508c53bada55939f0ce66fa02bc-angry_floof.scn
+res://Scenes/Enemies/green_slime.tscn::18aacb74b8a797a42290110ee67e50ca::1759422116::res://.godot/exported/133200997/export-303ed5c2451b6dcad404eeb94634a097-green_slime.scn
+res://Scenes/Enemies/slime.tscn::a2937b5bcae2a90ae559faf623ed081e::1759498699::res://.godot/exported/133200997/export-19a7583fc495937470471be2d8179d9e-slime.scn
+res://Scenes/Levels/area_1.tscn::4def33e5f8dccdccb3201ecd5e323e6e::1759586918::res://.godot/exported/133200997/export-b8ee93a4986551e43f773686e1796445-area_1.scn
+res://Scenes/Levels/area_2.tscn::23162f91888b27031719a537c5f3968a::1759578399::res://.godot/exported/133200997/export-ffc14473b211433e0214174d4639e452-area_2.scn
+res://Scenes/Levels/level_transition.tscn::c570b9da72077e51e7bcbc6d9f76efe2::1759538655::res://.godot/exported/133200997/export-efd857bae5c50389289a1f2938f10a9d-level_transition.scn
+res://Scenes/Levels/player_spawn.tscn::430d715dc31989a83efe261cf1592f9e::1759538659::res://.godot/exported/133200997/export-c1666dd86d2c8c1c2429ed08b9cfa2a5-player_spawn.scn
+res://Scenes/Levels/save_point.tscn::3b061c99957e0e39123ac4960b55a9c7::1759593992::res://.godot/exported/133200997/export-ce36c194cc05ccfa6453b04f73875d5b-save_point.scn
+res://Scenes/Player/player.tscn::7c5390923bbcde23dbff52087045ec86::1759590364::res://.godot/exported/133200997/export-8e63b53a88b650cb9792f8d8b6d332bc-player.scn
+res://default_bus_layout.tres::22796c0f2afcf5aad1efeb98be68e5fd::1759422413::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res

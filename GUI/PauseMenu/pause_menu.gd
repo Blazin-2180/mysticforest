@@ -29,12 +29,12 @@ func hide_pause_menu () -> void :
 	visible = false
 	is_paused = false
 
-func _on_save_pressed () -> void :
-	if is_paused == false :
-		return
-	GlobalSaveManager.save_game()
-	hide_pause_menu()
-	pass
+#func _on_save_pressed () -> void :
+	#if is_paused == false :
+		#return
+	#GlobalSaveManager.save_game()
+	#hide_pause_menu()
+	#pass
 
 func _on_load_pressed () -> void :
 	if is_paused == false :
@@ -42,3 +42,6 @@ func _on_load_pressed () -> void :
 	GlobalSaveManager.load_game()
 	hide_pause_menu()
 	pass
+
+func _on_button_exit_pressed() -> void:
+	get_tree().quit()

@@ -8,8 +8,8 @@ signal game_saved
 var current_save : Dictionary = {
 	scene_path = "",
 	player = {
-		health_points = 1,
-		max_health_points = 1,
+		health_points = 6,
+		max_health_points = 6,
 		position_x = 0,
 		position_y = 0
 	},
@@ -33,7 +33,7 @@ func load_game () -> void:
 
 func update_player_data () -> void :
 	var p : Player = GlobalPlayerManager.player
-	current_save.player.health_points = p.health_points
-	current_save.player.max_health_points = p.max_health_points
+	current_save.player.health_points = GlobalPlayerManager.health_points
+	current_save.player.max_health_points = GlobalPlayerManager.max_health_points
 	current_save.player.position_x = p.global_position.x
 	current_save.player.position_y = p.global_position.y

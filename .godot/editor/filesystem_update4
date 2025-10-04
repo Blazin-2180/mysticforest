@@ -1,12 +1,7 @@
-res://Levels/Area01/area_1.tscn
-res://Levels/Area02/area_2.tscn
-res://Scripts/level_transition.gd
-res://GUI/Player_HUD/player_hud.tscn
-res://GUI/scene_transition/scene_transition.tscn
-res://Globals/global_level_manager.gd
-res://GUI/scene_transition/scene_transition.gd
-res://Scripts/Enemies/enemy_state_death.gd
-res://Levels/area_1.tscn
-res://Levels/area_2.tscn
 res://Scenes/Levels/area_2.tscn
+res://Scripts/Levels/level_transition.gd
+res://Scenes/Player/player.tscn
 res://Scenes/Levels/area_1.tscn
+res://Globals/global_level_manager.gd
+res://Scripts/Levels/level_tile_map.gd
+res://Scripts/Player/player_camera.gd

@@ -1,6 +1,15 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 CollisionShape2D
 AudioStreamPlayer2D
+=======
+Label
+AnimationPlayer
+VBoxContainer
+Button
+ColorRect
+Control
+>>>>>>> Stashed changes
 Node
 AnimationPlayer
 Sprite2D

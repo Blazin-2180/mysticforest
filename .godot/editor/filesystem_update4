@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 res://Scripts/state_attack.gd
 res://Scenes/player.tscn
 res://GeneralNodes/HitBox/hit_box.gd
@@ -20,4 +21,16 @@ res://GeneralNodes/HurtBox/hurt_box.tscn
 res://GeneralNodes/HitBox/hit_box.gd
 res://GeneralNodes/HurtBox/hurt_box.gd
 res://Scripts/bonbon.gd
+>>>>>>> Stashed changes
+=======
+res://Scenes/Levels/World.tscn
+res://Scenes/Enemies/slime.tscn
+res://Scenes/Enemies/green_gloop.tscn
+res://Scripts/Enemies/enemy.gd
+res://Scenes/Levels/save_point.gd
+res://Scenes/Enemies/angry_floof.tscn
+res://Scenes/Player/player.tscn
+res://Scripts/Player/player.gd
+res://Scenes/Levels/area_1.tscn
+res://Scripts/Enemies/enemy_state_death.gd
 >>>>>>> Stashed changes

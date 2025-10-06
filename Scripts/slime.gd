@@ -17,13 +17,26 @@ var invulnerable : bool = false
 @onready var animation_player : AnimationPlayer = $SlimeAnimations
 @onready var sprite : Sprite2D = $SlimeSprite
 @onready var hit_box: HitBox = $HitBox
+<<<<<<< Updated upstream:Scripts/slime.gd
 @onready var hurt_box: HurtBox = $HurtBox
 @onready var slime_state_machine: Node = $SlimeStateMachine
+=======
+@onready var enemy_state_machine: Node = $EnemyStateMachine
+@onready var damage_numbers_origin = $DamageNumbersOrigin
+@onready var enemy_name_label: Label = $EnemyName
+>>>>>>> Stashed changes:Scripts/Enemies/enemy.gd
 
 func _ready() -> void:
 	slime_state_machine.inititalise ( self )
 	player = GlobalPlayerManager.player
+<<<<<<< Updated upstream:Scripts/slime.gd
 	hit_box.damaged.connect( take_damage )
+=======
+	hit_box.damaged.connect( _take_damage )
+	experience_points = level * 2
+	#enemy_name_label.visible = false
+	enemy_name_label.text = (enemy_name)
+>>>>>>> Stashed changes:Scripts/Enemies/enemy.gd
 	pass
 
 func _process ( _delta : float ) -> void:
@@ -64,7 +77,13 @@ func animation_direction () -> String :
 	else : 
 		return 'side'
 
+<<<<<<< Updated upstream:Scripts/slime.gd
 func take_damage ( damage : int ) -> void :
+=======
+func _take_damage ( hurt_box : HurtBox ) -> void :
+	#enemy_name_label.visible = true
+	
+>>>>>>> Stashed changes:Scripts/Enemies/enemy.gd
 	if invulnerable == true:
 		return
 <<<<<<< Updated upstream

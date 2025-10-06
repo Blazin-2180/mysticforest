@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:Scenes/area_1.tscn
 <<<<<<< Updated upstream
 [gd_scene load_steps=19 format=4 uid="uid://bpvi0vlqqdiw1"]
 =======
@@ -14,6 +15,28 @@
 [ext_resource type="Texture2D" uid="uid://bl15riwydlg1f" path="res://Sprites/tilesets/water_decorations.png" id="6_yvksn"]
 [ext_resource type="Texture2D" uid="uid://dqyyvndovkqj4" path="res://Sprites/objects/objects.png" id="8_6lqvh"]
 [ext_resource type="PackedScene" uid="uid://ex424qjj2be3" path="res://Scenes/slime.tscn" id="9_di6ls"]
+=======
+[gd_scene load_steps=30 format=4 uid="uid://bpvi0vlqqdiw1"]
+
+[ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
+[ext_resource type="PackedScene" uid="uid://w4wsau01imdh" path="res://Scenes/Bonbon/bonbon.tscn" id="2_6xvxw"]
+[ext_resource type="PackedScene" uid="uid://ex424qjj2be3" path="res://Scenes/Enemies/slime.tscn" id="3_1k8w3"]
+[ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="4_8byil"]
+[ext_resource type="Texture2D" uid="uid://dqyyvndovkqj4" path="res://Sprites/objects/objects.png" id="5_i564r"]
+[ext_resource type="Texture2D" uid="uid://ob8ngenog7yv" path="res://Sprites/objects/chest_01.png" id="6_xd6og"]
+[ext_resource type="Texture2D" uid="uid://bvuypmm65o0nf" path="res://Sprites/objects/chest_02.png" id="7_q45q0"]
+[ext_resource type="Texture2D" uid="uid://duiwlam6j7xkw" path="res://Sprites/tilesets/water1.png" id="8_apsi1"]
+[ext_resource type="Texture2D" uid="uid://c05qpq287rlpj" path="res://Sprites/tilesets/grass.png" id="9_x0267"]
+[ext_resource type="Texture2D" uid="uid://bx1bsn6c7lhqo" path="res://Sprites/tilesets/plains.png" id="10_rjd66"]
+[ext_resource type="Texture2D" uid="uid://d0pu8hjyc86ad" path="res://Sprites/tilesets/decor_8x8.png" id="11_lfs1r"]
+[ext_resource type="Texture2D" uid="uid://dtuify18dehpn" path="res://Sprites/tilesets/decor_16x16.png" id="12_cuvu0"]
+[ext_resource type="PackedScene" uid="uid://cg717qsjfk2io" path="res://Scenes/Enemies/angry_floof.tscn" id="13_88upg"]
+[ext_resource type="Script" uid="uid://dyf686efadnos" path="res://Scripts/Levels/level_tile_map.gd" id="13_uxoom"]
+[ext_resource type="PackedScene" uid="uid://sx10ttkyxwwi" path="res://Scenes/Levels/player_spawn.tscn" id="14_0htsb"]
+[ext_resource type="PackedScene" uid="uid://dgytq2fju16h8" path="res://Scenes/Levels/level_transition.tscn" id="15_iy4w2"]
+[ext_resource type="PackedScene" uid="uid://bfw0dhtlicetb" path="res://Scenes/Levels/save_point.tscn" id="17_bl5d6"]
+[ext_resource type="PackedScene" uid="uid://ko0e6lwp7y65" path="res://Scenes/Enemies/green_gloop.tscn" id="18_30j8n"]
+>>>>>>> Stashed changes:Scenes/Levels/area_1.tscn
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yajbp"]
 texture = ExtResource("3_55jl6")
@@ -625,6 +648,7 @@ position = Vector2(575, 323)
 =======
 position = Vector2(255, 151)
 
+<<<<<<< Updated upstream:Scenes/area_1.tscn
 [node name="Bonbon" parent="." instance=ExtResource("2_7sldb")]
 z_as_relative = false
 y_sort_enabled = true
@@ -635,6 +659,11 @@ follow_distance = 1.0
 
 [node name="Slime" parent="." instance=ExtResource("9_di6ls")]
 z_as_relative = false
+=======
+[node name="Slime" parent="." instance=ExtResource("3_1k8w3")]
+visible = false
+z_index = 4
+>>>>>>> Stashed changes:Scenes/Levels/area_1.tscn
 position = Vector2(164, 139)
 >>>>>>> Stashed changes
 
@@ -653,6 +682,35 @@ position = Vector2(-27, -19)
 tile_map_data = PackedByteArray("AAAdABAAAwAAAAAAAAAeABEAAwAAAAAAAAAfABEAAwAAAAAAAAAgABIABAABAAAAAAAhABIABAACAAAAAAAiABMABAACAAIAAAAjABQAAwAAAAAAAAAkABQAAwAAAAAAAAAlABUAAwAAAAAAAAAmABYAAwAAAAAAAAAnABYAAwAAAAAAAAAoABcAAwAAAAAAAAApABcAAwAAAAAAAAAqABgAAwAAAAAAAAArABkAAwAAAAAAAAAsABkAAwAAAAAAAAAtABoAAwAAAAAAAAAcAA8AAwAAAAAAAAAcABAAAwAAAAAAAAAcABEAAwAAAAAAAAAcABIAAwAAAAAAAAAcABMAAwAAAAAAAAAcABQAAwAAAAAAAAAcABUABAABAAAAAAAcABYABAABAAIAAAAcABcAAwAAAAAAAAAcABgAAwAAAAAAAAAcABkAAwAAAAAAAAAcABoAAwAAAAAAAAAcABsAAwAAAAAAAAAdAA8AAwAAAAAAAAAdABEAAwAAAAAAAAAdABIAAwAAAAAAAAAdABMAAwAAAAAAAAAdABQAAwAAAAAAAAAdABUABAACAAAAAAAdABYABAACAAIAAAAdABcAAwAAAAAAAAAdABgAAwAAAAAAAAAdABkAAwAAAAAAAAAdABoAAwAAAAAAAAAdABsAAwAAAAAAAAAeAA8AAwAAAAAAAAAeABAAAwAAAAAAAAAeABIAAwAAAAAAAAAeABMAAwAAAAAAAAAeABQAAwAAAAAAAAAeABUABAACAAAAAAAeABYABAACAAIAAAAeABcAAwAAAAAAAAAeABgAAwAAAAAAAAAeABkAAwAAAAAAAAAeABoAAwAAAAAAAAAeABsAAwAAAAAAAAAfAA8AAwAAAAAAAAAfABAAAwAAAAAAAAAfABIAAwAAAAAAAAAfABMAAwAAAAAAAAAfABQAAwAAAAAAAAAfABUABAACAAAAAAAfABYABAACAAIAAAAfABcAAwAAAAAAAAAfABgAAwAAAAAAAAAfABkAAwAAAAAAAAAfABoAAwAAAAAAAAAfABsAAwAAAAAAAAAgAA8AAwAAAAAAAAAgABAAAwAAAAAAAAAgABEAAwAAAAAAAAAgABMABAABAAEAAAAgABQABAABAAEAAAAgABUABAAFAAEAAAAgABYABAACAAIAAAAgABcAAwAAAAAAAAAgABgAAwAAAAAAAAAgABkAAwAAAAAAAAAgABoAAwAAAAAAAAAgABsAAwAAAAAAAAAhAA8AAwAAAAAAAAAhABAAAwAAAAAAAAAhABEAAwAAAAAAAAAhABMABAAEAAAAAAAhABQABAADAAEAAAAhABUABAADAAEAAAAhABYABAADAAIAAAAhABcAAwAAAAAAAAAhABgAAwAAAAAAAAAhABkAAwAAAAAAAAAhABoAAwAAAAAAAAAhABsAAwAAAAAAAAAiAA8AAwAAAAAAAAAiABAAAwAAAAAAAAAiABEAAwAAAAAAAAAiABIABAACAAAAAAAiABQAAwAAAAAAAAAiABUAAwAAAAAAAAAiABYAAwAAAAAAAAAiABcAAwAAAAAAAAAiABgAAwAAAAAAAAAiABkAAwAAAAAAAAAiABoAAwAAAAAAAAAiABsAAwAAAAAAAAAjAA8AAwAAAAAAAAAjABAAAwAAAAAAAAAjABEAAwAAAAAAAAAjABIABAACAAAAAAAjABMABAACAAIAAAAjABUAAwAAAAAAAAAjABYAAwAAAAAAAAAjABcAAwAAAAAAAAAjABgAAQABAAAAAAAjABkAAQABAAEAAAAjABoAAQABAAEAAAAjABsAAQABAAEAAAAkAA8AAwAAAAAAAAAkABAAAwAAAAAAAAAkABEAAwAAAAAAAAAkABIABAACAAAAAAAkABMABAACAAIAAAAkABUAAwAAAAAAAAAkABYAAwAAAAAAAAAkABcAAwAAAAAAAAAkABgAAQACAAAAAAAkABkAAQACAAEAAAAkABoAAQACAAEAAAAkABsAAQACAAEAAAAlAA8AAwAAAAAAAAAlABAAAwAAAAAAAAAlABEAAwAAAAAAAAAlABIABAACAAAAAAAlABMABAACAAIAAAAlABQAAwAAAAAAAAAlABYAAwAAAAAAAAAlABcAAwAAAAAAAAAlABgAAQACAAAAAAAlABkAAQACAAEAAAAlABoAAQACAAEAAAAlABsAAQACAAEAAAAmAA8AAwAAAAAAAAAmABAAAwAAAAAAAAAmABEAAwAAAAAAAAAmABIABAACAAAAAAAmABMABAACAAIAAAAmABQAAwAAAAAAAAAmABUAAwAAAAAAAAAmABcAAwAAAAAAAAAmABgAAQADAAAAAAAmABkAAQADAAEAAAAmABoAAQADAAEAAAAmABsAAQADAAEAAAAnAA8ABAABAAAAAAAnABAABAABAAEAAAAnABEABAABAAEAAAAnABIABAAFAAEAAAAnABMABAACAAIAAAAnABQAAwAAAAAAAAAnABUAAwAAAAAAAAAnABcAAwAAAAAAAAAnABgAAwAAAAAAAAAnABkAAwAAAAAAAAAnABoAAwAAAAAAAAAnABsAAwAAAAAAAAAoAA8ABAADAAAAAAAoABAABAADAAEAAAAoABEABAADAAEAAAAoABIABAAEAAEAAAAoABMABAACAAIAAAAoABQAAwAAAAAAAAAoABUAAwAAAAAAAAAoABYAAwAAAAAAAAAoABgAAwAAAAAAAAAoABkAAwAAAAAAAAAoABoAAwAAAAAAAAAoABsAAwAAAAAAAAApAA8AAwAAAAAAAAApABAAAwAAAAAAAAApABEAAwAAAAAAAAApABIABAACAAAAAAApABMABAACAAIAAAApABQAAwAAAAAAAAApABUAAwAAAAAAAAApABYAAwAAAAAAAAApABgAAwAAAAAAAAApABkAAwAAAAAAAAApABoAAwAAAAAAAAApABsAAwAAAAAAAAAqAA8AAwAAAAAAAAAqABAAAwAAAAAAAAAqABEAAwAAAAAAAAAqABIABAACAAAAAAAqABMABAACAAIAAAAqABQAAwAAAAAAAAAqABUAAwAAAAAAAAAqABYAAwAAAAAAAAAqABcAAwAAAAAAAAAqABkAAwAAAAAAAAAqABoAAwAAAAAAAAAqABsAAwAAAAAAAAArAA8AAwAAAAAAAAArABAAAwAAAAAAAAArABEAAwAAAAAAAAArABIABAACAAAAAAArABMABAACAAIAAAArABQAAwAAAAAAAAArABUAAwAAAAAAAAArABYAAwAAAAAAAAArABcAAwAAAAAAAAArABgAAwAAAAAAAAArABoAAwAAAAAAAAArABsAAwAAAAAAAAAsAA8AAwAAAAAAAAAsABAAAwAAAAAAAAAsABEAAwAAAAAAAAAsABIABAACAAAAAAAsABMABAAFAAAAAAAsABQABAABAAEAAAAsABUABAABAAEAAAAsABYABAABAAIAAAAsABcAAwAAAAAAAAAsABgAAwAAAAAAAAAsABoAAwAAAAAAAAAsABsAAwAAAAAAAAAtAA8AAwAAAAAAAAAtABAAAwAAAAAAAAAtABEAAwAAAAAAAAAtABIABAACAAAAAAAtABMABAACAAEAAAAtABQABAACAAEAAAAtABUABAACAAEAAAAtABYABAACAAIAAAAtABcAAwAAAAAAAAAtABgAAwAAAAAAAAAtABkAAwAAAAAAAAAtABsAAwAAAAAAAAAuAA8AAwAAAAAAAAAuABAAAwAAAAAAAAAuABEAAwAAAAAAAAAuABIABAACAAAAAAAuABMABAACAAEAAAAuABQABAACAAEAAAAuABUABAACAAEAAAAuABYABAAFAAAAAAAuABcABAABAAEAAAAuABgABAABAAEAAAAuABkABAABAAEAAAAuABoABAABAAEAAAAuABsABAABAAIAAAAvAA8AAwAAAAAAAAAvABAAAwAAAAAAAAAvABEAAwAAAAAAAAAvABIABAADAAAAAAAvABMABAADAAEAAAAvABQABAADAAEAAAAvABUABAADAAEAAAAvABYABAADAAEAAAAvABcABAADAAEAAAAvABgABAADAAEAAAAvABkABAADAAEAAAAvABoABAADAAEAAAAvABsABAADAAIAAAAwAA8AAwAAAAAAAAAwABAAAwAAAAAAAAAwABEAAwAAAAAAAAAwABIAAwAAAAAAAAAwABMAAwAAAAAAAAAwABQAAwAAAAAAAAAwABUAAwAAAAAAAAAwABYAAwAAAAAAAAAwABcAAwAAAAAAAAAwABgAAwAAAAAAAAAwABkAAwAAAAAAAAAwABoAAwAAAAAAAAAwABsAAwAAAAAAAAAxAA8AAwAAAAAAAAAxABAAAwAAAAAAAAAxABEAAwAAAAAAAAAxABIAAwAAAAAAAAAxABMAAwAAAAAAAAAxABQAAwAAAAAAAAAxABUAAwAAAAAAAAAxABYAAwAAAAAAAAAxABcAAwAAAAAAAAAxABgAAwAAAAAAAAAxABkAAwAAAAAAAAAxABoAAwAAAAAAAAAxABsAAwAAAAAAAAA=")
 tile_set = SubResource("TileSet_5p0fg")
 
+<<<<<<< Updated upstream:Scenes/area_1.tscn
 [node name="Slime" parent="." instance=ExtResource("9_di6ls")]
 z_index = 4
 position = Vector2(540, 320)
+=======
+[node name="AngryFloof" parent="." instance=ExtResource("13_88upg")]
+z_as_relative = false
+position = Vector2(288, 246)
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("14_0htsb")]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(430, 128)
+
+[node name="LevelTransition" parent="." instance=ExtResource("15_iy4w2")]
+z_as_relative = false
+position = Vector2(464, 304)
+level = "uid://bkoe6mc2kiurv"
+target_transition_area = "LevelTransition2"
+side = 3
+
+[node name="SavePoint" parent="." instance=ExtResource("17_bl5d6")]
+z_as_relative = false
+position = Vector2(431, 293)
+
+[node name="GreenGloop" parent="." instance=ExtResource("18_30j8n")]
+position = Vector2(296, 128)
+
+[node name="GreenGloop2" parent="." instance=ExtResource("18_30j8n")]
+position = Vector2(69, 210)
+>>>>>>> Stashed changes:Scenes/Levels/area_1.tscn

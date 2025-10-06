@@ -1,8 +1,12 @@
+<<<<<<< Updated upstream:Scenes/slime.tscn
 <<<<<<< Updated upstream
 [gd_scene load_steps=29 format=3 uid="uid://ex424qjj2be3"]
 =======
 [gd_scene load_steps=30 format=3 uid="uid://ex424qjj2be3"]
 >>>>>>> Stashed changes
+=======
+[gd_scene load_steps=33 format=3 uid="uid://ex424qjj2be3"]
+>>>>>>> Stashed changes:Scenes/Enemies/slime.tscn
 
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/slime.gd" id="1_5gljc"]
 [ext_resource type="Texture2D" uid="uid://cdyi0xpnhdbew" path="res://Sprites/characters/slime.png" id="1_jokqx"]
@@ -15,6 +19,14 @@
 [ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/slime_state_death.gd" id="9_c7ij5"]
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="9_psnrq"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="10_y26kt"]
+<<<<<<< Updated upstream:Scenes/slime.tscn
+=======
+[ext_resource type="PackedScene" uid="uid://chfp0fpb1rxx8" path="res://GUI/Player_HUD/damage_numbers.tscn" id="12_cp62l"]
+[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="13_hphkj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10642"]
+radius = 7.0
+>>>>>>> Stashed changes:Scenes/Enemies/slime.tscn
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vblni"]
 radius = 6.0
@@ -453,6 +465,7 @@ script = ExtResource("9_c7ij5")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
+<<<<<<< Updated upstream:Scenes/slime.tscn
 [node name="HitBox" parent="." instance=ExtResource("10_y26kt")]
 collision_layer = 64
 collision_mask = 0
@@ -471,3 +484,22 @@ collision_mask = 0
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_10642")
 debug_color = Color(0.9875826, 0.06837226, 0.22504988, 0.41960785)
+=======
+[node name="DamageNumbersOrigin" parent="." instance=ExtResource("12_cp62l")]
+position = Vector2(0, -17)
+
+[node name="EnemyName" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -12.0
+offset_top = -25.0
+offset_right = 13.0
+offset_bottom = -14.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("13_hphkj")
+theme_override_font_sizes/font_size = 7
+text = "Enemy"
+horizontal_alignment = 1
+vertical_alignment = 1
+>>>>>>> Stashed changes:Scenes/Enemies/slime.tscn

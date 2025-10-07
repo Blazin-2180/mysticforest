@@ -1,7 +1,8 @@
+HBoxContainer
+Label
 AnimationPlayer
 VBoxContainer
 Button
-Label
 ColorRect
 Control
 Node

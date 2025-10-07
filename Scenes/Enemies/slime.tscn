@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://ex424qjj2be3"]
+[gd_scene load_steps=33 format=3 uid="uid://ex424qjj2be3"]
 
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_5gljc"]
 [ext_resource type="Texture2D" uid="uid://cdyi0xpnhdbew" path="res://Sprites/characters/slime.png" id="1_jokqx"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="9_psnrq"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="10_y26kt"]
 [ext_resource type="PackedScene" uid="uid://chfp0fpb1rxx8" path="res://GUI/Player_HUD/damage_numbers.tscn" id="12_cp62l"]
+[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="13_hphkj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_10642"]
 radius = 7.0
@@ -475,3 +476,23 @@ bus = &"SFX"
 
 [node name="DamageNumbersOrigin" parent="." instance=ExtResource("12_cp62l")]
 position = Vector2(0, -17)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = -19.0
+offset_top = -39.0
+offset_right = 22.0
+offset_bottom = 1.0
+
+[node name="EnemyLevel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("13_hphkj")
+theme_override_font_sizes/font_size = 8
+text = "99"
+
+[node name="NameLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("13_hphkj")
+theme_override_font_sizes/font_size = 6
+text = "Enemy"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -23,9 +23,9 @@ func add_player_instance () -> void :
 	add_child( player )
 	pass
 
-func set_health(health_points : int, max_health_points : int ) -> void:
-	max_health_points = max_health_points
-	health_points = health_points
+func set_health(_health_points : int, _max_health_points : int ) -> void:
+	max_health_points = _max_health_points
+	health_points = _health_points
 	PlayerHud.update_health_points()
 
 func set_player_position( _new_position : Vector2) -> void :

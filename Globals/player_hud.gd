@@ -10,7 +10,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	hide_death_screen()
+	#hide_death_screen()
 	health_bar.value = GlobalPlayerManager.health_points
 	hp_label.text = str(GlobalPlayerManager.health_points, "/", GlobalPlayerManager.max_health_points)
 	pass
@@ -23,14 +23,14 @@ func update_health_points() -> void :
 	hp_label.text = str(GlobalPlayerManager.health_points, "/", GlobalPlayerManager.max_health_points)
 	pass
 
-func show_death_screen() -> void :
-	death.visible = true
-	death.mouse_filter = Control.MOUSE_FILTER_STOP
-	animation_player.play("show_death")
-	await animation_player.animation_finished
+#func show_death_screen() -> void :
+	#death.visible = true
+	#death.mouse_filter = Control.MOUSE_FILTER_STOP
+	#animation_player.play("show_death")
+	#await animation_player.animation_finished
 
-func hide_death_screen() -> void :
-	death.visible = false
-	death.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	death.modulate = Color(1,1,1, 0)
-	pass
+#func hide_death_screen() -> void :
+	#death.visible = false
+	#death.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	#death.modulate = Color(1,1,1, 0)
+	#pass

@@ -1,9 +1,8 @@
 class_name State_Death extends State
 
-@export var exhaust_audio : AudioStream
+@onready var idle : State_Idle = $"../Idle"
 
-@onready var audio: AudioStreamPlayer2D = $"../../AudioStreamPlayer2D"
-
+var next_state : State_Idle = null
 
 func init () -> void :
 	pass
@@ -11,12 +10,9 @@ func init () -> void :
 # What happens when the player enters this state ?
 func enter() -> void:
 	player.animation_player.play("death_down")
-	audio.stream = exhaust_audio
-	audio.play()
-	#Trigger You Have Died
-	PlayerHud.show_death_screen()
-	#AudioManager.play_music(null)
-	
+	#PlayerHud.show_death_screen()
+	await player.animation_player.animation_finished
+	respawn()
 	pass
 
 # What happens when the player exits this state ?
@@ -31,7 +27,13 @@ func process (_delta : float) -> State :
 # What happens during the physics process update in this State ?
 func physics( _delta : float ) -> State :
 	return null
-
+	
+func respawn () -> void : 
+	GlobalSaveManager.load_game()
+	GlobalPlayerManager.health_points = GlobalPlayerManager.max_health_points
+	next_state = idle
+	pass
+	
 # What happens with input events in this state ?
 func handle_input ( _event : InputEvent ) -> State :
 	return null

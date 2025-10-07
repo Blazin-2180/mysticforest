@@ -314,18 +314,21 @@ color = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.39400002
+anchor_top = 0.38518518
 anchor_right = 0.5
-anchor_bottom = 0.39400002
+anchor_bottom = 0.38518518
 offset_left = -267.5
-offset_top = -40.52002
+offset_top = -31.0
 offset_right = 267.5
-offset_bottom = 41.47998
+offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_gian7")
 theme_override_font_sizes/font_size = 64
 text = "You Have Died!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/Death"]
 layout_mode = 1
@@ -337,7 +340,7 @@ anchor_bottom = 0.5
 offset_left = -138.75
 offset_top = -61.0
 offset_right = 138.75
-offset_bottom = 41.00244
+offset_bottom = 41.002197
 grow_horizontal = 2
 grow_vertical = 2
 

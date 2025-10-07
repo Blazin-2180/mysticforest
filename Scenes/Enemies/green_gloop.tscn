@@ -1,16 +1,16 @@
 [gd_scene load_steps=31 format=3 uid="uid://ko0e6lwp7y65"]
 
-[ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_5gktn"]
-[ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="2_p30al"]
-[ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="3_i2upf"]
-[ext_resource type="Texture2D" uid="uid://b4gf2j13ybaev" path="res://Sprites/characters/greenslimes.png" id="4_5gktn"]
-[ext_resource type="AudioStream" uid="uid://by3w8hqduffhb" path="res://Audio/slimedeath.wav" id="5_1ahwl"]
-[ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/Enemies/enemy_state_machine.gd" id="6_au7rt"]
-[ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/Enemies/enemy_state_idle.gd" id="7_r4lo5"]
-[ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="8_j0e3i"]
-[ext_resource type="Script" uid="uid://brrsbrj7v7ght" path="res://Scripts/Enemies/enemy_state_stun.gd" id="9_b30uj"]
-[ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/Enemies/enemy_state_death.gd" id="10_uon5e"]
-[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="11_p30al"]
+[ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_lx6oe"]
+[ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="2_ev7co"]
+[ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="3_lowbq"]
+[ext_resource type="Texture2D" uid="uid://b4gf2j13ybaev" path="res://Sprites/characters/greenslimes.png" id="4_vib7w"]
+[ext_resource type="AudioStream" uid="uid://by3w8hqduffhb" path="res://Audio/slimedeath.wav" id="5_i0e5b"]
+[ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/Enemies/enemy_state_machine.gd" id="6_lvr6c"]
+[ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/Enemies/enemy_state_idle.gd" id="7_0f0ti"]
+[ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="8_7f3j6"]
+[ext_resource type="Script" uid="uid://brrsbrj7v7ght" path="res://Scripts/Enemies/enemy_state_stun.gd" id="9_jl70i"]
+[ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/Enemies/enemy_state_death.gd" id="10_ayxia"]
+[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="11_20umf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_10642"]
 radius = 7.0
@@ -139,7 +139,7 @@ tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_1ahwl")
+"stream": ExtResource("5_i0e5b")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -170,7 +170,7 @@ tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_1ahwl")
+"stream": ExtResource("5_i0e5b")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -201,7 +201,7 @@ tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_1ahwl")
+"stream": ExtResource("5_i0e5b")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -440,17 +440,17 @@ y_sort_enabled = true
 collision_layer = 64
 collision_mask = 131
 motion_mode = 1
-script = ExtResource("1_5gktn")
+script = ExtResource("1_lx6oe")
 enemy_name = "Green Gloop"
 
-[node name="HurtBox" parent="." instance=ExtResource("2_p30al")]
+[node name="HurtBox" parent="." instance=ExtResource("2_ev7co")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_10642")
 debug_color = Color(0.9875826, 0.06837226, 0.22504988, 0.41960785)
 
-[node name="HitBox" parent="." instance=ExtResource("3_i2upf")]
+[node name="HitBox" parent="." instance=ExtResource("3_lowbq")]
 collision_layer = 64
 collision_mask = 0
 
@@ -461,7 +461,7 @@ debug_color = Color(0.49352223, 0.54548895, 0.5766261, 0.41960785)
 
 [node name="EnemySprite" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
-texture = ExtResource("4_5gktn")
+texture = ExtResource("4_vib7w")
 hframes = 5
 vframes = 3
 
@@ -476,23 +476,23 @@ libraries = {
 autoplay = "idle_down"
 
 [node name="EnemyStateMachine" type="Node" parent="."]
-script = ExtResource("6_au7rt")
+script = ExtResource("6_lvr6c")
 
 [node name="Idle" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("after_idle_state")]
-script = ExtResource("7_r4lo5")
+script = ExtResource("7_0f0ti")
 after_idle_state = NodePath("../Wander")
 
 [node name="Wander" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
-script = ExtResource("8_j0e3i")
+script = ExtResource("8_7f3j6")
 state_animation_duration = 0.6
 next_state = NodePath("../Idle")
 
 [node name="Stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
-script = ExtResource("9_b30uj")
+script = ExtResource("9_jl70i")
 next_state = NodePath("../Idle")
 
 [node name="Death" type="Node" parent="EnemyStateMachine"]
-script = ExtResource("10_uon5e")
+script = ExtResource("10_ayxia")
 animation_name = null
 knockback_speed = null
 decelerate_speed = null
@@ -507,13 +507,13 @@ offset_right = 21.0
 
 [node name="EnemyLevel" type="Label" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("11_p30al")
+theme_override_fonts/font = ExtResource("11_20umf")
 theme_override_font_sizes/font_size = 8
 text = "99"
 
 [node name="NameLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("11_p30al")
+theme_override_fonts/font = ExtResource("11_20umf")
 theme_override_font_sizes/font_size = 6
 text = "Enemy"
 horizontal_alignment = 1

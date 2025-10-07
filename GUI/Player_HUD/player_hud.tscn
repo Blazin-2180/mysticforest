@@ -293,6 +293,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Death" type="Control" parent="Control"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15

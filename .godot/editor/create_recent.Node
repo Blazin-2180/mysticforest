@@ -1,7 +1,8 @@
+VBoxContainer
+ProgressBar
 HBoxContainer
 Label
 AnimationPlayer
-VBoxContainer
 Button
 ColorRect
 Control
@@ -11,5 +12,3 @@ Area2D
 CollisionShape2D
 Sprite2D
 CanvasLayer
-Camera2D
-FollowComponent

@@ -23,8 +23,9 @@ var invulnerable : bool = false
 @onready var hit_box: HitBox = $HitBox
 @onready var enemy_state_machine: Node = $EnemyStateMachine
 @onready var damage_numbers_origin = $DamageNumbersOrigin
-@onready var name_label: Label = $HBoxContainer/NameLabel
-@onready var enemy_level: Label = $HBoxContainer/EnemyLevel
+@onready var name_label: Label = $VBoxContainer/NameLabel
+#@onready var enemy_level: Label = $HBoxContainer/EnemyLevel
+@onready var health_bar: ProgressBar = $VBoxContainer/ProgressBar
 
 func _ready() -> void:
 	enemy_state_machine.inititalise ( self )
@@ -32,7 +33,9 @@ func _ready() -> void:
 	hit_box.damaged.connect( _take_damage )
 	experience_points = level * 2
 	name_label.text = enemy_name
-	enemy_level.text = str(level)
+	#enemy_level.text = str(level)
+	health_bar.max_value = health_points
+	health_bar.value = health_points
 	pass
 
 func _process ( _delta : float ) -> void:
@@ -78,6 +81,7 @@ func _take_damage ( hurt_box : HurtBox ) -> void :
 		return
 	health_points -= hurt_box.damage
 	DamageNumbers.display_numbers(hurt_box.damage, damage_numbers_origin.global_position)
+	health_bar.value = health_points
 	if health_points > 0 :
 		enemy_damaged.emit( hurt_box )
 	else:

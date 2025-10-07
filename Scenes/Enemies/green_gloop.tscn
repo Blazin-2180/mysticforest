@@ -506,6 +506,7 @@ offset_top = -40.0
 offset_right = 21.0
 
 [node name="EnemyLevel" type="Label" parent="HBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_fonts/font = ExtResource("11_20umf")
 theme_override_font_sizes/font_size = 8

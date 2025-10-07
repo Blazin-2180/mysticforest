@@ -1,8 +1,9 @@
 class_name State_Death extends State
 
 @onready var idle : State_Idle = $"../Idle"
+@onready var death: State_Death = $"../Death"
 
-var next_state : State = null
+var next_state : State = death
 
 func init () -> void :
 	pass

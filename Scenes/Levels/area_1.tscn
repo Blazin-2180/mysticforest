@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=30 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="PackedScene" uid="uid://w4wsau01imdh" path="res://Scenes/Bonbon/bonbon.tscn" id="2_6xvxw"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://sx10ttkyxwwi" path="res://Scenes/Levels/player_spawn.tscn" id="14_0htsb"]
 [ext_resource type="PackedScene" uid="uid://dgytq2fju16h8" path="res://Scenes/Levels/level_transition.tscn" id="15_iy4w2"]
 [ext_resource type="PackedScene" uid="uid://bfw0dhtlicetb" path="res://Scenes/Levels/save_point.tscn" id="17_bl5d6"]
+[ext_resource type="PackedScene" uid="uid://ko0e6lwp7y65" path="res://Scenes/Enemies/green_gloop.tscn" id="18_30j8n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wpi7"]
 texture = ExtResource("4_8byil")
@@ -649,6 +650,7 @@ y_sort_enabled = true
 position = Vector2(204, 175)
 
 [node name="Slime" parent="." instance=ExtResource("3_1k8w3")]
+visible = false
 z_index = 4
 z_as_relative = false
 position = Vector2(164, 139)
@@ -686,5 +688,7 @@ side = 3
 
 [node name="SavePoint" parent="." instance=ExtResource("17_bl5d6")]
 z_as_relative = false
-y_sort_enabled = true
 position = Vector2(431, 293)
+
+[node name="GreenGloop" parent="." instance=ExtResource("18_30j8n")]
+position = Vector2(280, 113)

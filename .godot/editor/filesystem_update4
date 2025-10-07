@@ -7,3 +7,4 @@ res://Scenes/Enemies/green_slime.tscn
 res://Globals/player_hud.gd
 res://Scripts/Player/state_death.gd
 res://Scenes/Enemies/green_gloop.tscn
+res://Scenes/Levels/area_1.tscn

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://buj7g0kdkywyt"]
+
+[ext_resource type="Script" uid="uid://b4h3excicddvf" path="res://GUI/Inventory/inventory.gd" id="1_btv15"]
+
+[node name="Inventory" type="CanvasLayer"]
+script = ExtResource("1_btv15")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -226.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.15686275, 0.14509805, 0.14117648, 0.77254903)

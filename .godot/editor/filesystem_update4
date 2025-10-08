@@ -1,12 +1,2 @@
-res://GUI/Player_HUD/player_hud.tscn
-res://Globals/global_player_manager.gd
-res://Scenes/Enemies/angry_floof.tscn
-res://Scripts/Enemies/enemy.gd
-res://Scenes/Enemies/slime.tscn
-res://Scenes/Enemies/green_slime.tscn
-res://Globals/player_hud.gd
-res://Scripts/Player/state_death.gd
-res://Scenes/Enemies/green_gloop.tscn
-res://Scenes/Levels/area_1.tscn
-res://Scenes/Player/player.tscn
-res://Scripts/Player/player.gd
+res://GUI/Inventory/inventory.gd
+res://GUI/Inventory/inventory.tscn

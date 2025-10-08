@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bbsj5phjad5en"]
+
+[ext_resource type="Script" uid="uid://bhtwlxtfik0ii" path="res://Items/Scripts/item_data.gd" id="1_hw0jr"]
+[ext_resource type="Texture2D" uid="uid://ckrhrrycwenp2" path="res://Items/Sprites/health_potion.png" id="2_5vqjr"]
+
+[resource]
+script = ExtResource("1_hw0jr")
+name = "Potion"
+description = "Heals you for half your health. One day. Maybe. "
+texture = ExtResource("2_5vqjr")
+metadata/_custom_type_script = "uid://bhtwlxtfik0ii"

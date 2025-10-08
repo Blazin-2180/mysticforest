@@ -1,14 +1,14 @@
+ColorRect
+CanvasLayer
 VBoxContainer
 ProgressBar
 HBoxContainer
 Label
 AnimationPlayer
 Button
-ColorRect
 Control
 Node
 Timer
 Area2D
 CollisionShape2D
 Sprite2D
-CanvasLayer

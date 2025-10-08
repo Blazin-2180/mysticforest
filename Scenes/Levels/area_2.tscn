@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bkoe6mc2kiurv"]
+[gd_scene load_steps=25 format=4 uid="uid://bkoe6mc2kiurv"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_by3mk"]
 [ext_resource type="PackedScene" uid="uid://sx10ttkyxwwi" path="res://Scenes/Levels/player_spawn.tscn" id="2_brl48"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d0pu8hjyc86ad" path="res://Sprites/tilesets/decor_8x8.png" id="10_gx01m"]
 [ext_resource type="Texture2D" uid="uid://dtuify18dehpn" path="res://Sprites/tilesets/decor_16x16.png" id="11_dfo7w"]
 [ext_resource type="PackedScene" uid="uid://dgytq2fju16h8" path="res://Scenes/Levels/level_transition.tscn" id="12_el205"]
+[ext_resource type="PackedScene" uid="uid://cg717qsjfk2io" path="res://Scenes/Enemies/angry_floof.tscn" id="13_lsd8x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4via2"]
 texture = ExtResource("3_xg5k7")
@@ -763,3 +764,15 @@ side = 3
 position = Vector2(16, 16)
 level = "uid://bpvi0vlqqdiw1"
 side = 2
+
+[node name="AngryFloof" parent="." instance=ExtResource("13_lsd8x")]
+position = Vector2(178, 54)
+
+[node name="AngryFloof2" parent="." instance=ExtResource("13_lsd8x")]
+position = Vector2(157, 188)
+
+[node name="AngryFloof3" parent="." instance=ExtResource("13_lsd8x")]
+position = Vector2(206, 282)
+
+[node name="AngryFloof4" parent="." instance=ExtResource("13_lsd8x")]
+position = Vector2(241, 169)

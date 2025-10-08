@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cg717qsjfk2io"]
+[gd_scene load_steps=31 format=3 uid="uid://cg717qsjfk2io"]
 
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="1_ggggf"]
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_wohw0"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="7_62558"]
 [ext_resource type="Script" uid="uid://brrsbrj7v7ght" path="res://Scripts/Enemies/enemy_state_stun.gd" id="8_8ggiy"]
 [ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/Enemies/enemy_state_death.gd" id="9_ys3wi"]
-[ext_resource type="Script" uid="uid://be7u36jqs6ewc" path="res://Scripts/Enemies/follow_component.gd" id="11_1du7y"]
 [ext_resource type="PackedScene" uid="uid://chfp0fpb1rxx8" path="res://GUI/Player_HUD/damage_numbers.tscn" id="12_fkw3n"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="13_62558"]
 
@@ -562,9 +561,6 @@ _data = {
 &"walk_up": SubResource("Animation_fkw3n")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1du7y"]
-radius = 51.009804
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62558"]
 bg_color = Color(0.2123048, 0.21230489, 0.21230471, 1)
 
@@ -577,9 +573,8 @@ collision_layer = 64
 collision_mask = 195
 script = ExtResource("1_wohw0")
 enemy_name = "Angry Floof"
-health_points = 4
-level = 2
-experience_points = 2
+health_points = 5
+experience_points = 3
 aggressive = true
 
 [node name="HurtBox" parent="." instance=ExtResource("1_ggggf")]
@@ -642,17 +637,6 @@ animation_name = null
 knockback_speed = null
 decelerate_speed = null
 
-[node name="FollowComponent" type="Node" parent="."]
-script = ExtResource("11_1du7y")
-
-[node name="FollowArea" type="Area2D" parent="."]
-collision_layer = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FollowArea"]
-position = Vector2(0, -21)
-shape = SubResource("CircleShape2D_1du7y")
-debug_color = Color(0.61086506, 0.5322444, 0.2444644, 0.41960785)
-
 [node name="DamageNumbersOrigin" parent="." instance=ExtResource("12_fkw3n")]
 position = Vector2(0, -41)
 
@@ -685,6 +669,3 @@ theme_override_styles/background = SubResource("StyleBoxFlat_62558")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8ggiy")
 value = 50.0
 show_percentage = false
-
-[connection signal="body_entered" from="FollowArea" to="FollowComponent" method="_on_follow_area_body_entered"]
-[connection signal="body_exited" from="FollowArea" to="FollowComponent" method="_on_follow_area_body_exited"]

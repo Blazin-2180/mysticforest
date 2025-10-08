@@ -8,3 +8,5 @@ res://Globals/player_hud.gd
 res://Scripts/Player/state_death.gd
 res://Scenes/Enemies/green_gloop.tscn
 res://Scenes/Levels/area_1.tscn
+res://Scenes/Player/player.tscn
+res://Scripts/Player/player.gd

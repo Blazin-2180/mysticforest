@@ -3,7 +3,7 @@ class_name State_Death extends State
 @onready var idle : State_Idle = $"../Idle"
 @onready var death: State_Death = $"../Death"
 
-var next_state : State = death
+var next_state : State = null
 
 func init () -> void :
 	pass
@@ -32,8 +32,8 @@ func physics( _delta : float ) -> State :
 func respawn () -> void : 
 	GlobalSaveManager.load_game()
 	GlobalPlayerManager.health_points = GlobalPlayerManager.max_health_points
-	if GlobalPlayerManager.health_points > 0 :
-		next_state = idle
+	#if GlobalPlayerManager.health_points > 0 :
+	next_state = idle
 	pass
 	
 # What happens with input events in this state ?

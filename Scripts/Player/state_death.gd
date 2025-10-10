@@ -31,9 +31,7 @@ func physics( _delta : float ) -> State :
 	
 func respawn () -> void : 
 	GlobalSaveManager.load_game()
-	GlobalPlayerManager.health_points = GlobalPlayerManager.max_health_points
-	#if GlobalPlayerManager.health_points > 0 :
-	next_state = idle
+	GlobalPlayerManager.player.state_machine.change_state( idle )
 	pass
 	
 # What happens with input events in this state ?

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1759885064
+::res://::1760126881
 default_bus_layout.tres::AudioBusLayout::4607572780211055496::1759422413::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1759595664::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::5303250123786392844::1759422413::1759422413::1::::<><><>0<>0<>66d50139fac29e5d34c31f0e0530bceb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -25,9 +25,9 @@ global_player_manager.gd::GDScript::6829512893203737909::1759864070::0::1::::<>N
 global_save_manager.gd::GDScript::5176101395501779439::1759590364::0::1::::<>Node<><>0<>0<><>::
 player_hud.gd::GDScript::3677750107377093370::1759873834::0::1::::<>CanvasLayer<><>0<>0<><>::
 ::res://GUI/::1759882943
-::res://GUI/Inventory/::1759884892
-inventory.gd::GDScript::4438056223940479507::1759884739::0::1::::<>CanvasLayer<><>0<>0<><>::
-inventory.tscn::PackedScene::3810731943454679899::1759884892::0::1::::<><><>0<>0<><>::uid://b4h3excicddvf::::res://GUI/Inventory/inventory.gd
+::res://GUI/Inventory/::1759885608
+inventory.gd::GDScript::4438056223940479507::1759885608::0::1::::<>CanvasLayer<><>0<>0<><>::
+inventory.tscn::PackedScene::3810731943454679899::1759885576::0::1::::<><><>0<>0<><>::uid://b4h3excicddvf::::res://GUI/Inventory/inventory.gd
 player_inventory.tres::Resource/InventoryData::5905353459858810420::1759883310::0::1::::<><><>0<>0<><>::uid://b1x2fieglm60r::::res://GUI/Inventory/Scripts/inventory_data.gd<>uid://b75cnnxj5xvkt::::res://GUI/Inventory/Scripts/slot_data.gd<>uid://bbsj5phjad5en::::res://Items/potion.tres
 ::res://GUI/Inventory/Scripts/::1759883101
 inventory_data.gd::GDScript::4260460021053376303::1759883101::0::1::::InventoryData<>Resource<><>0<>0<><>::

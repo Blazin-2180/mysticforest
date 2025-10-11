@@ -1,6 +1,17 @@
 extends CanvasLayer
 
+#region /// Variables
 var inventory_show : bool = false
+#endregion
+
+#region /// On Ready Variables
+@onready var inventory_slot: Button = $Control/ColorRect/Panel/GridContainer/InventorySlot
+#endregion
+
+#region /// Signals
+signal shown
+signal hidden
+#endregion
 
 func _ready() -> void:
 	hide_inventory()
@@ -17,9 +28,11 @@ func _unhandled_input ( event : InputEvent ) -> void:
 func show_inventory () -> void :
 	visible = true
 	inventory_show = true
+	shown.emit()
 	print("show")
 
 func hide_inventory () -> void : 
 	visible = false
 	inventory_show = false
+	hidden.emit()
 	print("hide")

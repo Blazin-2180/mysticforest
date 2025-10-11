@@ -1,2 +1,6 @@
-res://Scripts/Player/state_death.gd
+res://Scenes/Levels/area_1.tscn
+res://Scenes/grass.tscn
+res://GUI/Inventory/inventory_slot.tscn
 res://GUI/Inventory/inventory.tscn
+res://GUI/Inventory/inventory.gd
+res://GUI/Inventory/Scripts/inventory_ui.gd

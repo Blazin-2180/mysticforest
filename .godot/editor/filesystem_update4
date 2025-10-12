@@ -19,3 +19,4 @@ res://Items/Item_Pickup/item_pickup.gd
 res://Items/Item_Effects/item_effect.gd
 res://Items/Item_Effects/item_effect_heal.gd
 res://Items/Scripts/item_data.gd
+res://GUI/Inventory/Scripts/slot_data.gd

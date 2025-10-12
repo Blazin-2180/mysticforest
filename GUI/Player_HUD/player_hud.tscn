@@ -276,7 +276,6 @@ max_value = 6.0
 show_percentage = false
 
 [node name="HealthPoints" type="Label" parent="Control/HealthBar"]
-visible = false
 top_level = true
 z_as_relative = false
 y_sort_enabled = true

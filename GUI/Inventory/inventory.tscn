@@ -42,7 +42,6 @@ offset_right = 1647.0
 offset_bottom = 916.0
 theme_override_fonts/font = ExtResource("6_2cw0n")
 theme_override_font_sizes/font_size = 12
-text = "Description blah blah blah"
 horizontal_alignment = 3
 autowrap_mode = 3
 justification_flags = 161

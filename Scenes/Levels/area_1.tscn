@@ -693,5 +693,9 @@ position = Vector2(296, 267)
 position = Vector2(134, 176)
 
 [node name="ItemPickup" parent="." instance=ExtResource("17_30j8n")]
-position = Vector2(225, 169)
+position = Vector2(385, 204)
+item_data = ExtResource("18_boegt")
+
+[node name="ItemPickup2" parent="." instance=ExtResource("17_30j8n")]
+position = Vector2(224, 163)
 item_data = ExtResource("18_boegt")

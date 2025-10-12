@@ -1,6 +1,8 @@
-res://Globals/global_player_manager.gd
-res://Scenes/Enemies/angry_floof.tscn
+res://GUI/Inventory/inventory_slot.tscn
 res://Items/potion.tres
-res://Scenes/Enemies/green_gloop.tscn
-res://Scenes/Levels/area_1.tscn
-res://Scripts/Levels/level_transition.gd
+res://GUI/Inventory/inventory.gd
+res://Items/Scripts/item_data.gd
+res://Items/Item_Effects/item_effect_heal.gd
+res://Globals/global_save_manager.gd
+res://GUI/Inventory/Scripts/inventory_data.gd
+res://GUI/PauseMenu/pause_menu.gd

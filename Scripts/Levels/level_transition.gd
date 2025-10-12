@@ -36,8 +36,6 @@ func _ready() -> void:
 	await GlobalLevelManager.level_loaded
 	monitoring = true
 	
-	#await get_tree().physics_frame
-	#await get_tree().physics_frame
 	await get_tree().create_timer(0.2).timeout
 	body_entered.connect( _player_entered )
 	

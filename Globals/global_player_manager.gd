@@ -3,6 +3,8 @@ extends Node
 const PLAYER = preload("uid://d3qi426qtce4j")
 const INVENTORY_DATA : InventoryData = preload("res://GUI/Inventory/player_inventory.tres")
 
+signal interact_pressed
+
 var player : Player
 var health_points : int = 6
 var max_health_points : int = 6

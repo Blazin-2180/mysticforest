@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bts2km6wnynti"]
+
+[ext_resource type="Script" uid="uid://6ibyy16ft63t" path="res://GeneralNodes/ItemMagnet/item_magnet.gd" id="1_pyc5j"]
+
+[node name="ItemMagnet" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_pyc5j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

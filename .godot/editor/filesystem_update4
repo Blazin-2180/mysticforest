@@ -22,3 +22,5 @@ res://Items/Item_Effects/item_effect_heal.gd
 res://Scenes/Enemies/vision_area.tscn
 res://Scripts/Enemies/vision_area.gd
 res://Scripts/Enemies/enemy_state_chase.gd
+res://GeneralNodes/ItemMagnet/item_magnet.tscn
+res://GeneralNodes/ItemMagnet/item_magnet.gd

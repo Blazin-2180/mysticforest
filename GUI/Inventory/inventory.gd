@@ -6,6 +6,8 @@ var inventory_show : bool = false
 
 #region /// On Ready Variables
 @onready var inventory_slot: Button = $Control/ColorRect/Panel/GridContainer/InventorySlot
+@onready var item_description: Label = $Control/ItemDescription
+
 #endregion
 
 #region /// Signals
@@ -36,3 +38,6 @@ func hide_inventory () -> void :
 	inventory_show = false
 	hidden.emit()
 	print("hide")
+
+func update_item_description (new_text : String) -> void :
+	item_description.text = new_text

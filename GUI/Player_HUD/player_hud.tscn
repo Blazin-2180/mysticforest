@@ -260,7 +260,7 @@ mouse_filter = 1
 [node name="HealthBar" type="ProgressBar" parent="Control"]
 z_as_relative = false
 y_sort_enabled = true
-custom_minimum_size = Vector2(100, 10)
+custom_minimum_size = Vector2(200, 20)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0

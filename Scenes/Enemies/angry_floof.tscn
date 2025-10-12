@@ -642,10 +642,10 @@ position = Vector2(0, -41)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 1
-offset_left = -22.0
-offset_top = -55.0
-offset_right = 19.0
-offset_bottom = -15.0
+offset_left = -33.0
+offset_top = -69.0
+offset_right = 40.0
+offset_bottom = -29.0
 
 [node name="EnemyLevel" type="Label" parent="VBoxContainer"]
 visible = false
@@ -657,8 +657,8 @@ text = "99"
 [node name="NameLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("13_62558")
-theme_override_font_sizes/font_size = 6
-text = "Enemy"
+theme_override_font_sizes/font_size = 12
+text = "Angry Floof"
 horizontal_alignment = 1
 vertical_alignment = 1
 

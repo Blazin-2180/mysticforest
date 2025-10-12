@@ -512,10 +512,10 @@ position = Vector2(0, -17)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 1
-offset_left = -19.0
-offset_top = -34.0
-offset_right = 20.0
-offset_bottom = -3.0
+offset_left = -35.0
+offset_top = -46.0
+offset_right = 40.0
+offset_bottom = -15.0
 
 [node name="EnemyLevel" type="Label" parent="VBoxContainer"]
 visible = false
@@ -527,8 +527,8 @@ text = "99"
 [node name="NameLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("11_20umf")
-theme_override_font_sizes/font_size = 6
-text = "Enemy"
+theme_override_font_sizes/font_size = 12
+text = "Green Gloop"
 horizontal_alignment = 1
 vertical_alignment = 1
 

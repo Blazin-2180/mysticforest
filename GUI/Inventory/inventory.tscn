@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://buj7g0kdkywyt"]
+[gd_scene load_steps=9 format=3 uid="uid://buj7g0kdkywyt"]
 
 [ext_resource type="Script" uid="uid://b4h3excicddvf" path="res://GUI/Inventory/inventory.gd" id="1_btv15"]
 [ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="2_ewc0g"]
 [ext_resource type="PackedScene" uid="uid://cuv6ed6yntyvs" path="res://GUI/Inventory/inventory_slot.tscn" id="3_lgn1t"]
 [ext_resource type="Script" uid="uid://da20w1rpa8yuy" path="res://GUI/Inventory/Scripts/inventory_ui.gd" id="3_wlp85"]
+[ext_resource type="Resource" uid="uid://cqeukq4gf601u" path="res://GUI/Inventory/player_inventory.tres" id="4_wlp85"]
+[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="6_2cw0n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wlp85"]
 atlas = ExtResource("2_ewc0g")
@@ -32,30 +34,47 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="ItemDescription" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1555.0
+offset_top = 809.0
+offset_right = 1647.0
+offset_bottom = 916.0
+theme_override_fonts/font = ExtResource("6_2cw0n")
+theme_override_font_sizes/font_size = 12
+text = "Description blah blah blah"
+horizontal_alignment = 3
+autowrap_mode = 3
+justification_flags = 161
+uppercase = true
+
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -229.0
-offset_right = -3.0
+offset_left = -269.0
+offset_top = 239.0
+offset_right = -43.0
+offset_bottom = -146.0
 grow_horizontal = 0
 grow_vertical = 2
 color = Color(0.15686275, 0.14509805, 0.14117648, 0.77254903)
 
 [node name="Panel" type="PanelContainer" parent="Control/ColorRect"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 240.0
-offset_right = 208.0
-offset_bottom = 354.0
+offset_left = 19.0
+offset_top = 565.0
+offset_right = 209.0
+offset_bottom = 679.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
 
 [node name="GridContainer" type="GridContainer" parent="Control/ColorRect/Panel"]
 layout_mode = 2
 columns = 5
 script = ExtResource("3_wlp85")
+data = ExtResource("4_wlp85")
 
 [node name="InventorySlot" parent="Control/ColorRect/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2

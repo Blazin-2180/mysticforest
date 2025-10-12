@@ -22,7 +22,7 @@ func show_pause_menu () -> void :
 	get_tree().paused = true
 	visible = true
 	is_paused = true
-	button_load.grab_focus()
+	#button_load.grab_focus()
 
 func hide_pause_menu () -> void : 
 	get_tree().paused = false

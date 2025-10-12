@@ -1,5 +1,6 @@
-Control
+ColorRect
 Label
+Control
 TextureRect
 Button
 GridContainer
@@ -8,8 +9,6 @@ Panel
 StaticBody2D
 CollisionShape2D
 Sprite2D
-ColorRect
 CanvasLayer
 VBoxContainer
 ProgressBar
-HBoxContainer

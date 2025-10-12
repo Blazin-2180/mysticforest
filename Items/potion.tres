@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("1_hw0jr")
 name = "Potion"
-description = "Heals you for half your health. One day. Maybe. "
+description = "Heals you for half your health. One day. 
+Maybe. "
 texture = ExtResource("2_5vqjr")
 metadata/_custom_type_script = "uid://bhtwlxtfik0ii"

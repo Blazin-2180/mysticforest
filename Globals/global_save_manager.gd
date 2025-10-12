@@ -8,8 +8,8 @@ signal game_saved
 var current_save : Dictionary = {
 	scene_path = "",
 	player = {
-		health_points = 6,
-		max_health_points = 6,
+		health_points = 1,
+		max_health_points = 1,
 		position_x = 0,
 		position_y = 0
 	},
@@ -67,3 +67,12 @@ func update_scene_path () -> void :
 
 func update_item_data() -> void : 
 	current_save.items = GlobalPlayerManager.INVENTORY_DATA.get_save_data()
+
+func add_persistent_value( value : String) -> void :
+	if check_persistent_value( value ) == false :
+		current_save.persistence.append( value )
+	pass
+
+func check_persistent_value( value : String ) -> bool :
+	var p = current_save.persistence as Array
+	return p.has( value )

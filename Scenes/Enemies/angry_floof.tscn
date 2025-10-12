@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cg717qsjfk2io"]
+[gd_scene load_steps=36 format=3 uid="uid://cg717qsjfk2io"]
 
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="1_ggggf"]
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_wohw0"]
@@ -10,8 +10,10 @@
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="7_62558"]
 [ext_resource type="Script" uid="uid://brrsbrj7v7ght" path="res://Scripts/Enemies/enemy_state_stun.gd" id="8_8ggiy"]
 [ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/Enemies/enemy_state_death.gd" id="9_ys3wi"]
+[ext_resource type="Script" uid="uid://dkcfe0k2wd36f" path="res://Scripts/Enemies/enemy_state_chase.gd" id="11_8ggiy"]
 [ext_resource type="PackedScene" uid="uid://chfp0fpb1rxx8" path="res://GUI/Player_HUD/damage_numbers.tscn" id="12_fkw3n"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="13_62558"]
+[ext_resource type="PackedScene" uid="uid://b27pktbny6f3j" path="res://Scenes/Enemies/vision_area.tscn" id="14_ys3wi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ojc5"]
 radius = 14.035668
@@ -544,9 +546,135 @@ tracks/2/keys = {
 "values": [Vector2(1, 1), Vector2(0.8, 0.8)]
 }
 
+[sub_resource type="Animation" id="Animation_8a5p5"]
+resource_name = "chase_down"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("EnemySprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.30148083),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -20), Vector2(0, -22)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.29797524),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_l2jg0"]
+resource_name = "chase_side"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("EnemySprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.30148083),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -20), Vector2(0, -22)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.29797524),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_okw7h"]
+resource_name = "chase_up"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EnemySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("EnemySprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.30148083),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -20), Vector2(0, -22)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Shadow:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.29797524),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8j4vx"]
 _data = {
 &"RESET": SubResource("Animation_w6e41"),
+&"chase_down": SubResource("Animation_8a5p5"),
+&"chase_side": SubResource("Animation_l2jg0"),
+&"chase_up": SubResource("Animation_okw7h"),
 &"death_down": SubResource("Animation_3ojc5"),
 &"death_side": SubResource("Animation_dgpvt"),
 &"death_up": SubResource("Animation_6vsug"),
@@ -579,7 +707,6 @@ aggressive = true
 
 [node name="HurtBox" parent="." instance=ExtResource("1_ggggf")]
 position = Vector2(0, -21)
-damage = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 shape = SubResource("CircleShape2D_3ojc5")
@@ -599,6 +726,14 @@ position = Vector2(0, -20)
 texture = ExtResource("4_fkw3n")
 hframes = 4
 vframes = 3
+
+[node name="AttackBox" parent="EnemySprite" instance=ExtResource("1_ggggf")]
+position = Vector2(0, -1)
+damage = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemySprite/AttackBox"]
+shape = SubResource("CircleShape2D_3ojc5")
+debug_color = Color(0.9875826, 0.06837226, 0.22504988, 0.41960785)
 
 [node name="AngryFloofCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -21)
@@ -629,13 +764,19 @@ next_state = NodePath("../Idle")
 
 [node name="Stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
 script = ExtResource("8_8ggiy")
-next_state = NodePath("../Idle")
+next_state = NodePath("../Chase")
 
 [node name="Death" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("9_ys3wi")
 animation_name = null
 knockback_speed = null
 decelerate_speed = null
+
+[node name="Chase" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state", "vision_area", "attack_area")]
+script = ExtResource("11_8ggiy")
+next_state = NodePath("../Idle")
+vision_area = NodePath("../../VisionArea")
+attack_area = NodePath("../../EnemySprite/AttackBox")
 
 [node name="DamageNumbersOrigin" parent="." instance=ExtResource("12_fkw3n")]
 position = Vector2(0, -41)
@@ -669,3 +810,9 @@ theme_override_styles/background = SubResource("StyleBoxFlat_62558")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8ggiy")
 value = 50.0
 show_percentage = false
+
+[node name="VisionArea" parent="." instance=ExtResource("14_ys3wi")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="VisionArea"]
+position = Vector2(0, -20)
+polygon = PackedVector2Array(-16, 0, 16, 0, 128, 128, -128, 128)

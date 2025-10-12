@@ -5,4 +5,4 @@ class_name ItemEffectHeal extends ItemEffect
 
 func use() -> void :
 	GlobalPlayerManager.increase_health_points(heal_amount)
-	Inventory.play_audio( audio )
+	#Inventory.play_audio( audio )

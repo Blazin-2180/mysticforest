@@ -12,3 +12,13 @@ res://Interactables/TreasureChest/treasure_chest.tscn
 res://Interactables/TreasureChest/treasure_chest.gd
 res://Scenes/Levels/save_point.tscn
 res://Scenes/Levels/save_point.gd
+res://GeneralNodes/PresistentDataHandler/presistent_data_handler.tscn
+res://GeneralNodes/PresistentDataHandler/persistent_data_handler.gd
+res://Globals/global_save_manager.gd
+res://GUI/Inventory/inventory.gd
+res://GUI/Inventory/inventory.tscn
+res://Scenes/Enemies/angry_floof.tscn
+res://Items/Item_Effects/item_effect_heal.gd
+res://Scenes/Enemies/vision_area.tscn
+res://Scripts/Enemies/vision_area.gd
+res://Scripts/Enemies/enemy_state_chase.gd

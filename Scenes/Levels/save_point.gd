@@ -5,7 +5,6 @@ class_name SavePoint extends Area2D
 @onready var timer: Timer = $GameSaved/Timer
 @onready var interact_area: Area2D = $Area2D
 
-
 var can_interact = false
 
 func _ready() -> void:
@@ -21,16 +20,6 @@ func _on_area_exit( _a : Area2D ) -> void :
 	GlobalPlayerManager.interact_pressed.disconnect( interact )
 	pass
 	
-#func _on_body_entered(body: Node2D) -> void:
-	#if body.name == "Player" :
-		#can_interact = true
-	#Input.is_action_pressed("interact")
-	#pass # Replace with function body.
-#
-#func _on_body_exited(body : Node2D) -> void :
-	#if body.name == "Player" :
-		#can_interact = false
-
 func _process(_delta: float) -> void:
 	if can_interact &&  Input.is_action_pressed( "interact" ) :
 		interact() 

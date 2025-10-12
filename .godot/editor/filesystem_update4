@@ -1,11 +1,3 @@
-res://GUI/Inventory/inventory_slot.tscn
+res://Items/Item_Pickup/item_pickup.gd
+res://Items/Item_Pickup/item_pickup.tscn
 res://Items/potion.tres
-res://GUI/Inventory/inventory.gd
-res://Items/Scripts/item_data.gd
-res://Items/Item_Effects/item_effect_heal.gd
-res://Globals/global_save_manager.gd
-res://GUI/Inventory/Scripts/inventory_data.gd
-res://GUI/PauseMenu/pause_menu.gd
-res://Scripts/Player/state_attack.gd
-res://Scenes/Player/player.tscn
-res://Scripts/Enemies/enemy_state_death.gd

@@ -1,8 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://baw24k6eqvlau"]
+[gd_scene load_steps=9 format=3 uid="uid://baw24k6eqvlau"]
 
 [ext_resource type="Script" uid="uid://hxqmrdury3v" path="res://Items/Item_Pickup/item_pickup.gd" id="1_j8dhh"]
+[ext_resource type="Texture2D" uid="uid://de0dmgdcae1at" path="res://Sprites/objects/Shadow.png" id="2_6dcxl"]
+[ext_resource type="Texture2D" uid="uid://lh84o08aeq8y" path="res://Items/Sprites/Gloopgloop.png" id="3_8yq5r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qn5ny"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wivs4"]
+atlas = ExtResource("3_8yq5r")
+
+[sub_resource type="Animation" id="Animation_gq6u0"]
+resource_name = "default"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.55, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(-2, -2, -2, -2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -6), Vector2(0, 0), Vector2(0, -3), Vector2(0, 0), Vector2(0, -1), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wee4x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bwfvu"]
+_data = {
+&"RESET": SubResource("Animation_wee4x"),
+&"default": SubResource("Animation_gq6u0")
+}
 
 [node name="ItemPickup" type="CharacterBody2D"]
 collision_layer = 0
@@ -18,6 +60,18 @@ shape = SubResource("CircleShape2D_qn5ny")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_qn5ny")
 
+[node name="Sprite2D2_Shadow" type="Sprite2D" parent="."]
+modulate = Color(0.007843138, 0.007843138, 0.007843138, 0.45882353)
+position = Vector2(0, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_6dcxl")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_wivs4")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bwfvu")
+}

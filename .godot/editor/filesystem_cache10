@@ -44,15 +44,15 @@ player_hud.tscn::PackedScene::4288827602354132850::1760233645::0::1::::<><><>0<>
 ::res://GUI/scene_transition/::1759536975
 scene_transition.gd::GDScript::2692291084467012598::1759536929::0::1::::<>CanvasLayer<><>0<>0<><>::
 scene_transition.tscn::PackedScene::3133870543864244027::1759536975::0::1::::<><><>0<>0<><>::uid://bemfv11q3vbh3::::res://GUI/scene_transition/scene_transition.gd
-::res://Items/::1760288223
+::res://Items/::1760289162
 gloopgloop.tres::Resource/ItemData::2660111286455284725::1760288223::0::1::::<><><>0<>0<><>::uid://b3t0mu0dn1vs6::::res://Items/Item_Effects/item_effect.gd<>uid://bhtwlxtfik0ii::::res://Items/Scripts/item_data.gd<>uid://lh84o08aeq8y::::res://Items/Sprites/Gloopgloop.png
-potion.tres::Resource/ItemData::2494369152729209093::1760287587::0::1::::<><><>0<>0<><>::uid://b3t0mu0dn1vs6::::res://Items/Item_Effects/item_effect.gd<>uid://bhtwlxtfik0ii::::res://Items/Scripts/item_data.gd<>uid://3ib5yccrevtd::::res://Items/Item_Effects/item_effect_heal.gd<>uid://cx6h3sbqktrvg::::res://Items/Sprites/Potion.png
+potion.tres::Resource/ItemData::2494369152729209093::1760289162::0::1::::<><><>0<>0<><>::uid://b3t0mu0dn1vs6::::res://Items/Item_Effects/item_effect.gd<>uid://bhtwlxtfik0ii::::res://Items/Scripts/item_data.gd<>uid://3ib5yccrevtd::::res://Items/Item_Effects/item_effect_heal.gd<>uid://cx6h3sbqktrvg::::res://Items/Sprites/Potion.png
 ::res://Items/Item_Effects/::1760279695
 item_effect.gd::GDScript::4392471926473002647::1760230465::0::1::::ItemEffect<>Resource<><>0<>0<><>::
 item_effect_heal.gd::GDScript::1981918198471081293::1760279695::0::1::::ItemEffectHeal<>ItemEffect<><>0<>0<><>::
-::res://Items/Item_Pickup/::1760288887
-item_pickup.gd::GDScript::15876364520132117::1760288887::0::1::::ItemPickup<>CharacterBody2D<><>0<>1<><>::
-item_pickup.tscn::PackedScene::2433528714436752168::1760288631::0::1::::<><><>0<>0<><>::uid://hxqmrdury3v::::res://Items/Item_Pickup/item_pickup.gd
+::res://Items/Item_Pickup/::1760289162
+item_pickup.gd::GDScript::15876364520132117::1760289070::0::1::::ItemPickup<>CharacterBody2D<><>0<>1<><>::
+item_pickup.tscn::PackedScene::2433528714436752168::1760289162::0::1::::<><><>0<>0<><>::uid://hxqmrdury3v::::res://Items/Item_Pickup/item_pickup.gd
 ::res://Items/Scripts/::1760279695
 item_data.gd::GDScript::2918322421686906796::1760279695::0::1::::ItemData<>Resource<><>0<>0<><>::
 ::res://Items/Sprites/::1760287580
@@ -121,7 +121,7 @@ Shluggy.png::CompressedTexture2D::2386042060639673057::1759420626::1759420626::1
 skeleton.png::CompressedTexture2D/CompressedTexture2D::4666915343444864644::1759422413::1759422413::1::::<><><>0<>0<>10d4c28818d17f1e1dc10478df29e3c5<>res://.godot/imported/skeleton.png-88674f527580095898df74e3191abe3d.ctex::
 skeleton_swordless.png::CompressedTexture2D/CompressedTexture2D::1392808440180884977::1759422413::1759422413::1::::<><><>0<>0<>71514a70be4c74943e8b0908ec02f7c8<>res://.godot/imported/skeleton_swordless.png-a5a39d7671687fdfb8c46c20740bb0f1.ctex::
 slime.png::CompressedTexture2D/CompressedTexture2D::5033484576996741642::1759422413::1759422413::1::::<><><>0<>0<>67416e6bf8e4dd2ccb41d77b2c2d22d5<>res://.godot/imported/slime.png-5af89a29695051d378abeadb8bcdf750.ctex::
-::res://Sprites/objects/::1760215033
+::res://Sprites/objects/::1760289255
 chest_01.png::CompressedTexture2D/CompressedTexture2D::986735386697531509::1759422413::1759422413::1::::<><><>0<>0<>5d37b04be45846e685f9660e6d73ff66<>res://.godot/imported/chest_01.png-741663abdd1948bbdf73e0aa8510e999.ctex::
 chest_02.png::CompressedTexture2D/CompressedTexture2D::3903158600174967763::1759422413::1759422413::1::::<><><>0<>0<>a71877c7c49bbc9271ddfc3e3af5c47e<>res://.godot/imported/chest_02.png-354f7723b7f1ccef7f25c420e8670838.ctex::
 grass.PNG::CompressedTexture2D::1288825353583190976::1760215033::1760215033::1::::<><><>0<>0<>7abf9a24563e6381522d9fdaa031d342<>res://.godot/imported/grass.PNG-001e08ec6cea1d285eab39e6e0a52db8.ctex::
@@ -135,6 +135,7 @@ rock_in_water_04.png::CompressedTexture2D/CompressedTexture2D::26655535848126884
 rock_in_water_05.png::CompressedTexture2D/CompressedTexture2D::1701084687057967568::1759422413::1759422413::1::::<><><>0<>0<>75a008e822004db9f1fbd8616f612ce6<>res://.godot/imported/rock_in_water_05.png-7bea724e66125aac64ea3061f9a48a41.ctex::
 rock_in_water_06.png::CompressedTexture2D/CompressedTexture2D::7277414779730171298::1759422413::1759422413::1::::<><><>0<>0<>f7c9038ec9254150400c0d01c0953b77<>res://.godot/imported/rock_in_water_06.png-7b64d43107025b0cf20d98c4eb9f8238.ctex::
 Save _Point.png::CompressedTexture2D::150742869331932003::1759420612::1759420612::1::::<><><>0<>0<>372f54eee359580cacea4d3ffdd6ebb4<>res://.godot/imported/Save _Point.png-b7f6bd0fe533e430d3d59de2ffa9c3ea.ctex::
+Shadow.png::CompressedTexture2D::7491830769853657499::1760289255::1760289255::1::::<><><>0<>0<>d8e98745aeb8163516d9558b54ff60fa<>res://.godot/imported/Shadow.png-e285c2161bec5deab993c05dbd07639d.ctex::
 ::res://Sprites/particles/::1759422413
 dust_particles_01.png::CompressedTexture2D/CompressedTexture2D::7797449964398482967::1759422413::1759422413::1::::<><><>0<>0<>252b51446e9c4785b08a8e800efce679<>res://.godot/imported/dust_particles_01.png-30fe06a4f3b52c20997b0425f7acf164.ctex::
 ::res://Sprites/tilesets/::1759422413

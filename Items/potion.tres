@@ -1,7 +1,14 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bbsj5phjad5en"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=6 format=3 uid="uid://bbsj5phjad5en"]
 
+[ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_eu55q"]
 [ext_resource type="Script" uid="uid://bhtwlxtfik0ii" path="res://Items/Scripts/item_data.gd" id="1_hw0jr"]
 [ext_resource type="Texture2D" uid="uid://ckrhrrycwenp2" path="res://Items/Sprites/health_potion.png" id="2_5vqjr"]
+[ext_resource type="Script" uid="uid://3ib5yccrevtd" path="res://Items/Item_Effects/item_effect_heal.gd" id="2_pw2eo"]
+
+[sub_resource type="Resource" id="Resource_yhh2t"]
+script = ExtResource("2_pw2eo")
+heal_amount = 3
+metadata/_custom_type_script = "uid://3ib5yccrevtd"
 
 [resource]
 script = ExtResource("1_hw0jr")
@@ -9,4 +16,5 @@ name = "Potion"
 description = "Heals you for half your health. One day. 
 Maybe. "
 texture = ExtResource("2_5vqjr")
+effects = Array[ExtResource("1_eu55q")]([SubResource("Resource_yhh2t")])
 metadata/_custom_type_script = "uid://bhtwlxtfik0ii"

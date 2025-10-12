@@ -21,16 +21,9 @@ func reduce_health_points ( num : int ) -> void :
 	PlayerHud.update_health_points()
 	pass
 
-func increase_health_points ( num : int ) -> void :
-	if health_points < max_health_points :
-		health_points += num
-		if health_points > max_health_points :
-			health_points = max_health_points
-		PlayerHud.update_health_points()
-	else :
-		health_points = max_health_points
-		PlayerHud.update_health_points()
-	pass
+func increase_health_points(num: int) -> void:
+	health_points = min(health_points + num, max_health_points)
+	PlayerHud.update_health_points()
 
 func add_player_instance () -> void :
 	player = PLAYER.instantiate()

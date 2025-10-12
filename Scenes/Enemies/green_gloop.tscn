@@ -1,10 +1,11 @@
-[gd_scene load_steps=34 format=3 uid="uid://ko0e6lwp7y65"]
+[gd_scene load_steps=35 format=3 uid="uid://ko0e6lwp7y65"]
 
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_lx6oe"]
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="2_ev7co"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="3_lowbq"]
 [ext_resource type="Texture2D" uid="uid://b4gf2j13ybaev" path="res://Sprites/characters/greenslimes.png" id="4_vib7w"]
 [ext_resource type="AudioStream" uid="uid://by3w8hqduffhb" path="res://Audio/slimedeath.wav" id="5_i0e5b"]
+[ext_resource type="AudioStream" uid="uid://card765jpk5dy" path="res://Audio/slime.wav" id="5_lowbq"]
 [ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/Enemies/enemy_state_machine.gd" id="6_lvr6c"]
 [ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/Enemies/enemy_state_idle.gd" id="7_0f0ti"]
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="8_7f3j6"]
@@ -68,6 +69,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, -8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_lowbq")]
 }
 
 [sub_resource type="Animation" id="Animation_r4o34"]
@@ -298,6 +311,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_lowbq")]
+}
 
 [sub_resource type="Animation" id="Animation_555id"]
 resource_name = "stun_side"
@@ -505,6 +530,7 @@ knockback_speed = null
 decelerate_speed = null
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_lowbq")
 bus = &"SFX"
 
 [node name="DamageNumbersOrigin" parent="." instance=ExtResource("11_ev7co")]
@@ -513,9 +539,9 @@ position = Vector2(0, -17)
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 1
 offset_left = -35.0
-offset_top = -46.0
+offset_top = -49.0
 offset_right = 40.0
-offset_bottom = -15.0
+offset_bottom = -18.0
 
 [node name="EnemyLevel" type="Label" parent="VBoxContainer"]
 visible = false
@@ -533,7 +559,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 5)
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_lx6oe")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ev7co")

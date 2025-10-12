@@ -1,1 +1,6 @@
 res://Globals/global_player_manager.gd
+res://Scenes/Enemies/angry_floof.tscn
+res://Items/potion.tres
+res://Scenes/Enemies/green_gloop.tscn
+res://Scenes/Levels/area_1.tscn
+res://Scripts/Levels/level_transition.gd

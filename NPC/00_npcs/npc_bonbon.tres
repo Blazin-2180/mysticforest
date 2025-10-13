@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=3 format=3 uid="uid://oljmr2chdqxc"]
+
+[ext_resource type="Script" uid="uid://dg5ste7ke42e0" path="res://NPC/scripts/npc_resource.gd" id="1_hi10s"]
+[ext_resource type="Texture2D" uid="uid://cpofbuwwsvqf4" path="res://Sprites/characters/Bonbon2D.png" id="2_h2n6i"]
+
+[resource]
+script = ExtResource("1_hi10s")
+npc_name = "Bonbon"
+sprite = ExtResource("2_h2n6i")
+metadata/_custom_type_script = "uid://dg5ste7ke42e0"

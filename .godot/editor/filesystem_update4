@@ -25,3 +25,11 @@ res://Scripts/Enemies/enemy_state_chase.gd
 res://GeneralNodes/ItemMagnet/item_magnet.tscn
 res://GeneralNodes/ItemMagnet/item_magnet.gd
 res://Scripts/Enemies/enemy_state_death.gd
+res://NPC/npc.tscn
+res://NPC/scripts/npc.gd
+res://NPC/scripts/npc_resource.gd
+res://NPC/scripts/npc_behaviour.gd
+res://NPC/scripts/npc_behaviour_wander.gd
+res://NPC/npc_behaviour_wander.tscn
+res://NPC/00_npcs/npc_keef.tres
+res://NPC/00_npcs/npc_bonbon.tres

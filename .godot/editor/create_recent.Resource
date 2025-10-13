@@ -1,2 +1,3 @@
+NPCResource
 InventoryData
 ItemData

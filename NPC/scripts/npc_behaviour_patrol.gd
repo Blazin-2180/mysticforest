@@ -1,6 +1,8 @@
 @tool
 extends NPCBehaviour
 
+const COLORS = [Color(1,0,0), Color(1,1,0), Color(0,0,1), Color(0,1,1), Color(1,0,1)]
+
 @export var walk_speed : float = 30.0
 
 var patrol_locations : Array[PatrolLocation]

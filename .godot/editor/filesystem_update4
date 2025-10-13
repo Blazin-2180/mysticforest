@@ -33,3 +33,7 @@ res://NPC/scripts/npc_behaviour_wander.gd
 res://NPC/npc_behaviour_wander.tscn
 res://NPC/00_npcs/npc_keef.tres
 res://NPC/00_npcs/npc_bonbon.tres
+res://NPC/patrol_location.tscn
+res://NPC/scripts/patrol_location.gd
+res://NPC/npc_behaviour_patrol.tscn
+res://NPC/scripts/npc_behaviour_patrol.gd

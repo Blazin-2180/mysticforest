@@ -1,5 +1,7 @@
-CollisionShape2D
+Line2D
+Label
 Sprite2D
+CollisionShape2D
 AnimationPlayer
 CharacterBody2D
 AudioStreamPlayer2D
@@ -7,7 +9,6 @@ Area2D
 Node
 CollisionPolygon2D
 StaticBody2D
-Label
 AudioStreamPlayer
 Node2D
 ColorRect

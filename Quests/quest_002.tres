@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://8d3h5a02wpms"]
+
+[ext_resource type="Script" uid="uid://2ny2rj1wwc43" path="res://Quests/scripts/quest_reward_item.gd" id="1_ldd14"]
+[ext_resource type="Resource" uid="uid://b3knkyqs778qi" path="res://Items/coinage.tres" id="2_s3hxl"]
+[ext_resource type="Script" uid="uid://dx5wdgedq7lip" path="res://Quests/scripts/quest_resource.gd" id="3_mgpux"]
+
+[sub_resource type="Resource" id="Resource_ef4g0"]
+script = ExtResource("1_ldd14")
+item = ExtResource("2_s3hxl")
+quantity = 50
+metadata/_custom_type_script = "uid://2ny2rj1wwc43"
+
+[resource]
+script = ExtResource("3_mgpux")
+title = "Recover lost Tray-zurr"
+description = "Sammy has asked you find his lost treasure. "
+steps = Array[String](["Find treasure", "Return treasure"])
+reward_experience = 50
+reward_items = Array[ExtResource("1_ldd14")]([SubResource("Resource_ef4g0")])
+metadata/_custom_type_script = "uid://dx5wdgedq7lip"

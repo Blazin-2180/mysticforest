@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_8vtfr")
-name = "Gloop Gloop"
+name = "Sammy's Tray-zurr"
 description = "Smelly pile of gloop. A sticky memory of the Gloop you fought."
 texture = ExtResource("3_a636h")
 metadata/_custom_type_script = "uid://bhtwlxtfik0ii"

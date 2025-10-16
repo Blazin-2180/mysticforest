@@ -1,3 +1,4 @@
+Quest
+ItemData
 NPCResource
 InventoryData
-ItemData

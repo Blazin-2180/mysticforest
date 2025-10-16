@@ -19,7 +19,7 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
 var invulnerable = false
-var experience : float = 0.0
+
 
 signal direction_changed ( new_direction : Vector2 )
 signal player_damaged ( hurt_box : HurtBox )

@@ -9,6 +9,7 @@ var player : Player
 var health_points : int = 6
 var max_health_points : int = 6
 var player_spawned : bool = false
+var experience : int = 0
 
 func _ready() -> void:
 	add_player_instance()
@@ -24,6 +25,11 @@ func reduce_health_points ( num : int ) -> void :
 func increase_health_points(num: int) -> void:
 	health_points = min(health_points + num, max_health_points)
 	PlayerHud.update_health_points()
+
+func reward_experience( _exp : int ) -> void :
+	experience += _exp
+	print(str("Experience : ", experience ) )
+	pass
 
 func add_player_instance () -> void :
 	player = PLAYER.instantiate()

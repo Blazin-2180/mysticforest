@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://chfp0fpb1rxx8" path="res://GUI/Player_HUD/damage_numbers.tscn" id="11_ev7co"]
 [ext_resource type="Script" uid="uid://nbajkrbwxyoy" path="res://Scenes/Enemies/drop_data.gd" id="12_i0e5b"]
 [ext_resource type="Resource" uid="uid://bbsj5phjad5en" path="res://Items/potion.tres" id="13_lvr6c"]
-[ext_resource type="Resource" uid="uid://bd5tv50ifyd54" path="res://Items/gloopgloop.tres" id="14_lvr6c"]
+[ext_resource type="Resource" uid="uid://b3knkyqs778qi" path="res://Items/coinage.tres" id="14_lvr6c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_10642"]
 radius = 7.0

@@ -1,3 +1,11 @@
-res://GUI/dialog_system/dialog_system.tscn
 res://Items/potion.tres
+res://Interactables/dialog/dialog_interaction.tscn
+res://Interactables/dialog/scripts/diaglog_interaction.gd
+res://Scenes/Levels/area_1.tscn
+res://Interactables/dialog/scripts/dialog_item.gd
+res://Interactables/dialog/scripts/dialog_text.gd
+res://Interactables/dialog/scripts/dialog_choice.gd
+res://NPC/scripts/npc.gd
+res://GUI/dialog_system/dialog_system.tscn
 res://GUI/dialog_system/scripts/dialog_system.gd
+res://GUI/scene_transition/scene_transition.tscn

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1760578670
+::res://::1760619594
 default_bus_layout.tres::AudioBusLayout::4607572780211055496::1759422413::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1759595664::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::5303250123786392844::1759422413::1759422413::1::::<><><>0<>0<>66d50139fac29e5d34c31f0e0530bceb<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -32,12 +32,12 @@ global_player_manager.gd::GDScript::6829512893203737909::1760295436::0::1::::<>N
 global_save_manager.gd::GDScript::5176101395501779439::1760301140::0::1::::<>Node<><>0<>0<><>::
 player_hud.gd::GDScript::3677750107377093370::1759873834::0::1::::<>CanvasLayer<><>0<>0<><>::
 ::res://GUI/::1760577100
-::res://GUI/dialog_system/::1760578505
-dialog_system.tscn::PackedScene::2377423180054587106::1760578505::0::1::::<><><>0<>0<><>::uid://dad7e427uquod::::res://GUI/dialog_system/scripts/dialog_system.gd<>uid://bkptflthtg4he::::res://Sprites/Untitled 39.png<>uid://cc4owimmw7e3d::::res://Fonts/ari-w9500-bold.ttf
+::res://GUI/dialog_system/::1760580093
+dialog_system.tscn::PackedScene::2377423180054587106::1760580093::0::1::::<><><>0<>0<><>::uid://dad7e427uquod::::res://GUI/dialog_system/scripts/dialog_system.gd<>uid://bkptflthtg4he::::res://Sprites/Untitled 39.png<>uid://cc4owimmw7e3d::::res://Fonts/ari-w9500-bold.ttf
 ::res://GUI/dialog_system/audio/::1760577168
 ::res://GUI/dialog_system/icons/::1760577171
-::res://GUI/dialog_system/scripts/::1760577687
-dialog_system.gd::GDScript::7167406837653815087::1760578664::0::1::::DialogSystemNode<>CanvasLayer<><>0<>0<><>::
+::res://GUI/dialog_system/scripts/::1760580138
+dialog_system.gd::GDScript::7167406837653815087::1760580138::0::1::::DialogSystemNode<>CanvasLayer<><>0<>1<><>::
 ::res://GUI/dialog_system/sprites/::1760577181
 ::res://GUI/Inventory/::1760577750
 inventory.gd::GDScript::4438056223940479507::1760302856::0::1::::<>CanvasLayer<><>0<>0<><>::
@@ -58,14 +58,19 @@ player_hud.tscn::PackedScene::4288827602354132850::1760233645::0::1::::<><><>0<>
 ::res://GUI/scene_transition/::1759536975
 scene_transition.gd::GDScript::2692291084467012598::1759536929::0::1::::<>CanvasLayer<><>0<>0<><>::
 scene_transition.tscn::PackedScene::3133870543864244027::1759536975::0::1::::<><><>0<>0<><>::uid://bemfv11q3vbh3::::res://GUI/scene_transition/scene_transition.gd
-::res://Interactables/::1760291228
+::res://Interactables/::1760619594
+::res://Interactables/dialog/::1760620232
+dialog_interaction.tscn::PackedScene::3883141004365840181::1760620232::0::1::::<><><>0<>0<><>::
+::res://Interactables/dialog/scripts/::1760619581
+::res://Interactables/dialog/sprites/::1760620670
+dialog.png::CompressedTexture2D::4324978206788335365::1760620670::1760620670::1::::<><><>0<>0<>d73233766b24df36fdec7c3d9fa9249e<>res://.godot/imported/dialog.png-9a05df125137a747215081b39687c294.ctex::
 ::res://Interactables/TreasureChest/::1760302025
 chest_01.png::CompressedTexture2D::986735386697531509::1759422413::1760291256::1::::<><><>0<>0<>68041113228d5ed8d3a600ad8101cda2<>res://.godot/imported/chest_01.png-03b1c0e2b2851df0828ffc1519cbc478.ctex::
 treasure_chest.gd::GDScript::2219245811330673996::1760302025::0::1::::TreasureChest<>Node2D<><>0<>1<><>::
 treasure_chest.tscn::PackedScene::8292372096640858784::1760301836::0::1::::<><><>0<>0<><>::uid://6vawilxtlrgu::::res://Interactables/TreasureChest/treasure_chest.gd<>uid://ob8ngenog7yv::::res://Interactables/TreasureChest/chest_01.png<>uid://cx6h3sbqktrvg::::res://Items/Sprites/Potion.png<>uid://c4dftttrhfv4h::::res://Audio/chest_open.wav<>uid://2kxe0hv0aq0m::::res://GeneralNodes/PresistentDataHandler/presistent_data_handler.tscn
-::res://Items/::1760576191
+::res://Items/::1760620233
 gloopgloop.tres::Resource/ItemData::2660111286455284725::1760574495::0::1::::<><><>0<>0<><>::uid://b3t0mu0dn1vs6::::res://Items/Item_Effects/item_effect.gd<>uid://bhtwlxtfik0ii::::res://Items/Scripts/item_data.gd<>uid://lh84o08aeq8y::::res://Items/Sprites/Gloopgloop.png
-potion.tres::Resource/ItemData::2494369152729209093::1760576191::0::1::::<><><>0<>0<><>::uid://b3t0mu0dn1vs6::::res://Items/Item_Effects/item_effect.gd<>uid://bhtwlxtfik0ii::::res://Items/Scripts/item_data.gd<>uid://3ib5yccrevtd::::res://Items/Item_Effects/item_effect_heal.gd<>uid://cx6h3sbqktrvg::::res://Items/Sprites/Potion.png
+potion.tres::Resource/ItemData::2494369152729209093::1760620232::0::1::::<><><>0<>0<><>::uid://b3t0mu0dn1vs6::::res://Items/Item_Effects/item_effect.gd<>uid://bhtwlxtfik0ii::::res://Items/Scripts/item_data.gd<>uid://3ib5yccrevtd::::res://Items/Item_Effects/item_effect_heal.gd<>uid://cx6h3sbqktrvg::::res://Items/Sprites/Potion.png
 ::res://Items/Item_Effects/::1760303370
 item_effect.gd::GDScript::4392471926473002647::1760230465::0::1::::ItemEffect<>Resource<><>0<>0<><>::
 item_effect_heal.gd::GDScript::1981918198471081293::1760303370::0::1::::ItemEffectHeal<>ItemEffect<><>0<>0<><>::

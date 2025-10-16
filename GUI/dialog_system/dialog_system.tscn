@@ -33,6 +33,21 @@ corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
+[sub_resource type="Animation" id="Animation_dwuo2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_qocm2"]
 resource_name = "default"
 loop_mode = 1
@@ -47,21 +62,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1.5795683, 1.5795683, 1.5795683, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_dwuo2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("..:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_umqd7"]
@@ -106,7 +106,7 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -313.0
+offset_left = -314.5
 offset_top = -167.0
 offset_right = 315.0
 grow_horizontal = 2
@@ -120,18 +120,19 @@ theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "I AM [wave][color=orange] SAMMY [/color][/wave]!!!"
 
-[node name="Label" type="Label" parent="DialogUI"]
+[node name="NameLabel" type="Label" parent="DialogUI"]
 layout_mode = 0
 offset_left = 653.0
-offset_top = 859.0
-offset_right = 704.0
-offset_bottom = 882.0
+offset_top = 856.0
+offset_right = 729.0
+offset_bottom = 888.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_offset_y = 6
 theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 24
 text = "NAME"
 
 [node name="Timer" type="Timer" parent="DialogUI"]

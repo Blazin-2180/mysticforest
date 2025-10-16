@@ -1,6 +1,2 @@
-res://Scenes/Levels/area_1.tscn
-res://Items/potion.tres
-res://NPC/scripts/npc_behaviour_patrol.gd
-res://NPC/scripts/patrol_location.gd
-res://NPC/00_npcs/npc_sammy.tres
 res://NPC/npc.tscn
+res://Items/potion.tres

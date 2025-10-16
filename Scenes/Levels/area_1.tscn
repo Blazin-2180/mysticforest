@@ -695,6 +695,13 @@ npc_resource = ExtResource("22_yy0ca")
 
 [node name="NpcBehaviourPatrol" parent="Npc" instance=ExtResource("24_rjmqy")]
 
+[node name="DialogInteraction" parent="Npc/NpcBehaviourPatrol" instance=ExtResource("27_a7186")]
+
+[node name="DialogText" type="Node" parent="Npc/NpcBehaviourPatrol/DialogInteraction"]
+script = ExtResource("28_w5vv1")
+text = "Keef is hungry."
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
 [node name="PatrolLocation" parent="Npc/NpcBehaviourPatrol" instance=ExtResource("25_lgryw")]
 modulate = Color(1, 0, 0, 1)
 position = Vector2(120, -38)
@@ -730,10 +737,10 @@ metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [node name="DialogText2" type="Node" parent="Npc2/DialogInteraction"]
 script = ExtResource("28_w5vv1")
-text = "I am SAMMY"
+text = "I am SAMMY!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [node name="DialogText3" type="Node" parent="Npc2/DialogInteraction"]
 script = ExtResource("28_w5vv1")
-text = "I AM [wave][color=orange]SAMMY[/color][/wave]"
+text = "I AM [wave][color=orange]SAMMY[/color][/wave]!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"

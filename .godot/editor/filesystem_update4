@@ -9,3 +9,4 @@ res://NPC/scripts/npc.gd
 res://GUI/dialog_system/dialog_system.tscn
 res://GUI/dialog_system/scripts/dialog_system.gd
 res://GUI/scene_transition/scene_transition.tscn
+res://GUI/Player_HUD/player_hud.tscn

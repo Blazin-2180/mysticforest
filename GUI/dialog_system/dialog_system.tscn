@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dad7e427uquod" path="res://GUI/dialog_system/scripts/dialog_system.gd" id="1_5yhxf"]
 [ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="2_ns6ro"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="3_qocm2"]
-[ext_resource type="AudioStream" uid="uid://c1y6tgu0qfneo" path="res://Interactables/dialog/audio/voice_blip.wav" id="4_qocm2"]
+[ext_resource type="AudioStream" uid="uid://c1y6tgu0qfneo" path="res://GUI/dialog_system/audio/voice_blip.wav" id="4_qocm2"]
 
 [sub_resource type="Gradient" id="Gradient_5yhxf"]
 colors = PackedColorArray(0, 0, 0, 0.558, 1, 1, 1, 0.55200005)

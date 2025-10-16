@@ -690,6 +690,7 @@ position = Vector2(402, 158)
 item_data = ExtResource("20_6a6p3")
 
 [node name="Npc" parent="." instance=ExtResource("21_mn84x")]
+visible = false
 position = Vector2(467, 151)
 npc_resource = ExtResource("22_yy0ca")
 
@@ -722,7 +723,7 @@ position = Vector2(82, 13)
 wait_time = 1.0
 
 [node name="Npc2" parent="." instance=ExtResource("21_mn84x")]
-position = Vector2(345, 255)
+position = Vector2(366, 127)
 npc_resource = ExtResource("25_a7186")
 
 [node name="NpcBehaviourWander" parent="Npc2" instance=ExtResource("26_w5vv1")]

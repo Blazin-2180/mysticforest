@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c3f25s7qgb30y"
-path="res://.godot/imported/IamSammy.wav-2f16b034d442737848fb432232fcc5e1.sample"
+path="res://.godot/imported/IamSammy.wav-4cc6f3a2f0d839d5f127839a49e7284e.sample"
 
 [deps]
 
-source_file="res://Interactables/dialog/audio/IamSammy.wav"
-dest_files=["res://.godot/imported/IamSammy.wav-2f16b034d442737848fb432232fcc5e1.sample"]
+source_file="res://GUI/dialog_system/audio/IamSammy.wav"
+dest_files=["res://.godot/imported/IamSammy.wav-4cc6f3a2f0d839d5f127839a49e7284e.sample"]
 
 [params]
 

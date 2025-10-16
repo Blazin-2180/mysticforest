@@ -1,5 +1,5 @@
 @tool
-#@icon()
+@icon("res://NPC/icons/chat_bubbles.svg")
 class_name DialogInteraction extends Area2D
 
 #region /// SIGNALS

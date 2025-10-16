@@ -21,9 +21,9 @@ func _unhandled_input( event : InputEvent ) -> void:
 		#print("get_quest_index_by_title : ", get_quest_index_by_title( "Tray-zurr" ))
 		#print("get_quest_index_by_title : ", get_quest_index_by_title( "Recover lost Tray-zurr" ))
 		#print("Before : ", current_quests )
-		update_quest( "Tray-zurr", "Complete Quest", true )
+		#update_quest( "Tray-zurr", "Complete Quest", true )
 		#update_quest ("Recover lost Tray-zurr" )
-		print("After : ", current_quests )
+		#print("After : ", current_quests )
 		#print ("================================")
 		pass
 	pass

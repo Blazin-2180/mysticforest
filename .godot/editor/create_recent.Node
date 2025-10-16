@@ -1,3 +1,5 @@
+Control
+TabContainer
 DialogText
 Sprite2D
 AnimationPlayer
@@ -9,6 +11,4 @@ AudioStreamPlayer
 Timer
 RichTextLabel
 TextureRect
-Control
 CanvasLayer
-Line2D

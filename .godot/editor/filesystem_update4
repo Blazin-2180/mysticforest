@@ -12,3 +12,5 @@ res://Scenes/Player/player.tscn
 res://Globals/global_player_manager.gd
 res://Scripts/Player/player.gd
 res://Globals/global_save_manager.gd
+res://GUI/Inventory/inventory.tscn
+res://GUI/Inventory/inventory.gd

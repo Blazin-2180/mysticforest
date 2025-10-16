@@ -1,2 +1,4 @@
 res://NPC/npc.tscn
 res://Items/potion.tres
+res://Scenes/Levels/area_1.tscn
+res://NPC/scripts/npc_behaviour_patrol.gd

@@ -1,6 +1,8 @@
 @tool
 class_name PatrolLocation extends Node2D
 
+signal transform_changed
+
 #region /// Export Variables
 @export var wait_time : float = 0.0 : 
 	set (v) : 
@@ -11,6 +13,13 @@ class_name PatrolLocation extends Node2D
 #region /// Variables
 var target_position : Vector2 = Vector2.ZERO
 #endregion
+
+func _enter_tree() -> void:
+	set_notify_transform( true )
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_TRANSFORM_CHANGED :
+		transform_changed.emit()
 
 func _ready() -> void:
 	target_position = global_position

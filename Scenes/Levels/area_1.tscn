@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=39 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="4_8byil"]
@@ -23,7 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://d4cn8uy2jbf8v" path="res://NPC/npc.tscn" id="21_mn84x"]
 [ext_resource type="Resource" uid="uid://dwxedb7antgcf" path="res://NPC/00_npcs/npc_keef.tres" id="22_yy0ca"]
 [ext_resource type="PackedScene" uid="uid://bglw8tdn710ul" path="res://NPC/npc_behaviour_patrol.tscn" id="24_rjmqy"]
+[ext_resource type="Resource" uid="uid://c0g726g2mb7u4" path="res://NPC/00_npcs/npc_sammy.tres" id="25_a7186"]
 [ext_resource type="PackedScene" uid="uid://bc6jcenrpq7m6" path="res://NPC/patrol_location.tscn" id="25_lgryw"]
+[ext_resource type="PackedScene" uid="uid://7e8hltk36uqm" path="res://NPC/npc_behaviour_wander.tscn" id="26_w5vv1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wpi7"]
 texture = ExtResource("4_8byil")
@@ -692,11 +694,20 @@ npc_resource = ExtResource("22_yy0ca")
 [node name="NpcBehaviourPatrol" parent="Npc" instance=ExtResource("24_rjmqy")]
 
 [node name="PatrolLocation" parent="Npc/NpcBehaviourPatrol" instance=ExtResource("25_lgryw")]
+modulate = Color(1, 0, 0, 1)
 position = Vector2(83, 0)
 
 [node name="PatrolLocation2" parent="Npc/NpcBehaviourPatrol" instance=ExtResource("25_lgryw")]
+modulate = Color(1, 1, 0, 1)
 wait_time = 1.0
 
 [node name="PatrolLocation3" parent="Npc/NpcBehaviourPatrol" instance=ExtResource("25_lgryw")]
-position = Vector2(39, 48)
+modulate = Color(0, 0, 1, 1)
+position = Vector2(-36, 58)
 wait_time = 1.0
+
+[node name="Npc2" parent="." instance=ExtResource("21_mn84x")]
+position = Vector2(345, 255)
+npc_resource = ExtResource("25_a7186")
+
+[node name="NpcBehaviourWander" parent="Npc2" instance=ExtResource("26_w5vv1")]

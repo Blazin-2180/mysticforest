@@ -33,6 +33,24 @@ func gather_patrol_locations( _n : Node = null ) -> void :
 	for c in get_children() :
 		if c is PatrolLocation :
 			patrol_locations.append( c )
+			
+	if Engine.is_editor_hint() :
+		if patrol_locations.size() > 0 :
+			for i in patrol_locations.size():
+				var _p = patrol_locations[ i ] as PatrolLocation
+				
+				if not _p.transform_changed.is_connected( gather_patrol_locations ) :
+					_p.transform_changed.connect( gather_patrol_locations )
+					
+				_p.update_label( str(i))
+				_p.modulate = _get_colour_by_index( i )
+				
+				var _next : PatrolLocation
+				if i < patrol_locations.size() -1 :
+					_next = patrol_locations[ i + 1 ]
+				else : 
+					_next = patrol_locations[ 0 ]
+				_p.update_line ( _next.position )
 	pass
 
 func start() -> void :
@@ -64,3 +82,9 @@ func start() -> void :
 	npc.update_direction( target.target_position)
 	npc.update_animation()
 	pass
+
+func _get_colour_by_index( i : int ) -> Color:
+	var color_count : int = COLORS.size()
+	while i > color_count -1 :
+		i -= color_count
+	return COLORS[i]

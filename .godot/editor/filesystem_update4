@@ -1,4 +1,3 @@
-res://NPC/npc.tscn
+res://GUI/dialog_system/dialog_system.tscn
 res://Items/potion.tres
-res://Scenes/Levels/area_1.tscn
-res://NPC/scripts/npc_behaviour_patrol.gd
+res://GUI/dialog_system/scripts/dialog_system.gd

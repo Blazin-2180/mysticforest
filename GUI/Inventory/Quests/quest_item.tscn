@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqnutdbcsmtbt"]
+
+[ext_resource type="Script" uid="uid://ol6gmfuk1ysl" path="res://GUI/Inventory/Quests/quest_item.gd" id="1_jle2u"]
+
+[node name="QuestItem" type="Button"]
+custom_minimum_size = Vector2(355, 100)
+script = ExtResource("1_jle2u")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.0
+offset_right = 353.0
+offset_bottom = 22.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 18
+text = "Quest Title"
+clip_text = true
+text_overrun_behavior = 4
+uppercase = true
+
+[node name="StepLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 24.0
+offset_right = 353.0
+offset_bottom = 96.0
+text = "Someone has asked you to do something and you need to go here to do it and get such and such from such and such whilst doing"
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 4

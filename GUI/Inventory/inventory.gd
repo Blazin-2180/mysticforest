@@ -6,9 +6,10 @@ var is_paused : bool = false
 #endregion
 
 #region /// On Ready Variables
-@onready var inventory_slot: Button = $Control/ColorRect/Panel/GridContainer/InventorySlot
+@onready var inventory_slot: Button = $Control/TabContainer/Inventory/Panel/GridContainer/InventorySlot
 @onready var item_description: Label = $Control/TabContainer/Inventory/ItemDescription
 @onready var button_load: Button = $Control/TabContainer/System/VBoxContainer/Button_Load
+@onready var tab_container: TabContainer = $Control/TabContainer
 #endregion
 
 #region /// Signals
@@ -18,7 +19,6 @@ signal hidden
 
 func _ready() -> void:
 	hide_inventory()
-	button_load.pressed.connect(_on_load_pressed)
 	pass
 
 func _unhandled_input ( event : InputEvent ) -> void:
@@ -28,10 +28,15 @@ func _unhandled_input ( event : InputEvent ) -> void:
 		else : 
 			hide_inventory()
 			get_viewport().set_input_as_handled()
+	if event.is_action_pressed("right_bumper") :
+		change_tab( 1 )
+	elif event.is_action_pressed("left_bumper") :
+		change_tab( -1 )
 
 func show_inventory () -> void :
 	visible = true
 	inventory_show = true
+	tab_container.current_tab = 0
 	shown.emit()
 	print("show")
 
@@ -45,8 +50,6 @@ func update_item_description (new_text : String) -> void :
 	item_description.text = new_text
 	
 func _on_load_pressed () -> void :
-	if is_paused == false :
-		return
 	GlobalSaveManager.load_game()
 	await GlobalLevelManager.level_load_started
 	hide_pause_menu()
@@ -59,7 +62,17 @@ func hide_pause_menu () -> void :
 
 func _on_button_exit_pressed() -> void:
 	get_tree().quit()
+
 #func play_audio( audio : AudioStream) -> void :
 	#audio_stream_player.stream = audio
 	#audio_stream_player.play()
 	#pass
+
+func change_tab( _i : int = 1 ) -> void :
+	tab_container.current_tab = wrapi(
+		tab_container.current_tab + _i,
+		0,
+		tab_container.get_tab_count()
+	)
+	tab_container.get_tab_bar().grab_focus()
+	pass

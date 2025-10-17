@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://buj7g0kdkywyt"]
+[gd_scene load_steps=11 format=3 uid="uid://buj7g0kdkywyt"]
 
 [ext_resource type="Script" uid="uid://b4h3excicddvf" path="res://GUI/Inventory/inventory.gd" id="1_btv15"]
 [ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="2_ewc0g"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://da20w1rpa8yuy" path="res://GUI/Inventory/Scripts/inventory_ui.gd" id="3_wlp85"]
 [ext_resource type="Resource" uid="uid://cqeukq4gf601u" path="res://GUI/Inventory/player_inventory.tres" id="4_wlp85"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="6_2cw0n"]
+[ext_resource type="Script" uid="uid://dh04ovj0wsf36" path="res://GUI/Inventory/quests_ui.gd" id="7_m38iw"]
+[ext_resource type="PackedScene" uid="uid://dqnutdbcsmtbt" path="res://GUI/Inventory/Quests/quest_item.tscn" id="7_qfjco"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wlp85"]
 atlas = ExtResource("2_ewc0g")
@@ -40,7 +42,7 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -269.0
+offset_left = -425.0
 offset_top = 239.0
 offset_right = -43.0
 offset_bottom = -146.0
@@ -53,13 +55,14 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1658.0
+offset_left = 1503.0
 offset_top = 260.0
 offset_right = -52.0
 offset_bottom = -156.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 2
+tab_alignment = 1
+current_tab = 1
 
 [node name="Inventory" type="Control" parent="Control/TabContainer"]
 visible = false
@@ -69,14 +72,14 @@ metadata/_tab_index = 0
 [node name="Panel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
 offset_left = 12.0
-offset_top = 515.0
-offset_right = 202.0
+offset_top = 495.0
+offset_right = 353.0
 offset_bottom = 629.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
 
 [node name="GridContainer" type="GridContainer" parent="Control/TabContainer/Inventory/Panel"]
 layout_mode = 2
-columns = 5
+columns = 9
 script = ExtResource("3_wlp85")
 data = ExtResource("4_wlp85")
 
@@ -109,7 +112,31 @@ layout_mode = 2
 [node name="InventorySlot9" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
+[node name="InventorySlot11" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
 [node name="InventorySlot10" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
 [node name="ItemDescription" type="Label" parent="Control/TabContainer/Inventory"]
@@ -126,11 +153,61 @@ justification_flags = 161
 uppercase = true
 
 [node name="Quests" type="Control" parent="Control/TabContainer"]
-visible = false
 layout_mode = 2
+script = ExtResource("7_m38iw")
 metadata/_tab_index = 1
 
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/TabContainer/Quests"]
+layout_mode = 0
+offset_top = 6.0
+offset_right = 365.0
+offset_bottom = 630.0
+follow_focus = true
+scroll_vertical_custom_step = 100.0
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/TabContainer/Quests/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/Quests/ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="QuestItem" parent="Control/TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_qfjco")]
+layout_mode = 2
+
+[node name="QuestItem2" parent="Control/TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_qfjco")]
+layout_mode = 2
+
+[node name="QuestItem3" parent="Control/TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_qfjco")]
+layout_mode = 2
+
+[node name="QuestItem4" parent="Control/TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_qfjco")]
+layout_mode = 2
+
+[node name="QuestItem5" parent="Control/TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_qfjco")]
+layout_mode = 2
+
+[node name="QuestItem6" parent="Control/TabContainer/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("7_qfjco")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/Quests"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.079
+anchor_right = 0.5
+anchor_bottom = 0.079
+offset_left = -177.5
+offset_top = -50.165
+offset_right = 177.5
+offset_bottom = 49.835
+
 [node name="System" type="Control" parent="Control/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -181,3 +258,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("6_2cw0n")
 text = "Game Paused"
+
+[connection signal="pressed" from="Control/TabContainer/System/VBoxContainer/Button_Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Control/TabContainer/System/VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]

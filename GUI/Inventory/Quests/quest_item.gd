@@ -5,7 +5,7 @@ var quest : Quest
 @onready var title_label: Label = $TitleLabel
 @onready var step_label: Label = $StepLabel
 
-func initialise( q_data : Quest, q_state ) -> void :
+func initialize( q_data : Quest, q_state ) -> void :
 	quest = q_data
 	title_label.text = q_data.title
 	

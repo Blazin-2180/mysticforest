@@ -23,8 +23,8 @@ func _unhandled_input( event : InputEvent ) -> void:
 		#print("Before : ", current_quests )
 		update_quest( "Tray-zurr", "Complete Quest", true )
 		update_quest ("Recover lost Tray-zurr", "Find treasure" )
-		#print("After : ", current_quests )
-		#print ("================================")
+		print("After : ", current_quests )
+		print ("================================")
 		pass
 	pass
 

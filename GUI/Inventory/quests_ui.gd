@@ -19,6 +19,6 @@ func _on_visible_changed() -> void :
 				continue
 			var new_q_item : QuestItem = QUEST_ITEM.instantiate()
 			quest_item_container.add_child( new_q_item )
-			new_q_item.initialise( quest_data, q )
+			new_q_item.initialize( quest_data, q )
 			# Connect to the focus entered of each quest
 	pass

@@ -4,3 +4,4 @@ res://Items/potion.tres
 res://GUI/Inventory/quests_ui.gd
 res://Scenes/Levels/area_1.tscn
 res://Quests/scripts/global_quest_manager.gd
+res://Quests/quest_002.tres

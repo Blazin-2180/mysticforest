@@ -1,6 +1,1 @@
-res://Quests/utility_nodes/quest_advance_trigger.tscn
-res://Items/potion.tres
-res://Quests/quest_001.tres
-res://Quests/utility_nodes/quest_advance_trigger.gd
-res://Scenes/Levels/area_1.tscn
-res://Quests/scripts/global_quest_manager.gd
+res://GUI/dialog_system/scripts/dialog_system.gd

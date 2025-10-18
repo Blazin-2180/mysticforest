@@ -8,6 +8,8 @@ class_name QuestAdvanceTrigger extends QuestNode
 func _ready() -> void:
 	if Engine.is_editor_hint() :
 		return
+	$Sprite2D.queue_free()
+	
 	if signal_name != "" :
 		if get_parent().has_signal(signal_name ) :
 			get_parent().connect( signal_name, advance_quest )

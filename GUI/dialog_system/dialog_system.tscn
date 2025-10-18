@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://84v2vfy7raxm"]
+[gd_scene load_steps=13 format=3 uid="uid://84v2vfy7raxm"]
 
 [ext_resource type="Script" uid="uid://dad7e427uquod" path="res://GUI/dialog_system/scripts/dialog_system.gd" id="1_5yhxf"]
 [ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="2_ns6ro"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="3_qocm2"]
 [ext_resource type="AudioStream" uid="uid://c1y6tgu0qfneo" path="res://GUI/dialog_system/audio/voice_blip.wav" id="4_qocm2"]
+[ext_resource type="Theme" uid="uid://t1pkxxir1dgx" path="res://GUI/dialog_system/dialog_choice_theme.tres" id="5_dwuo2"]
 
 [sub_resource type="Gradient" id="Gradient_5yhxf"]
 colors = PackedColorArray(0, 0, 0, 0.558, 1, 1, 1, 0.55200005)
@@ -172,3 +173,22 @@ libraries = {
 &"": SubResource("AnimationLibrary_umqd7")
 }
 autoplay = "default"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogUI"]
+layout_mode = 0
+offset_left = 1154.0
+offset_top = 815.0
+offset_right = 1273.0
+offset_bottom = 882.0
+theme = ExtResource("5_dwuo2")
+alignment = 2
+
+[node name="Button" type="Button" parent="DialogUI/VBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "Accept"
+
+[node name="Button2" type="Button" parent="DialogUI/VBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "Decline"

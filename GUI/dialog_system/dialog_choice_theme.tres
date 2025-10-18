@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://t1pkxxir1dgx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erkp4"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 3.0
+bg_color = Color(0, 0, 0, 0.41500002)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+anti_aliasing = false
+
+[resource]
+Button/styles/normal = SubResource("StyleBoxFlat_erkp4")
+VBoxContainer/constants/separation = 5

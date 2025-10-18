@@ -1,3 +1,5 @@
+Timer
+QuestAdvanceTrigger
 DialogText
 DialogBranch
 DialogChoice
@@ -11,4 +13,3 @@ MarginContainer
 ScrollContainer
 Control
 TabContainer
-AnimationPlayer

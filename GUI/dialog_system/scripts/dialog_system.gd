@@ -113,11 +113,19 @@ func set_dialog_choice( _d : DialogChoice ) -> void :
 		
 	for i in _d.dialog_branches.size() :
 		var _new_choice : Button = Button.new()
-		_new_choice.text = _d.dialog_branches[ i ].text
-		_new_choice.pressed.connect( _dialog_choice_selected )
 		choice_options.add_child( _new_choice )
+		_new_choice.text = _d.dialog_branches[ i ].text
+		#new_choice.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		_new_choice.pressed.connect( _dialog_choice_selected.bind( _d.dialog_branches[ i ] ) )
+	
+	await get_tree().create_timer( 0.1 ).timeout
+	choice_options.get_child( 0 ).grab_focus()
 
-func _dialog_choice_selected() -> void :
+func _dialog_choice_selected( _d ) -> void :
+	choice_options.visible = false
+	_d.selected.emit()
+	show_dialog( _d.dialog_items )
+	
 	pass
 
 func _on_timer_timeout() -> void :

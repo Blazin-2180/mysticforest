@@ -1,9 +1,6 @@
-res://GUI/Inventory/inventory.tscn
+res://Quests/utility_nodes/quest_advance_trigger.tscn
 res://Items/potion.tres
-res://Scripts/Bonbon/bonbon_walk.gd
-res://Scripts/Bonbon/bonbon.gd
-res://GUI/dialog_system/dialog_system.tscn
-res://Quests/scripts/global_quest_manager.gd
-res://Quests/quest_002.tres
 res://Quests/quest_001.tres
-res://Globals/global_player_manager.gd
+res://Quests/utility_nodes/quest_advance_trigger.gd
+res://Scenes/Levels/area_1.tscn
+res://Quests/scripts/global_quest_manager.gd

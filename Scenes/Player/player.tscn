@@ -1,7 +1,7 @@
 [gd_scene load_steps=42 format=3 uid="uid://d3qi426qtce4j"]
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://ojxvkmnppmxj" path="res://Sprites/characters/player.png" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://iypq2epf0lxg" path="res://Scenes/Player/Blazin.png" id="2_dey5f"]
 [ext_resource type="AudioStream" uid="uid://bxxt437inie8m" path="res://Audio/attack_swoosh.wav" id="3_06tpx"]
 [ext_resource type="Script" uid="uid://di2d8abdhau6n" path="res://Scripts/Player/player_state_machine.gd" id="3_vgqql"]
 [ext_resource type="Script" uid="uid://pdebiy7r1fvw" path="res://Scripts/Player/state_idle.gd" id="4_fkybt"]
@@ -425,7 +425,7 @@ script = ExtResource("1_cvnsp")
 
 [node name="Player_Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -17)
-texture = ExtResource("2_6t5aa")
+texture = ExtResource("2_dey5f")
 hframes = 6
 vframes = 10
 

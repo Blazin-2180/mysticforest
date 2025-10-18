@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=41 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="4_8byil"]
@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://bglw8tdn710ul" path="res://NPC/npc_behaviour_patrol.tscn" id="24_rjmqy"]
 [ext_resource type="PackedScene" uid="uid://bc6jcenrpq7m6" path="res://NPC/patrol_location.tscn" id="25_lgryw"]
 [ext_resource type="PackedScene" uid="uid://bvla1al4urdab" path="res://Interactables/dialog/dialog_interaction.tscn" id="27_a7186"]
+[ext_resource type="Resource" uid="uid://c0g726g2mb7u4" path="res://NPC/00_npcs/npc_sammy.tres" id="27_w5vv1"]
+[ext_resource type="PackedScene" uid="uid://w4wsau01imdh" path="res://Scenes/Bonbon/bonbon.tscn" id="28_4uyou"]
 [ext_resource type="Script" uid="uid://dmcfkt87u7iu5" path="res://Interactables/dialog/scripts/dialog_text.gd" id="28_w5vv1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wpi7"]
@@ -722,6 +724,7 @@ wait_time = 1.0
 
 [node name="Sammy" parent="." instance=ExtResource("21_mn84x")]
 position = Vector2(366, 127)
+npc_resource = ExtResource("27_w5vv1")
 
 [node name="NpcBehaviourPatrol" parent="Sammy" instance=ExtResource("24_rjmqy")]
 
@@ -761,3 +764,6 @@ metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 script = ExtResource("28_w5vv1")
 text = "I AM [wave][color=orange]SAMMY[/color][/wave]!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="Bonbon" parent="." instance=ExtResource("28_4uyou")]
+position = Vector2(251, 216)

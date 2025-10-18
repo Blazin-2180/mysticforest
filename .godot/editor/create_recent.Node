@@ -1,3 +1,4 @@
+Node
 Label
 VBoxContainer
 MarginContainer
@@ -11,4 +12,3 @@ AnimationPlayer
 CollisionShape2D
 Area2D
 PanelContainer
-AudioStreamPlayer

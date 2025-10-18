@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://da20w1rpa8yuy" path="res://GUI/Inventory/Scripts/inventory_ui.gd" id="3_wlp85"]
 [ext_resource type="Resource" uid="uid://cqeukq4gf601u" path="res://GUI/Inventory/player_inventory.tres" id="4_wlp85"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="6_2cw0n"]
-[ext_resource type="Script" uid="uid://dh04ovj0wsf36" path="res://GUI/Inventory/quests_ui.gd" id="7_m38iw"]
+[ext_resource type="Script" uid="uid://dh04ovj0wsf36" path="res://GUI/Inventory/Quests/quests_ui.gd" id="7_m38iw"]
 [ext_resource type="PackedScene" uid="uid://dqnutdbcsmtbt" path="res://GUI/Inventory/Quests/quest_item.tscn" id="7_qfjco"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wlp85"]
@@ -62,10 +62,9 @@ offset_bottom = -156.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 
 [node name="Inventory" type="Control" parent="Control/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -153,6 +152,7 @@ justification_flags = 161
 uppercase = true
 
 [node name="Quests" type="Control" parent="Control/TabContainer"]
+visible = false
 layout_mode = 2
 script = ExtResource("7_m38iw")
 metadata/_tab_index = 1

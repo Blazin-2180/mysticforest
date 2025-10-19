@@ -38,6 +38,12 @@ func update_summary() -> void :
 
 func get_step() -> String :
 	if quest_step != 0 && quest_step <= get_step_count():
-		return linked_quest.steps[ quest_step - 1 ]
+		return linked_quest.steps[ quest_step - 1 ].to_lower()
+	else :
+		return "N/A"
+
+func get_previous_step() -> String :
+	if quest_step <= get_step_count() && quest_step > 1:
+		return linked_quest.steps[ quest_step - 2 ]
 	else :
 		return "N/A"

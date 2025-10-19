@@ -245,6 +245,7 @@ _data = {
 }
 
 [node name="PlayerHUD" type="CanvasLayer"]
+process_mode = 3
 layer = 2
 script = ExtResource("1_xhte5")
 

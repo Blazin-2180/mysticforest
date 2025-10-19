@@ -45,7 +45,7 @@ func update_quest( _title : String, _completed_step : String = "", _is_complete 
 		#Quest was not found and needs adding
 		var new_quest : Dictionary = { 
 				title = _title, 
-				is_complete = _completed_step, 
+				is_complete = _is_complete, 
 				completed_steps = [] 
 		}
 		if _completed_step != "":

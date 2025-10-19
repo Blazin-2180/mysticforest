@@ -1,3 +1,5 @@
+Sprite2D
+QuestActivatedSwitch
 Timer
 QuestAdvanceTrigger
 DialogText
@@ -5,11 +7,8 @@ DialogBranch
 DialogChoice
 Button
 VBoxContainer
-Sprite2D
 Node2D
 Node
 Label
 MarginContainer
 ScrollContainer
-Control
-TabContainer

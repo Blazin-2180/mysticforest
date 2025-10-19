@@ -1,19 +1,26 @@
-[gd_resource type="Resource" script_class="Quest" load_steps=5 format=3 uid="uid://cs8s5xvtfcuwq"]
+[gd_resource type="Resource" script_class="Quest" load_steps=7 format=3 uid="uid://cs8s5xvtfcuwq"]
 
 [ext_resource type="Script" uid="uid://dx5wdgedq7lip" path="res://Quests/scripts/quest_resource.gd" id="1_qf1bm"]
 [ext_resource type="Script" uid="uid://2ny2rj1wwc43" path="res://Quests/scripts/quest_reward_item.gd" id="1_ued3x"]
 [ext_resource type="Resource" uid="uid://bbsj5phjad5en" path="res://Items/potion.tres" id="2_3kns2"]
+[ext_resource type="Resource" uid="uid://b3knkyqs778qi" path="res://Items/coinage.tres" id="3_3kns2"]
 
 [sub_resource type="Resource" id="Resource_avaul"]
 script = ExtResource("1_ued3x")
 item = ExtResource("2_3kns2")
 metadata/_custom_type_script = "uid://2ny2rj1wwc43"
 
+[sub_resource type="Resource" id="Resource_7b73g"]
+script = ExtResource("1_ued3x")
+item = ExtResource("3_3kns2")
+quantity = 5
+metadata/_custom_type_script = "uid://2ny2rj1wwc43"
+
 [resource]
 script = ExtResource("1_qf1bm")
 title = "Tray-zurr"
 description = "Sammy has asked you help him find his treasure. "
-steps = Array[String](["Complete Quest"])
-reward_experience = 5
-reward_items = Array[ExtResource("1_ued3x")]([SubResource("Resource_avaul")])
+steps = Array[String](["Find the forest", "Find the chest containing Sammy's treasure", "Return the treasure to Sammy"])
+reward_experience = 10
+reward_items = Array[ExtResource("1_ued3x")]([SubResource("Resource_avaul"), SubResource("Resource_7b73g")])
 metadata/_custom_type_script = "uid://dx5wdgedq7lip"

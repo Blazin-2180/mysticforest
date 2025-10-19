@@ -1,7 +1,8 @@
+res://
+res://Items
 res://GUI/dialog_system
 res://GUI/Inventory/Quests
 res://Quests/scripts
-res://Items
 res://Quests
 res://Fonts
 res://NPC/00_npcs
@@ -19,4 +20,3 @@ res://Scenes/Bonbon
 res://Scripts/Bonbon
 res://Scripts
 res://Scenes
-res://Sprites/characters

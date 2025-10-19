@@ -21,7 +21,7 @@ func _unhandled_input( event : InputEvent ) -> void:
 		#print("get_quest_index_by_title : ", get_quest_index_by_title( "Tray-zurr" ))
 		#print("get_quest_index_by_title : ", get_quest_index_by_title( "Recover lost Tray-zurr" ))
 		#print("Before : ", current_quests )
-		#update_quest( "Tray-zurr", "Complete Quest", true )
+		update_quest( "Tray-zurr", "Complete Quest", true )
 		#update_quest ("Recover lost Tray-zurr", "Step 1")
 		#print("After : ", current_quests )
 		#print ("================================")
@@ -54,6 +54,7 @@ func update_quest( _title : String, _completed_step : String = "", _is_complete 
 		current_quests.append( new_quest )
 		quest_updated.emit( new_quest )
 		#Display a notification that quest was added
+		PlayerHud.queue_notification( "Quest Started", _title )
 		pass
 	else :
 		#Quest was found, update it
@@ -63,16 +64,23 @@ func update_quest( _title : String, _completed_step : String = "", _is_complete 
 			pass
 		q.is_complete = _is_complete
 		quest_updated.emit( q )
+		
 		#Display a notification that quest was added or completed.
 		if q.is_complete == true : 
+			PlayerHud.queue_notification( "Quest Complete ", _title  )
 			give_quest_rewards( find_quest_by_title( _title ) )
+		else :
+			PlayerHud.queue_notification( "Quest Updated ", _title + " : " + _completed_step )
 	pass
 
 #Give exp and item rewards to player.
 func give_quest_rewards( _q : Quest ) -> void :
+	var _message : String = str(_q.reward_experience) + " experience"
 	GlobalPlayerManager.reward_experience( _q.reward_experience )
 	for i in _q.reward_items :
 		GlobalPlayerManager.INVENTORY_DATA.add_item( i.item, i.quantity )
+		_message += ", " + i.item.name
+	PlayerHud.queue_notification( "Rewards received ", _message)
 	pass
 
 

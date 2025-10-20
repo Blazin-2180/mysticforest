@@ -11,14 +11,16 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 @onready var state_machine : PlayerStateMachine = $StateMachine
 
 @export var character_name : String = "Cob"
-@export var level : int = 1
-@export var attack : int = 1
-@export var defence : int = 1
 @export var movement_speed : int = 400
 
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
 var invulnerable = false
+var level : int = 1
+var experience : int = 0
+var attack : int = 1
+var critical : int = 1
+var defence : int = 1
 
 
 signal direction_changed ( new_direction : Vector2 )
@@ -28,6 +30,8 @@ func _ready() -> void:
 	GlobalPlayerManager.player = self
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
+	update_damage_value()
+	GlobalPlayerManager.player_levelled_up.connect( update_damage_value )
 	pass
 
 func _process( _delta : float ) -> void:
@@ -91,4 +95,8 @@ func make_invulnerable ( _duration : float = 1.0 ) -> void :
 	await get_tree().create_timer( _duration ).timeout
 	invulnerable = false
 	hit_box.monitoring = true
+	pass
+
+func update_damage_value() -> void :
+	%AttackHurtBox.damage = attack
 	pass

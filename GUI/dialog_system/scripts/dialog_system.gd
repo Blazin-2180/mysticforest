@@ -26,7 +26,7 @@ var dialog_item_index : int = 0
 @onready var progress_dialog : Label = $DialogUI/DialogProgressIndicator/Label
 @onready var timer : Timer = $DialogUI/Timer
 @onready var audio_stream_player : AudioStreamPlayer = $DialogUI/AudioStreamPlayer
-#@onready var portrait_sprite: Sprite2D = $DialogUI/PortraitSprite
+@onready var portrait_sprite: Sprite2D = $DialogUI/PortraitSprite
 @onready var choice_options : VBoxContainer = $DialogUI/VBoxContainer
 
 #endregion
@@ -96,7 +96,7 @@ func start_dialog() -> void :
 func set_dialog_text( _d : DialogText ) -> void :
 	content.text = _d.text
 	name_label.text = _d.npc_info.npc_name
-	#portrait_sprite.texture = _d.npc_info.portrait
+	portrait_sprite.texture = _d.npc_info.portrait
 	content.visible_characters = 0
 	text_length = content.get_total_character_count()
 	plain_text = content.get_parsed_text()

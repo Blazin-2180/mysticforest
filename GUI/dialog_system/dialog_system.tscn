@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://84v2vfy7raxm"]
+[gd_scene load_steps=14 format=3 uid="uid://84v2vfy7raxm"]
 
 [ext_resource type="Script" uid="uid://dad7e427uquod" path="res://GUI/dialog_system/scripts/dialog_system.gd" id="1_5yhxf"]
 [ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="2_ns6ro"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="3_qocm2"]
 [ext_resource type="AudioStream" uid="uid://c1y6tgu0qfneo" path="res://GUI/dialog_system/audio/voice_blip.wav" id="4_qocm2"]
+[ext_resource type="Texture2D" uid="uid://isepk5tn0sc3" path="res://GUI/dialog_system/sprites/Untitled_Artwork 4.png" id="4_umqd7"]
 [ext_resource type="Theme" uid="uid://t1pkxxir1dgx" path="res://GUI/dialog_system/dialog_choice_theme.tres" id="5_dwuo2"]
 
 [sub_resource type="Gradient" id="Gradient_5yhxf"]
@@ -124,10 +125,10 @@ text = "I AM [wave][color=orange] SAMMY [/color][/wave]!!!"
 
 [node name="NameLabel" type="Label" parent="DialogUI"]
 layout_mode = 0
-offset_left = 653.0
-offset_top = 856.0
-offset_right = 729.0
-offset_bottom = 888.0
+offset_left = 755.0
+offset_top = 855.0
+offset_right = 831.0
+offset_bottom = 887.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 6
@@ -138,6 +139,8 @@ theme_override_font_sizes/font_size = 24
 text = "NAME"
 
 [node name="PortraitSprite" type="Sprite2D" parent="DialogUI"]
+position = Vector2(701, 814)
+texture = ExtResource("4_umqd7")
 
 [node name="Timer" type="Timer" parent="DialogUI"]
 one_shot = true

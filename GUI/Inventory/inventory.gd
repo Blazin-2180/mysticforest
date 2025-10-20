@@ -40,13 +40,11 @@ func show_inventory () -> void :
 	inventory_show = true
 	tab_container.current_tab = 0
 	shown.emit()
-	print("show")
 
 func hide_inventory () -> void : 
 	visible = false
 	inventory_show = false
 	hidden.emit()
-	print("hide")
 
 func update_item_description (new_text : String) -> void :
 	item_description.text = new_text

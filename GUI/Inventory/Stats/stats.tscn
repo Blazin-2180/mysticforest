@@ -1,0 +1,105 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx3h406wgpg83"]
+
+[ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="1_kabgj"]
+[ext_resource type="Script" uid="uid://cnrwf3wqc2rfu" path="res://GUI/Inventory/Stats/stats.gd" id="2_rwfs3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlp85"]
+atlas = ExtResource("1_kabgj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cw0n"]
+content_margin_left = 7.0
+content_margin_top = 7.0
+content_margin_right = 7.0
+content_margin_bottom = 7.0
+texture = SubResource("AtlasTexture_wlp85")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+
+[node name="Stats" type="PanelContainer"]
+offset_left = 12.0
+offset_top = 47.0
+offset_right = 143.0
+offset_bottom = 228.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
+script = ExtResource("2_rwfs3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Level" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Level"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level :"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Level"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "99"
+horizontal_alignment = 2
+
+[node name="Experience" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Experience"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Exp :"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Experience"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "99/99"
+horizontal_alignment = 2
+
+[node name="Attack" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Attack"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Atk :"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Attack"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "99"
+horizontal_alignment = 2
+
+[node name="Defence" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Defence"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Def :"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Defence"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "99"
+horizontal_alignment = 2
+
+[node name="Health" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Health"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "HP :"
+
+[node name="Label2" type="Label" parent="VBoxContainer/Health"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "99"
+horizontal_alignment = 2

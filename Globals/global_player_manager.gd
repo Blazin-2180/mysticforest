@@ -4,12 +4,14 @@ const PLAYER = preload("uid://d3qi426qtce4j")
 const INVENTORY_DATA : InventoryData = preload("res://GUI/Inventory/player_inventory.tres")
 
 signal interact_pressed
+signal player_levelled_up
 
 var player : Player
 var health_points : int = 6
 var max_health_points : int = 6
 var player_spawned : bool = false
-var experience : int = 0
+var level_requirements = [ 0, 50, 100, 200, 400, 800, 1500, 3000, 6000, 12000, 25000 ]
+
 
 func _ready() -> void:
 	add_player_instance()
@@ -27,8 +29,14 @@ func increase_health_points(num: int) -> void:
 	PlayerHud.update_health_points()
 
 func reward_experience( _exp : int ) -> void :
-	experience += _exp
-	print(str("Experience : ", experience ) )
+	player.experience += _exp
+	# Check for level advancement
+	if player.experience >= level_requirements[ player.level ] :
+		player.level += 1
+		player.attack += 1
+		player.defence += 1
+		max_health_points += 2
+		player_levelled_up.emit()
 	pass
 
 func add_player_instance () -> void :

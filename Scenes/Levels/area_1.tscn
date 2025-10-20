@@ -794,15 +794,19 @@ position = Vector2(431, 293)
 
 [node name="GreenGloop" parent="." instance=ExtResource("18_30j8n")]
 position = Vector2(280, 113)
+experience_reward = 5
 
 [node name="GreenGloop2" parent="." instance=ExtResource("18_30j8n")]
 position = Vector2(79, 289)
+experience_reward = 5
 
 [node name="GreenGloop3" parent="." instance=ExtResource("18_30j8n")]
 position = Vector2(942, 238)
+experience_reward = 5
 
 [node name="GreenGloop4" parent="." instance=ExtResource("18_30j8n")]
 position = Vector2(693, 382)
+experience_reward = 5
 
 [node name="ItemPickup" parent="." instance=ExtResource("17_30j8n")]
 position = Vector2(384.31934, 203.61716)

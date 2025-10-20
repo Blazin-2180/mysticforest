@@ -1,7 +1,9 @@
+Label
+HBoxContainer
+VBoxContainer
 CanvasModulate
 PersistentDataHandler
 AudioStreamPlayer
-Label
 Sprite2D
 TileMapLayer
 DialogText
@@ -9,7 +11,4 @@ DialogInteraction
 QuestActivatedSwitch
 AudioStreamPlayer2D
 AnimationPlayer
-VBoxContainer
 PanelContainer
-Panel
-Control

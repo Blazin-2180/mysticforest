@@ -1,3 +1,4 @@
+res://GUI/Inventory/Stats
 res://
 res://Items
 res://GUI/dialog_system
@@ -19,4 +20,3 @@ res://Scenes/Enemies
 res://Scenes/Bonbon
 res://Scripts/Bonbon
 res://Scripts
-res://Scenes

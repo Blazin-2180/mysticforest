@@ -10,7 +10,7 @@ const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
 @export var enemy_name : String = "Enemy"
 @export var health_points : int = 3
 @export var level : int = 1
-@export var experience_points : int = 1
+@export var experience_reward : int = 1
 @export var aggressive : bool = false
 
 var cardinal_direction : Vector2 = Vector2.DOWN
@@ -31,7 +31,7 @@ func _ready() -> void:
 	enemy_state_machine.inititalise ( self )
 	player = GlobalPlayerManager.player
 	hit_box.damaged.connect( _take_damage )
-	experience_points = level * 2
+	#experience_reward = level * 2
 	name_label.text = enemy_name
 	#enemy_level.text = str(level)
 	health_bar.max_value = health_points
@@ -86,4 +86,3 @@ func _take_damage ( hurt_box : HurtBox ) -> void :
 		enemy_damaged.emit( hurt_box )
 	else:
 		enemy_death.emit( hurt_box )
-	print( enemy_name, " : ", health_points )

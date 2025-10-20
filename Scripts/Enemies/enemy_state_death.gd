@@ -31,6 +31,7 @@ func enter() -> void :
 	enemy.animation_player.animation_finished.connect( _on_animation_finished )
 	disable_hurt_box()
 	drop_items()
+	GlobalPlayerManager.reward_experience( enemy.experience_reward)
 	pass
 
 func process ( _delta : float ) -> EnemyState :

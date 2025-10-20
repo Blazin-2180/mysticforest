@@ -18,7 +18,11 @@ var cardinal_direction : Vector2 = Vector2.DOWN
 var invulnerable = false
 var level : int = 1
 var experience : int = 0
-var attack : int = 1
+var attack : int = 1 :
+	set ( v ) : 
+		attack = v
+		update_damage_value()
+
 var critical : int = 1
 var defence : int = 1
 
@@ -31,7 +35,7 @@ func _ready() -> void:
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
 	update_damage_value()
-	GlobalPlayerManager.player_levelled_up.connect( update_damage_value )
+	#GlobalPlayerManager.player_levelled_up.connect( update_damage_value )
 	pass
 
 func _process( _delta : float ) -> void:

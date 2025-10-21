@@ -27,3 +27,11 @@ func advance_quest() -> void :
 		
 	QuestManager.update_quest( _title, _step, quest_complete )
 	pass
+
+
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	advance_quest()
+	queue_free()
+	pass # Replace with function body.

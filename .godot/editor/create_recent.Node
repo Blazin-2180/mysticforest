@@ -1,5 +1,7 @@
-Label
 HBoxContainer
+CollisionShape2D
+Area2D
+Label
 VBoxContainer
 CanvasModulate
 PersistentDataHandler
@@ -10,5 +12,3 @@ DialogText
 DialogInteraction
 QuestActivatedSwitch
 AudioStreamPlayer2D
-AnimationPlayer
-PanelContainer

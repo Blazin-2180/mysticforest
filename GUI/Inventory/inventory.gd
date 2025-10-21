@@ -22,7 +22,7 @@ func _ready() -> void:
 	pass
 
 func _unhandled_input ( event : InputEvent ) -> void:
-	if event.is_action_pressed( "inventory" ) :
+	if event.is_action_pressed( "inventory" ) || event.is_action_pressed( "ui_cancel" ):
 		if inventory_show == false :
 			if DialogSystem.is_active:
 				return

@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=52 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="4_8byil"]
@@ -35,6 +35,7 @@
 [ext_resource type="Resource" uid="uid://cs8s5xvtfcuwq" path="res://Quests/quest_001.tres" id="31_p87po"]
 [ext_resource type="Script" uid="uid://bjn2dibwtkeq1" path="res://Quests/utility_nodes/quest_activated_switch.gd" id="32_p87po"]
 [ext_resource type="PackedScene" uid="uid://c7mmiy5ff1i6o" path="res://Quests/utility_nodes/quest_activated_switch.tscn" id="34_xkhu6"]
+[ext_resource type="PackedScene" uid="uid://hm7g5hqddfle" path="res://Quests/utility_nodes/quest_advance_trigger.tscn" id="36_d00wu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wpi7"]
 texture = ExtResource("4_8byil")
@@ -757,6 +758,9 @@ physics_layer_0/collision_layer = 128
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_v60p0")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v60p0"]
+size = Vector2(37, 20)
+
 [node name="Area_1" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_nwo41")
@@ -992,4 +996,20 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD+/wAAAAAAAAUAAAAAAAAAAAAAAAUAAAA=")
 tile_set = SubResource("TileSet_d00wu")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(501, 155)
+collision_layer = 128
+
+[node name="QuestAdvanceTrigger" parent="Area2D" instance=ExtResource("36_d00wu")]
+linked_quest = ExtResource("31_p87po")
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Step : 0 N/A
+Complete : false"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(6.5, 0)
+shape = SubResource("RectangleShape2D_v60p0")
+
 [connection signal="visibility_changed" from="treasure_chest" to="treasure_chest/ItemDropper" method="drop_item"]
+[connection signal="area_entered" from="Area2D" to="Area2D/QuestAdvanceTrigger" method="_on_area_2d_area_entered"]

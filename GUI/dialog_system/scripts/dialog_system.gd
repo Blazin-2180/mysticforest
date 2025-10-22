@@ -20,7 +20,7 @@ var dialog_item_index : int = 0
 
 #region /// ON READY VARIABLES
 @onready var dialog_ui : Control = $DialogUI
-@onready var content : RichTextLabel = $DialogUI/TextureRect/PanelContainer/RichTextLabel
+@onready var content : RichTextLabel = $DialogUI/PanelContainer/RichTextLabel
 @onready var name_label : Label = $DialogUI/NameLabel
 @onready var dialog_progress_indicator : PanelContainer = $DialogUI/DialogProgressIndicator
 @onready var progress_dialog : Label = $DialogUI/DialogProgressIndicator/Label

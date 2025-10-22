@@ -1,6 +1,9 @@
-HBoxContainer
 CollisionShape2D
 Area2D
+QuestActivatedSwitch
+QuestAdvanceTrigger
+DialogText
+HBoxContainer
 Label
 VBoxContainer
 CanvasModulate
@@ -8,7 +11,4 @@ PersistentDataHandler
 AudioStreamPlayer
 Sprite2D
 TileMapLayer
-DialogText
 DialogInteraction
-QuestActivatedSwitch
-AudioStreamPlayer2D

@@ -57,3 +57,8 @@ func _update_texture() -> void :
 
 func _on_treasure_chest_visibility_changed() -> void:
 	pass # Replace with function body.
+
+
+func _on_green_gloop_enemy_death(hurt_box: HurtBox) -> void:
+	$".".drop_item()
+	pass # Replace with function body.

@@ -1,4 +1,4 @@
+NPCResource
 Quest
 ItemData
-NPCResource
 InventoryData

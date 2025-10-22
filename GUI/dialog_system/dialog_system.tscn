@@ -15,17 +15,6 @@ gradient = SubResource("Gradient_5yhxf")
 fill_from = Vector2(0.508547, 0)
 fill_to = Vector2(0.5, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ns6ro"]
-content_margin_left = 32.0
-content_margin_top = 16.0
-content_margin_right = 32.0
-content_margin_bottom = 16.0
-texture = ExtResource("2_ns6ro")
-texture_margin_left = 16.0
-texture_margin_top = 16.0
-texture_margin_right = 16.0
-texture_margin_bottom = 16.0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ns6ro"]
 content_margin_left = 4.0
 content_margin_top = 0.0
@@ -74,6 +63,17 @@ _data = {
 &"default": SubResource("Animation_qocm2")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ns6ro"]
+content_margin_left = 32.0
+content_margin_top = 16.0
+content_margin_right = 32.0
+content_margin_bottom = 16.0
+texture = ExtResource("2_ns6ro")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
 [node name="DialogSystem" type="CanvasLayer"]
 process_mode = 3
 layer = 3
@@ -88,47 +88,27 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="DialogUI"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -310.0
-offset_top = -189.0
-offset_right = 319.0
+offset_left = -242.0
+offset_top = -127.0
+offset_right = 258.0
 offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = SubResource("GradientTexture2D_mhrrj")
 
-[node name="PanelContainer" type="PanelContainer" parent="DialogUI/TextureRect"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -314.5
-offset_top = -167.0
-offset_right = 315.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxTexture_ns6ro")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="DialogUI/TextureRect/PanelContainer"]
-layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("3_qocm2")
-theme_override_font_sizes/normal_font_size = 20
-bbcode_enabled = true
-text = "I AM [wave][color=orange] SAMMY [/color][/wave]!!!"
-
 [node name="NameLabel" type="Label" parent="DialogUI"]
 layout_mode = 0
-offset_left = 755.0
-offset_top = 855.0
-offset_right = 831.0
-offset_bottom = 887.0
+offset_left = 219.0
+offset_top = 253.0
+offset_right = 295.0
+offset_bottom = 285.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 6
@@ -139,7 +119,7 @@ theme_override_font_sizes/font_size = 24
 text = "NAME"
 
 [node name="PortraitSprite" type="Sprite2D" parent="DialogUI"]
-position = Vector2(701, 814)
+position = Vector2(167, 209)
 texture = ExtResource("4_umqd7")
 
 [node name="Timer" type="Timer" parent="DialogUI"]
@@ -158,10 +138,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -27.5
-offset_top = -58.0
-offset_right = 27.5
-offset_bottom = -33.0
+offset_left = -41.0
+offset_top = -32.0
+offset_right = 41.0
+offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ns6ro")
@@ -180,10 +160,10 @@ autoplay = "default"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="DialogUI"]
 layout_mode = 0
-offset_left = 1154.0
-offset_top = 815.0
-offset_right = 1273.0
-offset_bottom = 882.0
+offset_left = 406.0
+offset_top = 216.0
+offset_right = 525.0
+offset_bottom = 283.0
 theme = ExtResource("5_dwuo2")
 alignment = 2
 
@@ -196,3 +176,25 @@ text = "Accept"
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 text = "Decline"
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogUI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -207.25
+offset_top = -75.0
+offset_right = 207.25
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ns6ro")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogUI/PanelContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_qocm2")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "I AM [wave][color=orange] SAMMY [/color][/wave]!!!"

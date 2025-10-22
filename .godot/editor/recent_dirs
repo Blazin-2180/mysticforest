@@ -1,3 +1,4 @@
+res://NPC/00_npcs
 res://GUI/Inventory/Stats
 res://
 res://Items
@@ -6,7 +7,6 @@ res://GUI/Inventory/Quests
 res://Quests/scripts
 res://Quests
 res://Fonts
-res://NPC/00_npcs
 res://GUI/Inventory
 res://Scripts/Player
 C:/Users/blazi/Desktop

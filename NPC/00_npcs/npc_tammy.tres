@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=3 format=3 uid="uid://ch8ad3y2xyb8d"]
+
+[ext_resource type="Script" uid="uid://dg5ste7ke42e0" path="res://NPC/scripts/npc_resource.gd" id="1_32kcg"]
+[ext_resource type="Texture2D" uid="uid://bv6ggcotgwqb1" path="res://NPC/sprites/Tammy.png" id="2_3snu7"]
+
+[resource]
+script = ExtResource("1_32kcg")
+npc_name = "Tammy"
+sprite = ExtResource("2_3snu7")
+metadata/_custom_type_script = "uid://dg5ste7ke42e0"

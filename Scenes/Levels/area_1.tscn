@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=51 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="4_8byil"]
@@ -633,9 +633,6 @@ sources/1 = SubResource("TileSetAtlasSource_gpcaj")
 sources/5 = SubResource("TileSetAtlasSource_3u6la")
 sources/6 = SubResource("TileSetAtlasSource_3jev2")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_v60p0"]
-radius = 7.071068
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v60p0"]
 texture = ExtResource("5_i564r")
 0:0/0 = 0
@@ -822,26 +819,18 @@ item_data = ExtResource("18_boegt")
 position = Vector2(224, 163)
 item_data = ExtResource("18_boegt")
 
-[node name="ItemPickup3" parent="." instance=ExtResource("17_30j8n")]
-position = Vector2(653, 563)
+[node name="treasure_chest" parent="." instance=ExtResource("19_boegt")]
+position = Vector2(655, 565)
 item_data = ExtResource("20_6a6p3")
 
-[node name="Area2D2" type="Area2D" parent="ItemPickup3"]
-
-[node name="QuestAdvanceTrigger" parent="ItemPickup3/Area2D2" instance=ExtResource("36_d00wu")]
+[node name="QuestAdvanceTrigger" parent="treasure_chest" instance=ExtResource("36_d00wu")]
+position = Vector2(-1, -11.550842)
 linked_quest = ExtResource("31_p87po")
 quest_step = 2
 settings_summary = "UPDATE QUEST : 
 Quest : Tray-zurr
 Step : 2 find the chest containing sammy's treasure
 Complete : false"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemPickup3/Area2D2"]
-shape = SubResource("CircleShape2D_v60p0")
-
-[node name="treasure_chest" parent="." instance=ExtResource("19_boegt")]
-position = Vector2(813, 572)
-item_data = ExtResource("18_boegt")
 
 [node name="treasure_chest2" parent="." instance=ExtResource("19_boegt")]
 position = Vector2(402, 159)
@@ -923,21 +912,74 @@ script = ExtResource("28_w5vv1")
 text = "Er... sure... [wave]GOODBYEEEEE!!![/wave]"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestActivatedSwitch2" type="Node2D" parent="Sammy"]
-script = ExtResource("32_p87po")
-react_to_global_signal = true
+[node name="QuestActivatedSwitch4" parent="Sammy" instance=ExtResource("34_xkhu6")]
+check_type = 0
+remove_when_activated = false
+react_to_global_signal = false
 linked_quest = ExtResource("31_p87po")
 settings_summary = "UPDATE QUEST : 
 Quest : Tray-zurr
 Checking if player has quest"
+
+[node name="QuestActivatedSwitch2" type="Node2D" parent="Sammy/QuestActivatedSwitch4"]
+script = ExtResource("32_p87po")
+check_type = 2
+react_to_global_signal = true
+linked_quest = ExtResource("31_p87po")
+quest_step = 1
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Check if player is on Step : find the forest"
 metadata/_custom_type_script = "uid://bjn2dibwtkeq1"
 
-[node name="DialogInteraction2" parent="Sammy/QuestActivatedSwitch2" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction2" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch2" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch2/DialogInteraction2"]
+[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch2/DialogInteraction2"]
 script = ExtResource("28_w5vv1")
 text = "Have you found my tray-zurr  ?"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="QuestActivatedSwitch3" parent="Sammy/QuestActivatedSwitch4" instance=ExtResource("34_xkhu6")]
+check_type = 2
+remove_when_activated = false
+react_to_global_signal = true
+linked_quest = ExtResource("31_p87po")
+quest_step = 3
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Check if player is on Step : return the treasure to sammy"
+
+[node name="DialogInteraction3" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3" instance=ExtResource("27_a7186")]
+
+[node name="QuestActivatedSwitch4" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3" instance=ExtResource("34_xkhu6")]
+check_type = 2
+remove_when_activated = true
+react_to_global_signal = true
+free_on_remove = true
+linked_quest = ExtResource("31_p87po")
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Check if player is on Step : N/A"
+
+[node name="DialogText2" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3"]
+script = ExtResource("28_w5vv1")
+text = "You found my tray-zurr !!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="DialogText3" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3"]
+script = ExtResource("28_w5vv1")
+text = "As promised, a handsome reward!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="QuestAdvanceTrigger" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3" instance=ExtResource("36_d00wu")]
+signal_name = "finished"
+linked_quest = ExtResource("31_p87po")
+quest_step = 3
+quest_complete = true
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Step : 3 return the treasure to sammy
+Complete : true"
 
 [node name="NpcBehaviourPatrol" parent="Sammy" instance=ExtResource("24_rjmqy")]
 
@@ -1007,5 +1049,5 @@ text = "Hello!"
 npc_info = ExtResource("37_cww87")
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[connection signal="area_entered" from="ItemPickup3/Area2D2" to="ItemPickup3/Area2D2/QuestAdvanceTrigger" method="_on_area_2d_area_entered"]
+[connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]
 [connection signal="area_entered" from="Area2D" to="Area2D/QuestAdvanceTrigger" method="_on_area_2d_area_entered"]

@@ -35,3 +35,15 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	advance_quest()
 	queue_free()
 	pass # Replace with function body.
+
+
+func _on_item_pickup_picked_up() -> void:
+	advance_quest()
+	queue_free()
+	pass # Replace with function body.
+
+
+func _on_treasure_chest_chest_opened() -> void:
+	advance_quest()
+	queue_free()
+	pass # Replace with function body.

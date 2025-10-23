@@ -6,7 +6,6 @@
 
 [resource]
 script = ExtResource("3_8vtfr")
-name = "Sammy's Tray-zurr"
 description = "The tray-zurr Sammy lost in the forest. "
 texture = ExtResource("3_a636h")
 metadata/_custom_type_script = "uid://bhtwlxtfik0ii"

@@ -1,6 +1,8 @@
 @tool
 class_name TreasureChest extends Node2D
 
+signal chest_opened 
+
 #region /// Export Variables
 @export var item_data : ItemData : set = _set_item_data
 @export var quantity : int = 1 : set = _set_quantity
@@ -41,6 +43,7 @@ func player_interact() -> void :
 	is_open = true 
 	presistent_data_is_open.set_value()
 	animation_player.play("open_chest")
+	chest_opened.emit()
 	if item_data && quantity > 0 :
 		GlobalPlayerManager.INVENTORY_DATA.add_item( item_data, quantity )
 	else :

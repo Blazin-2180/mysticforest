@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://84v2vfy7raxm"]
 
 [ext_resource type="Script" uid="uid://dad7e427uquod" path="res://GUI/dialog_system/scripts/dialog_system.gd" id="1_5yhxf"]
-[ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="2_ns6ro"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="3_qocm2"]
 [ext_resource type="AudioStream" uid="uid://c1y6tgu0qfneo" path="res://GUI/dialog_system/audio/voice_blip.wav" id="4_qocm2"]
 [ext_resource type="Texture2D" uid="uid://isepk5tn0sc3" path="res://GUI/dialog_system/sprites/Untitled_Artwork 4.png" id="4_umqd7"]
 [ext_resource type="Theme" uid="uid://t1pkxxir1dgx" path="res://GUI/dialog_system/dialog_choice_theme.tres" id="5_dwuo2"]
+[ext_resource type="Texture2D" uid="uid://bt2evx6083gal" path="res://GUI/dialog_system/sprites/Untitled 60.png" id="5_umqd7"]
 
 [sub_resource type="Gradient" id="Gradient_5yhxf"]
 colors = PackedColorArray(0, 0, 0, 0.558, 1, 1, 1, 0.55200005)
@@ -15,12 +15,22 @@ gradient = SubResource("Gradient_5yhxf")
 fill_from = Vector2(0.508547, 0)
 fill_to = Vector2(0.5, 1)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ns6ro"]
+content_margin_left = 16.0
+content_margin_top = 8.0
+content_margin_right = 16.0
+content_margin_bottom = 8.0
+texture = ExtResource("5_umqd7")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ns6ro"]
 content_margin_left = 4.0
 content_margin_top = 0.0
 content_margin_right = 4.0
 content_margin_bottom = 1.0
-bg_color = Color(0.9867516, 0.9867516, 0.9867516, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -63,17 +73,6 @@ _data = {
 &"default": SubResource("Animation_qocm2")
 }
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ns6ro"]
-content_margin_left = 32.0
-content_margin_top = 16.0
-content_margin_right = 32.0
-content_margin_bottom = 16.0
-texture = ExtResource("2_ns6ro")
-texture_margin_left = 16.0
-texture_margin_top = 16.0
-texture_margin_right = 16.0
-texture_margin_bottom = 16.0
-
 [node name="DialogSystem" type="CanvasLayer"]
 process_mode = 3
 layer = 3
@@ -105,21 +104,22 @@ texture = SubResource("GradientTexture2D_mhrrj")
 
 [node name="NameLabel" type="Label" parent="DialogUI"]
 layout_mode = 0
-offset_left = 219.0
-offset_top = 253.0
-offset_right = 295.0
-offset_bottom = 285.0
+offset_left = 218.0
+offset_top = 261.0
+offset_right = 294.0
+offset_bottom = 282.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_offset_y = 6
 theme_override_constants/outline_size = 6
 theme_override_constants/shadow_outline_size = 6
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 16
 text = "NAME"
 
 [node name="PortraitSprite" type="Sprite2D" parent="DialogUI"]
-position = Vector2(167, 209)
+position = Vector2(186.00002, 241)
+scale = Vector2(0.58, 0.58000004)
 texture = ExtResource("4_umqd7")
 
 [node name="Timer" type="Timer" parent="DialogUI"]
@@ -130,39 +130,11 @@ stream = ExtResource("4_qocm2")
 max_polyphony = 6
 bus = &"SFX"
 
-[node name="DialogProgressIndicator" type="PanelContainer" parent="DialogUI"]
-self_modulate = Color(0.26293245, 0.26293245, 0.26293245, 1)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -41.0
-offset_top = -32.0
-offset_right = 41.0
-offset_bottom = -7.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ns6ro")
-
-[node name="Label" type="Label" parent="DialogUI/DialogProgressIndicator"]
-layout_mode = 2
-text = "Continue"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/DialogProgressIndicator/Label"]
-libraries = {
-&"": SubResource("AnimationLibrary_umqd7")
-}
-autoplay = "default"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="DialogUI"]
 layout_mode = 0
-offset_left = 406.0
+offset_left = 364.0
 offset_top = 216.0
-offset_right = 525.0
+offset_right = 483.0
 offset_bottom = 283.0
 theme = ExtResource("5_dwuo2")
 alignment = 2
@@ -184,10 +156,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -207.25
-offset_top = -75.0
-offset_right = 207.25
-offset_bottom = -5.0
+offset_left = -163.5
+offset_top = -76.0
+offset_right = 163.5
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_ns6ro")
@@ -195,6 +167,35 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_ns6ro")
 [node name="RichTextLabel" type="RichTextLabel" parent="DialogUI/PanelContainer"]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("3_qocm2")
-theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "I AM [wave][color=orange] SAMMY [/color][/wave]!!!"
+
+[node name="DialogProgressIndicator" type="PanelContainer" parent="DialogUI"]
+self_modulate = Color(0.26293245, 0.26293245, 0.26293245, 1)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -28.0
+offset_top = -25.0
+offset_right = 28.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ns6ro")
+
+[node name="Label" type="Label" parent="DialogUI/DialogProgressIndicator"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/DialogProgressIndicator/Label"]
+libraries = {
+&"": SubResource("AnimationLibrary_umqd7")
+}
+autoplay = "default"

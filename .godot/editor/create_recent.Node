@@ -1,9 +1,9 @@
+DialogText
 TextureRect
 CollisionShape2D
 Area2D
 QuestActivatedSwitch
 QuestAdvanceTrigger
-DialogText
 HBoxContainer
 Label
 VBoxContainer
@@ -12,4 +12,3 @@ PersistentDataHandler
 AudioStreamPlayer
 Sprite2D
 TileMapLayer
-DialogInteraction

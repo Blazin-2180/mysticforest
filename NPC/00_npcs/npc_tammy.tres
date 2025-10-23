@@ -7,4 +7,5 @@
 script = ExtResource("1_32kcg")
 npc_name = "Tammy"
 sprite = ExtResource("2_3snu7")
+dialogue_audio_pitch = 1.4
 metadata/_custom_type_script = "uid://dg5ste7ke42e0"

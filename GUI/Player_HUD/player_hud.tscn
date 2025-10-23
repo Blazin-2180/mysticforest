@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bsnsaia4q1dws" path="res://Globals/player_hud.gd" id="1_xhte5"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="2_gian7"]
-[ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="3_1pbxj"]
 [ext_resource type="Script" uid="uid://dx4og76726hhn" path="res://GUI/Player_HUD/quest_notification.gd" id="3_agyfd"]
+[ext_resource type="Texture2D" uid="uid://bt2evx6083gal" path="res://GUI/dialog_system/sprites/Untitled 60.png" id="4_agyfd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hai4"]
 bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
@@ -251,7 +251,7 @@ content_margin_left = 12.0
 content_margin_top = 8.0
 content_margin_right = 12.0
 content_margin_bottom = 12.0
-texture = ExtResource("3_1pbxj")
+texture = ExtResource("4_agyfd")
 texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
@@ -309,10 +309,10 @@ tracks/0/path = NodePath("PanelContainer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 2.7, 3),
+"times": PackedFloat32Array(0.3, 1.2, 2.2, 3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(40, 104), Vector2(40, 1), Vector2(40, 1), Vector2(40, 104)]
+"values": [Vector2(0, -369), Vector2(0, -284), Vector2(0, -284), Vector2(0, -369)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false

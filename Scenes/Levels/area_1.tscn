@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=52 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="4_8byil"]
@@ -33,6 +33,7 @@
 [ext_resource type="Resource" uid="uid://cs8s5xvtfcuwq" path="res://Quests/quest_001.tres" id="31_p87po"]
 [ext_resource type="Script" uid="uid://bjn2dibwtkeq1" path="res://Quests/utility_nodes/quest_activated_switch.gd" id="32_p87po"]
 [ext_resource type="PackedScene" uid="uid://c7mmiy5ff1i6o" path="res://Quests/utility_nodes/quest_activated_switch.tscn" id="34_xkhu6"]
+[ext_resource type="Resource" uid="uid://bwgtmy88h64b3" path="res://NPC/00_npcs/npc_dan.tres" id="36_cww87"]
 [ext_resource type="PackedScene" uid="uid://hm7g5hqddfle" path="res://Quests/utility_nodes/quest_advance_trigger.tscn" id="36_d00wu"]
 [ext_resource type="Resource" uid="uid://ch8ad3y2xyb8d" path="res://NPC/00_npcs/npc_tammy.tres" id="37_cww87"]
 
@@ -1006,7 +1007,7 @@ wait_time = 3.0
 position = Vector2(251, 216)
 
 [node name="QuestActivatedSwitch" parent="." instance=ExtResource("34_xkhu6")]
-position = Vector2(663, 447)
+position = Vector2(663, 445)
 check_type = 0
 remove_when_activated = true
 react_to_global_signal = true
@@ -1022,10 +1023,11 @@ tile_map_data = PackedByteArray("AAD+/wAAAAAAAAUAAAAAAAAAAAAAAAUAAAA=")
 tile_set = SubResource("TileSet_d00wu")
 
 [node name="Area2D" type="Area2D" parent="."]
-position = Vector2(663, 480)
+position = Vector2(662, 476)
 collision_layer = 128
 
 [node name="QuestAdvanceTrigger" parent="Area2D" instance=ExtResource("36_d00wu")]
+position = Vector2(6, 1)
 linked_quest = ExtResource("31_p87po")
 quest_step = 1
 settings_summary = "UPDATE QUEST : 
@@ -1045,8 +1047,20 @@ npc_resource = ExtResource("37_cww87")
 
 [node name="DialogText" type="Node" parent="Tammy/DialogInteraction"]
 script = ExtResource("28_w5vv1")
-text = "Hello!"
+text = "Hello there stranger!"
 npc_info = ExtResource("37_cww87")
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="Dan" parent="." instance=ExtResource("21_mn84x")]
+position = Vector2(499, 188)
+npc_resource = ExtResource("36_cww87")
+
+[node name="DialogInteraction" parent="Dan" instance=ExtResource("27_a7186")]
+
+[node name="DialogText" type="Node" parent="Dan/DialogInteraction"]
+script = ExtResource("28_w5vv1")
+text = "Greetings Squire!"
+npc_info = ExtResource("36_cww87")
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]

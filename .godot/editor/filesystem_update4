@@ -1,12 +1,5 @@
-res://GUI/dialog_system/dialog_system.tscn
+res://Scenes/Levels/area_1.tscn
 res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
-res://Scenes/Levels/area_1.tscn
-res://Items/sammys_treasure.tres
-res://Quests/utility_nodes/quest_advance_trigger.gd
-res://Interactables/TreasureChest/treasure_chest.gd
-res://GUI/Inventory/Quests/quest_item.tscn
-res://GUI/Player_HUD/player_hud.tscn
 res://NPC/00_npcs/npc_dan.tres
-res://NPC/00_npcs/npc_tammy.tres

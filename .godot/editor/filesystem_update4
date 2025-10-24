@@ -1,5 +1,7 @@
-res://Scenes/Levels/area_1.tscn
+res://NPC/npc.tscn
 res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
+res://GUI/dialog_system/dialog_system.tscn
+res://Scenes/Levels/area_1.tscn
 res://NPC/00_npcs/npc_dan.tres

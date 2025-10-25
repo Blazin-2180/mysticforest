@@ -95,10 +95,10 @@ horizontal_alignment = 1
 
 [node name="Stats" parent="Control/TabContainer/Inventory" instance=ExtResource("6_58q36")]
 layout_mode = 0
-offset_left = -39.0
-offset_top = 85.0
-offset_right = 92.0
-offset_bottom = 220.0
+offset_left = -70.0
+offset_top = 49.0
+offset_right = 22.0
+offset_bottom = 184.0
 mouse_filter = 1
 
 [node name="Panel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
@@ -241,15 +241,19 @@ Someone has asked you to fetch something from somewhere. "
 autowrap_mode = 2
 
 [node name="SpacerControl" type="Control" parent="Control/TabContainer/Quests/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
 [node name="QuestStepItem" parent="Control/TabContainer/Quests/VBoxContainer" instance=ExtResource("13_bth1d")]
+custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 
 [node name="QuestStepItem2" parent="Control/TabContainer/Quests/VBoxContainer" instance=ExtResource("13_bth1d")]
+custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 
 [node name="QuestStepItem3" parent="Control/TabContainer/Quests/VBoxContainer" instance=ExtResource("13_bth1d")]
+custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 
 [node name="System" type="Control" parent="Control/TabContainer"]

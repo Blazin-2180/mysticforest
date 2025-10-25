@@ -1,8 +1,8 @@
+RichTextLabel
+Label
 Control
 Sprite2D
 HBoxContainer
-RichTextLabel
-Label
 TextureRect
 NPC
 DialogText

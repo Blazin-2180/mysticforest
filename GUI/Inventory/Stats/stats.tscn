@@ -21,8 +21,8 @@ texture_margin_bottom = 14.0
 [node name="Stats" type="PanelContainer"]
 offset_left = 12.0
 offset_top = 47.0
-offset_right = 143.0
-offset_bottom = 228.0
+offset_right = 129.0
+offset_bottom = 182.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
 script = ExtResource("2_rwfs3")
 
@@ -33,13 +33,13 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Level"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Level :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Level"]
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 text = "99"
 horizontal_alignment = 2
@@ -48,28 +48,28 @@ horizontal_alignment = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Experience"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Exp :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Experience"]
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-text = "99/99"
+text = "99"
 horizontal_alignment = 2
 
 [node name="Attack" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Attack"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Atk :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Attack"]
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 text = "99"
 horizontal_alignment = 2
@@ -78,13 +78,13 @@ horizontal_alignment = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Defence"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Def :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Defence"]
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 text = "99"
 horizontal_alignment = 2
@@ -93,13 +93,13 @@ horizontal_alignment = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Health"]
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "HP :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Health"]
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 text = "99"
 horizontal_alignment = 2

@@ -14,3 +14,6 @@ res://GUI/Inventory/inventory.gd
 res://GUI/Inventory/Quests/quest_step_item.tscn
 res://GUI/Inventory/Quests/quest_step_item.gd
 res://GUI/Inventory/Quests/quests_ui.gd
+res://GUI/Inventory/Quests/quest_item.gd
+res://NPC/00_npcs/npc_sammy.tres
+res://GUI/Inventory/Stats/stats.tscn

@@ -33,7 +33,6 @@ offset_bottom = 96.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_js22w")
 theme_override_font_sizes/font_size = 16
-text = "Someone has asked you to do something and you need to go here to do it and get such and such from such and such whilst doing"
 autowrap_mode = 3
 clip_text = true
 text_overrun_behavior = 4

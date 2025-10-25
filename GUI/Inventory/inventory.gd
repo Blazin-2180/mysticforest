@@ -7,7 +7,7 @@ var is_paused : bool = false
 
 #region /// On Ready Variables
 @onready var inventory_slot: Button = $Control/TabContainer/Inventory/Panel/GridContainer/InventorySlot
-@onready var item_description: Label = $Control/TabContainer/Inventory/ItemDescription
+@onready var item_description: Label = $Control/TabContainer/Inventory/ItemDescription	
 @onready var button_load: Button = $Control/TabContainer/System/VBoxContainer/Button_Load
 @onready var tab_container: TabContainer = $Control/TabContainer
 #endregion
@@ -30,18 +30,23 @@ func _unhandled_input ( event : InputEvent ) -> void:
 		else : 
 			hide_inventory()
 			get_viewport().set_input_as_handled()
-	if event.is_action_pressed("right_bumper") :
-		change_tab( 1 )
-	elif event.is_action_pressed("left_bumper") :
-		change_tab( -1 )
+	if is_paused :
+		if event.is_action_pressed("right_bumper") :
+			change_tab( 1 )
+		elif event.is_action_pressed("left_bumper") :
+			change_tab( -1 )
 
 func show_inventory () -> void :
+	get_tree().paused = true
+	is_paused = true
 	visible = true
 	inventory_show = true
 	tab_container.current_tab = 0
 	shown.emit()
 
 func hide_inventory () -> void : 
+	get_tree().paused = false
+	is_paused = false
 	visible = false
 	inventory_show = false
 	hidden.emit()

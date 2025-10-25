@@ -362,22 +362,24 @@ mouse_filter = 2
 [node name="HealthBar" type="ProgressBar" parent="Control"]
 z_as_relative = false
 y_sort_enabled = true
-custom_minimum_size = Vector2(200, 20)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = -28.0
-offset_right = 208.0
+offset_top = -58.0
+offset_right = 58.0
 offset_bottom = -8.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_2hai4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xhte5")
 max_value = 6.0
+fill_mode = 3
 show_percentage = false
 
 [node name="HealthPoints" type="Label" parent="Control/HealthBar"]
+visible = false
 top_level = true
 z_as_relative = false
 y_sort_enabled = true

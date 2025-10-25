@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgv6jx5rdxcvb"]
+
+[ext_resource type="Script" uid="uid://ddv3yh5es5q08" path="res://GUI/Inventory/Quests/quest_step_item.gd" id="1_svk05"]
+[ext_resource type="Texture2D" uid="uid://bmutsn5pd20tq" path="res://GUI/Inventory/Quests/checkbox.png" id="2_obf4j"]
+[ext_resource type="FontFile" uid="uid://bcnxlrpjp5myd" path="res://Fonts/m5x7.ttf" id="2_t4tfv"]
+
+[node name="QuestStepItem" type="Control"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 3
+anchor_left = 0.078
+anchor_top = 0.022000002
+anchor_right = 0.078
+anchor_bottom = 0.022000002
+offset_left = -49.920002
+offset_top = -7.9200006
+offset_right = 50.079998
+offset_bottom = 8.08
+script = ExtResource("1_svk05")
+
+[node name="Label" type="RichTextLabel" parent="."]
+modulate = Color(0.23818931, 0.114358895, 0.02231149, 1)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 20.0
+offset_right = 139.0
+offset_bottom = 28.0
+theme_override_colors/default_color = Color(0.35672677, 0.18123084, 0.051876448, 1)
+theme_override_fonts/normal_font = ExtResource("2_t4tfv")
+bbcode_enabled = true
+text = "Step"
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(8, 8)
+texture = ExtResource("2_obf4j")
+hframes = 2

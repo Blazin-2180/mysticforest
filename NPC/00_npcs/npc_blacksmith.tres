@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NPCResource" load_steps=3 format=3 uid="uid://44ymrr1jotwi"]
+
+[ext_resource type="Script" uid="uid://dg5ste7ke42e0" path="res://NPC/scripts/npc_resource.gd" id="1_i4n13"]
+[ext_resource type="Texture2D" uid="uid://bmr1barhj826" path="res://NPC/sprites/npc_blacksmith.png" id="2_4cgiu"]
+
+[resource]
+script = ExtResource("1_i4n13")
+sprite = ExtResource("2_4cgiu")
+metadata/_custom_type_script = "uid://dg5ste7ke42e0"

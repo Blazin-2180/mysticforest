@@ -14,3 +14,8 @@ func _free_level () -> void :
 #If having an issue with the y-sorting of the fences/trees and stuff :
 #Ok and the Fences and logs, if you go into your Tileset you can paint the Y-Sort Origin.  
 #Put those at -8 so the y-sort is near the top of the tile and then you should have it looking how you want it to.
+
+func _process(delta: float) -> void:
+	print($DayNightCycle.get_current_hour(), "", "",
+	$DayNightCycle.get_current_minute(), "", "",
+	$DayNightCycle.is_daytime())

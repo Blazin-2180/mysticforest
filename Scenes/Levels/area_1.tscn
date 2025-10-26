@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=58 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="4_8byil"]
@@ -38,6 +38,8 @@
 [ext_resource type="Resource" uid="uid://ch8ad3y2xyb8d" path="res://NPC/00_npcs/npc_tammy.tres" id="37_cww87"]
 [ext_resource type="PackedScene" uid="uid://7e8hltk36uqm" path="res://NPC/npc_behaviour_wander.tscn" id="37_gppk4"]
 [ext_resource type="Resource" uid="uid://44ymrr1jotwi" path="res://NPC/00_npcs/npc_blacksmith.tres" id="38_gppk4"]
+[ext_resource type="Script" uid="uid://bmxm4mrnp2gnj" path="res://day_night_cycle.gd" id="39_ddrdp"]
+[ext_resource type="PackedScene" uid="uid://cvsou8yj36hxd" path="res://Scenes/torch.tscn" id="40_qp42o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wpi7"]
 texture = ExtResource("4_8byil")
@@ -821,8 +823,8 @@ z_as_relative = false
 position = Vector2(431, 293)
 
 [node name="GreenGloop" parent="." instance=ExtResource("18_30j8n")]
-position = Vector2(280, 113)
-experience_reward = 50
+position = Vector2(280, 114)
+experience_reward = 5
 
 [node name="GreenGloop2" parent="." instance=ExtResource("18_30j8n")]
 position = Vector2(79, 289)
@@ -1075,6 +1077,13 @@ position = Vector2(343.21854, 287.85568)
 npc_resource = ExtResource("38_gppk4")
 
 [node name="NpcBehaviourWander" parent="Blacksmith" instance=ExtResource("37_gppk4")]
+
+[node name="DayNightCycle" type="CanvasModulate" parent="."]
+script = ExtResource("39_ddrdp")
+metadata/_custom_type_script = "uid://bmxm4mrnp2gnj"
+
+[node name="Torch" parent="." instance=ExtResource("40_qp42o")]
+position = Vector2(436, 201)
 
 [connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]
 [connection signal="area_entered" from="Area2D" to="Area2D/QuestAdvanceTrigger" method="_on_area_2d_area_entered"]

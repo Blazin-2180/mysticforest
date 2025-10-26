@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mpad0apytvn5"
-path="res://.godot/imported/npc_blacksmith.png-c8e5ec413078d6cb56fd7a970374245c.ctex"
+uid="uid://dc1ap7edafihq"
+path="res://.godot/imported/npc_vagabond.png-172be27ec217cfe56758082f17c56217.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NPC/sprites/npc_blacksmith.png"
-dest_files=["res://.godot/imported/npc_blacksmith.png-c8e5ec413078d6cb56fd7a970374245c.ctex"]
+source_file="res://NPC/sprites/npc_vagabond.png"
+dest_files=["res://.godot/imported/npc_vagabond.png-172be27ec217cfe56758082f17c56217.ctex"]
 
 [params]
 

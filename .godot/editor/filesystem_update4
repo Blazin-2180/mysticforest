@@ -1,15 +1,6 @@
-res://GUI/Inventory/inventory.tscn
+res://Scenes/Levels/area_1.tscn
 res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
-res://GUI/Inventory/Stats/stats.tscn
+res://NPC/00_npcs/npc_vagabond.tres
 res://Scenes/Player/player.tscn
-res://Scenes/Levels/area_1.tscn
-res://NPC/npc.tscn
-res://NPC/00_npcs/npc_sammy.tres
-res://day_night_cycle.gd
-res://day_night_cycle.tscn
-res://Scripts/Levels/level.gd
-res://notes.txt
-res://Scenes/torch.tscn
-res://Scenes/torch_light_flicker.gd

@@ -1,3 +1,4 @@
+DialogText
 CollisionShape2D
 PointLight2D
 AnimationPlayer
@@ -11,4 +12,3 @@ Control
 HBoxContainer
 TextureRect
 NPC
-DialogText

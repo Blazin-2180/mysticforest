@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dg5ste7ke42e0" path="res://NPC/scripts/npc_resource.gd" id="1_lyti6"]
 [ext_resource type="Texture2D" uid="uid://isepk5tn0sc3" path="res://GUI/dialog_system/sprites/sammy_portrait.png" id="1_mo7ix"]
-[ext_resource type="Texture2D" uid="uid://bpf84hq7kmruv" path="res://NPC/sprites/npc_sammy_large.png" id="3_mo7ix"]
+[ext_resource type="Texture2D" uid="uid://ci2n6nxhe2flf" path="res://NPC/sprites/npc_sammy.png" id="3_mo7ix"]
 
 [resource]
 script = ExtResource("1_lyti6")

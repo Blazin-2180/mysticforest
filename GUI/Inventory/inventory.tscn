@@ -1,8 +1,8 @@
 [gd_scene load_steps=16 format=3 uid="uid://buj7g0kdkywyt"]
 
 [ext_resource type="Script" uid="uid://b4h3excicddvf" path="res://GUI/Inventory/inventory.gd" id="1_btv15"]
+[ext_resource type="Texture2D" uid="uid://bquge75xf5pir" path="res://Sprites/Player_Journal.png" id="2_3hl7w"]
 [ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="2_ewc0g"]
-[ext_resource type="Texture2D" uid="uid://d147lwhc7he3y" path="res://Sprites/Book.png" id="2_s6ihr"]
 [ext_resource type="PackedScene" uid="uid://cuv6ed6yntyvs" path="res://GUI/Inventory/inventory_slot.tscn" id="3_lgn1t"]
 [ext_resource type="Script" uid="uid://da20w1rpa8yuy" path="res://GUI/Inventory/Scripts/inventory_ui.gd" id="3_wlp85"]
 [ext_resource type="Resource" uid="uid://cqeukq4gf601u" path="res://GUI/Inventory/player_inventory.tres" id="4_wlp85"]
@@ -49,13 +49,12 @@ anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -274.0
-offset_top = 3.0
-offset_right = -3.0
-offset_bottom = -3.0
+offset_left = -640.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
-texture = ExtResource("2_s6ihr")
+texture = ExtResource("2_3hl7w")
 
 [node name="TabContainer" type="TabContainer" parent="Control"]
 layout_mode = 1
@@ -69,9 +68,10 @@ offset_bottom = -326.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 0
+current_tab = 1
 
 [node name="Inventory" type="Control" parent="Control/TabContainer"]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 mouse_behavior_recursive = 1
@@ -95,18 +95,19 @@ horizontal_alignment = 1
 
 [node name="Stats" parent="Control/TabContainer/Inventory" instance=ExtResource("6_58q36")]
 layout_mode = 0
-offset_left = -70.0
-offset_top = 49.0
-offset_right = 22.0
-offset_bottom = 184.0
+offset_left = -53.0
+offset_top = 48.0
+offset_right = 39.0
+offset_bottom = 183.0
 mouse_filter = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
-offset_left = 145.0
-offset_top = 144.0
-offset_right = 335.0
-offset_bottom = 258.0
+offset_left = 148.0
+offset_top = 142.0
+offset_right = 338.0
+offset_bottom = 256.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
 
@@ -145,6 +146,9 @@ layout_mode = 2
 [node name="InventorySlot9" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
+[node name="InventorySlot10" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
 [node name="ItemDescription" type="Label" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
 offset_left = 146.0
@@ -160,7 +164,6 @@ justification_flags = 161
 uppercase = true
 
 [node name="Quests" type="Control" parent="Control/TabContainer"]
-visible = false
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("7_m38iw")
@@ -169,9 +172,9 @@ metadata/_tab_index = 1
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/TabContainer/Quests"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 0
-offset_left = -72.0
+offset_left = -60.0
 offset_top = 18.0
-offset_right = 131.0
+offset_right = 143.0
 offset_bottom = 261.0
 follow_focus = true
 scroll_vertical_custom_step = 100.0
@@ -213,9 +216,9 @@ anchor_left = 0.5
 anchor_top = 0.079
 anchor_right = 0.5
 anchor_bottom = 0.079
-offset_left = 9.5
+offset_left = 14.5
 offset_top = 34.0
-offset_right = 211.5
+offset_right = 216.5
 offset_bottom = 261.0
 
 [node name="TitleLabel" type="Label" parent="Control/TabContainer/Quests/VBoxContainer"]

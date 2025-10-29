@@ -1,15 +1,15 @@
+Node2D
+TileMapLayer
 ColorRect
 Timer
 CanvasModulate
 GPUParticles2D
-TileMapLayer
 DialogText
 CollisionShape2D
 PointLight2D
 AnimationPlayer
 StaticBody2D
 Sprite2D
-DayNightCycle
 RichTextLabel
 Label
 Control

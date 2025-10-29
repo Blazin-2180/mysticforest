@@ -1,12 +1,9 @@
-res://Scenes/Levels/player_spawn.tscn
+res://Scenes/Levels/area_1.tscn
 res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
-res://Scenes/Levels/area_1.tscn
-res://Scenes/Levels/rain.gd
-res://Globals/global_level_manager.gd
+res://NPC/npc.tscn
+res://NPC/00_npcs/npc_blacksmith.tres
 res://Scenes/Levels/rain.tscn
-res://notes.txt
-res://day_night_cycle.gd
-res://Scenes/Player/player.tscn
-res://Scripts/Levels/level.gd
+res://Scenes/Enemies/green_gloop.tscn
+res://Scripts/Enemies/enemy.gd

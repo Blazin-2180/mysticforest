@@ -23,9 +23,9 @@ var invulnerable : bool = false
 @onready var hit_box: HitBox = $HitBox
 @onready var enemy_state_machine: Node = $EnemyStateMachine
 @onready var damage_numbers_origin = $DamageNumbersOrigin
-@onready var name_label: Label = $VBoxContainer/NameLabel
+@onready var name_label: Label = $NameLabel
 #@onready var enemy_level: Label = $HBoxContainer/EnemyLevel
-@onready var health_bar: ProgressBar = $VBoxContainer/ProgressBar
+@onready var health_bar: ProgressBar = $ProgressBar
 
 func _ready() -> void:
 	enemy_state_machine.inititalise ( self )

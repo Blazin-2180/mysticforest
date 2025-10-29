@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d3qi426qtce4j"]
+[gd_scene load_steps=41 format=3 uid="uid://d3qi426qtce4j"]
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://664eei4uv5rc" path="res://Scenes/Player/player_large.png" id="2_7g0yx"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://c8xxiqc1vb6ht" path="res://Scripts/Player/state_death.gd" id="9_7g0yx"]
 [ext_resource type="AudioStream" uid="uid://cfw3oxul2l2r4" path="res://Audio/player_hit.wav" id="11_oikmp"]
 [ext_resource type="Script" uid="uid://cct2yg7bmbj1i" path="res://Scripts/Player/player_camera.gd" id="12_06tpx"]
+[ext_resource type="PackedScene" uid="uid://dfysx1i7t4dtl" path="res://Scenes/Levels/rain.tscn" id="14_dey5f"]
 
 [sub_resource type="Animation" id="Animation_8erm5"]
 length = 0.001
@@ -505,6 +506,9 @@ bus = &"SFX"
 limit_smoothed = true
 editor_draw_limits = true
 script = ExtResource("12_06tpx")
+
+[node name="Rain" parent="Camera2D" instance=ExtResource("14_dey5f")]
+position = Vector2(40, -179)
 
 [node name="EffectAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

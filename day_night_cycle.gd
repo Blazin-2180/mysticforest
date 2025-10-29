@@ -5,7 +5,7 @@ class_name DayNightCycle extends CanvasModulate
 @export var hours_per_nighttime : int = 10
 
 @export var seconds_per_hour : float = 60.0
-@export var starting_hour : int = 10 #6
+@export var starting_hour : int = 8 #6
 
 @export var day_color : Color = Color( 1,1,1 )
 @export var night_color : Color = Color( 0.1, 0.1, 0.2 )

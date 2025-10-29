@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://sx10ttkyxwwi"]
 
 [ext_resource type="Script" uid="uid://b5fndcile2ur2" path="res://Scripts/Levels/player_spawn.gd" id="1_lyuil"]
-[ext_resource type="Texture2D" uid="uid://ojxvkmnppmxj" path="res://Sprites/characters/player.png" id="1_y6scc"]
+[ext_resource type="Texture2D" uid="uid://664eei4uv5rc" path="res://Scenes/Player/player_large.png" id="2_2ydhn"]
 
 [node name="PlayerSpawn" type="Node2D"]
 script = ExtResource("1_lyuil")
@@ -10,7 +10,7 @@ script = ExtResource("1_lyuil")
 self_modulate = Color(0.3372549, 0.5882353, 0.03529412, 0.5647059)
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(0, -17)
-texture = ExtResource("1_y6scc")
+position = Vector2(0, -21)
+texture = ExtResource("2_2ydhn")
 hframes = 6
-vframes = 10
+vframes = 5

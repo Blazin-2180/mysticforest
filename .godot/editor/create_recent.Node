@@ -1,3 +1,8 @@
+ColorRect
+Timer
+CanvasModulate
+GPUParticles2D
+TileMapLayer
 DialogText
 CollisionShape2D
 PointLight2D
@@ -5,10 +10,6 @@ AnimationPlayer
 StaticBody2D
 Sprite2D
 DayNightCycle
-CanvasModulate
 RichTextLabel
 Label
 Control
-HBoxContainer
-TextureRect
-NPC

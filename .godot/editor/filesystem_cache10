@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761500211
+::res://::1761687674
 click.wav::AudioStreamWAV::4713173896280159603::1761412786::1761412787::1::::<><><>0<>0<>92f742a3ca83e6b7180d8e09a9e0a3a9<>res://.godot/imported/click.wav-eb238f6fd9fd34c5c027498744914435.sample::
 day_night_cycle.gd::GDScript::3276948544782955011::1761487779::0::1::::DayNightCycle<>CanvasModulate<><>0<>0<><>::
 day_night_cycle.tscn::PackedScene::8878697982341300055::1761483841::0::1::::<><><>0<>0<><>::uid://bmxm4mrnp2gnj::::res://day_night_cycle.gd
@@ -212,9 +212,9 @@ level_transition.tscn::PackedScene::7631123800861152763::1760278156::0::1::::<><
 player_spawn.tscn::PackedScene::1312504188269801348::1759538659::0::1::::<><><>0<>0<><>::uid://b5fndcile2ur2::::res://Scripts/Levels/player_spawn.gd<>uid://ojxvkmnppmxj::::res://Sprites/characters/player.png
 save_point.gd::GDScript::7836809070609135618::1760299973::0::1::::SavePoint<>Area2D<><>0<>0<><>::
 save_point.tscn::PackedScene::2784304892198753479::1761395854::0::1::::<><><>0<>0<><>::uid://djwhdoc66scxm::::res://Scenes/Levels/save_point.gd<>uid://cfayijdeea8b::::res://Sprites/objects/Save _Point.png<>uid://cc4owimmw7e3d::::res://Fonts/ari-w9500-bold.ttf
-::res://Scenes/Player/::1761518400
+::res://Scenes/Player/::1761518789
 Blazin.png::CompressedTexture2D::611996567794549688::1760801775::1760801776::1::::<><><>0<>0<>0c3fdec033b271e3eed38b0451b130fb<>res://.godot/imported/Blazin.png-5043bb73a7ccb67a446281f072adebf3.ctex::
-player.tscn::PackedScene::9158118707746372211::1761518296::0::1::::<><><>0<>0<><>::uid://cxhkxcxap15bd::::res://Scripts/Player/player.gd<>uid://664eei4uv5rc::::res://Scenes/Player/player_large.png<>uid://bxxt437inie8m::::res://Audio/attack_swoosh.wav<>uid://di2d8abdhau6n::::res://Scripts/Player/player_state_machine.gd<>uid://pdebiy7r1fvw::::res://Scripts/Player/state_idle.gd<>uid://brxrr4qykfen4::::res://Scripts/Player/state_walk.gd<>uid://b0q88dv6he4lg::::res://Scripts/Player/state_attack.gd<>uid://ct2q7q6w76wi4::::res://GeneralNodes/HurtBox/hurt_box.tscn<>uid://bdu7hwutibfjb::::res://Scripts/Player/state_stun.gd<>uid://brnei34e0nbiu::::res://Scripts/Player/player_interactions.gd<>uid://dmywvab54r883::::res://GeneralNodes/HitBox/hit_box.tscn<>uid://c8xxiqc1vb6ht::::res://Scripts/Player/state_death.gd<>uid://cfw3oxul2l2r4::::res://Audio/player_hit.wav<>uid://cct2yg7bmbj1i::::res://Scripts/Player/player_camera.gd
+player.tscn::PackedScene::9158118707746372211::1761518789::0::1::::<><><>0<>0<><>::uid://cxhkxcxap15bd::::res://Scripts/Player/player.gd<>uid://664eei4uv5rc::::res://Scenes/Player/player_large.png<>uid://bxxt437inie8m::::res://Audio/attack_swoosh.wav<>uid://di2d8abdhau6n::::res://Scripts/Player/player_state_machine.gd<>uid://pdebiy7r1fvw::::res://Scripts/Player/state_idle.gd<>uid://brxrr4qykfen4::::res://Scripts/Player/state_walk.gd<>uid://b0q88dv6he4lg::::res://Scripts/Player/state_attack.gd<>uid://ct2q7q6w76wi4::::res://GeneralNodes/HurtBox/hurt_box.tscn<>uid://bdu7hwutibfjb::::res://Scripts/Player/state_stun.gd<>uid://brnei34e0nbiu::::res://Scripts/Player/player_interactions.gd<>uid://dmywvab54r883::::res://GeneralNodes/HitBox/hit_box.tscn<>uid://c8xxiqc1vb6ht::::res://Scripts/Player/state_death.gd<>uid://cfw3oxul2l2r4::::res://Audio/player_hit.wav<>uid://cct2yg7bmbj1i::::res://Scripts/Player/player_camera.gd
 PlayerSprite02 2.png::CompressedTexture2D::2680482730684213507::1761478602::1761478602::1::::<><><>0<>0<>df5ad8231fc613fa7d4a99b4004069ee<>res://.godot/imported/PlayerSprite02 2.png-467855212bcd0f2189fb741470072798.ctex::
 player_large.png::CompressedTexture2D::2241618022917754564::1761518400::1761518400::1::::<><><>0<>0<>5bfa0e60a4149a4612f51f5fa1e15e06<>res://.godot/imported/player_large.png-4d3bffe0c262bb66f988dbdfa946ad04.ctex::
 player_test.png::CompressedTexture2D::9086925819266494286::1761405095::1761405095::1::::<><><>0<>0<>d2d101bb9fd3535d23dff7bd1402c9b9<>res://.godot/imported/player_test.png-d26cb76895a9cb789c544fce620ad266.ctex::
@@ -291,11 +291,12 @@ Shadow.png::CompressedTexture2D::7491830769853657499::1760289255::1760289255::1:
 torch.png::CompressedTexture2D::8597389608110164743::1761487756::1761487756::1::::<><><>0<>0<>c6851e3e39b56df1be36633161d51ddf<>res://.godot/imported/torch.png-4ca2961d6cfaa2d72c8312af3fd0985d.ctex::
 ::res://Sprites/particles/::1759422413
 dust_particles_01.png::CompressedTexture2D/CompressedTexture2D::7797449964398482967::1759422413::1759422413::1::::<><><>0<>0<>252b51446e9c4785b08a8e800efce679<>res://.godot/imported/dust_particles_01.png-30fe06a4f3b52c20997b0425f7acf164.ctex::
-::res://Sprites/tilesets/::1761480982
+::res://Sprites/tilesets/::1761687827
 decor_8x8.png::CompressedTexture2D/CompressedTexture2D::8946222462056346727::1759422413::1759422413::1::::<><><>0<>0<>66603367480e6e0346c09a3ceb23ff09<>res://.godot/imported/decor_8x8.png-bf300424da2b694d577dfea9b4518e5d.ctex::
 decor_16x16.png::CompressedTexture2D/CompressedTexture2D::8534633602423632279::1759422413::1759422413::1::::<><><>0<>0<>b72443cb08d652efb787e0a879a58897<>res://.godot/imported/decor_16x16.png-054744e9dd2d5da4397018402f046ec0.ctex::
 fences.png::CompressedTexture2D/CompressedTexture2D::5350689688136153528::1759422413::1759422413::1::::<><><>0<>0<>812a9d2f5d6c69aae989bbb00e3f515d<>res://.godot/imported/fences.png-0f9c2f68ef918a73c3a7b9532c716200.ctex::
 grass.png::CompressedTexture2D/CompressedTexture2D::6590492933377776539::1759422413::1759422413::1::::<><><>0<>0<>baff0a599e406c4221e1577cbdb2c61b<>res://.godot/imported/grass.png-9d82cd9e29e6dbdb5b869648f373569b.ctex::
+plains-Sheet.png::CompressedTexture2D::3946278455448980388::1761687827::1761687828::1::::<><><>0<>0<>08c102f51727a079e780dd3706e12aae<>res://.godot/imported/plains-Sheet.png-bbdc92170df548dff36971fc459240f5.ctex::
 plains.png::CompressedTexture2D/CompressedTexture2D::4054531501083018018::1759422413::1759422413::1::::<><><>0<>0<>8c26786db5eaa31b40599d973598913b<>res://.godot/imported/plains.png-1163c47ec1d452b32c549e10fbd8cf4a.ctex::
 tree1.png::CompressedTexture2D::3379800190163992915::1761480982::1761480982::1::::<><><>0<>0<>c47cbb63485e4df21ef49d274b2abe28<>res://.godot/imported/tree1.png-a7a1beed4bb2d2d22056cc42f54eb106.ctex::
 Tree red.png::CompressedTexture2D::890087377307724279::1761479797::1761479798::1::::<><><>0<>0<>5419e90ef6f645c77ae572c2975a086c<>res://.godot/imported/Tree red.png-21b039aa878e9c1253a80f44f8d8db60.ctex::

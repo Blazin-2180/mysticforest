@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=61 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cih6cvq3sf7sm" path="res://Sprites/tilesets/fences.png" id="4_8byil"]
@@ -38,7 +38,6 @@
 [ext_resource type="Resource" uid="uid://ch8ad3y2xyb8d" path="res://NPC/00_npcs/npc_tammy.tres" id="37_cww87"]
 [ext_resource type="PackedScene" uid="uid://7e8hltk36uqm" path="res://NPC/npc_behaviour_wander.tscn" id="37_gppk4"]
 [ext_resource type="Resource" uid="uid://44ymrr1jotwi" path="res://NPC/00_npcs/npc_blacksmith.tres" id="38_gppk4"]
-[ext_resource type="Script" uid="uid://bmxm4mrnp2gnj" path="res://day_night_cycle.gd" id="39_ddrdp"]
 [ext_resource type="PackedScene" uid="uid://cvsou8yj36hxd" path="res://Scenes/torch.tscn" id="40_qp42o"]
 [ext_resource type="Resource" uid="uid://c4vh60c82t17" path="res://NPC/00_npcs/npc_vagabond.tres" id="41_xvepx"]
 [ext_resource type="Texture2D" uid="uid://bwhuvn2520qky" path="res://Sprites/tilesets/plains-Sheet.png" id="42_nfdua"]
@@ -1324,10 +1323,6 @@ position = Vector2(343.21854, 287.85568)
 npc_resource = ExtResource("38_gppk4")
 
 [node name="NpcBehaviourWander" parent="Blacksmith" instance=ExtResource("37_gppk4")]
-
-[node name="DayNightCycle" type="CanvasModulate" parent="."]
-script = ExtResource("39_ddrdp")
-metadata/_custom_type_script = "uid://bmxm4mrnp2gnj"
 
 [node name="Torch" parent="." instance=ExtResource("40_qp42o")]
 position = Vector2(436, 201)

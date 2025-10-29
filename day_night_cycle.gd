@@ -1,4 +1,4 @@
-class_name DayNightCycle extends CanvasModulate
+extends CanvasModulate
 
 
 @export var hours_per_daytime : int = 12

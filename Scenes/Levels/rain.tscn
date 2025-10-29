@@ -43,18 +43,19 @@ curve_z = SubResource("Curve_dehmj")
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(360, 0, 0)
-gravity = Vector3(0, 2500, 0)
+gravity = Vector3(0, 3000, 0)
 scale_min = 0.19999999
 scale_over_velocity_curve = SubResource("CurveXYZTexture_wuihu")
 color_initial_ramp = SubResource("GradientTexture1D_qskp8")
 alpha_curve = SubResource("CurveTexture_ikohj")
 
 [node name="Rain" type="GPUParticles2D"]
+z_index = 1
 material = SubResource("CanvasItemMaterial_nfdua")
 amount = 1000
 lifetime = 0.5
 preprocess = 0.5
-visibility_rect = Rect2(-360, 0, 700, 360)
+visibility_rect = Rect2(-400, 0, 700, 400)
 process_material = SubResource("ParticleProcessMaterial_w7afh")
 script = ExtResource("1_i6pwh")
 

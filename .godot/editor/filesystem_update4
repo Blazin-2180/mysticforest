@@ -1,9 +1,7 @@
-res://Scenes/Levels/area_1.tscn
+res://Scenes/Player/player.tscn
 res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
-res://NPC/npc.tscn
-res://NPC/00_npcs/npc_blacksmith.tres
+res://Scenes/Levels/area_1.tscn
+res://Scripts/Levels/level_transition.gd
 res://Scenes/Levels/rain.tscn
-res://Scenes/Enemies/green_gloop.tscn
-res://Scripts/Enemies/enemy.gd

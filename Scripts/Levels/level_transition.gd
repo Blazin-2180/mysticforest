@@ -92,5 +92,5 @@ func _update_area () -> void :
 	pass
 
 func _snap_to_grid () -> void :
-	position.x = round( position.x / 8 ) * 8
-	position.y = round( position.x / 8 ) * 8
+	position.x = round( position.x / 16 ) * 16
+	position.y = round( position.x / 16 ) * 16

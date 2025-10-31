@@ -550,6 +550,7 @@ bus = &"SFX"
 position = Vector2(0, -17)
 
 [node name="NameLabel" type="Label" parent="."]
+z_index = 1
 offset_left = -28.0
 offset_top = -36.0
 offset_right = 28.0
@@ -561,6 +562,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 1
 custom_minimum_size = Vector2(0, 5)
 offset_left = -17.0
 offset_top = -24.0

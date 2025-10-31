@@ -5,3 +5,4 @@ res://Quests/quest_001.tres
 res://Scenes/Levels/area_1.tscn
 res://Scripts/Levels/level_transition.gd
 res://Scenes/Levels/rain.tscn
+res://Scenes/Enemies/green_gloop.tscn

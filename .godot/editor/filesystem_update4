@@ -10,3 +10,10 @@ res://Scenes/Levels/area_2.tscn
 res://Scripts/Enemies/enemy.gd
 res://Scenes/Enemies/angry_floof.tscn
 res://Scenes/Enemies/slime.tscn
+res://Scenes/torch.tscn
+res://Scenes/torch.gd
+res://day_night_cycle.gd
+res://DayNightCycle/day_night.tscn
+res://DayNightCycle/day_night.gd
+res://Globals/global_level_manager.gd
+res://Scenes/Levels/rain.tscn

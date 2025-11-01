@@ -866,7 +866,7 @@ shape = SubResource("RectangleShape2D_v60p0")
 
 [node name="Tammy" parent="." instance=ExtResource("21_mn84x")]
 visible = false
-position = Vector2(492.61774, 200.9023)
+position = Vector2(496.53903, 206.27849)
 npc_resource = ExtResource("37_cww87")
 
 [node name="DialogInteraction" parent="Tammy" instance=ExtResource("27_a7186")]
@@ -899,7 +899,12 @@ npc_resource = ExtResource("38_gppk4")
 [node name="NpcBehaviourWander" parent="Blacksmith" instance=ExtResource("37_gppk4")]
 
 [node name="Torch" parent="." instance=ExtResource("40_qp42o")]
+z_index = 3
 position = Vector2(436, 201)
+
+[node name="Torch2" parent="." instance=ExtResource("40_qp42o")]
+z_index = 3
+position = Vector2(576, 201)
 
 [node name="Vagabond" parent="." instance=ExtResource("21_mn84x")]
 visible = false

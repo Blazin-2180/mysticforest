@@ -10,6 +10,7 @@ var current_tilemap_bounds : Array [ Vector2 ]
 var target_transition : String
 var position_offset : Vector2
 var weather
+var time_of_day
 
 func _ready() -> void:
 	await get_tree().process_frame

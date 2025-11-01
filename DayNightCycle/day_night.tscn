@@ -2,22 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dwc6dyukt36mv" path="res://DayNightCycle/day_night.gd" id="1_oxs4h"]
 
-[sub_resource type="Animation" id="Animation_6xbfu"]
-resource_name = "night_to_day"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0.78431374), Color(0, 0, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_yoj55"]
 length = 0.001
 tracks/0/type = "value"
@@ -49,6 +33,22 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.78431374)]
 }
 
+[sub_resource type="Animation" id="Animation_6xbfu"]
+resource_name = "night_to_day"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.78431374), Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_oah08"]
 _data = {
 &"RESET": SubResource("Animation_yoj55"),
@@ -73,7 +73,7 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 300.0
 one_shot = true
 autostart = true
 

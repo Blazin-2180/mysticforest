@@ -29,6 +29,7 @@ func _process( _delta : float) -> void:
 		change_state = false
 		if state == "day" :
 			change_to_day()
+			print("day")
 		elif state == "night" :
 			change_to_night()
 

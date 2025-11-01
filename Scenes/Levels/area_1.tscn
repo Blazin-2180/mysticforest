@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=45 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://c1amh04het2xy" path="res://Sprites/grass.PNG" id="3_nfdua"]
@@ -28,14 +28,11 @@
 [ext_resource type="Resource" uid="uid://cs8s5xvtfcuwq" path="res://Quests/quest_001.tres" id="31_p87po"]
 [ext_resource type="Script" uid="uid://bjn2dibwtkeq1" path="res://Quests/utility_nodes/quest_activated_switch.gd" id="32_p87po"]
 [ext_resource type="PackedScene" uid="uid://c7mmiy5ff1i6o" path="res://Quests/utility_nodes/quest_activated_switch.tscn" id="34_xkhu6"]
-[ext_resource type="Resource" uid="uid://bwgtmy88h64b3" path="res://NPC/00_npcs/npc_dan.tres" id="36_cww87"]
 [ext_resource type="PackedScene" uid="uid://hm7g5hqddfle" path="res://Quests/utility_nodes/quest_advance_trigger.tscn" id="36_d00wu"]
 [ext_resource type="PackedScene" uid="uid://d33cfpmn0iwcm" path="res://Scenes/Creature/creature_rabbit.tscn" id="36_gppk4"]
-[ext_resource type="Resource" uid="uid://ch8ad3y2xyb8d" path="res://NPC/00_npcs/npc_tammy.tres" id="37_cww87"]
 [ext_resource type="PackedScene" uid="uid://7e8hltk36uqm" path="res://NPC/npc_behaviour_wander.tscn" id="37_gppk4"]
 [ext_resource type="Resource" uid="uid://44ymrr1jotwi" path="res://NPC/00_npcs/npc_blacksmith.tres" id="38_gppk4"]
 [ext_resource type="PackedScene" uid="uid://cvsou8yj36hxd" path="res://Scenes/torch.tscn" id="40_qp42o"]
-[ext_resource type="Resource" uid="uid://c4vh60c82t17" path="res://NPC/00_npcs/npc_vagabond.tres" id="41_xvepx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d00wu"]
 texture = ExtResource("3_nfdua")
@@ -656,7 +653,7 @@ position = Vector2(693, 382)
 experience_reward = 5
 
 [node name="ItemPickup" parent="." instance=ExtResource("17_30j8n")]
-position = Vector2(384.31934, 203.61716)
+position = Vector2(594, 147)
 item_data = ExtResource("18_boegt")
 
 [node name="ItemPickup2" parent="." instance=ExtResource("17_30j8n")]
@@ -864,34 +861,6 @@ Complete : false"
 position = Vector2(6.5, 0)
 shape = SubResource("RectangleShape2D_v60p0")
 
-[node name="Tammy" parent="." instance=ExtResource("21_mn84x")]
-visible = false
-position = Vector2(496.53903, 206.27849)
-npc_resource = ExtResource("37_cww87")
-
-[node name="DialogInteraction" parent="Tammy" instance=ExtResource("27_a7186")]
-
-[node name="DialogText" type="Node" parent="Tammy/DialogInteraction"]
-script = ExtResource("28_w5vv1")
-text = "Hello there stranger!"
-npc_info = ExtResource("37_cww87")
-metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
-
-[node name="Dan" parent="." instance=ExtResource("21_mn84x")]
-visible = false
-position = Vector2(503.4283, 186.29109)
-npc_resource = ExtResource("36_cww87")
-
-[node name="NpcBehaviourWander" parent="Dan" instance=ExtResource("37_gppk4")]
-
-[node name="DialogInteraction" parent="Dan" instance=ExtResource("27_a7186")]
-
-[node name="DialogText" type="Node" parent="Dan/DialogInteraction"]
-script = ExtResource("28_w5vv1")
-text = "Greetings Squire!"
-npc_info = ExtResource("36_cww87")
-metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
-
 [node name="Blacksmith" parent="." instance=ExtResource("21_mn84x")]
 position = Vector2(343.21854, 287.85568)
 npc_resource = ExtResource("38_gppk4")
@@ -900,26 +869,13 @@ npc_resource = ExtResource("38_gppk4")
 
 [node name="Torch" parent="." instance=ExtResource("40_qp42o")]
 z_index = 3
-position = Vector2(436, 201)
+position = Vector2(385, 222)
 
 [node name="Torch2" parent="." instance=ExtResource("40_qp42o")]
-z_index = 3
-position = Vector2(576, 201)
+z_index = 1
+position = Vector2(541, 230)
 
-[node name="Vagabond" parent="." instance=ExtResource("21_mn84x")]
-visible = false
-position = Vector2(338.89365, 113.45529)
-npc_resource = ExtResource("41_xvepx")
-
-[node name="DialogInteraction" parent="Vagabond" instance=ExtResource("27_a7186")]
-
-[node name="DialogText" type="Node" parent="Vagabond/DialogInteraction"]
-script = ExtResource("28_w5vv1")
-text = "Yooooo! What's up ?"
-npc_info = ExtResource("41_xvepx")
-metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
-
-[node name="AnimalRabbit" parent="." instance=ExtResource("36_gppk4")]
+[node name="Rabbit" parent="." instance=ExtResource("36_gppk4")]
 position = Vector2(295, 353)
 
 [connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]

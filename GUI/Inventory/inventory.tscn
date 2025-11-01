@@ -68,10 +68,9 @@ offset_bottom = -326.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 
 [node name="Inventory" type="Control" parent="Control/TabContainer"]
-visible = false
 layout_mode = 2
 mouse_filter = 2
 mouse_behavior_recursive = 1
@@ -104,10 +103,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
-offset_left = 148.0
-offset_top = 142.0
-offset_right = 338.0
-offset_bottom = 256.0
+offset_left = 167.0
+offset_top = 125.0
+offset_right = 319.0
+offset_bottom = 252.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
 
@@ -149,6 +148,36 @@ layout_mode = 2
 [node name="InventorySlot10" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
+[node name="InventorySlot11" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
 [node name="ItemDescription" type="Label" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
 offset_left = 146.0
@@ -164,6 +193,7 @@ justification_flags = 161
 uppercase = true
 
 [node name="Quests" type="Control" parent="Control/TabContainer"]
+visible = false
 layout_mode = 2
 mouse_filter = 1
 script = ExtResource("7_m38iw")

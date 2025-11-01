@@ -4,3 +4,10 @@ res://Items/potion.tres
 res://Quests/quest_001.tres
 res://DayNightCycle/day_night.gd
 res://Scenes/Levels/rain.gd
+res://GUI/Inventory/inventory.tscn
+res://GUI/Inventory/player_inventory.tres
+res://GUI/Inventory/inventory_slot.tscn
+res://Scenes/Levels/area_1.tscn
+res://Quests/utility_nodes/quest_advance_trigger.tscn
+res://Quests/utility_nodes/quest_advance_trigger.gd
+res://GUI/Inventory/Scripts/inventory_data.gd

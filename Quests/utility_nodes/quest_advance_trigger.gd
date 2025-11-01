@@ -2,6 +2,8 @@
 @icon("res://Quests/utility_nodes/icons/quest_available.png")
 class_name QuestAdvanceTrigger extends QuestNode
 
+signal advanced 
+
 @export_category( "Parent Signal Connection")
 @export var signal_name : String = ""
 
@@ -18,6 +20,8 @@ func _ready() -> void:
 func advance_quest() -> void :
 	if linked_quest == null :
 		return
+	
+	advanced.emit()
 	
 	var _title : String = linked_quest.title 
 	var _step : String = get_step()

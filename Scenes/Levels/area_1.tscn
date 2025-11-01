@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=46 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://c1amh04het2xy" path="res://Sprites/grass.PNG" id="3_nfdua"]
@@ -459,6 +459,18 @@ sources/1 = SubResource("TileSetAtlasSource_xvepx")
 sources/2 = SubResource("TileSetAtlasSource_nfdua")
 sources/3 = SubResource("TileSetAtlasSource_pjqs8")
 
+[sub_resource type="GDScript" id="GDScript_p87po"]
+script/source = "extends Node
+
+@onready var quest_advance_trigger: QuestAdvanceTrigger = $\"..\"
+
+func _ready() -> void:
+	quest_advance_trigger.advanced.connect( quest_complete )
+
+func quest_complete() -> void : 
+	GlobalPlayerManager.INVENTORY_DATA.use_item(load(\"res://Items/sammys_treasure.tres\"))
+"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v60p0"]
 texture = ExtResource("5_i564r")
 0:0/0 = 0
@@ -678,7 +690,6 @@ position = Vector2(402, 159)
 item_data = ExtResource("18_boegt")
 
 [node name="Sammy" parent="." instance=ExtResource("21_mn84x")]
-visible = false
 position = Vector2(343.3369, 133.58524)
 npc_resource = ExtResource("27_w5vv1")
 
@@ -821,6 +832,9 @@ settings_summary = "UPDATE QUEST :
 Quest : Tray-zurr
 Step : 3 return the treasure to sammy
 Complete : true"
+
+[node name="Node" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3/QuestAdvanceTrigger"]
+script = SubResource("GDScript_p87po")
 
 [node name="NpcBehaviourWander" parent="Sammy" instance=ExtResource("37_gppk4")]
 

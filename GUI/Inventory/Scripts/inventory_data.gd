@@ -25,6 +25,15 @@ func add_item ( item : ItemData, quantity : int = 1) -> bool :
 	print("inventory full")
 	return false
 
+#func remove_item( item : ItemData, count : int = 1) -> void :
+	#for s in slots : 
+		#if s :
+			#if s.item_data == item :
+				#s.quantity -= count
+				#if s.quantity == 0 :
+					#
+				#return
+
 func connect_slots() -> void : 
 	for s in slots:
 		if s :
@@ -71,3 +80,11 @@ func item_from_save ( save_object : Dictionary) -> SlotData :
 	new_slot.item_data = load( save_object.item)
 	new_slot.quantity = int( save_object.quantity )
 	return new_slot
+
+func use_item( item : ItemData, count : int = 1) -> bool :
+	for s in slots :
+		if s :
+			if s.item_data == item && s.quantity >= count :
+				s.quantity -= count
+				return true
+	return false

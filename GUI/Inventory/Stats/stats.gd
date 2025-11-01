@@ -12,7 +12,12 @@ func _ready() -> void:
 func update_stats() -> void :
 	var _p : Player = GlobalPlayerManager.player
 	label_level.text = str(_p.level)
-	label_experience.text = str(_p.experience)
+	
+	if _p.level < GlobalPlayerManager.level_requirements.size() :
+		label_experience.text = str(_p.experience)
+	else : 
+		label_experience.text = "Max"
+	
 	label_attack.text = str(_p.attack)
 	label_defence.text = str(_p.defence)
 	label_health.text = str(GlobalPlayerManager.max_health_points)

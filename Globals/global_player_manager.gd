@@ -10,7 +10,8 @@ var player : Player
 var health_points : int = 6
 var max_health_points : int = 6
 var player_spawned : bool = false
-var level_requirements = [ 0, 50, 100, 200, 400, 800, 1500, 3000, 6000, 12000, 25000 ]
+#var level_requirements = [ 0, 50, 100, 200, 400, 800, 1500, 3000, 6000, 12000, 25000 ]
+var level_requirements = [0, 5, 10, 20, 25] # for testing
 
 
 func _ready() -> void:
@@ -31,13 +32,19 @@ func increase_health_points(num: int) -> void:
 func reward_experience( _exp : int ) -> void :
 	player.experience += _exp
 	# Check for level advancement
+	check_level_advance()
+	pass
+
+func check_level_advance() -> void :
+	if player.level >= level_requirements.size() :
+		return
 	if player.experience >= level_requirements[ player.level ] :
 		player.level += 1
 		player.attack += 1
 		player.defence += 1
 		max_health_points += 2
 		player_levelled_up.emit()
-	pass
+		check_level_advance()
 
 func add_player_instance () -> void :
 	player = PLAYER.instantiate()
@@ -60,3 +67,7 @@ func set_as_parent ( _p : Node2D ) -> void :
 
 func unparent_player ( _p : Node2D ) -> void :
 	_p.remove_child( player )
+
+func play_audio( _audio : AudioStream ) -> void :
+	player.audio.stream = _audio
+	player.audio.play()

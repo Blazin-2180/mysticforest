@@ -14,19 +14,19 @@ func _ready() -> void:
 	pass
 
 #Test Key
-func _unhandled_input( event : InputEvent ) -> void:
-	if event.is_action_pressed("test"):
-		#print(find_quest(load("res://Quests/quest_001.tres") as Quest ) )
-		#print(find_quest_by_title("tray-zurr"))
-		#print("get_quest_index_by_title : ", get_quest_index_by_title( "Tray-zurr" ))
-		#print("get_quest_index_by_title : ", get_quest_index_by_title( "Recover lost Tray-zurr" ))
-		#print("Before : ", current_quests )
-		update_quest( "Tray-zurr", "Complete Quest", true )
-		#update_quest ("Recover lost Tray-zurr", "Step 1")
-		#print("After : ", current_quests )
-		#print ("================================")
-		pass
-	pass
+#func _unhandled_input( event : InputEvent ) -> void:
+	#if event.is_action_pressed("test"):
+		##print(find_quest(load("res://Quests/quest_001.tres") as Quest ) )
+		##print(find_quest_by_title("tray-zurr"))
+		##print("get_quest_index_by_title : ", get_quest_index_by_title( "Tray-zurr" ))
+		##print("get_quest_index_by_title : ", get_quest_index_by_title( "Recover lost Tray-zurr" ))
+		##print("Before : ", current_quests )
+		#update_quest( "Tray-zurr", "Complete Quest", true )
+		##update_quest ("Recover lost Tray-zurr", "Step 1")
+		##print("After : ", current_quests )
+		##print ("================================")
+		#pass
+	#pass
 
 func gather_quest_data() -> void : 
 	#Gather all quest resources and add quests to array.

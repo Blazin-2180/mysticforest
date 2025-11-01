@@ -77,6 +77,7 @@ func _take_damage ( hurt_box : HurtBox ) -> void :
 	if invulnerable == true:
 		return
 	health_points -= hurt_box.damage
+	#GlobalPlayerManager.shake_camera()
 	DamageNumbers.display_numbers(hurt_box.damage, damage_numbers_origin.global_position)
 	health_bar.value = health_points
 	if health_points > 0 :

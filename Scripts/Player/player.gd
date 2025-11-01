@@ -50,9 +50,8 @@ func _physics_process( _delta : float ) -> void:
 
 #Testing
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("jump") :
-		GlobalPlayerManager.reduce_health_points(99)
-		player_damaged.emit(%AttackHurtBox)
+	if event.is_action_pressed("test") :
+		GlobalPlayerManager.shake_camera()
 	pass
 
 func set_direction() -> bool :
@@ -86,9 +85,13 @@ func animation_direction () -> String :
 func take_damage ( hurt_box : HurtBox ) -> void :
 	if invulnerable == true :
 		return
-
+	
 	if GlobalPlayerManager.health_points > 0 :
-		GlobalPlayerManager.reduce_health_points( hurt_box.damage )
+		var damage : int = hurt_box.damage
+		
+		if damage > 0 :
+			damage = clampi( damage - defence, 1, damage )
+		GlobalPlayerManager.reduce_health_points( damage )
 		player_damaged.emit ( hurt_box )
 		
 	pass

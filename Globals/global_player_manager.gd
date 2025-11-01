@@ -5,6 +5,7 @@ const INVENTORY_DATA : InventoryData = preload("res://GUI/Inventory/player_inven
 
 signal interact_pressed
 signal player_levelled_up
+signal camera_shook ( trauma : float )
 
 var player : Player
 var health_points : int = 6
@@ -71,3 +72,6 @@ func unparent_player ( _p : Node2D ) -> void :
 func play_audio( _audio : AudioStream ) -> void :
 	player.audio.stream = _audio
 	player.audio.play()
+
+func shake_camera ( trauma : float = 1 ) -> void :
+	camera_shook.emit( clampi ( trauma, 0, 1 ) )

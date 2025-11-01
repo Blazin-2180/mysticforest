@@ -374,6 +374,7 @@ offset_bottom = -8.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_2hai4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xhte5")
+max_value = 6.0
 fill_mode = 3
 show_percentage = false
 

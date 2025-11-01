@@ -17,3 +17,7 @@ res://Scenes/Player/player.tscn
 res://Scripts/Player/player.gd
 res://GUI/Player_HUD/player_hud.tscn
 res://Globals/player_hud.gd
+res://Scripts/Player/state_stun.gd
+res://Scripts/Player/player_camera.gd
+res://Quests/scripts/global_quest_manager.gd
+res://Scripts/Enemies/enemy.gd

@@ -35,7 +35,7 @@ func _ready() -> void:
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
 	update_damage_value()
-	GlobalPlayerManager.player_levelled_up.connect( update_damage_value )
+	GlobalPlayerManager.player_levelled_up.connect( _on_player_levelled_up )
 	pass
 
 func _process( _delta : float ) -> void:
@@ -104,3 +104,8 @@ func make_invulnerable ( _duration : float = 1.0 ) -> void :
 func update_damage_value() -> void :
 	%AttackHurtBox.damage = attack
 	pass
+
+func _on_player_levelled_up() -> void :
+	effect_animation_player.play("level_up")
+	GlobalPlayerManager.increase_health_points(GlobalPlayerManager.max_health_points)
+	PlayerHud.update_health_points()

@@ -13,3 +13,7 @@ res://Quests/utility_nodes/quest_advance_trigger.gd
 res://GUI/Inventory/Scripts/inventory_data.gd
 res://Globals/global_player_manager.gd
 res://GUI/Inventory/Stats/stats.gd
+res://Scenes/Player/player.tscn
+res://Scripts/Player/player.gd
+res://GUI/Player_HUD/player_hud.tscn
+res://Globals/player_hud.gd

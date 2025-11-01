@@ -374,12 +374,10 @@ offset_bottom = -8.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_2hai4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xhte5")
-max_value = 6.0
 fill_mode = 3
 show_percentage = false
 
 [node name="HealthPoints" type="Label" parent="Control/HealthBar"]
-visible = false
 top_level = true
 z_as_relative = false
 y_sort_enabled = true

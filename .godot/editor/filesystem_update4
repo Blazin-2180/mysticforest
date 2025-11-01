@@ -1,8 +1,12 @@
-res://Scenes/Player/player.tscn
+res://Scenes/Creature/creature_rabbit.tscn
 res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
+res://Items/Item_Pickup/item_pickup.tscn
+res://Scenes/Player/player.tscn
+res://Scripts/Player/player.gd
 res://Scenes/Levels/area_1.tscn
-res://Scripts/Levels/level_transition.gd
-res://Scenes/Levels/rain.tscn
-res://Scenes/Enemies/green_gloop.tscn
+res://Scenes/Levels/area_2.tscn
+res://Scripts/Enemies/enemy.gd
+res://Scenes/Enemies/angry_floof.tscn
+res://Scenes/Enemies/slime.tscn

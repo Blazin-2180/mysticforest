@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=3 uid="uid://d33cfpmn0iwcm"]
+
+[ext_resource type="Script" uid="uid://rqflf6f84ivd" path="res://Scenes/Creature/Scripts/creature.gd" id="1_ml6k6"]
+[ext_resource type="Texture2D" uid="uid://cec0tun7bxif1" path="res://Scenes/Creature/Sprites/creature_rabbit.png" id="2_vkxgn"]
+[ext_resource type="Script" uid="uid://ineykc1uavlo" path="res://Scenes/Creature/Scripts/creature_state_machine.gd" id="3_gyknj"]
+[ext_resource type="Script" uid="uid://5wr5a1egg4ri" path="res://Scenes/Creature/Scripts/creature_idle.gd" id="4_gyknj"]
+[ext_resource type="Script" uid="uid://b6m5eggog4dxe" path="res://Scenes/Creature/Scripts/creature_wander.gd" id="5_gyknj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ml6k6"]
+radius = 5.0
+
+[sub_resource type="Animation" id="Animation_gyknj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_uvk3f"]
+resource_name = "idle_side"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_qjowk"]
+resource_name = "idle_up"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_f7vjp"]
+resource_name = "idle_down"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qjowk"]
+_data = {
+&"RESET": SubResource("Animation_gyknj"),
+&"idle_down": SubResource("Animation_f7vjp"),
+&"idle_side": SubResource("Animation_uvk3f"),
+&"idle_up": SubResource("Animation_qjowk")
+}
+
+[node name="creature_rabbit" type="CharacterBody2D"]
+script = ExtResource("1_ml6k6")
+creature_name = "Rabbit"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_ml6k6")
+debug_color = Color(0, 0.6, 0.69803923, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+texture = ExtResource("2_vkxgn")
+hframes = 2
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qjowk")
+}
+
+[node name="CreatureStateMachine" type="Node" parent="."]
+script = ExtResource("3_gyknj")
+
+[node name="Idle" type="Node" parent="CreatureStateMachine" node_paths=PackedStringArray("after_idle_state")]
+script = ExtResource("4_gyknj")
+after_idle_state = NodePath("../Wander")
+
+[node name="Wander" type="Node" parent="CreatureStateMachine" node_paths=PackedStringArray("next_state")]
+script = ExtResource("5_gyknj")
+next_state = NodePath("../Idle")

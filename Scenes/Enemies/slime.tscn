@@ -489,13 +489,6 @@ offset_top = -34.0
 offset_right = 20.0
 offset_bottom = -3.0
 
-[node name="EnemyLevel" type="Label" parent="VBoxContainer"]
-visible = false
-layout_mode = 2
-theme_override_fonts/font = ExtResource("13_hphkj")
-theme_override_font_sizes/font_size = 8
-text = "99"
-
 [node name="NameLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("13_hphkj")

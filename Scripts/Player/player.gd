@@ -35,7 +35,7 @@ func _ready() -> void:
 	state_machine.initialise ( self )
 	hit_box.damaged.connect ( take_damage )
 	update_damage_value()
-	#GlobalPlayerManager.player_levelled_up.connect( update_damage_value )
+	GlobalPlayerManager.player_levelled_up.connect( update_damage_value )
 	pass
 
 func _process( _delta : float ) -> void:

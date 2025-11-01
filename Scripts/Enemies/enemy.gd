@@ -24,16 +24,13 @@ var invulnerable : bool = false
 @onready var enemy_state_machine: Node = $EnemyStateMachine
 @onready var damage_numbers_origin = $DamageNumbersOrigin
 @onready var name_label: Label = $NameLabel
-#@onready var enemy_level: Label = $HBoxContainer/EnemyLevel
 @onready var health_bar: ProgressBar = $ProgressBar
 
 func _ready() -> void:
 	enemy_state_machine.inititalise ( self )
 	player = GlobalPlayerManager.player
 	hit_box.damaged.connect( _take_damage )
-	#experience_reward = level * 2
 	name_label.text = enemy_name
-	#enemy_level.text = str(level)
 	health_bar.max_value = health_points
 	health_bar.value = health_points
 	pass

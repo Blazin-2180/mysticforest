@@ -1,3 +1,7 @@
+CollisionShape2D
+CharacterBody2D
+AnimationPlayer
+Sprite2D
 Node2D
 TileMapLayer
 ColorRect
@@ -5,11 +9,6 @@ Timer
 CanvasModulate
 GPUParticles2D
 DialogText
-CollisionShape2D
 PointLight2D
-AnimationPlayer
 StaticBody2D
-Sprite2D
 RichTextLabel
-Label
-Control

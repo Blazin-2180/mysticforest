@@ -703,6 +703,7 @@ script = ExtResource("1_wohw0")
 enemy_name = "Angry Floof"
 health_points = 5
 level = 2
+experience_reward = 10
 aggressive = true
 
 [node name="HurtBox" parent="." instance=ExtResource("1_ggggf")]
@@ -778,31 +779,23 @@ attack_area = NodePath("../../EnemySprite/AttackBox")
 [node name="DamageNumbersOrigin" parent="." instance=ExtResource("12_fkw3n")]
 position = Vector2(0, -41)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-z_index = 1
+[node name="NameLabel" type="Label" parent="."]
 offset_left = -33.0
-offset_top = -69.0
+offset_top = -58.0
 offset_right = 40.0
-offset_bottom = -29.0
-
-[node name="EnemyLevel" type="Label" parent="VBoxContainer"]
-visible = false
-layout_mode = 2
+offset_bottom = -49.0
 theme_override_fonts/font = ExtResource("13_62558")
-theme_override_font_sizes/font_size = 8
-text = "99"
-
-[node name="NameLabel" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("13_62558")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 6
 text = "Angry Floof"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 10)
-layout_mode = 2
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(0, 5)
+offset_left = -31.0
+offset_top = -47.0
+offset_right = 42.0
+offset_bottom = -42.0
 theme_override_styles/background = SubResource("StyleBoxFlat_62558")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8ggiy")
 value = 50.0

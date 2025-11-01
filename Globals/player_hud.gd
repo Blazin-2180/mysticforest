@@ -23,6 +23,7 @@ func _process(_delta: float) -> void:
 func update_health_points() -> void :
 	health_bar.value = GlobalPlayerManager.health_points
 	hp_label.text = str(GlobalPlayerManager.health_points, "/", GlobalPlayerManager.max_health_points)
+	health_bar.max_value = GlobalPlayerManager.max_health_points
 	pass
 
 

@@ -21,3 +21,4 @@ res://Scripts/Player/state_stun.gd
 res://Scripts/Player/player_camera.gd
 res://Quests/scripts/global_quest_manager.gd
 res://Scripts/Enemies/enemy.gd
+res://Scenes/Levels/area_2.tscn

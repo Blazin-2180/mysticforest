@@ -37,4 +37,4 @@ func queue_notification( _title : String, _description : String ) -> void :
 
 func update_exp() -> void :
 	exp_bar.value = GlobalPlayerManager.experience
-	exp_bar.max_value = GlobalPlayerManager.level_requirements[ player.level ]
+	exp_bar.max_value = GlobalPlayerManager.level_requirements[ GlobalPlayerManager.player.level ]

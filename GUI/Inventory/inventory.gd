@@ -43,9 +43,9 @@ func show_inventory () -> void :
 	is_paused = true
 	visible = true
 	inventory_show = true
+	PlayerHud.visible = false
 	tab_container.current_tab = 0
 	name_label.text = GlobalPlayerManager.character_name
-	print(GlobalPlayerManager.character_name)
 	shown.emit()
 
 func hide_inventory () -> void : 
@@ -53,6 +53,7 @@ func hide_inventory () -> void :
 	is_paused = false
 	visible = false
 	inventory_show = false
+	PlayerHud.visible = true
 	hidden.emit()
 
 func update_item_description (new_text : String) -> void :

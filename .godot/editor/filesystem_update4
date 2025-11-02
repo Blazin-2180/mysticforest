@@ -9,3 +9,4 @@ res://GUI/Inventory/Scripts/inventory_ui.gd
 res://Items/Scripts/equipable_item_data.gd
 res://GUI/Inventory/Scripts/inventory_slot_ui.gd
 res://GUI/Inventory/Scripts/inventory_data.gd
+res://GUI/Inventory/inventory.gd

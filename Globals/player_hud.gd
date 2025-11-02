@@ -10,6 +10,8 @@ extends CanvasLayer
 @onready var animation_player: AnimationPlayer = $Control/Death/GameOverAnimation
 @onready var quest_notification: NotificationUI = $Control/QuestNotification
 
+var player : Player = GlobalPlayerManager.player
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	health_bar.value = GlobalPlayerManager.health_points
@@ -35,4 +37,4 @@ func queue_notification( _title : String, _description : String ) -> void :
 
 func update_exp() -> void :
 	exp_bar.value = GlobalPlayerManager.experience
-	exp_bar.max_value = GlobalPlayerManager.level_requirements
+	exp_bar.max_value = GlobalPlayerManager.level_requirements[ player.level ]

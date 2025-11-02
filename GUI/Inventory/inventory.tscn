@@ -343,5 +343,9 @@ size_flags_vertical = 0
 theme_override_fonts/font = ExtResource("6_2cw0n")
 text = "Game Paused"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+max_polyphony = 4
+bus = &"SFX"
+
 [connection signal="pressed" from="Control/TabContainer/System/VBoxContainer/Button_Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Control/TabContainer/System/VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]

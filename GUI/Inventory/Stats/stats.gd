@@ -14,7 +14,7 @@ func update_stats() -> void :
 	label_level.text = str(_p.level)
 	
 	if _p.level < GlobalPlayerManager.level_requirements.size() :
-		label_experience.text = str(_p.experience)
+		label_experience.text = str(GlobalPlayerManager.experience)
 	else : 
 		label_experience.text = "Max"
 	

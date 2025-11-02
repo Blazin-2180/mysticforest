@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var health_bar: ProgressBar = $Control/HealthBar
 @onready var hp_label: Label = $Control/HealthBar/HealthPoints
+@onready var exp_bar: ProgressBar = $Control/ExpBar
 
 @onready var death: Control = $Control/Death
 @onready var respawn_button: Button = $Control/Death/VBoxContainer/RespawnButton
@@ -13,6 +14,7 @@ extends CanvasLayer
 func _ready() -> void:
 	health_bar.value = GlobalPlayerManager.health_points
 	hp_label.text = str(GlobalPlayerManager.health_points, "/", GlobalPlayerManager.max_health_points)
+	exp_bar.value = GlobalPlayerManager.experience
 	pass
 
 
@@ -30,3 +32,7 @@ func update_health_points() -> void :
 func queue_notification( _title : String, _description : String ) -> void :
 	quest_notification.add_notification_to_queue( _title, _description )
 	pass
+
+func update_exp() -> void :
+	exp_bar.value = GlobalPlayerManager.experience
+	exp_bar.max_value = GlobalPlayerManager.level_requirements

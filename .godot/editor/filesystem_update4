@@ -22,3 +22,7 @@ res://Scripts/Player/player_camera.gd
 res://Quests/scripts/global_quest_manager.gd
 res://Scripts/Enemies/enemy.gd
 res://Scenes/Levels/area_2.tscn
+res://GUI/Inventory/inventory.gd
+res://Items/Item_Effects/item_effect_heal.gd
+res://GUI/Inventory/Scripts/inventory_slot_ui.gd
+res://Scenes/Enemies/angry_floof.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2dsmm14jobve"]
+[gd_scene load_steps=17 format=3 uid="uid://b2dsmm14jobve"]
 
 [ext_resource type="Script" uid="uid://bsnsaia4q1dws" path="res://Globals/player_hud.gd" id="1_xhte5"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="2_gian7"]
@@ -10,6 +10,12 @@ bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhte5"]
 bg_color = Color(0.81263417, 0.16849923, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agyfd"]
+bg_color = Color(0.22670749, 0.22670752, 0.2267074, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srlca"]
+bg_color = Color(0.881864, 0.70350784, 0.21508199, 1)
 
 [sub_resource type="Animation" id="Animation_1pbxj"]
 length = 0.001
@@ -367,10 +373,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = -58.0
-offset_right = 58.0
-offset_bottom = -8.0
+offset_left = 145.0
+offset_top = -56.0
+offset_right = 195.0
+offset_bottom = -6.0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_2hai4")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xhte5")
@@ -386,14 +392,32 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 88.0
-offset_top = -30.0
-offset_right = 137.0
-offset_bottom = -7.0
+offset_left = 146.0
+offset_top = -40.0
+offset_right = 195.0
+offset_bottom = -17.0
 grow_vertical = 0
 text = "99/99"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ExpBar" type="ProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -11.0
+offset_right = 125.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_agyfd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_srlca")
+value = 50.0
+show_percentage = false
 
 [node name="Death" type="Control" parent="Control"]
 visible = false

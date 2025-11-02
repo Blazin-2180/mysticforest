@@ -10,6 +10,7 @@ var is_paused : bool = false
 @onready var item_description: Label = $Control/TabContainer/Inventory/ItemDescription	
 @onready var button_load: Button = $Control/TabContainer/System/VBoxContainer/Button_Load
 @onready var tab_container: TabContainer = $Control/TabContainer
+@onready var audio_stream : AudioStreamPlayer = $AudioStreamPlayer
 #endregion
 
 #region /// Signals
@@ -68,10 +69,10 @@ func hide_pause_menu () -> void :
 func _on_button_exit_pressed() -> void:
 	get_tree().quit()
 
-#func play_audio( audio : AudioStream) -> void :
-	#audio_stream_player.stream = audio
-	#audio_stream_player.play()
-	#pass
+func play_audio( audio : AudioStream ) -> void :
+	audio_stream.stream = audio
+	audio_stream.play()
+	pass
 
 func change_tab( _i : int = 1 ) -> void :
 	tab_container.current_tab = wrapi(

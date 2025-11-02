@@ -11,8 +11,9 @@ var player : Player
 var health_points : int = 6
 var max_health_points : int = 6
 var player_spawned : bool = false
-#var level_requirements = [ 0, 50, 100, 200, 400, 800, 1500, 3000, 6000, 12000, 25000 ]
-var level_requirements = [0, 5, 10, 20, 25] # for testing
+var experience : int = 0
+var level_requirements = [ 0, 50, 100, 200, 400, 800, 1500, 3000, 6000, 12000, 25000 ]
+#var level_requirements = [0, 5, 10, 20, 25] # for testing
 
 
 func _ready() -> void:
@@ -31,7 +32,7 @@ func increase_health_points(num: int) -> void:
 	PlayerHud.update_health_points()
 
 func reward_experience( _exp : int ) -> void :
-	player.experience += _exp
+	experience += _exp
 	# Check for level advancement
 	check_level_advance()
 	pass
@@ -39,7 +40,7 @@ func reward_experience( _exp : int ) -> void :
 func check_level_advance() -> void :
 	if player.level >= level_requirements.size() :
 		return
-	if player.experience >= level_requirements[ player.level ] :
+	if experience >= level_requirements[ player.level ] :
 		player.level += 1
 		player.attack += 1
 		player.defence += 1
@@ -57,6 +58,12 @@ func set_health(_health_points : int, _max_health_points : int ) -> void:
 	health_points = _health_points
 	PlayerHud.update_health_points()
 
+func set_experience( _experience : int, _max_experience : int) -> void :
+	level_requirements[player.level] = _max_experience
+	experience = _experience
+	PlayerHud.update_exp()
+	check_level_advance()
+
 func set_player_position( _new_position : Vector2) -> void :
 	player.global_position = _new_position
 	pass
@@ -73,5 +80,5 @@ func play_audio( _audio : AudioStream ) -> void :
 	player.audio.stream = _audio
 	player.audio.play()
 
-func shake_camera ( trauma : float = 1 ) -> void :
+func shake_camera( trauma : float = 1 ) -> void :
 	camera_shook.emit( clampi ( trauma, 0, 1 ) )

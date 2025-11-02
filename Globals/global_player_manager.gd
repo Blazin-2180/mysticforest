@@ -40,6 +40,7 @@ func reward_experience( _exp : int ) -> void :
 	experience += _exp
 	# Check for level advancement
 	check_level_advance()
+	PlayerHud.update_exp()
 	pass
 
 func check_level_advance() -> void :

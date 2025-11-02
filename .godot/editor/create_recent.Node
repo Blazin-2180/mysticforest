@@ -1,9 +1,9 @@
+Label
 ProgressBar
 AudioStreamPlayer
 AudioStreamPlayer2D
 TileMapLayer
 GPUParticles2D
-Label
 Node
 Timer
 AnimationPlayer
@@ -12,4 +12,3 @@ StaticBody2D
 CollisionShape2D
 CharacterBody2D
 Sprite2D
-Node2D

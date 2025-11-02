@@ -9,6 +9,7 @@ extends CanvasLayer
 @onready var back_to_title_button: Button = $Control/Death/VBoxContainer/BackToTitleButton
 @onready var animation_player: AnimationPlayer = $Control/Death/GameOverAnimation
 @onready var quest_notification: NotificationUI = $Control/QuestNotification
+@onready var level: Label = $Control/LevelLabel
 
 var player : Player = GlobalPlayerManager.player
 
@@ -17,6 +18,7 @@ func _ready() -> void:
 	health_bar.value = GlobalPlayerManager.health_points
 	hp_label.text = str(GlobalPlayerManager.health_points, "/", GlobalPlayerManager.max_health_points)
 	exp_bar.value = GlobalPlayerManager.experience
+	level.text = str(GlobalPlayerManager.player.level)
 	pass
 
 
@@ -38,3 +40,4 @@ func queue_notification( _title : String, _description : String ) -> void :
 func update_exp() -> void :
 	exp_bar.value = GlobalPlayerManager.experience
 	exp_bar.max_value = GlobalPlayerManager.level_requirements[ GlobalPlayerManager.player.level ]
+	level.text = str(GlobalPlayerManager.player.level)

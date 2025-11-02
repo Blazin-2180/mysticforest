@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://b2dsmm14jobve"]
+[gd_scene load_steps=18 format=3 uid="uid://b2dsmm14jobve"]
 
 [ext_resource type="Script" uid="uid://bsnsaia4q1dws" path="res://Globals/player_hud.gd" id="1_xhte5"]
 [ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="2_gian7"]
+[ext_resource type="FontFile" uid="uid://dl0otn5djtbbr" path="res://Fonts/Abaddon Light.ttf" id="2_srlca"]
 [ext_resource type="Script" uid="uid://dx4og76726hhn" path="res://GUI/Player_HUD/quest_notification.gd" id="3_agyfd"]
 [ext_resource type="Texture2D" uid="uid://bt2evx6083gal" path="res://GUI/dialog_system/sprites/Untitled 60.png" id="4_agyfd"]
 
@@ -418,6 +419,16 @@ theme_override_styles/background = SubResource("StyleBoxFlat_agyfd")
 theme_override_styles/fill = SubResource("StyleBoxFlat_srlca")
 value = 50.0
 show_percentage = false
+
+[node name="LevelLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 336.0
+offset_right = 216.0
+offset_bottom = 357.0
+theme_override_fonts/font = ExtResource("2_srlca")
+theme_override_font_sizes/font_size = 12
+text = "99"
 
 [node name="Death" type="Control" parent="Control"]
 visible = false

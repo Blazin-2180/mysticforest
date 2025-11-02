@@ -4,3 +4,5 @@ res://Items/potion.tres
 res://Quests/quest_001.tres
 res://Scripts/Player/player.gd
 res://Globals/global_player_manager.gd
+res://Globals/player_hud.gd
+res://Globals/global_save_manager.gd

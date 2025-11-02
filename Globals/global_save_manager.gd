@@ -51,7 +51,7 @@ func load_game () -> void:
 	GlobalPlayerManager.set_health (current_save.player.health_points, current_save.player.max_health_points)
 	GlobalPlayerManager.INVENTORY_DATA.parse_save_data( current_save.items )
 	p.level = current_save.player.level
-	p.experience = current_save.player.experience
+	GlobalPlayerManager.experience = current_save.player.experience
 	p.attack = current_save.player.attack
 	p.defence = current_save.player.defence
 	QuestManager.current_quests = current_save.quests
@@ -68,7 +68,7 @@ func update_player_data () -> void :
 	current_save.player.position_x = p.global_position.x
 	current_save.player.position_y = p.global_position.y
 	current_save.player.level = p.level
-	current_save.player.experience = p.experience
+	current_save.player.experience = GlobalPlayerManager.experience
 	current_save.player.attack = p.attack
 	current_save.player.defence = p.defence
 

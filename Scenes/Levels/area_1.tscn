@@ -1009,7 +1009,7 @@ side = 3
 
 [node name="SavePoint" parent="." instance=ExtResource("17_bl5d6")]
 z_as_relative = false
-position = Vector2(1833, 888)
+position = Vector2(545, 169)
 
 [node name="GreenGloop" parent="." instance=ExtResource("18_30j8n")]
 position = Vector2(280, 114)

@@ -10,7 +10,6 @@ const DIR_4 = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 @onready var player_sprite : Sprite2D = $Player_Sprite
 @onready var state_machine : PlayerStateMachine = $StateMachine
 
-@export var character_name : String = "Cob"
 @export var movement_speed : int = 400
 
 var direction : Vector2 = Vector2.ZERO

@@ -1,3 +1,5 @@
+res://CharacterCreator
+res://TitleScreen/sprites
 res://TitleScreen
 res://Globals
 res://DayNightCycle
@@ -18,5 +20,3 @@ res://GUI/PauseMenu
 res://GUI/scene_transition
 res://GUI/Player_HUD
 C:/Users/blazi/Documents/mysticforest
-res://Scenes/Enemies
-res://Scenes/Bonbon

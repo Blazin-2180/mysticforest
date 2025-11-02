@@ -11,6 +11,7 @@ var is_paused : bool = false
 @onready var button_load: Button = $Control/TabContainer/System/VBoxContainer/Button_Load
 @onready var tab_container: TabContainer = $Control/TabContainer
 @onready var audio_stream : AudioStreamPlayer = $AudioStreamPlayer
+@onready var name_label: Label = $Control/TabContainer/Inventory/Label
 #endregion
 
 #region /// Signals
@@ -43,6 +44,8 @@ func show_inventory () -> void :
 	visible = true
 	inventory_show = true
 	tab_container.current_tab = 0
+	name_label.text = GlobalPlayerManager.character_name
+	print(GlobalPlayerManager.character_name)
 	shown.emit()
 
 func hide_inventory () -> void : 

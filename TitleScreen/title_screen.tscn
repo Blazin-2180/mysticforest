@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://basa2hw4fxtl0"]
+[gd_scene load_steps=14 format=3 uid="uid://basa2hw4fxtl0"]
 
 [ext_resource type="Script" uid="uid://wambilu3erlm" path="res://TitleScreen/title_screen.gd" id="1_skoes"]
 [ext_resource type="Texture2D" uid="uid://ct8jgg1qk088i" path="res://TitleScreen/sprites/title_screen_placeholdere.png" id="1_xvftn"]
@@ -7,7 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://b0wellchjisbo" path="res://Audio/example_music_02.ogg" id="2_ka7ac"]
 [ext_resource type="Texture2D" uid="uid://bige2676xisao" path="res://Scenes/Bonbon/BonbonSprites_.png" id="2_ux371"]
 [ext_resource type="PackedScene" uid="uid://sx10ttkyxwwi" path="res://Scenes/Levels/player_spawn.tscn" id="4_skoes"]
-[ext_resource type="PackedScene" uid="uid://pto25yvwu0jn" path="res://TitleScreen/SplashScreen.tscn" id="7_5d78q"]
 
 [sub_resource type="Animation" id="Animation_skoes"]
 length = 0.001
@@ -204,8 +203,6 @@ frame = 24
 libraries = {
 &"": SubResource("AnimationLibrary_j0m2k")
 }
-
-[node name="SplashScreen" parent="CanvasLayer" instance=ExtResource("7_5d78q")]
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("4_skoes")]
 position = Vector2(303, 195)

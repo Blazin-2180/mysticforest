@@ -1,6 +1,6 @@
 extends Node2D
 
-const START_LEVEL : String = "res://Scenes/Levels/area_1.tscn"
+const START_LEVEL : String = "res://CharacterCreator/character_creator.tscn"
 
 @export var music : AudioStream
 @export var button_focus_audio : AudioStream
@@ -20,7 +20,8 @@ func _ready() -> void:
 	if GlobalSaveManager.get_save_file() == null :
 		continue_button.disabled = true
 	
-	$CanvasLayer/SplashScreen.finished.connect( setup_title_screen)
+	#$CanvasLayer/SplashScreen.finished.connect( setup_title_screen )
+	setup_title_screen()
 	
 	GlobalLevelManager.level_load_started.connect( exit_title_screen )
 	pass
@@ -34,7 +35,9 @@ func setup_title_screen() -> void :
 	new_game_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
 	continue_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
 	exit_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
-
+	new_game_button.mouse_entered.connect(button_mouse_enter.bind(new_game_button))
+	continue_button.mouse_entered.connect(button_mouse_enter.bind(continue_button))
+	exit_button.mouse_entered.connect(button_mouse_enter.bind(exit_button))
 	pass
 
 func start_game() -> void : 
@@ -50,7 +53,6 @@ func continue_game() -> void :
 func exit_title_screen() -> void :
 	GlobalPlayerManager.player.visible = true
 	PlayerHud.visible = true
-	PlayerHud.visible = true
 	Inventory.process_mode = Node.PROCESS_MODE_ALWAYS
 	self.queue_free()
 	pass
@@ -63,3 +65,6 @@ func exit_game() -> void :
 func play_audio( _a : AudioStream) -> void :
 	audio_player.stream = _a
 	audio_player.play()
+
+func button_mouse_enter(_b : Button) -> void:
+	_b.grab_focus()

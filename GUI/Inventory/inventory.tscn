@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://buj7g0kdkywyt"]
+[gd_scene load_steps=14 format=3 uid="uid://buj7g0kdkywyt"]
 
 [ext_resource type="Script" uid="uid://b4h3excicddvf" path="res://GUI/Inventory/inventory.gd" id="1_btv15"]
 [ext_resource type="Texture2D" uid="uid://bquge75xf5pir" path="res://Sprites/Player_Journal.png" id="2_3hl7w"]
-[ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="2_ewc0g"]
 [ext_resource type="PackedScene" uid="uid://cuv6ed6yntyvs" path="res://GUI/Inventory/inventory_slot.tscn" id="3_lgn1t"]
 [ext_resource type="Script" uid="uid://da20w1rpa8yuy" path="res://GUI/Inventory/Scripts/inventory_ui.gd" id="3_wlp85"]
 [ext_resource type="Resource" uid="uid://cqeukq4gf601u" path="res://GUI/Inventory/player_inventory.tres" id="4_wlp85"]
@@ -14,16 +13,11 @@
 [ext_resource type="FontFile" uid="uid://bcnxlrpjp5myd" path="res://Fonts/m5x7.ttf" id="12_75gpt"]
 [ext_resource type="PackedScene" uid="uid://dgv6jx5rdxcvb" path="res://GUI/Inventory/Quests/quest_step_item.tscn" id="13_bth1d"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wlp85"]
-atlas = ExtResource("2_ewc0g")
-region = Rect2(0, 0, 32, 32)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cw0n"]
 content_margin_left = 7.0
 content_margin_top = 7.0
 content_margin_right = 7.0
 content_margin_bottom = 7.0
-texture = SubResource("AtlasTexture_wlp85")
 texture_margin_left = 14.0
 texture_margin_top = 14.0
 texture_margin_right = 14.0
@@ -85,9 +79,9 @@ anchor_top = 0.031000001
 anchor_right = 0.5
 anchor_bottom = 0.031000001
 offset_left = -202.5
-offset_top = 30.0
+offset_top = 13.0
 offset_right = -5.5
-offset_bottom = 51.0
+offset_bottom = 34.0
 theme_override_colors/font_color = Color(0.35672677, 0.18123084, 0.051876448, 1)
 theme_override_font_sizes/font_size = 11
 text = "BLAZIN2180"
@@ -95,19 +89,18 @@ horizontal_alignment = 1
 
 [node name="Stats" parent="Control/TabContainer/Inventory" instance=ExtResource("6_58q36")]
 layout_mode = 0
-offset_left = -53.0
-offset_top = 48.0
-offset_right = 39.0
-offset_bottom = 183.0
+offset_left = -51.0
+offset_top = 33.0
+offset_right = 21.0
+offset_bottom = 117.0
 mouse_filter = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
-offset_left = 167.0
-offset_top = 125.0
-offset_right = 319.0
-offset_bottom = 252.0
+offset_left = -42.0
+offset_top = 124.0
+offset_right = 110.0
+offset_bottom = 251.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
 
@@ -179,19 +172,156 @@ layout_mode = 2
 [node name="InventorySlot20" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
+[node name="InventorySlot21" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot22" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot23" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot24" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot25" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot26" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot27" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot28" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot29" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot30" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot31" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="InventorySlot32" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+layout_mode = 2
+
+[node name="EquipmentPanel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 11.0
+offset_right = 290.0
+offset_bottom = 161.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
+
+[node name="GridContainer" type="GridContainer" parent="Control/TabContainer/Inventory/EquipmentPanel"]
+layout_mode = 2
+columns = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+focus_mode = 1
+mouse_filter = 2
+disabled = true
+
+[node name="HeadSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 1
+mouse_filter = 2
+
+[node name="Spacer2" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+focus_mode = 1
+mouse_filter = 2
+disabled = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ShoulderSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NeckSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BackSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HandSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ChestSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Ring1Slot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer2" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+focus_mode = 1
+mouse_filter = 2
+disabled = true
+
+[node name="LegSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Ring2Slot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MainHandSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FeetSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="OffHandSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="ItemDescription" type="Label" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
-offset_left = 146.0
-offset_top = 35.0
-offset_right = 332.0
-offset_bottom = 142.0
+offset_left = 26.0
+offset_top = 30.0
+offset_right = 130.0
+offset_bottom = 126.0
 theme_override_colors/font_color = Color(0.35672677, 0.18123084, 0.051876448, 1)
 theme_override_fonts/font = ExtResource("12_75gpt")
 theme_override_font_sizes/font_size = 16
 horizontal_alignment = 3
 autowrap_mode = 3
 justification_flags = 161
-uppercase = true
 
 [node name="Quests" type="Control" parent="Control/TabContainer"]
 visible = false

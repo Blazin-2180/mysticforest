@@ -37,7 +37,6 @@ func save_game() -> void :
 
 func get_save_file() -> FileAccess : 
 	return FileAccess.open( SAVE_PATH + "save.sav", FileAccess.READ )
-	pass
 
 func load_game () -> void: 
 	var p : Player = GlobalPlayerManager.player

@@ -1,3 +1,4 @@
+res://Items
 res://CharacterCreator
 res://TitleScreen/sprites
 res://TitleScreen
@@ -8,7 +9,6 @@ res://Scenes/Levels
 res://NPC/00_npcs
 res://GUI/Inventory/Quests
 res://GUI/Inventory/Stats
-res://Items
 res://GUI/dialog_system
 res://Quests/scripts
 res://Quests

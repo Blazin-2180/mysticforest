@@ -1,27 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx3h406wgpg83"]
+[gd_scene load_steps=4 format=3 uid="uid://bx3h406wgpg83"]
 
-[ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="1_kabgj"]
 [ext_resource type="Script" uid="uid://cnrwf3wqc2rfu" path="res://GUI/Inventory/Stats/stats.gd" id="2_rwfs3"]
+[ext_resource type="FontFile" uid="uid://bcnxlrpjp5myd" path="res://Fonts/m5x7.ttf" id="2_xd6ew"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wlp85"]
-atlas = ExtResource("1_kabgj")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cw0n"]
-content_margin_left = 7.0
-content_margin_top = 7.0
-content_margin_right = 7.0
-content_margin_bottom = 7.0
-texture = SubResource("AtlasTexture_wlp85")
-texture_margin_left = 14.0
-texture_margin_top = 14.0
-texture_margin_right = 14.0
-texture_margin_bottom = 14.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kabgj"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0)
 
 [node name="Stats" type="PanelContainer"]
-offset_right = 117.0
+offset_right = 74.0
 offset_bottom = 135.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
+theme_override_styles/panel = SubResource("StyleBoxFlat_kabgj")
 script = ExtResource("2_rwfs3")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -31,73 +19,146 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Level"]
-custom_minimum_size = Vector2(50, 0)
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "Level :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Level"]
-custom_minimum_size = Vector2(20, 0)
+custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "99"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/Level"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 horizontal_alignment = 2
 
 [node name="Experience" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Experience"]
-custom_minimum_size = Vector2(50, 0)
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "Exp :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Experience"]
-custom_minimum_size = Vector2(20, 0)
+custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "99"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/Experience"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 horizontal_alignment = 2
 
 [node name="Attack" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Attack"]
-custom_minimum_size = Vector2(50, 0)
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "Atk :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Attack"]
-custom_minimum_size = Vector2(20, 0)
+custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "99"
+horizontal_alignment = 2
+
+[node name="attack_modifier_label" type="Label" parent="VBoxContainer/Attack"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
+text = "+1"
 horizontal_alignment = 2
 
 [node name="Defence" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Defence"]
-custom_minimum_size = Vector2(50, 0)
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "Def :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Defence"]
-custom_minimum_size = Vector2(20, 0)
+custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "99"
+horizontal_alignment = 2
+
+[node name="defence_modifier_label" type="Label" parent="VBoxContainer/Defence"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
+text = "+1"
 horizontal_alignment = 2
 
 [node name="Health" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Health"]
-custom_minimum_size = Vector2(50, 0)
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "HP :"
 
 [node name="Label2" type="Label" parent="VBoxContainer/Health"]
-custom_minimum_size = Vector2(20, 0)
+custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
 text = "99"
+horizontal_alignment = 2
+
+[node name="health_modifier_label" type="Label" parent="VBoxContainer/Health"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_xd6ew")
+theme_override_font_sizes/font_size = 16
+text = "+1"
 horizontal_alignment = 2

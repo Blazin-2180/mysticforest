@@ -1,3 +1,4 @@
+EquipableItemData
 NPCResource
 Quest
 ItemData

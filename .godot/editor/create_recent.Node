@@ -1,3 +1,5 @@
+HBoxContainer
+VBoxContainer
 AudioStreamPlayer
 CanvasLayer
 Control
@@ -10,5 +12,3 @@ TextureRect
 AnimationPlayer
 Sprite2D
 ProgressBar
-AudioStreamPlayer2D
-TileMapLayer

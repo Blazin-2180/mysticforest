@@ -5,6 +5,9 @@ class_name Stats extends PanelContainer
 @onready var label_attack : Label = $VBoxContainer/Attack/Label2
 @onready var label_defence : Label = $VBoxContainer/Defence/Label2
 @onready var label_health: Label = $VBoxContainer/Health/Label2
+@onready var attack_modifier_label: Label = $VBoxContainer/Attack/attack_modifier_label
+@onready var defence_modifier_label: Label = $VBoxContainer/Defence/defence_modifier_label
+@onready var health_modifier_label: Label = $VBoxContainer/Health/health_modifier_label
 
 func _ready() -> void:
 	Inventory.shown.connect( update_stats )

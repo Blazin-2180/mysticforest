@@ -1,8 +1,13 @@
-res://GUI/Player_HUD/player_hud.tscn
+res://TitleScreen/title_screen.tscn
 res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
-res://Scripts/Player/player.gd
-res://Globals/global_player_manager.gd
-res://Globals/player_hud.gd
 res://Globals/global_save_manager.gd
+res://TitleScreen/title_screen.gd
+res://default_bus_layout.tres
+res://GUI/Inventory/inventory.tscn
+res://Quests/utility_nodes/quest_activated_switch.tscn
+res://Quests/utility_nodes/quest_advance_trigger.tscn
+res://Scenes/Levels/area_1.tscn
+res://TitleScreen/splash_screen.gd
+res://TitleScreen/SplashScreen.tscn

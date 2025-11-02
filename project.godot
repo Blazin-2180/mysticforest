@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="MysticForest"
-run/main_scene="uid://bpvi0vlqqdiw1"
+run/main_scene="uid://basa2hw4fxtl0"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
+AudioManager="*res://Globals/global_audio_manager.gd"
 GlobalLevelManager="*res://Globals/global_level_manager.gd"
 GlobalPlayerManager="*res://Globals/global_player_manager.gd"
 PlayerHud="*res://GUI/Player_HUD/player_hud.tscn"

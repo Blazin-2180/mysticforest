@@ -34,10 +34,14 @@ func save_game() -> void :
 	print("game saved")
 	pass
 
+func get_save_file() -> FileAccess : 
+	return FileAccess.open( SAVE_PATH + "save.sav", FileAccess.READ )
+	pass
+
 func load_game () -> void: 
 	var p : Player = GlobalPlayerManager.player
 	# Reads save data
-	var file := FileAccess.open( SAVE_PATH + "save.sav", FileAccess.READ )
+	var file := get_save_file()
 	var json := JSON.new()
 	json.parse( file.get_line() )
 	var save_dictionary : Dictionary = json.get_data() as Dictionary

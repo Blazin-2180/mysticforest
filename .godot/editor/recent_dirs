@@ -1,3 +1,5 @@
+res://TitleScreen
+res://Globals
 res://DayNightCycle
 res://
 res://Scenes/Levels
@@ -12,11 +14,9 @@ res://Fonts
 res://GUI/Inventory
 res://Scripts/Player
 C:/Users/blazi/Desktop
-res://Globals
 res://GUI/PauseMenu
 res://GUI/scene_transition
 res://GUI/Player_HUD
 C:/Users/blazi/Documents/mysticforest
 res://Scenes/Enemies
 res://Scenes/Bonbon
-res://Scripts/Bonbon

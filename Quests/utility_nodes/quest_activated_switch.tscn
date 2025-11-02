@@ -4,10 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://co72tf5u6i0td" path="res://Quests/utility_nodes/icons/quest_complete.png" id="2_xq3vc"]
 
 [node name="QuestActivatedSwitch" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_67iaq")
-check_type = null
-remove_when_activated = null
-react_to_global_signal = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -43)

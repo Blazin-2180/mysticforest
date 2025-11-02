@@ -12,3 +12,4 @@ res://CharacterCreator/character_creator.gd
 res://GUI/Inventory/inventory.tscn
 res://Globals/global_save_manager.gd
 res://Scenes/Levels/area_1.tscn
+res://NPC/scripts/npc_behaviour_wander.gd

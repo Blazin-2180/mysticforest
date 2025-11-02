@@ -26,11 +26,11 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Engine.is_editor_hint() :
 		return
-	if abs( global_position.distance_to( original_position ) ) > wander_range * 16:
-		npc.velocity *= -1
-		npc.direction *= -1 
-		npc.update_direction( global_position + npc.direction)
-		npc.update_animation()
+	#if abs( global_position.distance_to( original_position ) ) > wander_range * 16:
+		#npc.velocity *= -1
+		#npc.direction *= -1 
+		#npc.update_direction( global_position + npc.direction)
+		#npc.update_animation()
 
 func start() -> void :
 	#IDLE PHASE
@@ -46,6 +46,13 @@ func start() -> void :
 		return
 	npc.state = "walk"
 	var _direction : Vector2 = DIRECTIONS[randi_range( 0, 3 )]
+	if abs( global_position.distance_to( original_position ) ) > wander_range * 16 :
+		var direction_to_area : Vector2 = global_position.direction_to( original_position )
+		var best_directions : Array[ float ]
+		for d in DIRECTIONS :
+			best_directions.append( d.dot ( direction_to_area ) )
+		_direction = DIRECTIONS[ best_directions.find( best_directions.max() ) ]
+		
 	npc.direction = _direction
 	npc.velocity = wander_speed * _direction
 	npc.update_direction( global_position + _direction)

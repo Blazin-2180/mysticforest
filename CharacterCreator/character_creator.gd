@@ -1,15 +1,41 @@
 class_name CharacterCreator extends Node2D
 
 @onready var name_box : TextEdit = $CanvasLayer/Control/ColorRect/Details/NameBox
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var confirm_button: Button = $CanvasLayer/ConfirmButton
+
+@export var music : AudioStream
+@export var button_focus_audio : AudioStream
+@export var button_pressed_audio : AudioStream
 
 var player_name = ""
+
 
 func _ready() -> void:
 	get_tree().paused = true
 	GlobalPlayerManager.player.visible = false
 	PlayerHud.visible = false
 	Inventory.process_mode = Node.PROCESS_MODE_DISABLED
+	setup_create_screen()
 	pass
+
+
+func setup_create_screen() -> void :
+	AudioManager.play_music( music )
+	confirm_button.grab_focus()
+	confirm_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
+	confirm_button.mouse_entered.connect(button_mouse_enter.bind(confirm_button))
+
+	pass
+
+
+func play_audio( _a : AudioStream) -> void :
+	audio_player.stream = _a
+	audio_player.play()
+
+
+func button_mouse_enter(_b : Button) -> void:
+	_b.grab_focus()
 
 
 # Players name
@@ -20,7 +46,10 @@ func _on_text_edit_text_changed() -> void:
 
 # Change scene
 func _on_confirm_button_pressed() -> void:
-	GlobalPlayerManager.character_name = player_name
+	if player_name == "" :
+		GlobalPlayerManager.character_name = "Cob"
+	else :
+		GlobalPlayerManager.character_name = player_name
 	get_tree().change_scene_to_file("res://Scenes/Levels/area_1.tscn")
 	GlobalPlayerManager.player.visible = true
 	PlayerHud.visible = true

@@ -1196,6 +1196,23 @@ Complete : true"
 [node name="Node" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3/QuestAdvanceTrigger"]
 script = SubResource("GDScript_p87po")
 
+[node name="QuestActivatedSwitch" parent="Sammy/QuestActivatedSwitch4" instance=ExtResource("34_xkhu6")]
+check_type = 3
+react_to_global_signal = true
+linked_quest = ExtResource("31_p87po")
+quest_step = 3
+quest_complete = true
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Checking if quest has been completed."
+
+[node name="DialogInteraction" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
+
+[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch/DialogInteraction"]
+script = ExtResource("28_w5vv1")
+text = "Thank you for all your help"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
 [node name="Bonbon" parent="." instance=ExtResource("28_4uyou")]
 position = Vector2(251, 216)
 

@@ -16,6 +16,7 @@ const DIRECTIONS = [Vector2.UP, Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT]
 var original_position : Vector2
 #endregion
 
+
 func _ready() -> void:
 	if Engine.is_editor_hint() :
 		return
@@ -23,14 +24,11 @@ func _ready() -> void:
 	$CollisionShape2D.queue_free()
 	original_position = npc.global_position
 
+
 func _process(_delta: float) -> void:
 	if Engine.is_editor_hint() :
 		return
-	#if abs( global_position.distance_to( original_position ) ) > wander_range * 16:
-		#npc.velocity *= -1
-		#npc.direction *= -1 
-		#npc.update_direction( global_position + npc.direction)
-		#npc.update_animation()
+
 
 func start() -> void :
 	#IDLE PHASE
@@ -65,7 +63,7 @@ func start() -> void :
 	start()
 	pass
 
+
 func _set_wander_range( v : int ) -> void :
 	wander_range = v
 	$CollisionShape2D.shape.radius = v * 16.0
-	

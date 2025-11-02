@@ -31,6 +31,11 @@ func increase_health_points(num: int) -> void:
 	health_points = min(health_points + num, max_health_points)
 	PlayerHud.update_health_points()
 
+func increase_experience(num: int) -> void:
+	experience = min(experience + num, level_requirements[ player.level ])
+	PlayerHud.update_exp()
+
+
 func reward_experience( _exp : int ) -> void :
 	experience += _exp
 	# Check for level advancement

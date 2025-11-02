@@ -112,3 +112,5 @@ func _on_player_levelled_up() -> void :
 	effect_animation_player.play("level_up")
 	GlobalPlayerManager.increase_health_points(GlobalPlayerManager.max_health_points)
 	PlayerHud.update_health_points()
+	GlobalPlayerManager.increase_experience(GlobalPlayerManager.level_requirements[ self.level ])
+	PlayerHud.update_exp()

@@ -117,6 +117,7 @@ mouse_filter = 2
 
 [node name="InventorySlot2" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
+focus_neighbor_left = NodePath("../InventorySlot")
 
 [node name="InventorySlot3" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
@@ -172,42 +173,6 @@ layout_mode = 2
 [node name="InventorySlot20" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot21" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot22" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot23" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot24" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot25" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot26" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot27" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot28" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot29" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot30" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot31" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot32" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
 [node name="EquipmentPanel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
 offset_left = 196.0
@@ -253,14 +218,17 @@ layout_mode = 2
 [node name="ShoulderSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
+focus_neighbor_top = NodePath("../../HBoxContainer/HeadSlot")
 
 [node name="NeckSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
+focus_neighbor_top = NodePath("../../HBoxContainer/HeadSlot")
 
 [node name="BackSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
+focus_neighbor_top = NodePath("../../HBoxContainer/HeadSlot")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
 layout_mode = 2

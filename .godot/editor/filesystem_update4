@@ -1,12 +1,5 @@
 res://GUI/Inventory/inventory.tscn
-res://Items/b_cloak.tres
-res://GUI/Inventory/player_inventory.tres
 res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
-res://Globals/global_save_manager.gd
-res://GUI/Inventory/Scripts/inventory_ui.gd
-res://Items/Scripts/equipable_item_data.gd
-res://GUI/Inventory/Scripts/inventory_slot_ui.gd
-res://GUI/Inventory/Scripts/inventory_data.gd
-res://GUI/Inventory/inventory.gd
+res://Items/b_cloak.tres

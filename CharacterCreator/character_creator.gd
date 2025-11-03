@@ -12,8 +12,8 @@ var player_name = ""
 
 
 func _ready() -> void:
-	get_tree().paused = true
 	GlobalPlayerManager.player.visible = false
+	GlobalPlayerManager.player.process_mode = Node.PROCESS_MODE_DISABLED
 	PlayerHud.visible = false
 	Inventory.process_mode = Node.PROCESS_MODE_DISABLED
 	setup_create_screen()
@@ -24,17 +24,16 @@ func setup_create_screen() -> void :
 	AudioManager.play_music( music )
 	confirm_button.grab_focus()
 	confirm_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
-	confirm_button.mouse_entered.connect(button_mouse_enter.bind(confirm_button))
-
+	confirm_button.mouse_entered.connect( button_mouse_enter.bind( confirm_button ))
 	pass
 
 
-func play_audio( _a : AudioStream) -> void :
+func play_audio( _a : AudioStream ) -> void :
 	audio_player.stream = _a
 	audio_player.play()
 
 
-func button_mouse_enter(_b : Button) -> void:
+func button_mouse_enter( _b : Button ) -> void:
 	_b.grab_focus()
 
 
@@ -50,7 +49,8 @@ func _on_confirm_button_pressed() -> void:
 		GlobalPlayerManager.character_name = "Cob"
 	else :
 		GlobalPlayerManager.character_name = player_name
-	get_tree().change_scene_to_file("res://Scenes/Levels/area_1.tscn")
+	get_tree().change_scene_to_file( "res://Scenes/Levels/area_1.tscn" )
+	GlobalPlayerManager.player.process_mode = Node.PROCESS_MODE_ALWAYS
 	GlobalPlayerManager.player.visible = true
 	PlayerHud.visible = true
 	Inventory.process_mode = Node.PROCESS_MODE_ALWAYS

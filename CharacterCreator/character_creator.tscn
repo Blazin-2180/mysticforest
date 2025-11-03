@@ -10,12 +10,11 @@
 script = ExtResource("1_80knc")
 music = ExtResource("2_cge1w")
 button_focus_audio = ExtResource("3_uycd5")
-button_pressed_audio = ExtResource("3_uycd5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 640.0
 offset_bottom = 360.0
-color = Color(0.31174326, 0.5832564, 0.9908163, 1)
+color = Color(0.3113789, 0.5829434, 0.99071157, 0.48100004)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -74,6 +73,7 @@ text = "Confirm"
 position = Vector2(312, 177)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+max_polyphony = 4
 
 [connection signal="text_changed" from="CanvasLayer/Control/ColorRect/Details/NameBox" to="." method="_on_text_edit_text_changed"]
 [connection signal="pressed" from="CanvasLayer/ConfirmButton" to="." method="_on_confirm_button_pressed"]

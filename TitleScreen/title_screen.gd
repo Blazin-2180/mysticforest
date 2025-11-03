@@ -28,13 +28,17 @@ func _ready() -> void:
 
 func setup_title_screen() -> void :
 	AudioManager.play_music( music )
+	
 	new_game_button.pressed.connect( start_game )
 	continue_button.pressed.connect ( continue_game )
 	exit_button.pressed.connect ( exit_game )
+	
 	new_game_button.grab_focus()
+	
 	new_game_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
 	continue_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
 	exit_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
+	
 	new_game_button.mouse_entered.connect(button_mouse_enter.bind(new_game_button))
 	continue_button.mouse_entered.connect(button_mouse_enter.bind(continue_button))
 	exit_button.mouse_entered.connect(button_mouse_enter.bind(exit_button))
@@ -51,6 +55,7 @@ func continue_game() -> void :
 	pass
 
 func exit_title_screen() -> void :
+	GlobalPlayerManager.player_spawned = false
 	GlobalPlayerManager.player.visible = true
 	PlayerHud.visible = true
 	Inventory.process_mode = Node.PROCESS_MODE_ALWAYS

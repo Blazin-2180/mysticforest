@@ -2,8 +2,8 @@ extends StaticBody2D
 
 var state : String = "day" # day or night
 var change_state : bool = false
-var length_of_day = 300 # seconds
-var length_of_night = 150 # seconds
+var length_of_day = 30 # seconds
+var length_of_night = 15 # seconds
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var timer : Timer = $Timer

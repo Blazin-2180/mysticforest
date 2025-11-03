@@ -13,7 +13,7 @@ var player_name = ""
 
 func _ready() -> void:
 	GlobalPlayerManager.player.visible = false
-	GlobalPlayerManager.player.process_mode = Node.PROCESS_MODE_DISABLED
+	#GlobalPlayerManager.player.process_mode = Node.PROCESS_MODE_DISABLED
 	PlayerHud.visible = false
 	Inventory.process_mode = Node.PROCESS_MODE_DISABLED
 	setup_create_screen()
@@ -50,7 +50,7 @@ func _on_confirm_button_pressed() -> void:
 	else :
 		GlobalPlayerManager.character_name = player_name
 	get_tree().change_scene_to_file( "res://Scenes/Levels/area_1.tscn" )
-	GlobalPlayerManager.player.process_mode = Node.PROCESS_MODE_ALWAYS
+	#GlobalPlayerManager.player.process_mode = Node.PROCESS_MODE_ALWAYS
 	GlobalPlayerManager.player.visible = true
 	PlayerHud.visible = true
 	Inventory.process_mode = Node.PROCESS_MODE_ALWAYS

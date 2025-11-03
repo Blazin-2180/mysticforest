@@ -32,7 +32,9 @@ func _ready() -> void:
 			
 func player_interact() -> void :
 	player_interacted.emit()
-	await get_tree().create_timer(0.2).timeout
+	#await get_tree().create_timer(0.2).timeout
+	await get_tree().process_frame
+	await get_tree().process_frame
 	DialogSystem.show_dialog( dialog_items)
 	DialogSystem.finished.connect( _on_dialog_finished )
 	pass

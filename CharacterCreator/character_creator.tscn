@@ -11,12 +11,12 @@ script = ExtResource("1_80knc")
 music = ExtResource("2_cge1w")
 button_focus_audio = ExtResource("3_uycd5")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_right = 640.0
 offset_bottom = 360.0
 color = Color(0.3113789, 0.5829434, 0.99071157, 0.48100004)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3

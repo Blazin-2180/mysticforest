@@ -1,24 +1,20 @@
-[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://dcjnbduc0kgal"]
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=6 format=3 uid="uid://dcjnbduc0kgal"]
 
 [ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_yag0p"]
 [ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_q18xr"]
 [ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_1bkbk"]
-[ext_resource type="Texture2D" uid="uid://cejencl6l7ut7" path="res://Items/cloak_test.png" id="4_q18xr"]
+[ext_resource type="Texture2D" uid="uid://befkh87ugythv" path="res://Items/Sprites/b_cloak.png" id="4_q18xr"]
 
 [sub_resource type="Resource" id="Resource_q18xr"]
 script = ExtResource("2_q18xr")
 type = 1
 metadata/_custom_type_script = "uid://bp4smcxq30eoh"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cv6ri"]
-atlas = ExtResource("4_q18xr")
-region = Rect2(0, 0, 64, 64)
-
 [resource]
 script = ExtResource("3_1bkbk")
-type = 5
+type = 3
 modifiers = Array[ExtResource("2_q18xr")]([SubResource("Resource_q18xr")])
 name = "Rough Cloak"
 description = "An old worn out cloak. Not sure it will protect against the wind much, but worth a shot. "
-texture = SubResource("AtlasTexture_cv6ri")
+texture = ExtResource("4_q18xr")
 metadata/_custom_type_script = "uid://cfxo73une4mka"

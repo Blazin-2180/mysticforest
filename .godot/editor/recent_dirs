@@ -1,4 +1,5 @@
 res://Items
+res://GUI/Inventory
 res://CharacterCreator
 res://TitleScreen/sprites
 res://TitleScreen
@@ -13,7 +14,6 @@ res://GUI/dialog_system
 res://Quests/scripts
 res://Quests
 res://Fonts
-res://GUI/Inventory
 res://Scripts/Player
 C:/Users/blazi/Desktop
 res://GUI/PauseMenu

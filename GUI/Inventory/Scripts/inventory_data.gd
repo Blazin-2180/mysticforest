@@ -37,25 +37,17 @@ func add_item ( item : ItemData, quantity : int = 1) -> bool :
 	print("inventory full")
 	return false
 
-#func remove_item( item : ItemData, count : int = 1) -> void :
-	#for s in slots : 
-		#if s :
-			#if s.item_data == item :
-				#s.quantity -= count
-				#if s.quantity == 0 :
-					#
-				#return
 
 func connect_slots() -> void : 
 	for s in slots:
 		if s :
-			s.changed.connect(slot_changed)
+			s.changed.connect( slot_changed )
 
 func slot_changed() -> void :
 	for s in slots :
 		if s :
 			if s.quantity < 1:
-				s.changed.disconnect(slot_changed)
+				s.changed.disconnect( slot_changed )
 				var index = slots.find( s )
 				slots[ index ] = null
 				emit_changed()
@@ -100,3 +92,60 @@ func use_item( item : ItemData, count : int = 1) -> bool :
 				s.quantity -= count
 				return true
 	return false
+
+func equip_item ( slot : SlotData ) -> void :
+	if slot == null || slot.item_data is EquipableItemData :
+		return
+	
+	var item : EquipableItemData = slot.item_data
+	var slot_index : int = slots.find( slot )
+	var equipment_index : int = slots.size() - equipment_slot_count
+	
+	match item.type :
+		EquipableItemData.Type.HEAD :
+			equipment_index += 0
+			pass
+		EquipableItemData.Type.SHOULDERS :
+			equipment_index += 1
+			pass
+		EquipableItemData.Type.NECK :
+			equipment_index += 2
+			pass
+		EquipableItemData.Type.BACK :
+			equipment_index += 3
+			pass
+		EquipableItemData.Type.HANDS :
+			equipment_index += 4
+			pass
+		EquipableItemData.Type.CHEST :
+			equipment_index += 5
+			pass
+		EquipableItemData.Type.RING1 :
+			equipment_index += 6
+			pass
+		EquipableItemData.Type.LEGS :
+			equipment_index += 7
+			pass
+		EquipableItemData.Type.RING2 :
+			equipment_index += 8
+			pass
+		EquipableItemData.Type.MAINHAND :
+			equipment_index += 9
+			pass
+		EquipableItemData.Type.FEET :
+			equipment_index += 10
+			pass
+		EquipableItemData.Type.OFFHAND :
+			equipment_index += 11
+			pass
+	
+	var unequiped_slot : SlotData = slots[ equipment_index ]
+	
+	slots[ slot_index ] = unequiped_slot
+	slots[ equipment_index ] = slot
+	
+	equipment_changed.emit()
+	
+	print("Equipped item : ", slots[ equipment_index])
+	
+	pass

@@ -29,8 +29,8 @@
 [ext_resource type="AudioStream" uid="uid://p3geyldqfb3s" path="res://Audio/example_music_01.ogg" id="33_p87po"]
 [ext_resource type="Resource" uid="uid://dcjnbduc0kgal" path="res://Items/b_cloak.tres" id="34_v60p0"]
 [ext_resource type="PackedScene" uid="uid://c7mmiy5ff1i6o" path="res://Quests/utility_nodes/quest_activated_switch.tscn" id="34_xkhu6"]
+[ext_resource type="Resource" uid="uid://d0idvs68ca4tk" path="res://Items/b_cloak_dark.tres" id="35_v60p0"]
 [ext_resource type="PackedScene" uid="uid://hm7g5hqddfle" path="res://Quests/utility_nodes/quest_advance_trigger.tscn" id="36_d00wu"]
-[ext_resource type="PackedScene" uid="uid://d33cfpmn0iwcm" path="res://Scenes/Creature/creature_rabbit.tscn" id="36_gppk4"]
 [ext_resource type="PackedScene" uid="uid://7e8hltk36uqm" path="res://NPC/npc_behaviour_wander.tscn" id="37_gppk4"]
 [ext_resource type="Resource" uid="uid://44ymrr1jotwi" path="res://NPC/00_npcs/npc_blacksmith.tres" id="38_gppk4"]
 [ext_resource type="PackedScene" uid="uid://cvsou8yj36hxd" path="res://Scenes/torch.tscn" id="40_qp42o"]
@@ -1268,12 +1268,9 @@ position = Vector2(385, 222)
 z_index = 1
 position = Vector2(541, 230)
 
-[node name="Rabbit" parent="." instance=ExtResource("36_gppk4")]
-position = Vector2(295, 353)
-
 [node name="ItemPickup3" parent="." instance=ExtResource("17_30j8n")]
 position = Vector2(333, 191)
-item_data = ExtResource("34_v60p0")
+item_data = ExtResource("35_v60p0")
 
 [connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]
 [connection signal="area_entered" from="Area2D" to="Area2D/QuestAdvanceTrigger" method="_on_area_2d_area_entered"]

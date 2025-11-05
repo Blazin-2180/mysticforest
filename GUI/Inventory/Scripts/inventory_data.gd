@@ -100,6 +100,7 @@ func equip_item ( slot : SlotData ) -> void :
 	var item : EquipableItemData = slot.item_data
 	var slot_index : int = slots.find( slot )
 	var equipment_index : int = slots.size() - equipment_slot_count
+	print(str(equipment_slot_count))
 	
 	match item.type :
 		EquipableItemData.Type.HEAD :

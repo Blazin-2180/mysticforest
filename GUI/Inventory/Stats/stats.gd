@@ -1,13 +1,13 @@
 class_name Stats extends PanelContainer
 
-@onready var label_level : Label = $VBoxContainer/Level/Label2
-@onready var label_experience : Label = $VBoxContainer/Experience/Label2
-@onready var label_attack : Label = $VBoxContainer/Attack/Label2
-@onready var label_defence : Label = $VBoxContainer/Defence/Label2
-@onready var label_health: Label = $VBoxContainer/Health/Label2
-@onready var attack_modifier_label: Label = $VBoxContainer/Attack/attack_modifier_label
-@onready var defence_modifier_label: Label = $VBoxContainer/Defence/defence_modifier_label
-@onready var health_modifier_label: Label = $VBoxContainer/Health/health_modifier_label
+@onready var label_level : Label = %Label_level
+@onready var label_experience : Label = %Label_experience
+@onready var label_attack : Label = %Label_attack
+@onready var label_defence : Label = %Label_defence
+@onready var label_health: Label = %Label_health
+@onready var attack_modifier_label: Label = %attack_modifier_label
+@onready var defence_modifier_label: Label = %defence_modifier_label
+@onready var health_modifier_label: Label = %health_modifier_label
 
 func _ready() -> void:
 	Inventory.shown.connect( update_stats )

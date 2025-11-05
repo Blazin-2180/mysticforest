@@ -27,7 +27,8 @@ theme_override_fonts/font = ExtResource("2_xd6ew")
 theme_override_font_sizes/font_size = 16
 text = "Level :"
 
-[node name="Label2" type="Label" parent="VBoxContainer/Level"]
+[node name="Label_level" type="Label" parent="VBoxContainer/Level"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -56,7 +57,8 @@ theme_override_fonts/font = ExtResource("2_xd6ew")
 theme_override_font_sizes/font_size = 16
 text = "Exp :"
 
-[node name="Label2" type="Label" parent="VBoxContainer/Experience"]
+[node name="Label_experience" type="Label" parent="VBoxContainer/Experience"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -85,7 +87,8 @@ theme_override_fonts/font = ExtResource("2_xd6ew")
 theme_override_font_sizes/font_size = 16
 text = "Atk :"
 
-[node name="Label2" type="Label" parent="VBoxContainer/Attack"]
+[node name="Label_attack" type="Label" parent="VBoxContainer/Attack"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -95,6 +98,7 @@ text = "99"
 horizontal_alignment = 2
 
 [node name="attack_modifier_label" type="Label" parent="VBoxContainer/Attack"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -115,7 +119,8 @@ theme_override_fonts/font = ExtResource("2_xd6ew")
 theme_override_font_sizes/font_size = 16
 text = "Def :"
 
-[node name="Label2" type="Label" parent="VBoxContainer/Defence"]
+[node name="Label_defence" type="Label" parent="VBoxContainer/Defence"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -125,6 +130,7 @@ text = "99"
 horizontal_alignment = 2
 
 [node name="defence_modifier_label" type="Label" parent="VBoxContainer/Defence"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -145,7 +151,8 @@ theme_override_fonts/font = ExtResource("2_xd6ew")
 theme_override_font_sizes/font_size = 16
 text = "HP :"
 
-[node name="Label2" type="Label" parent="VBoxContainer/Health"]
+[node name="Label_health" type="Label" parent="VBoxContainer/Health"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -155,6 +162,7 @@ text = "99"
 horizontal_alignment = 2
 
 [node name="health_modifier_label" type="Label" parent="VBoxContainer/Health"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)

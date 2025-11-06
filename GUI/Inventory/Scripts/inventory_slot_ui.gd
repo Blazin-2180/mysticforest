@@ -30,9 +30,7 @@ func set_slot_data (value : SlotData ) -> void :
 		label.text = str( slot_data.quantity )
 
 func item_focused () -> void :
-	if slot_data != null : 
-		if slot_data.item_data != null :
-			Inventory.update_item_description ( slot_data.item_data.description )
+	Inventory.focus_item_changed( slot_data )
 	pass
 
 func item_unfocused () -> void :

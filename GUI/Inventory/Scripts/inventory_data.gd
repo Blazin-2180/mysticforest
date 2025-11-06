@@ -108,7 +108,6 @@ func equip_item ( slot : SlotData ) -> void :
 	var item : EquipableItemData = slot.item_data
 	var slot_index : int = slots.find( slot )
 	var equipment_index : int = slots.size() - equipment_slot_count
-	print(str(equipment_slot_count))
 	
 	match item.type :
 		EquipableItemData.Type.HEAD :
@@ -155,6 +154,50 @@ func equip_item ( slot : SlotData ) -> void :
 
 	equipment_changed.emit()
 
-	print("Equipped item : ", slots[ equipment_index])
+	Inventory.focus_item_changed( unequiped_slot )
 
 	pass
+
+func get_attack_bonus() -> int :
+	return get_equipment_bonus( EqiupableItemModifier.Type.ATTACK )
+
+
+func get_attack_bonus_difference( item : EquipableItemData ) -> int :
+	var before : int = get_attack_bonus()
+	var after : int = get_equipment_bonus( EqiupableItemModifier.Type.ATTACK, item )
+	return after - before
+	
+func get_defence_bonus() -> int :
+	return get_equipment_bonus( EqiupableItemModifier.Type.DEFENCE )
+
+
+func get_defence_bonus_difference( item : EquipableItemData ) -> int :
+	var before : int = get_defence_bonus()
+	var after : int = get_equipment_bonus( EqiupableItemModifier.Type.DEFENCE, item )
+	return after - before
+
+func get_health_bonus() -> int :
+	return get_equipment_bonus( EqiupableItemModifier.Type.HEALTH )
+
+
+func get_health_bonus_difference( item : EquipableItemData ) -> int :
+	var before : int = get_health_bonus()
+	var after : int = get_equipment_bonus( EqiupableItemModifier.Type.HEALTH, item )
+	return after - before
+
+
+func get_equipment_bonus( bonus_type : EqiupableItemModifier.Type, compare : EquipableItemData = null) -> int : 
+	var bonus : int = 0
+	for s in equipment_slots() :
+		if s == null :
+			continue
+			
+		var e : EquipableItemData = s.item_data
+		if compare :
+			if e.type == compare.type :
+				e = compare
+				
+		for m in e.modifiers : 
+			if m.type == bonus_type :
+				bonus += m.value
+	return bonus

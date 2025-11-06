@@ -17,6 +17,7 @@ var is_paused : bool = false
 #region /// Signals
 signal shown
 signal hidden
+signal preview_stats_changed ( item : ItemData )
 #endregion
 
 func _ready() -> void:
@@ -48,6 +49,7 @@ func show_inventory () -> void :
 	name_label.text = GlobalPlayerManager.character_name
 	shown.emit()
 
+
 func hide_inventory () -> void : 
 	get_tree().paused = false
 	is_paused = false
@@ -56,27 +58,44 @@ func hide_inventory () -> void :
 	PlayerHud.visible = true
 	hidden.emit()
 
+
 func update_item_description (new_text : String) -> void :
 	item_description.text = new_text
-	
+
+
+func focus_item_changed( slot : SlotData ) -> void : 
+	if slot : 
+		if slot.item_data :
+			update_item_description( slot.item_data.description )
+			preview_stats( slot.item_data )
+	else : 
+		update_item_description("")
+		preview_stats( null )
+	pass
+
+
 func _on_load_pressed () -> void :
 	GlobalSaveManager.load_game()
 	await GlobalLevelManager.level_load_started
 	hide_pause_menu()
 	pass
 
+
 func hide_pause_menu () -> void : 
 	get_tree().paused = false
 	visible = false
 	is_paused = false
 
+
 func _on_button_exit_pressed() -> void:
 	get_tree().quit()
+
 
 func play_audio( audio : AudioStream ) -> void :
 	audio_stream.stream = audio
 	audio_stream.play()
 	pass
+
 
 func change_tab( _i : int = 1 ) -> void :
 	tab_container.current_tab = wrapi(
@@ -85,4 +104,9 @@ func change_tab( _i : int = 1 ) -> void :
 		tab_container.get_tab_count()
 	)
 	tab_container.get_tab_bar().grab_focus()
+	pass
+
+
+func preview_stats( item : ItemData) -> void : 
+	preview_stats_changed.emit( item )
 	pass

@@ -29,6 +29,7 @@ func _ready() -> void:
 	Inventory.hidden.connect ( clear_inventory )
 	clear_inventory()
 	data.changed.connect( on_inventory_changed )
+	data.equipment_changed.connect( on_inventory_changed )
 	pass
 
 func clear_inventory () -> void :
@@ -72,7 +73,5 @@ func item_focused() -> void :
 	pass
 
 func on_inventory_changed () -> void :
-	var i = focus_index
-	clear_inventory()
-	update_inventory( i )
+	update_inventory( false )
 	pass

@@ -24,6 +24,7 @@ var attack : int = 1 :
 
 var critical : int = 1
 var defence : int = 1
+var defence_bonus : int = 0
 
 
 signal direction_changed ( new_direction : Vector2 )
@@ -35,6 +36,7 @@ func _ready() -> void:
 	hit_box.damaged.connect ( take_damage )
 	update_damage_value()
 	GlobalPlayerManager.player_levelled_up.connect( _on_player_levelled_up )
+	GlobalPlayerManager.INVENTORY_DATA.equipment_changed.connect( _on_equipment_changed )
 	pass
 
 func _process( _delta : float ) -> void:
@@ -89,7 +91,7 @@ func take_damage ( hurt_box : HurtBox ) -> void :
 		var damage : int = hurt_box.damage
 		
 		if damage > 0 :
-			damage = clampi( damage - defence, 1, damage )
+			damage = clampi( damage - defence - defence_bonus, 1, damage )
 		GlobalPlayerManager.reduce_health_points( damage )
 		player_damaged.emit ( hurt_box )
 		
@@ -104,7 +106,8 @@ func make_invulnerable ( _duration : float = 1.0 ) -> void :
 	pass
 
 func update_damage_value() -> void :
-	%AttackHurtBox.damage = attack
+	var damage_value : int = attack + GlobalPlayerManager.INVENTORY_DATA.get_attack_bonus()
+	%AttackHurtBox.damage = damage_value
 	pass
 
 func _on_player_levelled_up() -> void :
@@ -112,3 +115,9 @@ func _on_player_levelled_up() -> void :
 	GlobalPlayerManager.increase_health_points(GlobalPlayerManager.max_health_points)
 	PlayerHud.update_health_points()
 	PlayerHud.update_exp()
+
+
+func _on_equipment_changed() -> void : 
+	update_damage_value()
+	defence_bonus = GlobalPlayerManager.INVENTORY_DATA.get_defence_bonus()
+	pass

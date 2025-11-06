@@ -173,42 +173,6 @@ layout_mode = 2
 [node name="InventorySlot20" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot21" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot22" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot23" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot24" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot25" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot26" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot27" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot28" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot29" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot30" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot31" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
-[node name="InventorySlot32" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
-layout_mode = 2
-
 [node name="EquipmentPanel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 0
 offset_left = 182.0

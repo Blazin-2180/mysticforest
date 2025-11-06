@@ -5,6 +5,7 @@ class_name Stats extends PanelContainer
 @onready var label_attack : Label = %Label_attack
 @onready var label_defence : Label = %Label_defence
 @onready var label_health: Label = %Label_health
+
 @onready var attack_modifier_label: Label = %attack_modifier_label
 @onready var defence_modifier_label: Label = %defence_modifier_label
 @onready var health_modifier_label: Label = %health_modifier_label

@@ -35,6 +35,7 @@ func clear_inventory () -> void :
 	for c in get_children():
 		c.set_slot_data( null )
 
+
 func update_inventory( apply_focus : bool = true ) -> void :
 	clear_inventory()
 
@@ -60,7 +61,7 @@ func update_inventory( apply_focus : bool = true ) -> void :
 	feet_slot.set_slot_data( e_slots[ 10 ])
 	off_hand_slot.set_slot_data( e_slots[ 11 ])
 		
-	if apply_focus:
+	if apply_focus :
 		get_child( 0 ).grab_focus()
 
 func item_focused() -> void :

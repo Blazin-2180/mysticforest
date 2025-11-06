@@ -11,11 +11,11 @@ func _init() -> void:
 
 
 func inventory_slots() -> Array [ SlotData ] :
-	return slots.slice( 0, -equipment_slot_count )
+	return slots.slice( 0, - equipment_slot_count )
 
 
 func equipment_slots() -> Array [ SlotData ] :
-	return slots.slice( -equipment_slot_count, slots.size() )
+	return slots.slice( - equipment_slot_count, slots.size() )
 	
 
 func add_item ( item : ItemData, quantity : int = 1) -> bool : 
@@ -24,6 +24,7 @@ func add_item ( item : ItemData, quantity : int = 1) -> bool :
 			if s.item_data == item :
 				s.quantity += quantity
 				return true
+
 
 	for i in inventory_slots().size() :
 		if slots[ i ] == null :
@@ -43,6 +44,7 @@ func connect_slots() -> void :
 		if s :
 			s.changed.connect( slot_changed )
 
+
 func slot_changed() -> void :
 	for s in slots :
 		if s :
@@ -53,12 +55,14 @@ func slot_changed() -> void :
 				emit_changed()
 	pass
 
+
 # Gather the inventory into an Array
 func get_save_data() ->  Array :
 	var item_save : Array = []
 	for i in slots.size() :
 		item_save.append( item_to_save( slots[i] ) )
 	return item_save
+
 
 # Convert each inventory item into a dictionary
 func item_to_save( slot : SlotData ) -> Dictionary :
@@ -69,6 +73,7 @@ func item_to_save( slot : SlotData ) -> Dictionary :
 			result.item = slot.item_data.resource_path
 	return result
 	
+	
 func parse_save_data( save_data : Array ) -> void :
 	var array_size = slots.size()
 	slots.clear()
@@ -76,6 +81,7 @@ func parse_save_data( save_data : Array ) -> void :
 	for i in save_data.size() :
 		slots[i] = item_from_save ( save_data[i] )
 	connect_slots()
+
 
 func item_from_save ( save_object : Dictionary) -> SlotData :
 	if save_object.item == "":
@@ -85,6 +91,7 @@ func item_from_save ( save_object : Dictionary) -> SlotData :
 	new_slot.quantity = int( save_object.quantity )
 	return new_slot
 
+
 func use_item( item : ItemData, count : int = 1) -> bool :
 	for s in slots :
 		if s :
@@ -93,8 +100,9 @@ func use_item( item : ItemData, count : int = 1) -> bool :
 				return true
 	return false
 
+
 func equip_item ( slot : SlotData ) -> void :
-	if slot == null || slot.item_data is EquipableItemData :
+	if slot == null || !slot.item_data is EquipableItemData :
 		return
 	
 	var item : EquipableItemData = slot.item_data
@@ -139,14 +147,14 @@ func equip_item ( slot : SlotData ) -> void :
 		EquipableItemData.Type.OFFHAND :
 			equipment_index += 11
 			pass
-	
+
 	var unequiped_slot : SlotData = slots[ equipment_index ]
-	
+
 	slots[ slot_index ] = unequiped_slot
 	slots[ equipment_index ] = slot
-	
+
 	equipment_changed.emit()
-	
+
 	print("Equipped item : ", slots[ equipment_index])
-	
+
 	pass

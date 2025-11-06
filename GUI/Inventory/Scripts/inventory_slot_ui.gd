@@ -22,6 +22,7 @@ func set_slot_data (value : SlotData ) -> void :
 		texture_rect.texture = null
 		label.text = ""
 		return
+		
 	texture_rect.texture = slot_data.item_data.texture
 	if slot_data.item_data is EquipableItemData : 
 		label.text = ""

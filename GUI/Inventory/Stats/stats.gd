@@ -55,11 +55,11 @@ func _on_preview_stats_changed( item : ItemData ) -> void :
 	pass
 
 
-func update_change_label( label : Label, value : int ) -> void : 
+func update_change_label( stat_label : Label, value : int ) -> void : 
 	if value > 0 :
-		label.text = "+" + str( value )
-		label.modulate = Color.WEB_GREEN
+		stat_label.text = "+" + str( value )
+		stat_label.modulate = Color.WEB_GREEN
 	elif value < 0 :
-		label.text = str( value )
-		label.modulate = Color.DARK_RED
+		stat_label.text = str( value )
+		stat_label.modulate = Color.DARK_RED
 	pass

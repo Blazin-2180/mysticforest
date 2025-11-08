@@ -1,6 +1,3 @@
-res://GUI/Inventory/Scripts/inventory_data.gd
-res://GUI/Inventory/Scripts/inventory_slot_ui.gd
-res://GUI/Inventory/Scripts/inventory_ui.gd
 res://GUI/Inventory/inventory.tscn
 res://Items/b_cloak.tres
 res://GUI/Inventory/player_inventory.tres
@@ -8,6 +5,9 @@ res://GUI/dialog_system/dialog_choice_theme.tres
 res://Items/potion.tres
 res://Quests/quest_001.tres
 res://Items/b_cloak_dark.tres
+res://GUI/Inventory/Quests/quest_step_item.tscn
+res://GUI/Inventory/quest_log.tscn
 res://GUI/Inventory/inventory.gd
-res://GUI/Inventory/Stats/stats.gd
-res://Scripts/Player/player.gd
+res://GUI/Inventory/Quests/quest_log.gd
+res://GUI/Inventory/Quests/quests_ui.gd
+res://GUI/Inventory/Quests/quest_step_item.gd

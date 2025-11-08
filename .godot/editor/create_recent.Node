@@ -1,8 +1,9 @@
+Button
+HSeparator
 MarginContainer
 TextureRect
 GridContainer
 Panel
-Button
 VBoxContainer
 HBoxContainer
 PanelContainer
@@ -11,4 +12,3 @@ CanvasLayer
 Control
 DialogText
 TextEdit
-Label

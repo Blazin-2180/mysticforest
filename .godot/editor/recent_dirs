@@ -1,5 +1,6 @@
-res://Items
 res://GUI/Inventory
+res://GUI/Inventory/Quests
+res://Items
 res://CharacterCreator
 res://TitleScreen/sprites
 res://TitleScreen
@@ -8,7 +9,6 @@ res://DayNightCycle
 res://
 res://Scenes/Levels
 res://NPC/00_npcs
-res://GUI/Inventory/Quests
 res://GUI/Inventory/Stats
 res://GUI/dialog_system
 res://Quests/scripts

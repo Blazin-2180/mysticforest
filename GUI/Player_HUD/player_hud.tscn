@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://b2dsmm14jobve"]
+[gd_scene load_steps=15 format=3 uid="uid://b2dsmm14jobve"]
 
 [ext_resource type="Script" uid="uid://bsnsaia4q1dws" path="res://Globals/player_hud.gd" id="1_xhte5"]
-[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="2_gian7"]
-[ext_resource type="FontFile" uid="uid://dl0otn5djtbbr" path="res://Fonts/Abaddon Light.ttf" id="2_srlca"]
+[ext_resource type="Texture2D" uid="uid://bvy0vs4slmynn" path="res://GUI/Sprites/User_Pane.png" id="2_wywdo"]
 [ext_resource type="Script" uid="uid://dx4og76726hhn" path="res://GUI/Player_HUD/quest_notification.gd" id="3_agyfd"]
+[ext_resource type="Texture2D" uid="uid://b02p4578te0ng" path="res://Scenes/Player/Player_UI_Sprite.png" id="3_wywdo"]
 [ext_resource type="Texture2D" uid="uid://bt2evx6083gal" path="res://GUI/dialog_system/sprites/Untitled 60.png" id="4_agyfd"]
+[ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="6_27j6t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hai4"]
 bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
@@ -17,241 +18,6 @@ bg_color = Color(0.22670749, 0.22670752, 0.2267074, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srlca"]
 bg_color = Color(0.881864, 0.70350784, 0.21508199, 1)
-
-[sub_resource type="Animation" id="Animation_1pbxj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Death/FadeToBlack:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Control/Death:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Control/Death/Label:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(692.5, 385)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Control/Death/VBoxContainer:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(821.25, 479)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Control/Death/VBoxContainer:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Control/Death/Label:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_agyfd"]
-resource_name = "fade_to_black"
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Death/FadeToBlack:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Control/Death:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Control/Death/Label:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(692.5, 385)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Control/Death/VBoxContainer:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(821.25, 479)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Control/Death/VBoxContainer:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Control/Death/Label:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_gian7"]
-resource_name = "show_death"
-length = 4.0
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Death/FadeToBlack:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Control/Death:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.7, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Control/Death/Label:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(2.5, 4),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector2(692.5, 260), Vector2(692.5, 385)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Control/Death/VBoxContainer:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(2.5, 4),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector2(821.25, 565), Vector2(821.25, 479)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Control/Death/VBoxContainer:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(2.5, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Control/Death/Label:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(2.5, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_agyfd"]
-_data = {
-&"RESET": SubResource("Animation_1pbxj"),
-&"fade_to_black": SubResource("Animation_agyfd"),
-&"show_death": SubResource("Animation_gian7")
-}
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_agyfd"]
 content_margin_left = 12.0
@@ -357,6 +123,64 @@ process_mode = 3
 layer = 2
 script = ExtResource("1_xhte5")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 273.0
+offset_bottom = 100.0
+texture = ExtResource("2_wywdo")
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect"]
+position = Vector2(38, 51)
+scale = Vector2(0.60541046, 0.60541046)
+texture = ExtResource("3_wywdo")
+
+[node name="HealthBar" type="ProgressBar" parent="TextureRect"]
+show_behind_parent = true
+z_as_relative = false
+y_sort_enabled = true
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 77.0
+offset_top = -59.0
+offset_right = 257.0
+offset_bottom = -38.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_2hai4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xhte5")
+max_value = 6.0
+show_percentage = false
+
+[node name="HealthPoints" type="Label" parent="TextureRect/HealthBar"]
+top_level = true
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 155.0
+offset_top = -680.0
+offset_right = 204.0
+offset_bottom = -657.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 11
+text = "99/99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 55.0
+offset_right = 91.0
+offset_bottom = 36.0
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -366,42 +190,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="HealthBar" type="ProgressBar" parent="Control"]
-z_as_relative = false
-y_sort_enabled = true
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 145.0
-offset_top = -56.0
-offset_right = 195.0
-offset_bottom = -6.0
-grow_vertical = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_2hai4")
-theme_override_styles/fill = SubResource("StyleBoxFlat_xhte5")
-max_value = 6.0
-fill_mode = 3
-show_percentage = false
-
-[node name="HealthPoints" type="Label" parent="Control/HealthBar"]
-top_level = true
-z_as_relative = false
-y_sort_enabled = true
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 146.0
-offset_top = -40.0
-offset_right = 195.0
-offset_bottom = -17.0
-grow_vertical = 0
-text = "99/99"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="ExpBar" type="ProgressBar" parent="Control"]
 layout_mode = 1
 anchors_preset = 7
@@ -410,9 +198,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -125.0
-offset_top = -11.0
+offset_top = -54.0
 offset_right = 125.0
-offset_bottom = -6.0
+offset_bottom = -49.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_agyfd")
@@ -420,118 +208,25 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_srlca")
 value = 50.0
 show_percentage = false
 
-[node name="LevelLabel" type="Label" parent="Control"]
-layout_mode = 0
-offset_left = 195.0
-offset_top = 336.0
-offset_right = 216.0
-offset_bottom = 357.0
-theme_override_fonts/font = ExtResource("2_srlca")
-theme_override_font_sizes/font_size = 12
-text = "99"
-
-[node name="Death" type="Control" parent="Control"]
-visible = false
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Black" type="ColorRect" parent="Control/Death"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="Control/Death"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.38518518
-anchor_right = 0.5
-anchor_bottom = 0.38518518
-offset_left = 372.5
-offset_top = 246.33333
-offset_right = 907.5
-offset_bottom = 328.3333
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_gian7")
-theme_override_font_sizes/font_size = 64
-text = "You Have Died!!!"
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Death"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 501.25
-offset_top = 299.0
-offset_right = 778.75
-offset_bottom = 401.0022
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RespawnButton" type="Button" parent="Control/Death/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_gian7")
-theme_override_font_sizes/font_size = 32
-text = "Respawn"
-
-[node name="BackToTitleButton" type="Button" parent="Control/Death/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_gian7")
-theme_override_font_sizes/font_size = 32
-text = "Back To Title"
-
-[node name="FadeToBlack" type="ColorRect" parent="Control/Death"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0)
-
-[node name="GameOverAnimation" type="AnimationPlayer" parent="Control/Death"]
-root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_agyfd")
-}
-
 [node name="QuestNotification" type="Control" parent="Control"]
 process_mode = 3
 anchors_preset = 0
-offset_left = 466.0
-offset_top = 291.0
-offset_right = 635.0
-offset_bottom = 354.0
+offset_left = 1065.0
+offset_top = 7.0
+offset_right = 1234.0
+offset_bottom = 70.0
 mouse_filter = 2
 script = ExtResource("3_agyfd")
 
 [node name="PanelContainer" type="PanelContainer" parent="Control/QuestNotification"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -44.5
+offset_left = 40.0
 offset_top = -30.5
-offset_right = 122.5
+offset_right = 207.0
 offset_bottom = 31.5
-grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_agyfd")
 
@@ -560,3 +255,52 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 751.0
+offset_top = 671.0
+offset_right = 763.0
+offset_bottom = 692.0
+theme_override_font_sizes/font_size = 10
+text = "L"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestLog" type="TextureButton" parent="."]
+offset_left = 724.0
+offset_top = 672.0
+offset_right = 764.0
+offset_bottom = 712.0
+
+[node name="TextureRect" type="TextureRect" parent="QuestLog"]
+layout_mode = 0
+offset_right = 42.0
+offset_bottom = 43.0
+texture = ExtResource("6_27j6t")
+
+[node name="Label2" type="Label" parent="."]
+z_index = 1
+offset_left = 703.0
+offset_top = 671.0
+offset_right = 715.0
+offset_bottom = 692.0
+theme_override_font_sizes/font_size = 10
+text = "C"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Character" type="TextureButton" parent="."]
+offset_left = 676.0
+offset_top = 672.0
+offset_right = 716.0
+offset_bottom = 712.0
+
+[node name="TextureRect" type="TextureRect" parent="Character"]
+layout_mode = 0
+offset_right = 42.0
+offset_bottom = 43.0
+texture = ExtResource("6_27j6t")
+
+[connection signal="pressed" from="QuestLog" to="." method="_on_quest_log_pressed"]
+[connection signal="pressed" from="Character" to="." method="_on_character_pressed"]

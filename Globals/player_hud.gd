@@ -1,17 +1,13 @@
 extends CanvasLayer
 
-@onready var health_bar: ProgressBar = $Control/HealthBar
-@onready var hp_label: Label = $Control/HealthBar/HealthPoints
+@onready var health_bar: ProgressBar = $TextureRect/HealthBar
+@onready var hp_label: Label = $TextureRect/HealthBar/HealthPoints
 @onready var exp_bar: ProgressBar = $Control/ExpBar
-
-@onready var death: Control = $Control/Death
-@onready var respawn_button: Button = $Control/Death/VBoxContainer/RespawnButton
-@onready var back_to_title_button: Button = $Control/Death/VBoxContainer/BackToTitleButton
-@onready var animation_player: AnimationPlayer = $Control/Death/GameOverAnimation
 @onready var quest_notification: NotificationUI = $Control/QuestNotification
-@onready var level: Label = $Control/LevelLabel
+@onready var level: Label = $TextureRect/LevelLabel
 
 var player : Player = GlobalPlayerManager.player
+var quest_log_toggled : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +15,7 @@ func _ready() -> void:
 	hp_label.text = str(GlobalPlayerManager.health_points, "/", GlobalPlayerManager.max_health_points)
 	exp_bar.value = GlobalPlayerManager.experience
 	level.text = str(GlobalPlayerManager.player.level)
+	#quest_log_toggled = false
 	pass
 
 
@@ -41,3 +38,14 @@ func update_exp() -> void :
 	exp_bar.value = GlobalPlayerManager.experience
 	exp_bar.max_value = GlobalPlayerManager.level_requirements[ GlobalPlayerManager.player.level ]
 	level.text = str(GlobalPlayerManager.player.level)
+
+
+func _on_character_pressed() -> void:
+	Character.show()
+	pass # Replace with function body.
+
+
+func _on_quest_log_pressed() -> void:
+	QuestLog.show()
+	QuestLog.shown.emit()
+	pass # Replace with function body.

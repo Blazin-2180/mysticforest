@@ -1,7 +1,10 @@
+Label
+TextureRect
+TextureButton
+Sprite2D
 Button
 HSeparator
 MarginContainer
-TextureRect
 GridContainer
 Panel
 VBoxContainer
@@ -9,6 +12,3 @@ HBoxContainer
 PanelContainer
 AudioStreamPlayer
 CanvasLayer
-Control
-DialogText
-TextEdit

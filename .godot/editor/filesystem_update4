@@ -20,3 +20,7 @@ res://GUI/Inventory/Quests/quest_item.tscn
 res://GUI/Inventory/Stats/stats.tscn
 res://DayNightCycle/day_night.tscn
 res://Scenes/Player/player.tscn
+res://TitleScreen/title_screen.tscn
+res://CharacterCreator/character_creator.tscn
+res://CharacterCreator/character_creator.gd
+res://TitleScreen/title_screen.gd

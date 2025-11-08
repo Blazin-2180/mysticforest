@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2dsmm14jobve"]
+[gd_scene load_steps=16 format=3 uid="uid://b2dsmm14jobve"]
 
 [ext_resource type="Script" uid="uid://bsnsaia4q1dws" path="res://Globals/player_hud.gd" id="1_xhte5"]
 [ext_resource type="Texture2D" uid="uid://bvy0vs4slmynn" path="res://GUI/Sprites/User_Pane.png" id="2_wywdo"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b02p4578te0ng" path="res://Scenes/Player/Player_UI_Sprite.png" id="3_wywdo"]
 [ext_resource type="Texture2D" uid="uid://bt2evx6083gal" path="res://GUI/dialog_system/sprites/Untitled 60.png" id="4_agyfd"]
 [ext_resource type="Texture2D" uid="uid://bkptflthtg4he" path="res://Sprites/Untitled 39.png" id="6_27j6t"]
+[ext_resource type="Texture2D" uid="uid://daicqnp0hm231" path="res://GUI/Sprites/Inventory_Icon.png" id="7_27j6t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hai4"]
 bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
@@ -279,28 +280,28 @@ offset_right = 42.0
 offset_bottom = 43.0
 texture = ExtResource("6_27j6t")
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label3" type="Label" parent="."]
 z_index = 1
-offset_left = 703.0
+offset_left = 709.0
 offset_top = 671.0
-offset_right = 715.0
+offset_right = 721.0
 offset_bottom = 692.0
 theme_override_font_sizes/font_size = 10
 text = "C"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Character" type="TextureButton" parent="."]
-offset_left = 676.0
+[node name="Inventory" type="TextureButton" parent="."]
+offset_left = 681.0
 offset_top = 672.0
-offset_right = 716.0
+offset_right = 721.0
 offset_bottom = 712.0
 
-[node name="TextureRect" type="TextureRect" parent="Character"]
+[node name="TextureRect" type="TextureRect" parent="Inventory"]
 layout_mode = 0
 offset_right = 42.0
 offset_bottom = 43.0
-texture = ExtResource("6_27j6t")
+texture = ExtResource("7_27j6t")
 
 [connection signal="pressed" from="QuestLog" to="." method="_on_quest_log_pressed"]
-[connection signal="pressed" from="Character" to="." method="_on_character_pressed"]
+[connection signal="pressed" from="Inventory" to="." method="_on_inventory_pressed"]

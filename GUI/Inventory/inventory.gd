@@ -94,3 +94,8 @@ func change_tab( _i : int = 1 ) -> void :
 func preview_stats( item : ItemData) -> void : 
 	preview_stats_changed.emit( item )
 	pass
+
+
+func _on_button_pressed() -> void:
+	Inventory.hide()
+	pass # Replace with function body.

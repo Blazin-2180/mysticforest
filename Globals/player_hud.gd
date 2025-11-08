@@ -40,12 +40,12 @@ func update_exp() -> void :
 	level.text = str(GlobalPlayerManager.player.level)
 
 
-func _on_character_pressed() -> void:
-	Character.show()
-	pass # Replace with function body.
-
-
 func _on_quest_log_pressed() -> void:
 	QuestLog.show()
 	QuestLog.shown.emit()
+	pass # Replace with function body.
+
+
+func _on_inventory_pressed() -> void:
+	Inventory.show()
 	pass # Replace with function body.

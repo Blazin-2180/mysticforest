@@ -74,13 +74,13 @@ dan_portrait.png::CompressedTexture2D::3673789250441570777::1761343319::17613433
 sammy_portrait.png::CompressedTexture2D::598939776016257184::1760991593::1761343315::1::::<><><>0<>0<>8d66ebad6e7f8b17ee292c1c7892b4d5<>res://.godot/imported/sammy_portrait.png-26821d6f0ed3c07cde6c1eac736db3ef.ctex::
 Untitled 60.png::CompressedTexture2D::3776028538925481331::1761253051::1761253051::1::::<><><>0<>0<>414bfdb59a15c4fb869b49ff727cc53f<>res://.godot/imported/Untitled 60.png-4c5af8be6d5e51a16b2495c7e8b36ce4.ctex::
 Untitled_Artwork 3.png::CompressedTexture2D::3770686475370899099::1760991589::1760991590::1::::<><><>0<>0<>4a633ba80e8816aa1a791c8894491834<>res://.godot/imported/Untitled_Artwork 3.png-3f74ea9cc2607acb53dedd308112aa61.ctex::
-::res://GUI/Inventory/::1762641495
+::res://GUI/Inventory/::1762641873
 inventory.gd::GDScript::4438056223940479507::1762633995::0::1::::<>CanvasLayer<><>0<>0<><>::
 inventory.tscn::PackedScene::3810731943454679899::1762633250::0::1::::<><><>0<>0<><>::uid://b4h3excicddvf::::res://GUI/Inventory/inventory.gd<>uid://doxp5pfvb3mja::::res://GUI/Sprites/Panel.png<>uid://cuv6ed6yntyvs::::res://GUI/Inventory/inventory_slot.tscn<>uid://da20w1rpa8yuy::::res://GUI/Inventory/Scripts/inventory_ui.gd<>uid://cqeukq4gf601u::::res://GUI/Inventory/player_inventory.tres<>uid://cc4owimmw7e3d::::res://Fonts/ari-w9500-bold.ttf<>uid://bcnxlrpjp5myd::::res://Fonts/m5x7.ttf
 inventory_slot.tscn::PackedScene::6221859749501070180::1762633779::0::1::::<><><>0<>0<><>::uid://bgmaqkfjt07uv::::res://GUI/Inventory/Scripts/inventory_slot_ui.gd<>uid://bcnxlrpjp5myd::::res://Fonts/m5x7.ttf<>uid://befkh87ugythv::::res://Items/Sprites/b_cloak.png
 player_inventory.tres::Resource/InventoryData::5905353459858810420::1762609799::0::1::::<><><>0<>0<><>::uid://b1x2fieglm60r::::res://GUI/Inventory/Scripts/inventory_data.gd<>uid://b75cnnxj5xvkt::::res://GUI/Inventory/Scripts/slot_data.gd<>uid://dcjnbduc0kgal::::res://Items/b_cloak.tres
 quest_log.tscn::PackedScene::6926754211042663065::1762635264::0::1::::<><><>0<>0<><>::uid://c1gu00sd6wxf5::::res://GUI/Inventory/Quests/quest_log.gd<>uid://b8fdjyabyitf4::::res://Audio/click.wav<>uid://doxp5pfvb3mja::::res://GUI/Sprites/Panel.png<>uid://7u1tpnlr0ho6::::res://GUI/Sprites/SidePanel.png<>uid://bcnxlrpjp5myd::::res://Fonts/m5x7.ttf<>uid://dh04ovj0wsf36::::res://GUI/Inventory/Quests/quests_ui.gd<>uid://dqnutdbcsmtbt::::res://GUI/Inventory/Quests/quest_item.tscn<>uid://dqrqrvboo8eeq::::res://Fonts/Abaddon-Bold.ttf<>uid://dgv6jx5rdxcvb::::res://GUI/Inventory/Quests/quest_step_item.tscn
-character.tscn::PackedScene::8617860331991968286::1762641495::0::1::::<><><>0<>0<><>::uid://7u1tpnlr0ho6::::res://GUI/Sprites/SidePanel.png<>uid://doxp5pfvb3mja::::res://GUI/Sprites/Panel.png<>uid://bx3h406wgpg83::::res://GUI/Inventory/Stats/stats.tscn<>uid://dyc6o5fjjpch2::::res://GUI/Sprites/Close_Button.png<>uid://cuv6ed6yntyvs::::res://GUI/Inventory/inventory_slot.tscn
+character.tscn::PackedScene::8617860331991968286::1762641873::0::1::::<><><>0<>0<><>::uid://7u1tpnlr0ho6::::res://GUI/Sprites/SidePanel.png<>uid://doxp5pfvb3mja::::res://GUI/Sprites/Panel.png<>uid://bx3h406wgpg83::::res://GUI/Inventory/Stats/stats.tscn<>uid://dyc6o5fjjpch2::::res://GUI/Sprites/Close_Button.png<>uid://cuv6ed6yntyvs::::res://GUI/Inventory/inventory_slot.tscn
 side_bar.tscn::PackedScene::1129155777410332547::1762324361::0::1::::<><><>0<>0<><>::uid://befkh87ugythv::::res://Items/Sprites/b_cloak.png<>uid://da20w1rpa8yuy::::res://GUI/Inventory/Scripts/inventory_ui.gd<>uid://cuv6ed6yntyvs::::res://GUI/Inventory/inventory_slot.tscn
 ::res://GUI/Inventory/Quests/::1762634458
 checkbox.png::CompressedTexture2D::3271160859417851618::1761413356::1761413356::1::::<><><>0<>0<>e9825bd0d2aae438b66bc67cf26bd48c<>res://.godot/imported/checkbox.png-918ee75a34baeced0eb183094218efe5.ctex::
@@ -109,8 +109,9 @@ quest_notification.gd::GDScript::8834334892411324287::1760893425::0::1::::Notifi
 ::res://GUI/scene_transition/::1760625193
 scene_transition.gd::GDScript::2692291084467012598::1759536929::0::1::::<>CanvasLayer<><>0<>0<><>::
 scene_transition.tscn::PackedScene::3133870543864244027::1760625193::0::1::::<><><>0<>0<><>::uid://bemfv11q3vbh3::::res://GUI/scene_transition/scene_transition.gd
-::res://GUI/Sprites/::1762641801
+::res://GUI/Sprites/::1762642514
 Close_Button.png::CompressedTexture2D::8849831865636693241::1762641801::1762641801::1::::<><><>0<>0<>80c862a5717d89c641091ef87192f124<>res://.godot/imported/Close_Button.png-131e7510c3da3a4943c71d2d2036750e.ctex::
+Inventory_Icon.png::CompressedTexture2D::7175927786921154542::1762642514::1762642514::1::::<><><>0<>0<>eb94ad9931b30a6e9ff4fb4b28f0e130<>res://.godot/imported/Inventory_Icon.png-eb931810de7893b248fa686b0731ffdb.ctex::
 Panel.png::CompressedTexture2D::8190351675594644402::1762610457::1762610457::1::::<><><>0<>0<>6dd2420f6449294ee78f62810ba24d52<>res://.godot/imported/Panel.png-5460c63c7de29a4593a566641f076938.ctex::
 SidePanel.png::CompressedTexture2D::2288943931850561039::1762634735::1762634735::1::::<><><>0<>0<>28bdac9b2e881bddcaf26e613ea588f9<>res://.godot/imported/SidePanel.png-fb136c00d5f6724482aaef28bc4f31f2.ctex::
 User_Pane.png::CompressedTexture2D::3911487883733047991::1762622554::1762622554::1::::<><><>0<>0<>33b500057f64844ffb4ffc860a82bc0b<>res://.godot/imported/User_Pane.png-bb7b06e99e4796585616a6ec60dbb213.ctex::

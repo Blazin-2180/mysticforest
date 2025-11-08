@@ -220,18 +220,16 @@ mouse_filter = 1
 
 [node name="EquipmentPanel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5409975
-anchor_top = 0.40615386
-anchor_right = 0.41501328
-anchor_bottom = 0.2830769
-offset_left = -132.12006
-offset_top = -205.0
-offset_right = 131.87994
-offset_bottom = 195.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -114.5
+offset_top = 49.0
+offset_right = 149.5
+offset_bottom = 449.0
+grow_horizontal = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_58q36")
-metadata/_edit_use_anchors_ = true
 
 [node name="GridContainer" type="GridContainer" parent="Control/TabContainer/Inventory/EquipmentPanel"]
 layout_mode = 2

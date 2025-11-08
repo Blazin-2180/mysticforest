@@ -47,5 +47,5 @@ func _on_quest_log_pressed() -> void:
 
 
 func _on_inventory_pressed() -> void:
-	Inventory.show()
+	Inventory.show_inventory()
 	pass # Replace with function body.

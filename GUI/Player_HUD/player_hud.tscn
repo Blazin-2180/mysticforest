@@ -268,17 +268,12 @@ text = "L"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="QuestLog" type="TextureButton" parent="."]
+[node name="QuestLog" type="Button" parent="."]
 offset_left = 724.0
 offset_top = 672.0
 offset_right = 764.0
 offset_bottom = 712.0
-
-[node name="TextureRect" type="TextureRect" parent="QuestLog"]
-layout_mode = 0
-offset_right = 42.0
-offset_bottom = 43.0
-texture = ExtResource("6_27j6t")
+icon = ExtResource("6_27j6t")
 
 [node name="Label3" type="Label" parent="."]
 z_index = 1
@@ -291,17 +286,12 @@ text = "C"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Inventory" type="TextureButton" parent="."]
+[node name="Inventory" type="Button" parent="."]
 offset_left = 681.0
 offset_top = 672.0
 offset_right = 721.0
 offset_bottom = 712.0
-
-[node name="TextureRect" type="TextureRect" parent="Inventory"]
-layout_mode = 0
-offset_right = 42.0
-offset_bottom = 43.0
-texture = ExtResource("7_27j6t")
+icon = ExtResource("7_27j6t")
 
 [connection signal="pressed" from="QuestLog" to="." method="_on_quest_log_pressed"]
 [connection signal="pressed" from="Inventory" to="." method="_on_inventory_pressed"]

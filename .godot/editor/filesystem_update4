@@ -7,3 +7,7 @@ res://Quests/quest_001.tres
 res://Quests/quest_002.tres
 res://Items/b_cloak_dark.tres
 res://Scenes/Levels/area_1.tscn
+res://GUI/Inventory/Quests/quest_item.tscn
+res://GUI/Inventory/Quests/quest_item.gd
+res://GUI/Inventory/Quests/quest_step_item.gd
+res://GUI/Inventory/quest_log.tscn

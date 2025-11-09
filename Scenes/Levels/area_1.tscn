@@ -1102,7 +1102,7 @@ tile_set = SubResource("TileSet_d00wu")
 position = Vector2(343.3369, 133.58524)
 npc_resource = ExtResource("27_w5vv1")
 
-[node name="QuestActivatedSwitch" type="Node2D" parent="Sammy"]
+[node name="AcceptQuest" type="Node2D" parent="Sammy"]
 script = ExtResource("32_p87po")
 remove_when_activated = true
 react_to_global_signal = true
@@ -1112,48 +1112,48 @@ Quest : Tray-zurr
 Checking if player has quest"
 metadata/_custom_type_script = "uid://bjn2dibwtkeq1"
 
-[node name="DialogInteraction" parent="Sammy/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction" parent="Sammy/AcceptQuest" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogText" type="Node" parent="Sammy/AcceptQuest/DialogInteraction"]
 script = ExtResource("28_w5vv1")
 text = "I am Sammy!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogText2" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogText2" type="Node" parent="Sammy/AcceptQuest/DialogInteraction"]
 script = ExtResource("28_w5vv1")
 text = "I am SAMMY!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogText4" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogText4" type="Node" parent="Sammy/AcceptQuest/DialogInteraction"]
 script = ExtResource("28_w5vv1")
 text = "I AM [wave][color=orange]SAMMY[/color][/wave]!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogText3" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogText3" type="Node" parent="Sammy/AcceptQuest/DialogInteraction"]
 script = ExtResource("28_w5vv1")
 text = "Sammy has lost his Tray-zurr. Please find it for me. "
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogChoice" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogChoice" type="Node" parent="Sammy/AcceptQuest/DialogInteraction"]
 script = ExtResource("28_v60p0")
 metadata/_custom_type_script = "uid://barr8eqv2majo"
 
-[node name="Accept" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction/DialogChoice"]
+[node name="Accept" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
 text = "Sure thing, Sammy"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
-[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+[node name="DialogText" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice/Accept"]
 script = ExtResource("28_w5vv1")
 text = "Thank you so much Blazin!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogText2" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+[node name="DialogText2" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice/Accept"]
 script = ExtResource("28_w5vv1")
 text = "You shall be rewarded handsomely upon its return. Handsome, like my beard!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestAdvanceTrigger" type="Node2D" parent="Sammy/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+[node name="QuestAdvanceTrigger" type="Node2D" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice/Accept"]
 script = ExtResource("30_x5gn0")
 signal_name = "selected"
 linked_quest = ExtResource("31_p87po")
@@ -1163,24 +1163,24 @@ Step : 0 N/A
 Complete : false"
 metadata/_custom_type_script = "uid://kd06ric1rkvp"
 
-[node name="Decline" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction/DialogChoice"]
+[node name="Decline" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
 text = "Maybe later..."
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
-[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch/DialogInteraction/DialogChoice/Decline"]
+[node name="DialogText" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice/Decline"]
 script = ExtResource("28_w5vv1")
 text = "Er... sure... [wave]GOODBYEEEEE!!![/wave]"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestActivatedSwitch2" parent="Sammy" instance=ExtResource("34_xkhu6")]
+[node name="OnQuest" parent="Sammy" instance=ExtResource("34_xkhu6")]
 react_to_global_signal = true
 linked_quest = ExtResource("31_p87po")
 settings_summary = "UPDATE QUEST : 
 Quest : Tray-zurr
 Checking if player has quest"
 
-[node name="QuestActivatedSwitch4" type="Node2D" parent="Sammy/QuestActivatedSwitch2"]
+[node name="QuestNotComplete" type="Node2D" parent="Sammy/OnQuest"]
 script = ExtResource("32_p87po")
 check_type = 2
 react_to_global_signal = true
@@ -1191,14 +1191,14 @@ Quest : Tray-zurr
 Check if player is on Step : find the forest"
 metadata/_custom_type_script = "uid://bjn2dibwtkeq1"
 
-[node name="DialogInteraction2" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch4" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction2" parent="Sammy/OnQuest/QuestNotComplete" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch4/DialogInteraction2"]
+[node name="DialogText" type="Node" parent="Sammy/OnQuest/QuestNotComplete/DialogInteraction2"]
 script = ExtResource("28_w5vv1")
 text = "Have you found my tray-zurr  ?"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestActivatedSwitch5" parent="Sammy/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
+[node name="QuestComplete" parent="Sammy/OnQuest" instance=ExtResource("34_xkhu6")]
 check_type = 2
 react_to_global_signal = true
 linked_quest = ExtResource("31_p87po")
@@ -1207,9 +1207,9 @@ settings_summary = "UPDATE QUEST :
 Quest : Tray-zurr
 Check if player is on Step : return the treasure to sammy"
 
-[node name="DialogInteraction3" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction3" parent="Sammy/OnQuest/QuestComplete" instance=ExtResource("27_a7186")]
 
-[node name="QuestActivatedSwitch4" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3" instance=ExtResource("34_xkhu6")]
+[node name="QuestActivatedSwitch4" parent="Sammy/OnQuest/QuestComplete/DialogInteraction3" instance=ExtResource("34_xkhu6")]
 check_type = 2
 remove_when_activated = true
 react_to_global_signal = true
@@ -1219,17 +1219,17 @@ settings_summary = "UPDATE QUEST :
 Quest : Tray-zurr
 Check if player is on Step : N/A"
 
-[node name="DialogText2" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3"]
+[node name="DialogText2" type="Node" parent="Sammy/OnQuest/QuestComplete/DialogInteraction3"]
 script = ExtResource("28_w5vv1")
 text = "You found my tray-zurr !!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogText3" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3"]
+[node name="DialogText3" type="Node" parent="Sammy/OnQuest/QuestComplete/DialogInteraction3"]
 script = ExtResource("28_w5vv1")
 text = "As promised, a handsome reward!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestAdvanceTrigger" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3" instance=ExtResource("36_d00wu")]
+[node name="QuestAdvanceTrigger" parent="Sammy/OnQuest/QuestComplete/DialogInteraction3" instance=ExtResource("36_d00wu")]
 signal_name = "finished"
 linked_quest = ExtResource("31_p87po")
 quest_step = 3
@@ -1239,10 +1239,10 @@ Quest : Tray-zurr
 Step : 3 return the treasure to sammy
 Complete : true"
 
-[node name="Node" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3/QuestAdvanceTrigger"]
+[node name="Node" type="Node" parent="Sammy/OnQuest/QuestComplete/DialogInteraction3/QuestAdvanceTrigger"]
 script = SubResource("GDScript_p87po")
 
-[node name="QuestActivatedSwitch" parent="Sammy/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
+[node name="QuestActivatedSwitch" parent="Sammy/OnQuest" instance=ExtResource("34_xkhu6")]
 check_type = 3
 react_to_global_signal = true
 linked_quest = ExtResource("31_p87po")
@@ -1252,9 +1252,9 @@ settings_summary = "UPDATE QUEST :
 Quest : Tray-zurr
 Checking if quest has been completed."
 
-[node name="DialogInteraction" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction" parent="Sammy/OnQuest/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogText" type="Node" parent="Sammy/OnQuest/QuestActivatedSwitch/DialogInteraction"]
 script = ExtResource("28_w5vv1")
 text = "Thank you for all your help"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
@@ -1265,7 +1265,7 @@ npc_resource = ExtResource("38_gppk4")
 
 [node name="NpcBehaviourWander" parent="Blacksmith" instance=ExtResource("37_gppk4")]
 
-[node name="QuestActivatedSwitch" parent="Blacksmith" instance=ExtResource("34_xkhu6")]
+[node name="AcceptQuest" parent="Blacksmith" instance=ExtResource("34_xkhu6")]
 remove_when_activated = true
 react_to_global_signal = true
 linked_quest = ExtResource("33_v60p0")
@@ -1273,90 +1273,90 @@ settings_summary = "UPDATE QUEST :
 Quest : Stop! Hammer Time
 Checking if player has quest"
 
-[node name="DialogInteraction" parent="Blacksmith/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction" parent="Blacksmith/AcceptQuest" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction"]
 script = ExtResource("28_w5vv1")
 text = "Those damned Gloops stole my hammer but they didn't put out my fire. "
 npc_info = ExtResource("38_gppk4")
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogChoice" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogChoice" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction"]
 script = ExtResource("28_v60p0")
 metadata/_custom_type_script = "uid://barr8eqv2majo"
 
-[node name="Accept" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice"]
+[node name="Accept" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
 text = "Gloops ? "
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
-[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+[node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept"]
 script = ExtResource("28_w5vv1")
 text = "Disgusting green gloopy things that roam around not too far from here."
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogText2" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+[node name="DialogText2" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept"]
 script = ExtResource("28_w5vv1")
 text = "Can you help me ?"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogChoice" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+[node name="DialogChoice" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept"]
 script = ExtResource("28_v60p0")
 metadata/_custom_type_script = "uid://barr8eqv2majo"
 
-[node name="Accept" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice"]
+[node name="Accept" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice"]
 script = ExtResource("29_d00wu")
 text = "Of course!"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
-[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
+[node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
 script = ExtResource("28_w5vv1")
 text = "I'll keep the forge hot!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogText2" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
+[node name="DialogText2" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
 script = ExtResource("28_w5vv1")
 text = "Return my Hammer and I shall craft you a fine weapon in return."
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestAdvanceTrigger" type="Node2D" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
+[node name="QuestAdvanceTrigger" type="Node2D" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
 script = ExtResource("30_x5gn0")
 signal_name = "selected"
 linked_quest = ExtResource("33_v60p0")
 settings_summary = "UPDATE QUEST : 
-Quest : Recover lost Tray-zurr
+Quest : Stop! Hammer Time
 Step : 0 N/A
 Complete : false"
 metadata/_custom_type_script = "uid://kd06ric1rkvp"
 
-[node name="Decline" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice"]
+[node name="Decline" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice"]
 script = ExtResource("29_d00wu")
 text = "Maybe another time!"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
-[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Decline"]
+[node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice/Decline"]
 script = ExtResource("28_w5vv1")
 text = "Peace out!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="Decline" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice"]
+[node name="Decline" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
 text = "Not now!"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
-[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Decline"]
+[node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Decline"]
 script = ExtResource("28_w5vv1")
 text = "Maybe another time."
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestActivatedSwitch2" parent="Blacksmith" instance=ExtResource("34_xkhu6")]
+[node name="OnQuest" parent="Blacksmith" instance=ExtResource("34_xkhu6")]
 react_to_global_signal = true
 linked_quest = ExtResource("33_v60p0")
 settings_summary = "UPDATE QUEST : 
 Quest : Stop! Hammer Time
 Checking if player has quest"
 
-[node name="QuestActivatedSwitch4" type="Node2D" parent="Blacksmith/QuestActivatedSwitch2"]
+[node name="QuestNotComplete" type="Node2D" parent="Blacksmith/OnQuest"]
 script = ExtResource("32_p87po")
 check_type = 2
 react_to_global_signal = true
@@ -1367,14 +1367,14 @@ Quest : Stop! Hammer Time
 Check if player is on Step : kill 10 gloops"
 metadata/_custom_type_script = "uid://bjn2dibwtkeq1"
 
-[node name="DialogInteraction2" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch4" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction2" parent="Blacksmith/OnQuest/QuestNotComplete" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch4/DialogInteraction2"]
+[node name="DialogText" type="Node" parent="Blacksmith/OnQuest/QuestNotComplete/DialogInteraction2"]
 script = ExtResource("28_w5vv1")
 text = "Still no hammer, eh ? Those Gloops are vile thieves!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestActivatedSwitch5" parent="Blacksmith/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
+[node name="QuestComplete" parent="Blacksmith/OnQuest" instance=ExtResource("34_xkhu6")]
 check_type = 2
 react_to_global_signal = true
 linked_quest = ExtResource("33_v60p0")
@@ -1383,20 +1383,24 @@ settings_summary = "UPDATE QUEST :
 Quest : Stop! Hammer Time
 Check if player is on Step : return to the blacksmith"
 
-[node name="DialogInteraction" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch5" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction" parent="Blacksmith/OnQuest/QuestComplete" instance=ExtResource("27_a7186")]
 
-[node name="QuestActivatedSwitch4" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction" instance=ExtResource("34_xkhu6")]
+[node name="QuestActivatedSwitch4" parent="Blacksmith/OnQuest/QuestComplete/DialogInteraction" instance=ExtResource("34_xkhu6")]
 check_type = 2
 remove_when_activated = true
 react_to_global_signal = true
 free_on_remove = true
 linked_quest = ExtResource("33_v60p0")
-quest_step = 2
 settings_summary = "UPDATE QUEST : 
 Quest : Stop! Hammer Time
-Check if player is on Step : return to the blacksmith"
+Check if player is on Step : N/A"
 
-[node name="QuestAdvanceTrigger" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction" instance=ExtResource("36_d00wu")]
+[node name="DialogText" type="Node" parent="Blacksmith/OnQuest/QuestComplete/DialogInteraction"]
+script = ExtResource("28_w5vv1")
+text = "Thank you!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="QuestAdvanceTrigger" parent="Blacksmith/OnQuest/QuestComplete/DialogInteraction" instance=ExtResource("36_d00wu")]
 signal_name = "finished"
 linked_quest = ExtResource("33_v60p0")
 quest_step = 2
@@ -1406,12 +1410,7 @@ Quest : Stop! Hammer Time
 Step : 2 return to the blacksmith
 Complete : true"
 
-[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction"]
-script = ExtResource("28_w5vv1")
-text = "Thank you!"
-metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
-
-[node name="QuestActivatedSwitch" parent="Blacksmith/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
+[node name="QuestActivatedSwitch" parent="Blacksmith/OnQuest" instance=ExtResource("34_xkhu6")]
 check_type = 3
 react_to_global_signal = true
 linked_quest = ExtResource("33_v60p0")
@@ -1421,9 +1420,9 @@ settings_summary = "UPDATE QUEST :
 Quest : Stop! Hammer Time
 Checking if quest has been completed."
 
-[node name="DialogInteraction" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction" parent="Blacksmith/OnQuest/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogText" type="Node" parent="Blacksmith/OnQuest/QuestActivatedSwitch/DialogInteraction"]
 script = ExtResource("28_w5vv1")
 text = "Ahh, the sound of the hammer on steel. Many thanks Wanderer!"
 npc_info = ExtResource("38_gppk4")
@@ -1446,24 +1445,31 @@ script = ExtResource("36_cww87")
 metadata/_custom_type_script = "uid://cmfd1h7if1agl"
 
 [node name="RedGloop" parent="EnemyCounter" instance=ExtResource("37_ddrdp")]
-position = Vector2(306, 481)
+position = Vector2(223, 320)
 
 [node name="RedGloop2" parent="EnemyCounter" instance=ExtResource("37_ddrdp")]
-position = Vector2(354, 529)
+position = Vector2(282, 336)
 
 [node name="RedGloop3" parent="EnemyCounter" instance=ExtResource("37_ddrdp")]
-position = Vector2(278, 541)
+position = Vector2(246, 358)
+
+[node name="RedGloop4" parent="EnemyCounter" instance=ExtResource("37_ddrdp")]
+position = Vector2(246, 358)
+
+[node name="RedGloop5" parent="EnemyCounter" instance=ExtResource("37_ddrdp")]
+position = Vector2(246, 358)
 
 [node name="QuestAdvanceTrigger" parent="EnemyCounter" instance=ExtResource("36_d00wu")]
+signal_name = "enemies_defeated"
 linked_quest = ExtResource("33_v60p0")
-quest_step = 2
+quest_step = 1
 settings_summary = "UPDATE QUEST : 
 Quest : Stop! Hammer Time
-Step : 2 return to the blacksmith
+Step : 1 kill 10 gloops
 Complete : false"
 
 [node name="ItemDropper" parent="." instance=ExtResource("38_ddrdp")]
-position = Vector2(397, 465)
+position = Vector2(330, 330)
 item_data = ExtResource("20_6a6p3")
 
 [connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]

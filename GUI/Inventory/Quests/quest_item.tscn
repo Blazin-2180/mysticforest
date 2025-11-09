@@ -25,6 +25,7 @@ text_overrun_behavior = 4
 uppercase = true
 
 [node name="StepLabel" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 5.0
 offset_top = 24.0

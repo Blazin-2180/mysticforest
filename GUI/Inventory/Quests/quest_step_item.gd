@@ -9,6 +9,7 @@ func initialize( step : String, is_complete : bool ) -> void :
 		#sprite.frame = 1
 		label.bbcode_enabled = true
 		label.text = "[s]" + label.text + "[/s]"
+		label.modulate = Color.DIM_GRAY
 	else : 
 		#sprite.frame = 0
 		label.bbcode_enabled = false

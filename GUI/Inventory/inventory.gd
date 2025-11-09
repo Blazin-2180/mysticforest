@@ -99,3 +99,8 @@ func preview_stats( item : ItemData) -> void :
 func _on_button_pressed() -> void:
 	Inventory.hide()
 	pass # Replace with function body.
+
+
+func _on_inventory_slot_mouse_entered() -> void:
+	item_description.visible = true
+	pass # Replace with function body.

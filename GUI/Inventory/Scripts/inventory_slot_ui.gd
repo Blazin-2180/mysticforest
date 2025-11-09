@@ -54,5 +54,10 @@ func item_pressed () -> void :
 
 
 func _on_mouse_entered() -> void:
-	Inventory.item_description.visible
+	Inventory.item_description.visible = true
+	pass # Replace with function body.
+
+
+func _on_mouse_exited() -> void:
+	Inventory.item_description.visible = false
 	pass # Replace with function body.

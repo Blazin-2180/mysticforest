@@ -27,6 +27,7 @@ func _on_visible_changed() -> void :
 			new_q_item.initialize( quest_data, q )
 			# Connect to the focus entered of each quest
 			new_q_item.focus_entered.connect ( update_quest_details.bind( new_q_item.quest ) )
+			quest_item_container.get_child(0).grab_focus()
 	pass
 
 func update_quest_details( q : Quest ) -> void :

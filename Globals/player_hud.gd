@@ -49,3 +49,8 @@ func _on_quest_log_pressed() -> void:
 func _on_inventory_pressed() -> void:
 	Inventory.show_inventory()
 	pass # Replace with function body.
+
+
+func _on_menu_pressed() -> void:
+	
+	pass # Replace with function body.

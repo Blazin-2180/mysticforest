@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2dsmm14jobve"]
+[gd_scene load_steps=17 format=3 uid="uid://b2dsmm14jobve"]
 
 [ext_resource type="Script" uid="uid://bsnsaia4q1dws" path="res://Globals/player_hud.gd" id="1_xhte5"]
 [ext_resource type="Texture2D" uid="uid://bvy0vs4slmynn" path="res://GUI/Sprites/User_Pane.png" id="2_wywdo"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bt2evx6083gal" path="res://GUI/dialog_system/sprites/Untitled 60.png" id="4_agyfd"]
 [ext_resource type="Texture2D" uid="uid://dovsuss0q3bt1" path="res://GUI/Sprites/QuestLog_Icon.png" id="6_27j6t"]
 [ext_resource type="Texture2D" uid="uid://daicqnp0hm231" path="res://GUI/Sprites/Inventory_Icon.png" id="7_27j6t"]
+[ext_resource type="Texture2D" uid="uid://yyo5ab6y23sw" path="res://GUI/Sprites/Menu_Icon.png" id="8_rbl7t"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hai4"]
 bg_color = Color(0.21950099, 0.21950105, 0.21950087, 1)
@@ -293,5 +294,13 @@ offset_right = 721.0
 offset_bottom = 712.0
 icon = ExtResource("7_27j6t")
 
+[node name="Menu" type="Button" parent="."]
+offset_left = 767.0
+offset_top = 672.0
+offset_right = 809.0
+offset_bottom = 714.0
+icon = ExtResource("8_rbl7t")
+
 [connection signal="pressed" from="QuestLog" to="." method="_on_quest_log_pressed"]
 [connection signal="pressed" from="Inventory" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_inventory_2_pressed"]

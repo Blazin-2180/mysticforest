@@ -25,3 +25,4 @@ res://CharacterCreator/character_creator.tscn
 res://CharacterCreator/character_creator.gd
 res://TitleScreen/title_screen.gd
 res://GUI/Inventory/Scripts/inventory_ui.gd
+res://GUI/Inventory/Scripts/inventory_slot_ui.gd

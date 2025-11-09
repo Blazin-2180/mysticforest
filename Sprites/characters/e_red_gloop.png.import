@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmpj6pcf0f2et"
-path="res://.godot/imported/checkbox.png-1fdeb392107495d301165cbc37734517.ctex"
+uid="uid://cl2eiu78ebrlp"
+path="res://.godot/imported/e_red_gloop.png-37b62b490f65cc7beefe0aa582f48ae0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GUI/Inventory/Stats/checkbox.png"
-dest_files=["res://.godot/imported/checkbox.png-1fdeb392107495d301165cbc37734517.ctex"]
+source_file="res://Sprites/characters/e_red_gloop.png"
+dest_files=["res://.godot/imported/e_red_gloop.png-37b62b490f65cc7beefe0aa582f48ae0.ctex"]
 
 [params]
 

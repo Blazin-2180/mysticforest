@@ -34,7 +34,7 @@ func drop_item() -> void :
 	drop.item_data = item_data
 	add_child( drop )
 	drop.picked_up.connect( _on_drop_pickup )
-	#audio.play()
+	audio.play()
 	pass
 
 
@@ -56,9 +56,4 @@ func _update_texture() -> void :
 
 
 func _on_treasure_chest_visibility_changed() -> void:
-	pass # Replace with function body.
-
-
-func _on_green_gloop_enemy_death(hurt_box: HurtBox) -> void:
-	$".".drop_item()
 	pass # Replace with function body.

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=51 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cl4halcwdd6mt" path="res://Sprites/tilesets/plains_large.png" id="4_gppk4"]
@@ -31,8 +31,11 @@
 [ext_resource type="Resource" uid="uid://dcjnbduc0kgal" path="res://Items/b_cloak.tres" id="34_v60p0"]
 [ext_resource type="PackedScene" uid="uid://c7mmiy5ff1i6o" path="res://Quests/utility_nodes/quest_activated_switch.tscn" id="34_xkhu6"]
 [ext_resource type="Resource" uid="uid://d0idvs68ca4tk" path="res://Items/b_cloak_dark.tres" id="35_v60p0"]
+[ext_resource type="Script" uid="uid://cmfd1h7if1agl" path="res://GeneralNodes/EnemyCounter/enemy_counter.gd" id="36_cww87"]
 [ext_resource type="PackedScene" uid="uid://hm7g5hqddfle" path="res://Quests/utility_nodes/quest_advance_trigger.tscn" id="36_d00wu"]
+[ext_resource type="PackedScene" uid="uid://vgo4vhwdcuw1" path="res://Scenes/Enemies/red_gloop.tscn" id="37_ddrdp"]
 [ext_resource type="PackedScene" uid="uid://7e8hltk36uqm" path="res://NPC/npc_behaviour_wander.tscn" id="37_gppk4"]
+[ext_resource type="PackedScene" uid="uid://cwo4g57s01qrs" path="res://GeneralNodes/ItemDropper/ItemDropper.tscn" id="38_ddrdp"]
 [ext_resource type="Resource" uid="uid://44ymrr1jotwi" path="res://NPC/00_npcs/npc_blacksmith.tres" id="38_gppk4"]
 [ext_resource type="PackedScene" uid="uid://cvsou8yj36hxd" path="res://Scenes/torch.tscn" id="40_qp42o"]
 
@@ -1354,12 +1357,21 @@ Quest : Recover lost Tray-zurr
 Checking if player has quest"
 
 [node name="QuestActivatedSwitch" parent="Blacksmith/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
-check_type = 2
+check_type = 3
+react_to_global_signal = true
 linked_quest = ExtResource("33_v60p0")
 quest_step = 1
+quest_complete = true
 settings_summary = "UPDATE QUEST : 
-Quest : Recover lost Tray-zurr
-Check if player is on Step : kill 10 gloops"
+Quest : Stop! Hammer Time
+Checking if quest has been completed."
+
+[node name="DialogInteraction" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
+
+[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch/DialogInteraction"]
+script = ExtResource("28_w5vv1")
+text = "You did it! Well done!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [node name="Torch" parent="." instance=ExtResource("40_qp42o")]
 z_index = 1
@@ -1373,5 +1385,32 @@ position = Vector2(541, 230)
 position = Vector2(333, 191)
 item_data = ExtResource("35_v60p0")
 
+[node name="EnemyCounter" type="Node2D" parent="."]
+script = ExtResource("36_cww87")
+metadata/_custom_type_script = "uid://cmfd1h7if1agl"
+
+[node name="RedGloop" parent="EnemyCounter" instance=ExtResource("37_ddrdp")]
+position = Vector2(306, 481)
+
+[node name="RedGloop2" parent="EnemyCounter" instance=ExtResource("37_ddrdp")]
+position = Vector2(354, 529)
+
+[node name="RedGloop3" parent="EnemyCounter" instance=ExtResource("37_ddrdp")]
+position = Vector2(278, 541)
+
+[node name="QuestAdvanceTrigger" parent="EnemyCounter" instance=ExtResource("36_d00wu")]
+linked_quest = ExtResource("33_v60p0")
+quest_step = 1
+quest_complete = true
+settings_summary = "UPDATE QUEST : 
+Quest : Stop! Hammer Time
+Step : 1 kill 10 gloops
+Complete : true"
+
+[node name="ItemDropper" parent="." instance=ExtResource("38_ddrdp")]
+position = Vector2(397, 465)
+item_data = ExtResource("20_6a6p3")
+
 [connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]
 [connection signal="area_entered" from="Area2D" to="Area2D/QuestAdvanceTrigger" method="_on_area_2d_area_entered"]
+[connection signal="enemies_defeated" from="EnemyCounter" to="ItemDropper" method="drop_item"]

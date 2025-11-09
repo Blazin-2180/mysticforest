@@ -1,6 +1,7 @@
-HSeparator
-Label
 DialogText
+EnemyCounter
+Label
+HSeparator
 Button
 TextureRect
 TextureButton
@@ -11,4 +12,3 @@ Panel
 VBoxContainer
 HBoxContainer
 PanelContainer
-AudioStreamPlayer

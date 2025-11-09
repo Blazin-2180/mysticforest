@@ -1,18 +1,21 @@
-[gd_scene load_steps=35 format=3 uid="uid://ex424qjj2be3"]
+[gd_scene load_steps=40 format=3 uid="uid://vgo4vhwdcuw1"]
 
-[ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_5gljc"]
-[ext_resource type="Texture2D" uid="uid://cdyi0xpnhdbew" path="res://Sprites/characters/slime.png" id="1_jokqx"]
-[ext_resource type="AudioStream" uid="uid://by3w8hqduffhb" path="res://Audio/slimedeath.wav" id="3_r4o34"]
-[ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/Enemies/enemy_state_machine.gd" id="3_vblni"]
-[ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/Enemies/enemy_state_idle.gd" id="4_e388w"]
-[ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="5_r4o34"]
-[ext_resource type="AudioStream" uid="uid://card765jpk5dy" path="res://Audio/slime.wav" id="6_wkjhq"]
-[ext_resource type="Script" uid="uid://brrsbrj7v7ght" path="res://Scripts/Enemies/enemy_state_stun.gd" id="8_c7ij5"]
-[ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/Enemies/enemy_state_death.gd" id="9_c7ij5"]
-[ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="9_psnrq"]
-[ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="10_y26kt"]
-[ext_resource type="PackedScene" uid="uid://chfp0fpb1rxx8" path="res://GUI/Player_HUD/damage_numbers.tscn" id="12_cp62l"]
-[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="13_hphkj"]
+[ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_ckabu"]
+[ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="2_idbop"]
+[ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="3_shp1w"]
+[ext_resource type="Texture2D" uid="uid://cl2eiu78ebrlp" path="res://Sprites/characters/e_red_gloop.png" id="4_ckabu"]
+[ext_resource type="AudioStream" uid="uid://card765jpk5dy" path="res://Audio/slime.wav" id="5_mo25u"]
+[ext_resource type="AudioStream" uid="uid://by3w8hqduffhb" path="res://Audio/slimedeath.wav" id="6_c06th"]
+[ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/Enemies/enemy_state_machine.gd" id="7_w1rpe"]
+[ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/Enemies/enemy_state_idle.gd" id="8_y8p31"]
+[ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="9_b62pu"]
+[ext_resource type="Script" uid="uid://brrsbrj7v7ght" path="res://Scripts/Enemies/enemy_state_stun.gd" id="10_wnyqv"]
+[ext_resource type="Script" uid="uid://bmsalek0e3su7" path="res://Scripts/Enemies/enemy_state_death.gd" id="11_oc4t5"]
+[ext_resource type="Script" uid="uid://nbajkrbwxyoy" path="res://Scenes/Enemies/drop_data.gd" id="12_esqqy"]
+[ext_resource type="Resource" uid="uid://bbsj5phjad5en" path="res://Items/potion.tres" id="13_cn3w8"]
+[ext_resource type="Resource" uid="uid://b3knkyqs778qi" path="res://Items/coinage.tres" id="14_uddbo"]
+[ext_resource type="PackedScene" uid="uid://chfp0fpb1rxx8" path="res://GUI/Player_HUD/damage_numbers.tscn" id="15_kp8j2"]
+[ext_resource type="FontFile" uid="uid://dqrqrvboo8eeq" path="res://Fonts/Abaddon-Bold.ttf" id="16_34xiw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_10642"]
 radius = 7.0
@@ -45,6 +48,42 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EnemySprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_mo25u")]
 }
 
 [sub_resource type="Animation" id="Animation_r4o34"]
@@ -117,7 +156,7 @@ tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_r4o34")
+"stream": ExtResource("6_c06th")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -148,7 +187,7 @@ tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_r4o34")
+"stream": ExtResource("6_c06th")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -179,7 +218,7 @@ tracks/1/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_r4o34")
+"stream": ExtResource("6_c06th")
 }],
 "times": PackedFloat32Array(0)
 }
@@ -216,7 +255,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [7, 8, 9, 10]
+"values": [10, 11, 12, 13]
 }
 
 [sub_resource type="Animation" id="Animation_f4si1"]
@@ -233,7 +272,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [14, 15, 16, 17]
+"values": [5, 6, 5, 6]
 }
 
 [sub_resource type="Animation" id="Animation_kh8cv"]
@@ -263,21 +302,30 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
 }
-tracks/2/type = "audio"
+tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("AudioStreamPlayer2D")
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("6_wkjhq")
-}],
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
-tracks/2/use_blend = true
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("5_mo25u")]
+}
 
 [sub_resource type="Animation" id="Animation_555id"]
 resource_name = "stun_side"
@@ -294,21 +342,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [70, 71, 72]
 }
-tracks/1/type = "audio"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("6_wkjhq")
-}],
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
-tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_xq7bh"]
 resource_name = "stun_up"
@@ -325,21 +370,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [77, 78, 79]
 }
-tracks/1/type = "audio"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/path = NodePath("AudioStreamPlayer2D:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("6_wkjhq")
-}],
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
-tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_5gljc"]
 resource_name = "walk_down"
@@ -351,10 +393,22 @@ tracks/0/path = NodePath("EnemySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [21, 22, 23, 24, 25, 26]
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnemySprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.26977885, 0.4465305, 0.6349105, 0.90236366),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -8), Vector2(0, -9), Vector2(0, -10), Vector2(0, -9.319276), Vector2(0, -8.352816)]
 }
 
 [sub_resource type="Animation" id="Animation_vblni"]
@@ -367,10 +421,10 @@ tracks/0/path = NodePath("EnemySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [28, 29, 30, 31, 32, 33]
+"values": [10, 11, 12, 13, 14]
 }
 
 [sub_resource type="Animation" id="Animation_e388w"]
@@ -383,10 +437,10 @@ tracks/0/path = NodePath("EnemySprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [35, 36, 37, 38, 39, 40]
+"values": [5, 6, 7, 8, 9]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5gljc"]
@@ -409,28 +463,43 @@ _data = {
 &"walk_up": SubResource("Animation_e388w")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hphkj"]
+[sub_resource type="Resource" id="Resource_0f0ti"]
+script = ExtResource("12_esqqy")
+item = ExtResource("13_cn3w8")
+probability = 10.0
+metadata/_custom_type_script = "uid://nbajkrbwxyoy"
+
+[sub_resource type="Resource" id="Resource_7f3j6"]
+script = ExtResource("12_esqqy")
+item = ExtResource("14_uddbo")
+max_amount = 4
+metadata/_custom_type_script = "uid://nbajkrbwxyoy"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lx6oe"]
 bg_color = Color(0.2123048, 0.21230489, 0.21230471, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sapfs"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev7co"]
 bg_color = Color(0.6255871, 0, 0, 1)
 
-[node name="Slime" type="CharacterBody2D"]
+[node name="RedGloop" type="CharacterBody2D"]
+z_as_relative = false
 y_sort_enabled = true
 collision_layer = 64
-collision_mask = 195
+collision_mask = 131
 motion_mode = 1
-script = ExtResource("1_5gljc")
-enemy_name = "Slime"
+script = ExtResource("1_ckabu")
+enemy_name = "Green Gloop"
+health_points = 5
+experience_reward = 5
 
-[node name="HurtBox" parent="." instance=ExtResource("9_psnrq")]
+[node name="HurtBox" parent="." instance=ExtResource("2_idbop")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_10642")
 debug_color = Color(0.9875826, 0.06837226, 0.22504988, 0.41960785)
 
-[node name="HitBox" parent="." instance=ExtResource("10_y26kt")]
+[node name="HitBox" parent="." instance=ExtResource("3_shp1w")]
 collision_layer = 64
 collision_mask = 0
 
@@ -441,9 +510,9 @@ debug_color = Color(0.49352223, 0.54548895, 0.5766261, 0.41960785)
 
 [node name="EnemySprite" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
-texture = ExtResource("1_jokqx")
-hframes = 7
-vframes = 13
+texture = ExtResource("4_ckabu")
+hframes = 5
+vframes = 3
 
 [node name="SlimeCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
@@ -456,51 +525,52 @@ libraries = {
 autoplay = "idle_down"
 
 [node name="EnemyStateMachine" type="Node" parent="."]
-script = ExtResource("3_vblni")
+script = ExtResource("7_w1rpe")
 
 [node name="Idle" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("after_idle_state")]
-script = ExtResource("4_e388w")
+script = ExtResource("8_y8p31")
 after_idle_state = NodePath("../Wander")
 
 [node name="Wander" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
-script = ExtResource("5_r4o34")
+script = ExtResource("9_b62pu")
 state_animation_duration = 0.6
 next_state = NodePath("../Idle")
 
 [node name="Stun" type="Node" parent="EnemyStateMachine" node_paths=PackedStringArray("next_state")]
-script = ExtResource("8_c7ij5")
+script = ExtResource("10_wnyqv")
 next_state = NodePath("../Idle")
 
 [node name="Death" type="Node" parent="EnemyStateMachine"]
-script = ExtResource("9_c7ij5")
-animation_name = null
-knockback_speed = null
-decelerate_speed = null
+script = ExtResource("11_oc4t5")
+drops = Array[ExtResource("12_esqqy")]([SubResource("Resource_0f0ti"), SubResource("Resource_7f3j6")])
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_mo25u")
 bus = &"SFX"
 
-[node name="DamageNumbersOrigin" parent="." instance=ExtResource("12_cp62l")]
+[node name="DamageNumbersOrigin" parent="." instance=ExtResource("15_kp8j2")]
 position = Vector2(0, -17)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = -19.0
-offset_top = -34.0
-offset_right = 20.0
-offset_bottom = -3.0
-
-[node name="NameLabel" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("13_hphkj")
-theme_override_font_sizes/font_size = 6
-text = "Enemy"
+[node name="NameLabel" type="Label" parent="."]
+z_index = 1
+offset_left = -28.0
+offset_top = -36.0
+offset_right = 28.0
+offset_bottom = -24.0
+theme_override_fonts/font = ExtResource("16_34xiw")
+theme_override_font_sizes/font_size = 10
+text = "Green Gloop"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+[node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 1
 custom_minimum_size = Vector2(0, 5)
-layout_mode = 2
-theme_override_styles/background = SubResource("StyleBoxFlat_hphkj")
-theme_override_styles/fill = SubResource("StyleBoxFlat_sapfs")
+offset_left = -17.0
+offset_top = -24.0
+offset_right = 17.0
+offset_bottom = -19.0
+theme_override_styles/background = SubResource("StyleBoxFlat_lx6oe")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ev7co")
 value = 50.0
 show_percentage = false

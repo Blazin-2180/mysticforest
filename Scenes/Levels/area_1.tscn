@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=48 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cl4halcwdd6mt" path="res://Sprites/tilesets/plains_large.png" id="4_gppk4"]
@@ -27,6 +27,7 @@
 [ext_resource type="Resource" uid="uid://cs8s5xvtfcuwq" path="res://Quests/quest_001.tres" id="31_p87po"]
 [ext_resource type="Script" uid="uid://bjn2dibwtkeq1" path="res://Quests/utility_nodes/quest_activated_switch.gd" id="32_p87po"]
 [ext_resource type="AudioStream" uid="uid://p3geyldqfb3s" path="res://Audio/example_music_01.ogg" id="33_p87po"]
+[ext_resource type="Resource" uid="uid://8d3h5a02wpms" path="res://Quests/quest_002.tres" id="33_v60p0"]
 [ext_resource type="Resource" uid="uid://dcjnbduc0kgal" path="res://Items/b_cloak.tres" id="34_v60p0"]
 [ext_resource type="PackedScene" uid="uid://c7mmiy5ff1i6o" path="res://Quests/utility_nodes/quest_activated_switch.tscn" id="34_xkhu6"]
 [ext_resource type="Resource" uid="uid://d0idvs68ca4tk" path="res://Items/b_cloak_dark.tres" id="35_v60p0"]
@@ -1259,6 +1260,76 @@ position = Vector2(343.21854, 287.85568)
 npc_resource = ExtResource("38_gppk4")
 
 [node name="NpcBehaviourWander" parent="Blacksmith" instance=ExtResource("37_gppk4")]
+
+[node name="QuestActivatedSwitch" parent="Blacksmith" instance=ExtResource("34_xkhu6")]
+remove_when_activated = true
+react_to_global_signal = true
+linked_quest = ExtResource("33_v60p0")
+settings_summary = "UPDATE QUEST : 
+Quest : Recover lost Tray-zurr
+Checking if player has quest"
+
+[node name="DialogInteraction" parent="Blacksmith/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
+
+[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction"]
+script = ExtResource("28_w5vv1")
+text = "Those damned Gloops stole my hammer but they didn't put out my fire. "
+npc_info = ExtResource("38_gppk4")
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="DialogChoice" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction"]
+script = ExtResource("28_v60p0")
+metadata/_custom_type_script = "uid://barr8eqv2majo"
+
+[node name="Accept" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice"]
+script = ExtResource("29_d00wu")
+text = "Gloops ? "
+metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
+
+[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+script = ExtResource("28_w5vv1")
+text = "I'll keep the forge hot!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="DialogText2" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+script = ExtResource("28_w5vv1")
+text = "Return my Hammer and I shall craft you a fine weapon in return."
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="QuestAdvanceTrigger" type="Node2D" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+script = ExtResource("30_x5gn0")
+signal_name = "selected"
+linked_quest = ExtResource("33_v60p0")
+settings_summary = "UPDATE QUEST : 
+Quest : Recover lost Tray-zurr
+Step : 0 N/A
+Complete : false"
+metadata/_custom_type_script = "uid://kd06ric1rkvp"
+
+[node name="Decline" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice"]
+script = ExtResource("29_d00wu")
+text = "Maybe later"
+metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
+
+[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Decline"]
+script = ExtResource("28_w5vv1")
+text = "Maybe another time."
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="QuestActivatedSwitch2" parent="Blacksmith" instance=ExtResource("34_xkhu6")]
+react_to_global_signal = true
+linked_quest = ExtResource("33_v60p0")
+settings_summary = "UPDATE QUEST : 
+Quest : Recover lost Tray-zurr
+Checking if player has quest"
+
+[node name="QuestActivatedSwitch" parent="Blacksmith/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
+check_type = 2
+linked_quest = ExtResource("33_v60p0")
+quest_step = 1
+settings_summary = "UPDATE QUEST : 
+Quest : Recover lost Tray-zurr
+Check if player is on Step : kill 10 gloops"
 
 [node name="Torch" parent="." instance=ExtResource("40_qp42o")]
 z_index = 1

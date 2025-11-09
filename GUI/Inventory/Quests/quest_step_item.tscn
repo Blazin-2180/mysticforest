@@ -18,14 +18,13 @@ offset_bottom = 8.08
 script = ExtResource("1_svk05")
 
 [node name="Label" type="RichTextLabel" parent="."]
-modulate = Color(0.23818931, 0.114358895, 0.02231149, 1)
 custom_minimum_size = Vector2(195, 0)
 layout_mode = 1
 anchors_preset = -1
 offset_left = 10.0
 offset_right = 205.0
 offset_bottom = 28.0
-theme_override_colors/default_color = Color(0.35672677, 0.18123084, 0.051876448, 1)
+theme_override_colors/default_color = Color(1, 0.7227015, 0.41414726, 1)
 theme_override_fonts/normal_font = ExtResource("2_t4tfv")
 theme_override_font_sizes/normal_font_size = 16
 text = "Step"

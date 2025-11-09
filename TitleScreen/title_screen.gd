@@ -15,6 +15,7 @@ func _ready() -> void:
 	get_tree().paused = true
 	GlobalPlayerManager.player.visible = false
 	PlayerHud.visible = false
+	DayNight.visible = false
 	Inventory.process_mode = Node.PROCESS_MODE_DISABLED
 	
 	if GlobalSaveManager.get_save_file() == null :

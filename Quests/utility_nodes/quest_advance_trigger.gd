@@ -7,6 +7,8 @@ signal advanced
 @export_category( "Parent Signal Connection")
 @export var signal_name : String = ""
 
+var player : Player
+
 func _ready() -> void:
 	if Engine.is_editor_hint() :
 		return
@@ -31,8 +33,6 @@ func advance_quest() -> void :
 		
 	QuestManager.update_quest( _title, _step, quest_complete )
 	pass
-
-
 
 
 func _on_area_2d_area_entered( _area : Area2D) -> void:

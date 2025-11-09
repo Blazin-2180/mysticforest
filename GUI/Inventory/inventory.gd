@@ -2,7 +2,6 @@ extends CanvasLayer
 
 #region /// Variables
 var inventory_show : bool = false
-var is_paused : bool = false
 #endregion
 
 #region /// On Ready Variables
@@ -11,7 +10,6 @@ var is_paused : bool = false
 @onready var button_load: Button = $Control/TabContainer/System/VBoxContainer/Button_Load
 @onready var tab_container: TabContainer = $Control/TabContainer
 @onready var audio_stream : AudioStreamPlayer = $AudioStreamPlayer
-@onready var name_label: Label = $Control/TabContainer/Inventory/Label
 #endregion
 
 #region /// Signals
@@ -33,29 +31,17 @@ func _unhandled_input ( event : InputEvent ) -> void:
 		else : 
 			hide_inventory()
 			get_viewport().set_input_as_handled()
-	if is_paused :
-		if event.is_action_pressed("right_bumper") :
-			change_tab( 1 )
-		elif event.is_action_pressed("left_bumper") :
-			change_tab( -1 )
 
 func show_inventory () -> void :
-	get_tree().paused = true
-	is_paused = true
 	visible = true
 	inventory_show = true
-	PlayerHud.visible = false
 	tab_container.current_tab = 0
-	name_label.text = GlobalPlayerManager.character_name
 	shown.emit()
 
 
 func hide_inventory () -> void : 
-	get_tree().paused = false
-	is_paused = false
 	visible = false
 	inventory_show = false
-	PlayerHud.visible = true
 	hidden.emit()
 
 
@@ -82,9 +68,7 @@ func _on_load_pressed () -> void :
 
 
 func hide_pause_menu () -> void : 
-	get_tree().paused = false
 	visible = false
-	is_paused = false
 
 
 func _on_button_exit_pressed() -> void:
@@ -110,3 +94,13 @@ func change_tab( _i : int = 1 ) -> void :
 func preview_stats( item : ItemData) -> void : 
 	preview_stats_changed.emit( item )
 	pass
+
+
+func _on_button_pressed() -> void:
+	Inventory.hide()
+	pass # Replace with function body.
+
+
+func _on_inventory_slot_mouse_entered() -> void:
+	item_description.visible = true
+	pass # Replace with function body.

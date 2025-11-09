@@ -54,3 +54,13 @@ func item_pressed () -> void :
 			if slot_data == null :
 				return
 			label.text = str( slot_data.quantity )
+
+
+func _on_mouse_entered() -> void:
+	Inventory.item_description.visible = true
+	pass # Replace with function body.
+
+
+func _on_mouse_exited() -> void:
+	Inventory.item_description.visible = false
+	pass # Replace with function body.

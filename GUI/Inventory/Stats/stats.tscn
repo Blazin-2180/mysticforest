@@ -22,18 +22,18 @@ layout_mode = 2
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "Level :"
 
 [node name="Label_level" type="Label" parent="VBoxContainer/Level"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "99"
 horizontal_alignment = 2
 
@@ -52,18 +52,18 @@ layout_mode = 2
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "Exp :"
 
 [node name="Label_experience" type="Label" parent="VBoxContainer/Experience"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "99"
 horizontal_alignment = 2
 
@@ -82,18 +82,18 @@ layout_mode = 2
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
-text = "Atk :"
+theme_override_font_sizes/font_size = 20
+text = "Attack :"
 
 [node name="Label_attack" type="Label" parent="VBoxContainer/Attack"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "99"
 horizontal_alignment = 2
 
@@ -114,18 +114,18 @@ layout_mode = 2
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
-text = "Def :"
+theme_override_font_sizes/font_size = 20
+text = "Defence :"
 
 [node name="Label_defence" type="Label" parent="VBoxContainer/Defence"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "99"
 horizontal_alignment = 2
 
@@ -146,18 +146,18 @@ layout_mode = 2
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
-text = "HP :"
+theme_override_font_sizes/font_size = 20
+text = "Health :"
 
 [node name="Label_health" type="Label" parent="VBoxContainer/Health"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(15, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
 theme_override_fonts/font = ExtResource("2_xd6ew")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 20
 text = "99"
 horizontal_alignment = 2
 

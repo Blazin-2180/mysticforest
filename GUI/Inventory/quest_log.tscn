@@ -1,0 +1,177 @@
+[gd_scene load_steps=11 format=3 uid="uid://c5xmvodn1e6s0"]
+
+[ext_resource type="Script" uid="uid://c1gu00sd6wxf5" path="res://GUI/Inventory/Quests/quest_log.gd" id="1_gvuue"]
+[ext_resource type="AudioStream" uid="uid://b8fdjyabyitf4" path="res://Audio/click.wav" id="2_i8rem"]
+[ext_resource type="Texture2D" uid="uid://doxp5pfvb3mja" path="res://GUI/Sprites/Panel.png" id="2_kol1c"]
+[ext_resource type="Texture2D" uid="uid://7u1tpnlr0ho6" path="res://GUI/Sprites/SidePanel.png" id="3_0ii3e"]
+[ext_resource type="FontFile" uid="uid://bcnxlrpjp5myd" path="res://Fonts/m5x7.ttf" id="7_5k3ud"]
+[ext_resource type="Script" uid="uid://dh04ovj0wsf36" path="res://GUI/Inventory/Quests/quests_ui.gd" id="8_imp4t"]
+[ext_resource type="PackedScene" uid="uid://dqnutdbcsmtbt" path="res://GUI/Inventory/Quests/quest_item.tscn" id="9_yd7am"]
+[ext_resource type="Texture2D" uid="uid://dyc6o5fjjpch2" path="res://GUI/Sprites/Close_Button.png" id="10_4obcy"]
+[ext_resource type="FontFile" uid="uid://dqrqrvboo8eeq" path="res://Fonts/Abaddon-Bold.ttf" id="10_smedl"]
+[ext_resource type="PackedScene" uid="uid://dgv6jx5rdxcvb" path="res://GUI/Inventory/Quests/quest_step_item.tscn" id="11_jj6gv"]
+
+[node name="QuestLog" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_gvuue")
+button_focus_audio = ExtResource("2_i8rem")
+button_pressed_audio = ExtResource("2_i8rem")
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+mouse_behavior_recursive = 1
+
+[node name="SidePanel" type="TextureRect" parent="Control"]
+y_sort_enabled = true
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -770.0
+offset_top = 139.0
+offset_right = -568.0
+offset_bottom = -173.27014
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("3_0ii3e")
+expand_mode = 1
+
+[node name="ColorRect2" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -581.0
+offset_top = 133.0
+offset_right = -259.0
+offset_bottom = -165.27014
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_kol1c")
+expand_mode = 1
+
+[node name="Quests" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 725.0
+offset_top = 70.0
+offset_right = 725.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("8_imp4t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Quests"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.079
+anchor_right = 0.5
+anchor_bottom = 0.079
+offset_left = -652.0
+offset_top = 30.411
+offset_right = -359.0
+offset_bottom = 371.411
+
+[node name="TitleLabel" type="Label" parent="Control/Quests/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("10_smedl")
+theme_override_font_sizes/font_size = 16
+text = "Quest Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 4
+uppercase = true
+
+[node name="SpacerControl2" type="Control" parent="Control/Quests/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="QuestDescriptionLabel" type="Label" parent="Control/Quests/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
+theme_override_fonts/font = ExtResource("7_5k3ud")
+theme_override_font_sizes/font_size = 16
+text = "A description of the quest.
+Someone has asked you to fetch something from somewhere. "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="SpacerControl" type="Control" parent="Control/Quests/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="QuestStepItem" parent="Control/Quests/VBoxContainer" instance=ExtResource("11_jj6gv")]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+
+[node name="QuestStepItem2" parent="Control/Quests/VBoxContainer" instance=ExtResource("11_jj6gv")]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+
+[node name="QuestStepItem3" parent="Control/Quests/VBoxContainer" instance=ExtResource("11_jj6gv")]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Quests"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 0
+offset_left = -187.0
+offset_top = 82.0
+offset_right = -29.0
+offset_bottom = 467.0
+follow_focus = true
+scroll_vertical_custom_step = 100.0
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Quests/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Quests/ScrollContainer/MarginContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="QuestItem" parent="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("9_yd7am")]
+layout_mode = 2
+toggle_mode = true
+
+[node name="QuestItem2" parent="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("9_yd7am")]
+layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+max_polyphony = 4
+bus = &"SFX"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1001.0
+offset_top = 132.99997
+offset_right = 1026.0
+offset_bottom = 157.99997
+rotation = -0.8652173
+icon = ExtResource("10_4obcy")
+
+[connection signal="focus_entered" from="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer/QuestItem" to="." method="_on_quest_item_focus_entered"]
+[connection signal="focus_entered" from="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer/QuestItem2" to="." method="_on_quest_item_focus_entered"]
+[connection signal="mouse_entered" from="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer/QuestItem2" to="." method="_on_quest_item_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

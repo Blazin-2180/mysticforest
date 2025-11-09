@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var exp_bar: ProgressBar = $Control/ExpBar
 @onready var quest_notification: NotificationUI = $Control/QuestNotification
 @onready var level: Label = $TextureRect/LevelLabel
+@onready var quest_title_label: Label = $QuestTitleLabel
+@onready var quest_step_label: Label = $QuestStepLabel
 
 var player : Player = GlobalPlayerManager.player
 var quest_log_toggled : bool = false
@@ -15,6 +17,7 @@ func _ready() -> void:
 	hp_label.text = str(GlobalPlayerManager.health_points, "/", GlobalPlayerManager.max_health_points)
 	exp_bar.value = GlobalPlayerManager.experience
 	level.text = str(GlobalPlayerManager.player.level)
+	#quest_title_label.new(Quest)
 	#quest_log_toggled = false
 	pass
 

@@ -16,7 +16,7 @@ func _ready() -> void:
 func _on_visible_changed() -> void :
 	for i in quest_item_container.get_children():
 		i.queue_free()
-	if visible == true :
+	if QuestLog.visible == true :
 		# Update the quest list
 		for q in QuestManager.current_quests :
 			var quest_data : Quest = QuestManager.find_quest_by_title( q.title )

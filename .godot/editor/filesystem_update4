@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-res://GUI/Inventory/Stats/stats.gd
-res://Scenes/Player/player.tscn
-=======
-res://Quests/utility_nodes/quest_activated_switch.tscn
->>>>>>> origin/main
+res://GUI/dialog_system/dialog_system.tscn
 res://Items/b_cloak.tres
 res://GUI/Inventory/player_inventory.tres
 res://GUI/dialog_system/dialog_choice_theme.tres
-res://Items/potion.tres
-res://Quests/quest_001.tres
-res://Quests/quest_002.tres
-res://Items/b_cloak_dark.tres
-<<<<<<< HEAD
-res://Items/Scripts/equipable_item_data.gd
+res://GUI/Inventory/Quests/quests_ui.gd
+res://GUI/Inventory/Quests/quest_log.gd
+res://GUI/Inventory/quest_log.tscn
+res://GUI/Player_HUD/player_hud.tscn
 res://GUI/Inventory/inventory.tscn
-res://Scripts/Player/sprite.gd
-res://GUI/Inventory/Scripts/inventory_slot_ui.gd
-=======
-res://Scenes/Bonbon/bonbon.tscn
-res://Quests/utility_nodes/quest_advance_trigger.gd
-res://Quests/utility_nodes/quest_advance_trigger.tscn
->>>>>>> origin/main
+res://Globals/player_hud.gd

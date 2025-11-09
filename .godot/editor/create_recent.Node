@@ -1,10 +1,10 @@
+HSeparator
+Label
 DialogText
 Button
-Label
 TextureRect
 TextureButton
 Sprite2D
-HSeparator
 MarginContainer
 GridContainer
 Panel
@@ -12,4 +12,3 @@ VBoxContainer
 HBoxContainer
 PanelContainer
 AudioStreamPlayer
-CanvasLayer

@@ -57,3 +57,8 @@ func _on_button_pressed() -> void:
 func _on_quest_item_focus_entered( _b : QuestItem ) -> void:
 	_b.grab_focus()
 	pass # Replace with function body.
+
+
+func _on_quest_item_pressed(_b : QuestItem) -> void:
+	quest_item.show()
+	pass # Replace with function body.

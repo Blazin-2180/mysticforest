@@ -138,6 +138,8 @@ offset_left = -187.0
 offset_top = 82.0
 offset_right = -29.0
 offset_bottom = 467.0
+mouse_filter = 2
+mouse_behavior_recursive = 2
 follow_focus = true
 scroll_vertical_custom_step = 100.0
 horizontal_scroll_mode = 0
@@ -153,8 +155,8 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 
 [node name="QuestItem" parent="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("9_yd7am")]
+z_as_relative = false
 layout_mode = 2
-toggle_mode = true
 
 [node name="QuestItem2" parent="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("9_yd7am")]
 layout_mode = 2
@@ -172,6 +174,7 @@ rotation = -0.8652173
 icon = ExtResource("10_4obcy")
 
 [connection signal="focus_entered" from="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer/QuestItem" to="." method="_on_quest_item_focus_entered"]
+[connection signal="pressed" from="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer/QuestItem" to="." method="_on_quest_item_pressed"]
 [connection signal="focus_entered" from="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer/QuestItem2" to="." method="_on_quest_item_focus_entered"]
 [connection signal="mouse_entered" from="Control/Quests/ScrollContainer/MarginContainer/VBoxContainer/QuestItem2" to="." method="_on_quest_item_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

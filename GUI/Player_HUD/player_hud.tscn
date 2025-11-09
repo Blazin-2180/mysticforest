@@ -301,6 +301,34 @@ offset_right = 809.0
 offset_bottom = 714.0
 icon = ExtResource("8_rbl7t")
 
+[node name="QuestTitleLabel" type="Label" parent="."]
+offset_left = 1125.0
+offset_top = 186.0
+offset_right = 1215.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(1, 0.72156864, 0.41568628, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "Quest Title"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+offset_left = 1127.0
+offset_top = 209.0
+offset_right = 1167.0
+offset_bottom = 213.0
+
+[node name="QuestStepLabel" type="Label" parent="."]
+offset_left = 1124.0
+offset_top = 218.0
+offset_right = 1272.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(1, 0.72156864, 0.41568628, 1)
+theme_override_colors/font_outline_color = Color(0.9335894, 0.5779985, 3.85046e-07, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "Quest Current Step"
+autowrap_mode = 3
+
 [connection signal="pressed" from="QuestLog" to="." method="_on_quest_log_pressed"]
 [connection signal="pressed" from="Inventory" to="." method="_on_inventory_pressed"]
 [connection signal="pressed" from="Menu" to="." method="_on_inventory_2_pressed"]

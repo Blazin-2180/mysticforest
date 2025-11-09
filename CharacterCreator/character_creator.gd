@@ -23,7 +23,7 @@ func _ready() -> void:
 
 func setup_create_screen() -> void :
 	AudioManager.play_music( music )
-	confirm_button.pressed.connect ( _on_confirm_button_pressed )
+	#confirm_button.pressed.connect ( _on_confirm_button_pressed )
 	confirm_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
 	confirm_button.mouse_entered.connect( button_mouse_enter.bind( confirm_button ))
 	pass

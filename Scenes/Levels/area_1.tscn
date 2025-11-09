@@ -1239,6 +1239,7 @@ tile_map_data = PackedByteArray("AAD+/wAAAAAAAAUAAAAAAAAAAAAAAAUAAAA=")
 tile_set = SubResource("TileSet_d00wu")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 position = Vector2(697, 179)
 collision_layer = 128
 
@@ -1288,15 +1289,34 @@ metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
 [node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
 script = ExtResource("28_w5vv1")
-text = "I'll keep the forge hot!"
+text = "Disgusting green gloopy things that roam around not too far from here."
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [node name="DialogText2" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
 script = ExtResource("28_w5vv1")
+text = "Can you help me ?"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="DialogChoice" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+script = ExtResource("28_v60p0")
+metadata/_custom_type_script = "uid://barr8eqv2majo"
+
+[node name="Accept" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice"]
+script = ExtResource("29_d00wu")
+text = "Of course!"
+metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
+
+[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
+script = ExtResource("28_w5vv1")
+text = "I'll keep the forge hot!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="DialogText2" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
+script = ExtResource("28_w5vv1")
 text = "Return my Hammer and I shall craft you a fine weapon in return."
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestAdvanceTrigger" type="Node2D" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept"]
+[node name="QuestAdvanceTrigger2" type="Node2D" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
 script = ExtResource("30_x5gn0")
 signal_name = "selected"
 linked_quest = ExtResource("33_v60p0")
@@ -1306,9 +1326,19 @@ Step : 0 N/A
 Complete : false"
 metadata/_custom_type_script = "uid://kd06ric1rkvp"
 
+[node name="Decline" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice"]
+script = ExtResource("29_d00wu")
+text = "Maybe another time!"
+metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
+
+[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Decline"]
+script = ExtResource("28_w5vv1")
+text = "Peace out!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
 [node name="Decline" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
-text = "Maybe later"
+text = "Not now!"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
 [node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Decline"]

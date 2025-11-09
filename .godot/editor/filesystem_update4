@@ -8,3 +8,9 @@ res://GUI/Inventory/quest_log.tscn
 res://GUI/Player_HUD/player_hud.tscn
 res://GUI/Inventory/inventory.tscn
 res://Globals/player_hud.gd
+res://Scenes/Levels/area_1.tscn
+res://Items/potion.tres
+res://Quests/quest_001.tres
+res://Quests/quest_002.tres
+res://Items/b_cloak_dark.tres
+res://CharacterCreator/character_creator.gd

@@ -10,15 +10,19 @@ extends CanvasLayer
 
 var player : Player = GlobalPlayerManager.player
 var quest_log_toggled : bool = false
+var quest : Quest
 
+func initialize( q_data : Quest ) -> void :
+	quest = q_data
+	for q in QuestManager.current_quests :
+		quest_title_label.new().text = QuestManager.current_quests[0]
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	health_bar.value = GlobalPlayerManager.health_points
 	hp_label.text = str(GlobalPlayerManager.health_points, "/", GlobalPlayerManager.max_health_points)
 	exp_bar.value = GlobalPlayerManager.experience
 	level.text = str(GlobalPlayerManager.player.level)
-	#quest_title_label.new(Quest)
-	#quest_log_toggled = false
 	pass
 
 

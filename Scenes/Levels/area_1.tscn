@@ -826,17 +826,8 @@ sources/2 = SubResource("TileSetAtlasSource_nfdua")
 sources/3 = SubResource("TileSetAtlasSource_pjqs8")
 sources/4 = SubResource("TileSetAtlasSource_x5gn0")
 
-[sub_resource type="GDScript" id="GDScript_p87po"]
-script/source = "extends Node
-
-@onready var quest_advance_trigger: QuestAdvanceTrigger = $\"..\"
-
-func _ready() -> void:
-	quest_advance_trigger.advanced.connect( quest_complete )
-
-func quest_complete() -> void : 
-	GlobalPlayerManager.INVENTORY_DATA.use_item(load(\"res://Items/sammys_treasure.tres\"))
-"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v60p0"]
+size = Vector2(83, 20)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v60p0"]
 texture = ExtResource("5_i564r")
@@ -962,8 +953,17 @@ physics_layer_0/collision_layer = 128
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_v60p0")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v60p0"]
-size = Vector2(83, 20)
+[sub_resource type="GDScript" id="GDScript_p87po"]
+script/source = "extends Node
+
+@onready var quest_advance_trigger: QuestAdvanceTrigger = $\"..\"
+
+func _ready() -> void:
+	quest_advance_trigger.advanced.connect( quest_complete )
+
+func quest_complete() -> void : 
+	GlobalPlayerManager.INVENTORY_DATA.use_item(load(\"res://Items/sammys_treasure.tres\"))
+"
 
 [node name="Area_1" type="Node2D"]
 y_sort_enabled = true
@@ -1061,6 +1061,43 @@ item_data = ExtResource("18_boegt")
 position = Vector2(472, 159)
 item_data = ExtResource("34_v60p0")
 
+[node name="Bonbon" parent="." instance=ExtResource("28_4uyou")]
+position = Vector2(251, 216)
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2(697, 179)
+collision_layer = 128
+
+[node name="QuestAdvanceTrigger" parent="Area2D" instance=ExtResource("36_d00wu")]
+position = Vector2(6, 1)
+linked_quest = ExtResource("31_p87po")
+quest_step = 1
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Step : 1 find the forest
+Complete : false"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8.5, 0)
+shape = SubResource("RectangleShape2D_v60p0")
+
+[node name="QuestActivatedSwitch" parent="." instance=ExtResource("34_xkhu6")]
+position = Vector2(703, 172)
+remove_when_activated = true
+react_to_global_signal = true
+free_on_remove = true
+linked_quest = ExtResource("31_p87po")
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Checking if player has quest"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="QuestActivatedSwitch"]
+z_index = -1
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD+/wAAAAAAAAUAAAAAAAAAAAAAAAUAAAA=")
+tile_set = SubResource("TileSet_d00wu")
+
 [node name="Sammy" parent="." instance=ExtResource("21_mn84x")]
 position = Vector2(343.3369, 133.58524)
 npc_resource = ExtResource("27_w5vv1")
@@ -1136,14 +1173,14 @@ script = ExtResource("28_w5vv1")
 text = "Er... sure... [wave]GOODBYEEEEE!!![/wave]"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestActivatedSwitch4" parent="Sammy" instance=ExtResource("34_xkhu6")]
+[node name="QuestActivatedSwitch2" parent="Sammy" instance=ExtResource("34_xkhu6")]
 react_to_global_signal = true
 linked_quest = ExtResource("31_p87po")
 settings_summary = "UPDATE QUEST : 
 Quest : Tray-zurr
 Checking if player has quest"
 
-[node name="QuestActivatedSwitch2" type="Node2D" parent="Sammy/QuestActivatedSwitch4"]
+[node name="QuestActivatedSwitch4" type="Node2D" parent="Sammy/QuestActivatedSwitch2"]
 script = ExtResource("32_p87po")
 check_type = 2
 react_to_global_signal = true
@@ -1154,14 +1191,14 @@ Quest : Tray-zurr
 Check if player is on Step : find the forest"
 metadata/_custom_type_script = "uid://bjn2dibwtkeq1"
 
-[node name="DialogInteraction2" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch2" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction2" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch4" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch2/DialogInteraction2"]
+[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch4/DialogInteraction2"]
 script = ExtResource("28_w5vv1")
 text = "Have you found my tray-zurr  ?"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestActivatedSwitch3" parent="Sammy/QuestActivatedSwitch4" instance=ExtResource("34_xkhu6")]
+[node name="QuestActivatedSwitch5" parent="Sammy/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
 check_type = 2
 react_to_global_signal = true
 linked_quest = ExtResource("31_p87po")
@@ -1170,9 +1207,9 @@ settings_summary = "UPDATE QUEST :
 Quest : Tray-zurr
 Check if player is on Step : return the treasure to sammy"
 
-[node name="DialogInteraction3" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction3" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5" instance=ExtResource("27_a7186")]
 
-[node name="QuestActivatedSwitch4" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3" instance=ExtResource("34_xkhu6")]
+[node name="QuestActivatedSwitch4" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3" instance=ExtResource("34_xkhu6")]
 check_type = 2
 remove_when_activated = true
 react_to_global_signal = true
@@ -1182,17 +1219,17 @@ settings_summary = "UPDATE QUEST :
 Quest : Tray-zurr
 Check if player is on Step : N/A"
 
-[node name="DialogText2" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3"]
+[node name="DialogText2" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3"]
 script = ExtResource("28_w5vv1")
 text = "You found my tray-zurr !!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="DialogText3" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3"]
+[node name="DialogText3" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3"]
 script = ExtResource("28_w5vv1")
 text = "As promised, a handsome reward!"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestAdvanceTrigger" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3" instance=ExtResource("36_d00wu")]
+[node name="QuestAdvanceTrigger" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3" instance=ExtResource("36_d00wu")]
 signal_name = "finished"
 linked_quest = ExtResource("31_p87po")
 quest_step = 3
@@ -1202,10 +1239,10 @@ Quest : Tray-zurr
 Step : 3 return the treasure to sammy
 Complete : true"
 
-[node name="Node" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch3/DialogInteraction3/QuestAdvanceTrigger"]
+[node name="Node" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction3/QuestAdvanceTrigger"]
 script = SubResource("GDScript_p87po")
 
-[node name="QuestActivatedSwitch" parent="Sammy/QuestActivatedSwitch4" instance=ExtResource("34_xkhu6")]
+[node name="QuestActivatedSwitch" parent="Sammy/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
 check_type = 3
 react_to_global_signal = true
 linked_quest = ExtResource("31_p87po")
@@ -1215,49 +1252,12 @@ settings_summary = "UPDATE QUEST :
 Quest : Tray-zurr
 Checking if quest has been completed."
 
-[node name="DialogInteraction" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
+[node name="DialogInteraction" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
 
-[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch4/QuestActivatedSwitch/DialogInteraction"]
+[node name="DialogText" type="Node" parent="Sammy/QuestActivatedSwitch2/QuestActivatedSwitch/DialogInteraction"]
 script = ExtResource("28_w5vv1")
 text = "Thank you for all your help"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
-
-[node name="Bonbon" parent="." instance=ExtResource("28_4uyou")]
-position = Vector2(251, 216)
-
-[node name="QuestActivatedSwitch" parent="." instance=ExtResource("34_xkhu6")]
-position = Vector2(703, 172)
-remove_when_activated = true
-react_to_global_signal = true
-free_on_remove = true
-linked_quest = ExtResource("31_p87po")
-settings_summary = "UPDATE QUEST : 
-Quest : Tray-zurr
-Checking if player has quest"
-
-[node name="TileMapLayer" type="TileMapLayer" parent="QuestActivatedSwitch"]
-z_index = -1
-y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD+/wAAAAAAAAUAAAAAAAAAAAAAAAUAAAA=")
-tile_set = SubResource("TileSet_d00wu")
-
-[node name="Area2D" type="Area2D" parent="."]
-visible = false
-position = Vector2(697, 179)
-collision_layer = 128
-
-[node name="QuestAdvanceTrigger" parent="Area2D" instance=ExtResource("36_d00wu")]
-position = Vector2(6, 1)
-linked_quest = ExtResource("31_p87po")
-quest_step = 1
-settings_summary = "UPDATE QUEST : 
-Quest : Tray-zurr
-Step : 1 find the forest
-Complete : false"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(8.5, 0)
-shape = SubResource("RectangleShape2D_v60p0")
 
 [node name="Blacksmith" parent="." instance=ExtResource("21_mn84x")]
 position = Vector2(343.21854, 287.85568)
@@ -1270,7 +1270,7 @@ remove_when_activated = true
 react_to_global_signal = true
 linked_quest = ExtResource("33_v60p0")
 settings_summary = "UPDATE QUEST : 
-Quest : Recover lost Tray-zurr
+Quest : Stop! Hammer Time
 Checking if player has quest"
 
 [node name="DialogInteraction" parent="Blacksmith/QuestActivatedSwitch" instance=ExtResource("27_a7186")]
@@ -1319,7 +1319,7 @@ script = ExtResource("28_w5vv1")
 text = "Return my Hammer and I shall craft you a fine weapon in return."
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
-[node name="QuestAdvanceTrigger2" type="Node2D" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
+[node name="QuestAdvanceTrigger" type="Node2D" parent="Blacksmith/QuestActivatedSwitch/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
 script = ExtResource("30_x5gn0")
 signal_name = "selected"
 linked_quest = ExtResource("33_v60p0")
@@ -1353,14 +1353,69 @@ metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 react_to_global_signal = true
 linked_quest = ExtResource("33_v60p0")
 settings_summary = "UPDATE QUEST : 
-Quest : Recover lost Tray-zurr
+Quest : Stop! Hammer Time
 Checking if player has quest"
+
+[node name="QuestActivatedSwitch4" type="Node2D" parent="Blacksmith/QuestActivatedSwitch2"]
+script = ExtResource("32_p87po")
+check_type = 2
+react_to_global_signal = true
+linked_quest = ExtResource("33_v60p0")
+quest_step = 1
+settings_summary = "UPDATE QUEST : 
+Quest : Stop! Hammer Time
+Check if player is on Step : kill 10 gloops"
+metadata/_custom_type_script = "uid://bjn2dibwtkeq1"
+
+[node name="DialogInteraction2" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch4" instance=ExtResource("27_a7186")]
+
+[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch4/DialogInteraction2"]
+script = ExtResource("28_w5vv1")
+text = "Still no hammer, eh ? Those Gloops are vile thieves!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
+
+[node name="QuestActivatedSwitch5" parent="Blacksmith/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
+check_type = 2
+react_to_global_signal = true
+linked_quest = ExtResource("33_v60p0")
+quest_step = 2
+settings_summary = "UPDATE QUEST : 
+Quest : Stop! Hammer Time
+Check if player is on Step : return to the blacksmith"
+
+[node name="DialogInteraction" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch5" instance=ExtResource("27_a7186")]
+
+[node name="QuestActivatedSwitch4" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction" instance=ExtResource("34_xkhu6")]
+check_type = 2
+remove_when_activated = true
+react_to_global_signal = true
+free_on_remove = true
+linked_quest = ExtResource("33_v60p0")
+quest_step = 2
+settings_summary = "UPDATE QUEST : 
+Quest : Stop! Hammer Time
+Check if player is on Step : return to the blacksmith"
+
+[node name="QuestAdvanceTrigger" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction" instance=ExtResource("36_d00wu")]
+signal_name = "finished"
+linked_quest = ExtResource("33_v60p0")
+quest_step = 2
+quest_complete = true
+settings_summary = "UPDATE QUEST : 
+Quest : Stop! Hammer Time
+Step : 2 return to the blacksmith
+Complete : true"
+
+[node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch5/DialogInteraction"]
+script = ExtResource("28_w5vv1")
+text = "Thank you!"
+metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [node name="QuestActivatedSwitch" parent="Blacksmith/QuestActivatedSwitch2" instance=ExtResource("34_xkhu6")]
 check_type = 3
 react_to_global_signal = true
 linked_quest = ExtResource("33_v60p0")
-quest_step = 1
+quest_step = 2
 quest_complete = true
 settings_summary = "UPDATE QUEST : 
 Quest : Stop! Hammer Time
@@ -1370,7 +1425,8 @@ Checking if quest has been completed."
 
 [node name="DialogText" type="Node" parent="Blacksmith/QuestActivatedSwitch2/QuestActivatedSwitch/DialogInteraction"]
 script = ExtResource("28_w5vv1")
-text = "You did it! Well done!"
+text = "Ahh, the sound of the hammer on steel. Many thanks Wanderer!"
+npc_info = ExtResource("38_gppk4")
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [node name="Torch" parent="." instance=ExtResource("40_qp42o")]
@@ -1400,12 +1456,11 @@ position = Vector2(278, 541)
 
 [node name="QuestAdvanceTrigger" parent="EnemyCounter" instance=ExtResource("36_d00wu")]
 linked_quest = ExtResource("33_v60p0")
-quest_step = 1
-quest_complete = true
+quest_step = 2
 settings_summary = "UPDATE QUEST : 
 Quest : Stop! Hammer Time
-Step : 1 kill 10 gloops
-Complete : true"
+Step : 2 return to the blacksmith
+Complete : false"
 
 [node name="ItemDropper" parent="." instance=ExtResource("38_ddrdp")]
 position = Vector2(397, 465)

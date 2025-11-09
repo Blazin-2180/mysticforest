@@ -1,4 +1,4 @@
-res://GUI/Inventory/inventory.tscn
+res://Scenes/Enemies/red_gloop.tscn
 res://Items/b_cloak.tres
 res://GUI/Inventory/player_inventory.tres
 res://GUI/dialog_system/dialog_choice_theme.tres
@@ -6,13 +6,4 @@ res://Items/potion.tres
 res://Quests/quest_001.tres
 res://Quests/quest_002.tres
 res://Items/b_cloak_dark.tres
-res://GUI/Inventory/inventory.gd
-res://GeneralNodes/EnemyCounter/enemy_counter.tscn
-res://GeneralNodes/EnemyCounter/enemy_counter.gd
-res://Scenes/Enemies/red_gloop.tscn
-res://Scenes/Enemies/green_gloop.tscn
 res://Scenes/Levels/area_1.tscn
-res://Scenes/Levels/level_transition.tscn
-res://Scripts/Levels/level_transition.gd
-res://GeneralNodes/ItemDropper/item_dropper.gd
-res://GeneralNodes/ItemDropper/ItemDropper.tscn

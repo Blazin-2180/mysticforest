@@ -488,7 +488,7 @@ collision_layer = 64
 collision_mask = 131
 motion_mode = 1
 script = ExtResource("1_ckabu")
-enemy_name = "Green Gloop"
+enemy_name = "Red Gloop"
 health_points = 5
 experience_reward = 5
 

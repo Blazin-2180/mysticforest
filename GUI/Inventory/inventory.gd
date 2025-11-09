@@ -7,7 +7,6 @@ var inventory_show : bool = false
 #region /// On Ready Variables
 @onready var inventory_slot: Button = $Control/TabContainer/Inventory/Panel/GridContainer/InventorySlot
 @onready var item_description: Label = $Control/TabContainer/Inventory/ItemDescription	
-@onready var button_load: Button = $Control/TabContainer/System/VBoxContainer/Button_Load
 @onready var tab_container: TabContainer = $Control/TabContainer
 @onready var audio_stream : AudioStreamPlayer = $AudioStreamPlayer
 @onready var character_name: Label = $Control/TabContainer/Inventory/CharacterName
@@ -24,7 +23,7 @@ func _ready() -> void:
 	pass
 
 func _unhandled_input ( event : InputEvent ) -> void:
-	if event.is_action_pressed( "inventory" ) || event.is_action_pressed( "ui_cancel" ):
+	if event.is_action_pressed( "inventory" ):
 		if inventory_show == false :
 			if DialogSystem.is_active:
 				return
@@ -65,12 +64,7 @@ func focus_item_changed( slot : SlotData ) -> void :
 func _on_load_pressed () -> void :
 	GlobalSaveManager.load_game()
 	await GlobalLevelManager.level_load_started
-	hide_pause_menu()
 	pass
-
-
-func hide_pause_menu () -> void : 
-	visible = false
 
 
 func _on_button_exit_pressed() -> void:
@@ -83,14 +77,14 @@ func play_audio( audio : AudioStream ) -> void :
 	pass
 
 
-func change_tab( _i : int = 1 ) -> void :
-	tab_container.current_tab = wrapi(
-		tab_container.current_tab + _i,
-		0,
-		tab_container.get_tab_count()
-	)
-	tab_container.get_tab_bar().grab_focus()
-	pass
+#func change_tab( _i : int = 1 ) -> void :
+	#tab_container.current_tab = wrapi(
+		#tab_container.current_tab + _i,
+		#0,
+		#tab_container.get_tab_count()
+	#)
+	#tab_container.get_tab_bar().grab_focus()
+	#pass
 
 
 func preview_stats( item : ItemData) -> void : 
@@ -100,6 +94,7 @@ func preview_stats( item : ItemData) -> void :
 
 func _on_button_pressed() -> void:
 	Inventory.hide()
+	hidden.emit()
 	pass # Replace with function body.
 
 

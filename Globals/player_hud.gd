@@ -10,12 +10,7 @@ extends CanvasLayer
 
 var player : Player = GlobalPlayerManager.player
 var quest_log_toggled : bool = false
-var quest : Quest
 
-func initialize( q_data : Quest ) -> void :
-	quest = q_data
-	for q in QuestManager.current_quests :
-		quest_title_label.new().text = QuestManager.current_quests[0]
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -55,9 +50,11 @@ func _on_quest_log_pressed() -> void:
 
 func _on_inventory_pressed() -> void:
 	Inventory.show_inventory()
+	Inventory.shown.emit()
 	pass # Replace with function body.
 
 
 func _on_menu_pressed() -> void:
-	
+	SystemMenu.show_system_menu()
+	SystemMenu.shown.emit()
 	pass # Replace with function body.

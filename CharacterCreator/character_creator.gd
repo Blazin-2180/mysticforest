@@ -17,6 +17,7 @@ func _ready() -> void:
 	PlayerHud.visible = false
 	DayNight.visible = false
 	Inventory.process_mode = Node.PROCESS_MODE_DISABLED
+	SystemMenu.visible = false
 	setup_create_screen()
 	pass
 
@@ -24,6 +25,7 @@ func _ready() -> void:
 func setup_create_screen() -> void :
 	AudioManager.play_music( music )
 	#confirm_button.pressed.connect ( _on_confirm_button_pressed )
+	confirm_button.grab_focus()
 	confirm_button.focus_entered.connect( play_audio.bind( button_focus_audio ) )
 	confirm_button.mouse_entered.connect( button_mouse_enter.bind( confirm_button ))
 	pass
@@ -57,5 +59,4 @@ func _on_confirm_button_pressed() -> void:
 	GlobalPlayerManager.player.visible = true
 	PlayerHud.visible = true
 	Inventory.process_mode = Node.PROCESS_MODE_ALWAYS
-	
 	pass # Replace with function body.

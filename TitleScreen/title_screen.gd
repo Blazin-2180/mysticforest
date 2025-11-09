@@ -17,6 +17,7 @@ func _ready() -> void:
 	PlayerHud.visible = false
 	DayNight.visible = false
 	Inventory.process_mode = Node.PROCESS_MODE_DISABLED
+	SystemMenu.visible = false
 	
 	if GlobalSaveManager.get_save_file() == null :
 		continue_button.disabled = true

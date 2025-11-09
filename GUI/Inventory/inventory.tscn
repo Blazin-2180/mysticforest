@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://buj7g0kdkywyt"]
+[gd_scene load_steps=12 format=3 uid="uid://buj7g0kdkywyt"]
 
 [ext_resource type="Script" uid="uid://b4h3excicddvf" path="res://GUI/Inventory/inventory.gd" id="1_btv15"]
 [ext_resource type="Texture2D" uid="uid://doxp5pfvb3mja" path="res://GUI/Sprites/Panel.png" id="2_nebwj"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cuv6ed6yntyvs" path="res://GUI/Inventory/inventory_slot.tscn" id="3_lgn1t"]
 [ext_resource type="Script" uid="uid://da20w1rpa8yuy" path="res://GUI/Inventory/Scripts/inventory_ui.gd" id="3_wlp85"]
 [ext_resource type="Resource" uid="uid://cqeukq4gf601u" path="res://GUI/Inventory/player_inventory.tres" id="4_wlp85"]
-[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="6_2cw0n"]
 [ext_resource type="PackedScene" uid="uid://bx3h406wgpg83" path="res://GUI/Inventory/Stats/stats.tscn" id="6_58q36"]
 [ext_resource type="Texture2D" uid="uid://dyc6o5fjjpch2" path="res://GUI/Sprites/Close_Button.png" id="8_m38iw"]
 [ext_resource type="FontFile" uid="uid://bcnxlrpjp5myd" path="res://Fonts/m5x7.ttf" id="12_75gpt"]
@@ -340,60 +339,6 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="System" type="Control" parent="Control/TabContainer"]
-visible = false
-layout_mode = 2
-mouse_filter = 2
-metadata/_tab_index = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/System"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 12.5
-offset_top = 156.0
-offset_right = 212.5
-offset_bottom = 266.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-
-[node name="Button_Load" type="Button" parent="Control/TabContainer/System/VBoxContainer"]
-layout_mode = 2
-mouse_filter = 1
-theme_override_fonts/font = ExtResource("6_2cw0n")
-theme_override_font_sizes/font_size = 32
-text = "Load"
-
-[node name="Button_Exit" type="Button" parent="Control/TabContainer/System/VBoxContainer"]
-layout_mode = 2
-mouse_filter = 1
-theme_override_fonts/font = ExtResource("6_2cw0n")
-theme_override_font_sizes/font_size = 32
-text = "Exit"
-
-[node name="Label" type="Label" parent="Control/TabContainer/System"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -55.0
-offset_top = -104.0
-offset_right = 55.0
-offset_bottom = -81.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("6_2cw0n")
-text = "Game Paused"
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 max_polyphony = 4
 bus = &"SFX"
@@ -407,6 +352,4 @@ rotation = -0.8652173
 icon = ExtResource("8_m38iw")
 
 [connection signal="mouse_entered" from="Control/TabContainer/Inventory/Panel/GridContainer/InventorySlot" to="." method="_on_inventory_slot_mouse_entered"]
-[connection signal="pressed" from="Control/TabContainer/System/VBoxContainer/Button_Load" to="." method="_on_load_pressed"]
-[connection signal="pressed" from="Control/TabContainer/System/VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

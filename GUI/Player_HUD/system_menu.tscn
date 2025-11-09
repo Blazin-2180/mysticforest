@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2lhgr7egcch7"]
+
+[ext_resource type="Texture2D" uid="uid://doxp5pfvb3mja" path="res://GUI/Sprites/Panel.png" id="1_i6ne5"]
+[ext_resource type="Script" uid="uid://cylq8ohw37rnt" path="res://GUI/Player_HUD/system_menu.gd" id="1_uuv63"]
+[ext_resource type="FontFile" uid="uid://dqrqrvboo8eeq" path="res://Fonts/Abaddon-Bold.ttf" id="2_uuv63"]
+[ext_resource type="FontFile" uid="uid://cc4owimmw7e3d" path="res://Fonts/ari-w9500-bold.ttf" id="3_d1rr4"]
+[ext_resource type="Texture2D" uid="uid://dyc6o5fjjpch2" path="res://GUI/Sprites/Close_Button.png" id="5_d1rr4"]
+
+[node name="System_Menu" type="CanvasLayer"]
+script = ExtResource("1_uuv63")
+
+[node name="ColorRect" type="TextureRect" parent="."]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -838.0
+offset_top = 109.0
+offset_right = -457.0
+offset_bottom = -116.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_i6ne5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 443.0
+offset_top = 147.0
+offset_right = 818.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_uuv63")
+theme_override_font_sizes/font_size = 16
+text = "System Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 4
+uppercase = true
+
+[node name="System" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 616.0
+offset_top = 519.0
+offset_right = 616.0
+offset_bottom = 519.0
+mouse_filter = 2
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="System"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -93.5
+offset_top = -42.0
+offset_right = 106.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Button_Load" type="Button" parent="System/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("3_d1rr4")
+theme_override_font_sizes/font_size = 32
+text = "Load"
+
+[node name="Button_Exit" type="Button" parent="System/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("3_d1rr4")
+theme_override_font_sizes/font_size = 32
+text = "Exit"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 787.0
+offset_top = 125.0
+offset_right = 822.0
+offset_bottom = 160.0
+rotation = -0.8652173
+icon = ExtResource("5_d1rr4")
+
+[connection signal="pressed" from="System/VBoxContainer/Button_Load" to="." method="_on_button_load_pressed"]
+[connection signal="pressed" from="System/VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

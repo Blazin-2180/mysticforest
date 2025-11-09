@@ -331,4 +331,4 @@ autowrap_mode = 3
 
 [connection signal="pressed" from="QuestLog" to="." method="_on_quest_log_pressed"]
 [connection signal="pressed" from="Inventory" to="." method="_on_inventory_pressed"]
-[connection signal="pressed" from="Menu" to="." method="_on_inventory_2_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

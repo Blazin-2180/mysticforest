@@ -1,0 +1,14 @@
+res://GUI/Player_HUD/player_hud.tscn
+res://Items/b_cloak.tres
+res://GUI/Inventory/player_inventory.tres
+res://GUI/dialog_system/dialog_choice_theme.tres
+res://Items/potion.tres
+res://Quests/quest_001.tres
+res://Quests/quest_002.tres
+res://Items/b_cloak_dark.tres
+res://default_bus_layout.tres
+res://GUI/Player_HUD/system_menu.tscn
+res://GUI/Inventory/inventory.tscn
+res://Globals/player_hud.gd
+res://Globals/global_save_manager.gd
+res://Globals/global_player_manager.gd

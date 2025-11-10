@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dyc6o5fjjpch2" path="res://GUI/Sprites/Close_Button.png" id="5_d1rr4"]
 
 [node name="System_Menu" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_uuv63")
 
 [node name="ColorRect" type="TextureRect" parent="."]
@@ -43,13 +44,14 @@ text_overrun_behavior = 4
 uppercase = true
 
 [node name="System" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_left = 616.0
 offset_top = 519.0
 offset_right = 616.0
 offset_bottom = 519.0
-mouse_filter = 2
+mouse_filter = 1
 metadata/_tab_index = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="System"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=50 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cl4halcwdd6mt" path="res://Sprites/tilesets/plains_large.png" id="4_gppk4"]
@@ -19,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://d4cn8uy2jbf8v" path="res://NPC/npc.tscn" id="21_mn84x"]
 [ext_resource type="PackedScene" uid="uid://bvla1al4urdab" path="res://Interactables/dialog/dialog_interaction.tscn" id="27_a7186"]
 [ext_resource type="Resource" uid="uid://c0g726g2mb7u4" path="res://NPC/00_npcs/npc_sammy.tres" id="27_w5vv1"]
-[ext_resource type="PackedScene" uid="uid://w4wsau01imdh" path="res://Scenes/Bonbon/bonbon.tscn" id="28_4uyou"]
 [ext_resource type="Script" uid="uid://barr8eqv2majo" path="res://Interactables/dialog/scripts/dialog_choice.gd" id="28_v60p0"]
 [ext_resource type="Script" uid="uid://dmcfkt87u7iu5" path="res://Interactables/dialog/scripts/dialog_text.gd" id="28_w5vv1"]
 [ext_resource type="Script" uid="uid://csvjnhbmc8yd0" path="res://Interactables/dialog/scripts/dialog_branch.gd" id="29_d00wu"]
@@ -28,9 +27,9 @@
 [ext_resource type="Script" uid="uid://bjn2dibwtkeq1" path="res://Quests/utility_nodes/quest_activated_switch.gd" id="32_p87po"]
 [ext_resource type="AudioStream" uid="uid://p3geyldqfb3s" path="res://Audio/example_music_01.ogg" id="33_p87po"]
 [ext_resource type="Resource" uid="uid://8d3h5a02wpms" path="res://Quests/quest_002.tres" id="33_v60p0"]
+[ext_resource type="Resource" uid="uid://bct8boglta6bg" path="res://Items/f_new_boots.tres" id="34_cww87"]
 [ext_resource type="Resource" uid="uid://dcjnbduc0kgal" path="res://Items/b_cloak.tres" id="34_v60p0"]
 [ext_resource type="PackedScene" uid="uid://c7mmiy5ff1i6o" path="res://Quests/utility_nodes/quest_activated_switch.tscn" id="34_xkhu6"]
-[ext_resource type="Resource" uid="uid://d0idvs68ca4tk" path="res://Items/b_cloak_dark.tres" id="35_v60p0"]
 [ext_resource type="Script" uid="uid://cmfd1h7if1agl" path="res://GeneralNodes/EnemyCounter/enemy_counter.gd" id="36_cww87"]
 [ext_resource type="PackedScene" uid="uid://hm7g5hqddfle" path="res://Quests/utility_nodes/quest_advance_trigger.tscn" id="36_d00wu"]
 [ext_resource type="PackedScene" uid="uid://vgo4vhwdcuw1" path="res://Scenes/Enemies/red_gloop.tscn" id="37_ddrdp"]
@@ -818,6 +817,7 @@ texture = ExtResource("5_i564r")
 0:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-23.291702, -16.547005, 19.87439, -16.007427, 23.111847, -9.892231, 23.471558, -4.6763268, 18.795227, -3.95689, 19.694534, 3.7770348, -13.399475, 3.7770348, -13.57933, -1.978447, -23.111847, -1.978447)
 
 [sub_resource type="TileSet" id="TileSet_dk5kr"]
+tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 128
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_ddrdp")
@@ -984,7 +984,8 @@ y_sort_enabled = true
 [node name="Objects" type="TileMapLayer" parent="Terrains"]
 z_as_relative = false
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAlAAQAAwAAAAAAAAArAAQAAwAAAAAAAAAxAAQAAwAAAAAAAAAoAAgAAwAAAAAAAAAvAAgAAwAAAAAAAAA2AAgAAwAAAAAAAAA6AAgAAwAAAAAAAAAlAAcAAwAAAAUAAAArAAcAAwAAAAUAAAAxAAcAAwAAAAUAAAAoAAsAAwAAAAUAAAAvAAsAAwAAAAUAAAA2AAsAAwAAAAUAAAA6AAsAAwAAAAUAAABIAAgABAAAAAoAAABNAAgABAAAAAoAAABSAAYABAAAAAoAAABNAAYABAAAAAoAAABIAAYABAAAAAoAAABSAAgABAAAAAoAAABWAAYABAAAAAoAAABWAAkABAAAAAoAAABDAAYABAAAAAoAAABDAAgABAAAAAoAAABGAAoABAAAAAoAAABLAAoABAAAAAoAAABQAAoABAAAAAoAAABVAAoABAAAAAoAAABBAAoABAAAAAoAAABAAA0ABAAAAAoAAABFAA0ABAAAAAoAAABKAA0ABAAAAAoAAABPAA0ABAAAAAoAAABUAA0ABAAAAAoAAABVAA8ABAAAAAoAAABQAA8ABAAAAAoAAABLAA8ABAAAAAoAAABGAA8ABAAAAAoAAABBAA8ABAAAAAoAAABBABMABAAAABAAAABGABMABAAAABAAAABLABMABAAAABAAAABQABMABAAAABAAAABVABMABAAAABAAAAA=")
+position = Vector2(-1026, 37)
+tile_map_data = PackedByteArray("AAArAAcAAwAAAAUAAAAxAAcAAwAAAAUAAAAyAAEAAwAAAAAAAAA1AAEAAwAAAAAAAAA4AAEAAwAAAAAAAAA4AAMAAwAAAAAAAAA0AAMAAwAAAAAAAAA0AAQAAwAAAAAAAAA4AAQAAwAAAAAAAAA4AAIAAwAAAAAAAAA0AAIAAwAAAAAAAAA0AAEAAwAAAAAAAAA2AAEAAwAAAAAAAAA3AAEAAwAAAAAAAAAzAAEAAwAAAAAAAAA5AAEAAwAAAAAAAAA5AAIAAwAAAAAAAAA5AAMAAwAAAAAAAAA5AAQAAwAAAAAAAAAxAAEAAwAAAAAAAAA6AAIAAwAAAAAAAAA7AAIAAwAAAAAAAAA8AAIAAwAAAAAAAAA9AAIAAwAAAAAAAAA+AAIAAwAAAAAAAAA/AAIAAwAAAAAAAABAAAIAAwAAAAAAAABBAAIAAwAAAAAAAAA6AAMAAwAAAAAAAAA7AAMAAwAAAAAAAAA8AAMAAwAAAAAAAAA9AAMAAwAAAAAAAAA+AAMAAwAAAAAAAAA/AAMAAwAAAAAAAABAAAMAAwAAAAAAAABBAAMAAwAAAAAAAAA6AAQAAwAAAAAAAAA7AAQAAwAAAAAAAAA8AAQAAwAAAAAAAAA9AAQAAwAAAAAAAAA+AAQAAwAAAAAAAAA/AAQAAwAAAAAAAABAAAQAAwAAAAAAAABBAAQAAwAAAAAAAAA=")
 tile_set = SubResource("TileSet_dk5kr")
 
 [node name="CliffsUpper" type="TileMapLayer" parent="Terrains"]
@@ -1002,7 +1003,7 @@ tile_set = SubResource("TileSet_ikohj")
 z_index = 1
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(429, 124)
+position = Vector2(418, 125)
 
 [node name="LevelTransition" parent="." instance=ExtResource("15_iy4w2")]
 z_as_relative = false
@@ -1061,9 +1062,6 @@ item_data = ExtResource("18_boegt")
 position = Vector2(472, 159)
 item_data = ExtResource("34_v60p0")
 
-[node name="Bonbon" parent="." instance=ExtResource("28_4uyou")]
-position = Vector2(251, 216)
-
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
 position = Vector2(697, 179)
@@ -1099,7 +1097,7 @@ tile_map_data = PackedByteArray("AAD+/wAAAAAAAAUAAAAAAAAAAAAAAAUAAAA=")
 tile_set = SubResource("TileSet_d00wu")
 
 [node name="Sammy" parent="." instance=ExtResource("21_mn84x")]
-position = Vector2(343.3369, 133.58524)
+position = Vector2(344.92862, 136.80348)
 npc_resource = ExtResource("27_w5vv1")
 
 [node name="AcceptQuest" type="Node2D" parent="Sammy"]
@@ -1260,7 +1258,7 @@ text = "Thank you for all your help"
 metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [node name="Blacksmith" parent="." instance=ExtResource("21_mn84x")]
-position = Vector2(343.21854, 287.85568)
+position = Vector2(346.00174, 297.66766)
 npc_resource = ExtResource("38_gppk4")
 
 [node name="NpcBehaviourWander" parent="Blacksmith" instance=ExtResource("37_gppk4")]
@@ -1438,7 +1436,7 @@ position = Vector2(541, 230)
 
 [node name="ItemPickup3" parent="." instance=ExtResource("17_30j8n")]
 position = Vector2(333, 191)
-item_data = ExtResource("35_v60p0")
+item_data = ExtResource("34_cww87")
 
 [node name="EnemyCounter" type="Node2D" parent="."]
 script = ExtResource("36_cww87")

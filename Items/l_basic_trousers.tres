@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://btsuyxxvu6tr"]
+
+[ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_71nm8"]
+[ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_msoln"]
+[ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_r8unh"]
+[ext_resource type="Texture2D" uid="uid://didonorqyenr0" path="res://Sprites/player/character_legs.png" id="4_pec55"]
+
+[sub_resource type="Resource" id="Resource_381dr"]
+script = ExtResource("2_msoln")
+type = 1
+value = 0
+metadata/_custom_type_script = "uid://bp4smcxq30eoh"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d033d"]
+atlas = ExtResource("4_pec55")
+region = Rect2(16, 32, 32, 32)
+
+[resource]
+script = ExtResource("3_r8unh")
+type = 7
+modifiers = Array[ExtResource("2_msoln")]([SubResource("Resource_381dr")])
+sprite_texture = ExtResource("4_pec55")
+name = "Ragged Trousers"
+description = "Ran out of ideas soooo placeholder"
+texture = SubResource("AtlasTexture_d033d")
+metadata/_custom_type_script = "uid://cfxo73une4mka"

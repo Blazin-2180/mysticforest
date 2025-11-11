@@ -1,4 +1,4 @@
-res://GUI/dialog_system/dialog_system.tscn
+res://Scenes/Player/player.tscn
 res://Items/b_cloak.tres
 res://GUI/Inventory/player_inventory.tres
 res://GUI/dialog_system/dialog_choice_theme.tres
@@ -6,6 +6,12 @@ res://Items/potion.tres
 res://Quests/quest_001.tres
 res://Quests/quest_002.tres
 res://Items/b_cloak_dark.tres
-res://GUI/dialog_system/scripts/dialog_system.gd
-res://NPC/00_npcs/npc_blacksmith.tres
+res://Items/c_basic_tunic.tres
+res://GUI/Inventory/inventory.tscn
+res://Scripts/Player/sprite.gd
+res://Items/Sprites/l_basic_trousers.tres
 res://Scenes/Levels/area_1.tscn
+res://Scripts/Player/player.gd
+res://Items/f_basic_boots.tres
+res://Items/l_basic_trousers.tres
+res://Items/f_new_boots.tres

@@ -1,12 +1,12 @@
+res://Items
+res://Items/Sprites
 res://GUI/Player_HUD
 <<<<<<< HEAD
 res://Scripts/Player
-res://Items
 =======
 >>>>>>> origin/main
 res://GUI/Inventory
 res://GUI/Inventory/Quests
-res://Items
 res://CharacterCreator
 res://TitleScreen/sprites
 res://TitleScreen

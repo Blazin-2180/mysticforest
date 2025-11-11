@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://bdghs61arjamd"]
+
+[ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_7gpl3"]
+[ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_cuo4r"]
+[ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_bo67r"]
+[ext_resource type="Texture2D" uid="uid://4ld134yl5rvx" path="res://Sprites/player/character_chest.png" id="4_cuo4r"]
+
+[sub_resource type="Resource" id="Resource_bo67r"]
+script = ExtResource("2_cuo4r")
+value = 0
+metadata/_custom_type_script = "uid://bp4smcxq30eoh"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuo4r"]
+atlas = ExtResource("4_cuo4r")
+region = Rect2(16, 16, 32, 32)
+
+[resource]
+script = ExtResource("3_bo67r")
+type = 5
+modifiers = Array[ExtResource("2_cuo4r")]([SubResource("Resource_bo67r")])
+sprite_texture = ExtResource("4_cuo4r")
+name = "Basic Tunic"
+description = "Better than nothing. At least you are modest. "
+texture = SubResource("AtlasTexture_cuo4r")
+metadata/_custom_type_script = "uid://cfxo73une4mka"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cejencl6l7ut7"
-path="res://.godot/imported/cloak_test.png-dc6989ce61ad09d5f1444129a4555490.ctex"
+uid="uid://didonorqyenr0"
+path="res://.godot/imported/character_legs.png-51142dbef37ef1e3c89e6bd70d223ddd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/cloak_test.png"
-dest_files=["res://.godot/imported/cloak_test.png-dc6989ce61ad09d5f1444129a4555490.ctex"]
+source_file="res://Sprites/player/character_legs.png"
+dest_files=["res://.godot/imported/character_legs.png-51142dbef37ef1e3c89e6bd70d223ddd.ctex"]
 
 [params]
 

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://ruvyhu0pw1mf"]
+
+[ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_hhmx7"]
+[ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_akmeh"]
+[ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_jbriu"]
+[ext_resource type="Texture2D" uid="uid://dyr0duxdbmhkw" path="res://Sprites/player/character_feet.png" id="4_akmeh"]
+
+[sub_resource type="Resource" id="Resource_jbriu"]
+script = ExtResource("2_akmeh")
+type = 3
+value = 0
+metadata/_custom_type_script = "uid://bp4smcxq30eoh"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akmeh"]
+atlas = ExtResource("4_akmeh")
+region = Rect2(16, 32, 32, 32)
+
+[resource]
+script = ExtResource("3_jbriu")
+type = 10
+modifiers = Array[ExtResource("2_akmeh")]([SubResource("Resource_jbriu")])
+sprite_texture = ExtResource("4_akmeh")
+name = "Basic Boots"
+description = "You can almost feel the grass beneath your feet these boots are so worn out."
+texture = SubResource("AtlasTexture_akmeh")
+metadata/_custom_type_script = "uid://cfxo73une4mka"

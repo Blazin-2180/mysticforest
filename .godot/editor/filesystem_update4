@@ -15,3 +15,4 @@ res://Scripts/Player/player.gd
 res://Items/f_basic_boots.tres
 res://Items/l_basic_trousers.tres
 res://Items/f_new_boots.tres
+res://Scripts/Player/state_attack.gd

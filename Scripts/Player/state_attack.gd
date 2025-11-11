@@ -5,7 +5,8 @@ var attacking : bool = false
 @export_range(1, 20, 0.5) var decelerate_speed : float = 5.0
 
 # References
-@onready var attack_animation: AnimationPlayer = $"../../Player_Sprite/AnimationPlayer"
+
+@onready var attack_animation: AnimationPlayer = $"../../AnimationPlayer"
 
 @onready var walk: State_Walk = $"../Walk"
 @onready var idle : State_Idle = $"../Idle"

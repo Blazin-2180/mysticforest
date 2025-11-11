@@ -93,10 +93,10 @@ tracks/0/path = NodePath("Player_Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [27, 28, 29]
+"values": [0, 2]
 }
 tracks/1/type = "audio"
 tracks/1/imported = false
@@ -124,10 +124,10 @@ tracks/0/path = NodePath("Player_Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [24, 25, 26]
+"values": [0, 2]
 }
 tracks/1/type = "audio"
 tracks/1/imported = false

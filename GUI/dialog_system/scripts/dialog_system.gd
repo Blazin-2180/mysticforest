@@ -20,14 +20,14 @@ var dialog_item_index : int = 0
 
 #region /// ON READY VARIABLES
 @onready var dialog_ui : Control = $DialogUI
-@onready var content : RichTextLabel = $DialogUI/PanelContainer/RichTextLabel
+@onready var content : RichTextLabel = $DialogUI/PanelContainer/MarginContainer/RichTextLabel
 @onready var name_label : Label = $DialogUI/NameLabel
 @onready var dialog_progress_indicator : PanelContainer = $DialogUI/DialogProgressIndicator
 @onready var progress_dialog : Label = $DialogUI/DialogProgressIndicator/Label
 @onready var timer : Timer = $DialogUI/Timer
 @onready var audio_stream_player : AudioStreamPlayer = $DialogUI/AudioStreamPlayer
 @onready var portrait_sprite: Sprite2D = $DialogUI/PortraitSprite
-@onready var choice_options : VBoxContainer = $DialogUI/VBoxContainer
+@onready var choice_options : HBoxContainer = $DialogUI/HBoxContainer
 
 #endregion
 
@@ -151,3 +151,27 @@ func start_timer() -> void :
 	# Manipulate the wait_time
 	timer.start()
 	pass
+
+
+func _on_dialog_progress_indicator_gui_input(event: InputEvent) -> void:
+	if is_active == false :
+		return
+	if (
+		event.is_action_pressed("interact") ||
+		event.is_action("attack") ||
+		event.is_action_pressed("ui_accept")
+	) :
+		if text_in_progress == true :
+			content.visible_characters = text_length
+			timer.stop()
+			text_in_progress = false
+			show_dialog_button_indicator( true )
+			return
+		elif waiting_for_choice == true :
+			return
+		
+		dialog_item_index += 1
+		if dialog_item_index < dialog_items.size() :
+			start_dialog()
+		else : 
+			hide_dialog()

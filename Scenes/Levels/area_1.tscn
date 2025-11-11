@@ -1140,7 +1140,7 @@ metadata/_custom_type_script = "uid://barr8eqv2majo"
 
 [node name="Accept" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
-text = "Sure thing, Sammy"
+text = "Accept"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
 [node name="DialogText" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice/Accept"]
@@ -1165,7 +1165,7 @@ metadata/_custom_type_script = "uid://kd06ric1rkvp"
 
 [node name="Decline" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
-text = "Maybe later..."
+text = "Decline"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
 [node name="DialogText" type="Node" parent="Sammy/AcceptQuest/DialogInteraction/DialogChoice/Decline"]
@@ -1287,7 +1287,7 @@ metadata/_custom_type_script = "uid://barr8eqv2majo"
 
 [node name="Accept" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
-text = "Gloops ? "
+text = "Continue"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
 [node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept"]
@@ -1306,7 +1306,7 @@ metadata/_custom_type_script = "uid://barr8eqv2majo"
 
 [node name="Accept" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice"]
 script = ExtResource("29_d00wu")
-text = "Of course!"
+text = "Accept"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
 [node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice/Accept"]
@@ -1331,7 +1331,7 @@ metadata/_custom_type_script = "uid://kd06ric1rkvp"
 
 [node name="Decline" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice"]
 script = ExtResource("29_d00wu")
-text = "Maybe another time!"
+text = "Decline"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
 [node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Accept/DialogChoice/Decline"]
@@ -1341,7 +1341,7 @@ metadata/_custom_type_script = "uid://dmcfkt87u7iu5"
 
 [node name="Decline" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice"]
 script = ExtResource("29_d00wu")
-text = "Not now!"
+text = "Decline"
 metadata/_custom_type_script = "uid://csvjnhbmc8yd0"
 
 [node name="DialogText" type="Node" parent="Blacksmith/AcceptQuest/DialogInteraction/DialogChoice/Decline"]

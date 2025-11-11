@@ -5,5 +5,6 @@
 
 [resource]
 script = ExtResource("1_i4n13")
+npc_name = "Blacksmith"
 sprite = ExtResource("2_4cgiu")
 metadata/_custom_type_script = "uid://dg5ste7ke42e0"

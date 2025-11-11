@@ -1,16 +1,11 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://t1pkxxir1dgx"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://t1pkxxir1dgx"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erkp4"]
-content_margin_left = 5.0
-content_margin_right = 5.0
-content_margin_bottom = 3.0
-bg_color = Color(0, 0, 0, 0.41500002)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-anti_aliasing = false
+[ext_resource type="Texture2D" uid="uid://ducyil2u3ap2s" path="res://GUI/Sprites/Button.png" id="1_21q0u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ji6w"]
+texture = ExtResource("1_21q0u")
 
 [resource]
-Button/styles/normal = SubResource("StyleBoxFlat_erkp4")
+Button/colors/font_color = Color(1, 0.72156864, 0.41568628, 1)
+Button/styles/normal = SubResource("StyleBoxTexture_0ji6w")
 VBoxContainer/constants/separation = 5

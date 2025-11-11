@@ -1,3 +1,6 @@
+AudioStreamPlayer2D
+MarginContainer
+HBoxContainer
 CanvasLayer
 DialogText
 EnemyCounter
@@ -7,9 +10,6 @@ Button
 TextureRect
 TextureButton
 Sprite2D
-MarginContainer
 GridContainer
 Panel
 VBoxContainer
-HBoxContainer
-PanelContainer

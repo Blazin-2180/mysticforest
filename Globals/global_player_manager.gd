@@ -14,7 +14,6 @@ var max_health_points : int = 6
 var player_spawned : bool = false
 var experience : int = 0
 var level_requirements = [ 0, 50, 100, 200, 400, 800, 1500, 3000, 6000, 12000, 25000 ]
-#var level_requirements = [0, 5, 10, 20, 25] # for testing
 
 
 func _ready() -> void:

@@ -18,3 +18,4 @@ res://Items/l_leather_trousers.tres
 res://Items/c_leather_chest.tres
 res://Items/l_test_trousers.tres
 res://Items/c_test_chest.tres
+res://Globals/global_player_manager.gd

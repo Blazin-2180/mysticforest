@@ -3,11 +3,12 @@ extends StaticBody2D
 var state : String = "day" # day or night
 var change_state : bool = false
 var length_of_day = 30 # seconds
-var length_of_night = 15 # seconds
+var length_of_night = 60 # seconds
 
 @onready var animation_player : AnimationPlayer = $AnimationPlayer
 @onready var timer : Timer = $Timer
 @onready var color : ColorRect = $ColorRect
+
 
 func _ready() -> void:
 	if state == "day" :
@@ -15,14 +16,16 @@ func _ready() -> void:
 	elif state == "night" :
 		color.color.a = 250
 
+
 func _on_timer_timeout() -> void:
 	if state == "day" :
 		state = "night"
 	elif state == "night" :
 		state = "day"
-	
+
 	change_state = true
-	
+
+
 func _process( _delta : float) -> void:
 	GlobalLevelManager.time_of_day = state
 	if change_state == true :
@@ -33,14 +36,18 @@ func _process( _delta : float) -> void:
 		elif state == "night" :
 			change_to_night()
 
+
 func change_to_day() -> void :
 	animation_player.play("night_to_day")
 	timer.wait_time = length_of_day
 	timer.start()
+	print("Day")
 	pass
+
 
 func change_to_night() -> void :
 	animation_player.play("day_to_night")
 	timer.wait_time = length_of_night
 	timer.start()
+	print("Night")
 	pass

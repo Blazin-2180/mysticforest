@@ -5,11 +5,11 @@ var inventory_show : bool = false
 #endregion
 
 #region /// On Ready Variables
-@onready var inventory_slot: Button = $Control/TabContainer/Inventory/Panel/GridContainer/InventorySlot
-@onready var item_description: Label = $Control/TabContainer/Inventory/ItemDescription	
+@onready var inventory_slot: Button = $Control/Inventory/Panel/GridContainer/InventorySlot
+@onready var item_description: Label = $Control/Inventory/ItemDescription	
 @onready var tab_container: TabContainer = $Control/TabContainer
 @onready var audio_stream : AudioStreamPlayer = $AudioStreamPlayer
-@onready var character_name: Label = $Control/TabContainer/Inventory/CharacterName
+@onready var character_name: Label = $Control/Inventory/CharacterName
 #endregion
 
 #region /// Signals
@@ -35,7 +35,6 @@ func _unhandled_input ( event : InputEvent ) -> void:
 func show_inventory () -> void :
 	visible = true
 	inventory_show = true
-	tab_container.current_tab = 0
 	character_name.text = GlobalPlayerManager.character_name
 	shown.emit()
 

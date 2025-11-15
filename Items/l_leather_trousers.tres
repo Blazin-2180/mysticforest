@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_q7d7v"]
 [ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_afjol"]
 [ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_coq0o"]
-[ext_resource type="Texture2D" uid="uid://dry2hoajvpdwk" path="res://Sprites/items/character_legs.png" id="4_afjol"]
+[ext_resource type="Texture2D" uid="uid://cnqttdayapacn" path="res://Sprites/items/l_leather_trousers.png" id="4_coq0o"]
 [ext_resource type="Texture2D" uid="uid://dykj6sf2y10eg" path="res://Sprites/items/l_leather_trousers_sprite.png" id="5_coq0o"]
 
 [sub_resource type="Resource" id="Resource_coq0o"]
@@ -15,7 +15,7 @@ metadata/_custom_type_script = "uid://bp4smcxq30eoh"
 script = ExtResource("3_coq0o")
 type = 8
 modifiers = Array[ExtResource("2_afjol")]([SubResource("Resource_coq0o")])
-sprite_texture = ExtResource("4_afjol")
+sprite_texture = ExtResource("4_coq0o")
 name = "Test Trousers"
 description = "Test"
 texture = ExtResource("5_coq0o")

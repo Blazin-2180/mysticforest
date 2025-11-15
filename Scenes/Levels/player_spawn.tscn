@@ -12,5 +12,5 @@ z_as_relative = false
 y_sort_enabled = true
 position = Vector2(0, -21)
 texture = ExtResource("2_2ydhn")
-hframes = 6
-vframes = 5
+hframes = 3
+vframes = 10

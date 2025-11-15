@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgv6jx5rdxcvb"]
+[gd_scene load_steps=3 format=3 uid="uid://dgv6jx5rdxcvb"]
 
 [ext_resource type="Script" uid="uid://ddv3yh5es5q08" path="res://GUI/Inventory/Quests/quest_step_item.gd" id="1_svk05"]
-[ext_resource type="Texture2D" uid="uid://bmutsn5pd20tq" path="res://GUI/Inventory/Quests/checkbox.png" id="2_obf4j"]
-[ext_resource type="FontFile" uid="uid://bcnxlrpjp5myd" path="res://Fonts/m5x7.ttf" id="2_t4tfv"]
+[ext_resource type="FontFile" uid="uid://calu4nwskqgpo" path="res://Fonts/Goodlight.otf" id="2_svk05"]
 
 [node name="QuestStepItem" type="Control"]
 custom_minimum_size = Vector2(0, 30)
@@ -23,15 +22,10 @@ layout_mode = 1
 anchors_preset = -1
 offset_left = 10.0
 offset_right = 205.0
-offset_bottom = 28.0
+offset_bottom = 12.08
 theme_override_colors/default_color = Color(1, 0.7227015, 0.41414726, 1)
-theme_override_fonts/normal_font = ExtResource("2_t4tfv")
-theme_override_font_sizes/normal_font_size = 16
+theme_override_fonts/normal_font = ExtResource("2_svk05")
+theme_override_fonts/mono_font = ExtResource("2_svk05")
+theme_override_font_sizes/normal_font_size = 6
 text = "Step"
 vertical_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(8, 8)
-texture = ExtResource("2_obf4j")
-hframes = 2

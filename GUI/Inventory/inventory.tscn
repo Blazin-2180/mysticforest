@@ -130,27 +130,21 @@ grow_vertical = 2
 texture = ExtResource("2_nebwj")
 expand_mode = 1
 
-[node name="TabContainer" type="TabContainer" parent="Control"]
+[node name="Inventory" type="Control" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 874.0
-offset_top = 22.0
-offset_right = -25.0
-offset_bottom = -19.0
+offset_top = 51.0
+offset_right = -28.0
+offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 2
-tab_alignment = 1
-current_tab = 0
-
-[node name="Inventory" type="Control" parent="Control/TabContainer"]
-layout_mode = 2
 mouse_filter = 2
 mouse_behavior_recursive = 1
-metadata/_tab_index = 0
 
-[node name="CharacterName" type="Label" parent="Control/TabContainer/Inventory"]
+[node name="CharacterName" type="Label" parent="Control/Inventory"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -164,7 +158,7 @@ text = "Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
+[node name="Panel" type="PanelContainer" parent="Control/Inventory"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.49400002
@@ -178,76 +172,76 @@ offset_bottom = 298.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
 
-[node name="GridContainer" type="GridContainer" parent="Control/TabContainer/Inventory/Panel"]
+[node name="GridContainer" type="GridContainer" parent="Control/Inventory/Panel"]
 layout_mode = 2
 columns = 5
 script = ExtResource("3_wlp85")
 data = ExtResource("4_wlp85")
 
-[node name="InventorySlot" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 focus_mode = 1
 mouse_filter = 2
 
-[node name="InventorySlot2" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot2" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 focus_neighbor_left = NodePath("../InventorySlot")
 
-[node name="InventorySlot3" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot3" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot4" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot4" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot5" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot5" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot6" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot6" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot7" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot7" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot8" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot8" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot9" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot9" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot10" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot10" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot11" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot11" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot12" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot12" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot13" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot13" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot14" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot14" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot15" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot15" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot16" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot16" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot17" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot17" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot18" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot18" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot19" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot19" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="InventorySlot20" parent="Control/TabContainer/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
+[node name="InventorySlot20" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
 
-[node name="ItemDescription" type="Label" parent="Control/TabContainer/Inventory"]
+[node name="ItemDescription" type="Label" parent="Control/Inventory"]
 layout_mode = 0
 offset_left = -152.0
 offset_top = 407.0
@@ -260,7 +254,7 @@ horizontal_alignment = 3
 autowrap_mode = 3
 justification_flags = 161
 
-[node name="Label2" type="Label" parent="Control/TabContainer/Inventory"]
+[node name="Label2" type="Label" parent="Control/Inventory"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.45700002
@@ -276,14 +270,14 @@ theme_override_font_sizes/font_size = 16
 text = "Inventory"
 horizontal_alignment = 1
 
-[node name="Stats" parent="Control/TabContainer/Inventory" instance=ExtResource("6_58q36")]
+[node name="Stats" parent="Control/Inventory" instance=ExtResource("6_58q36")]
 layout_mode = 0
 offset_left = -127.0
 offset_top = 72.0
 offset_right = -27.0
 offset_bottom = 156.0
 
-[node name="EquipmentPanel" type="PanelContainer" parent="Control/TabContainer/Inventory"]
+[node name="EquipmentPanel" type="PanelContainer" parent="Control/Inventory"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -296,160 +290,160 @@ grow_horizontal = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_58q36")
 
-[node name="GridContainer" type="GridContainer" parent="Control/TabContainer/Inventory/EquipmentPanel"]
+[node name="GridContainer" type="GridContainer" parent="Control/Inventory/EquipmentPanel"]
 layout_mode = 2
 columns = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Inventory/EquipmentPanel/GridContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Spacer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
+[node name="Spacer" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 focus_mode = 1
 mouse_filter = 2
 disabled = true
 
-[node name="HeadSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
+[node name="HeadSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 focus_mode = 1
 mouse_filter = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer/HeadSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer/HeadSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_s6ihr")
 
-[node name="Spacer2" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
+[node name="Spacer2" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_lgn1t")]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 focus_mode = 1
 mouse_filter = 2
 disabled = true
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="ShoulderSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
+[node name="ShoulderSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HBoxContainer/HeadSlot")
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2/ShoulderSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2/ShoulderSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_25srg")
 
-[node name="NeckSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
+[node name="NeckSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HBoxContainer/HeadSlot")
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2/NeckSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2/NeckSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_nebwj")
 
-[node name="BackSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
+[node name="BackSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_top = NodePath("../../HBoxContainer/HeadSlot")
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2/BackSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer2/BackSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_3hl7w")
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="HandSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
+[node name="HandSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3/HandSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3/HandSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_jggfy")
 
-[node name="ChestSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
+[node name="ChestSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3/ChestSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3/ChestSlot"]
 z_index = -1
-position = Vector2(24, 23)
+position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_0j5b8")
 
-[node name="Ring1Slot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
+[node name="Ring1Slot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3/Ring1Slot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3/Ring1Slot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_sriek")
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="WaistSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
+[node name="WaistSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4/WaistSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4/WaistSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_4b4r1")
 
-[node name="LegSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
+[node name="LegSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4/LegSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4/LegSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_75gpt")
 
-[node name="Ring2Slot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
+[node name="Ring2Slot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4/Ring2Slot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4/Ring2Slot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_bth1d")
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="MainHandSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
+[node name="MainHandSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5/MainHandSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5/MainHandSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_jiko3")
 
-[node name="FeetSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
+[node name="FeetSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5/FeetSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5/FeetSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_riwg3")
 
-[node name="OffHandSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
+[node name="OffHandSlot" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5" instance=ExtResource("3_lgn1t")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5/OffHandSlot"]
+[node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer5/OffHandSlot"]
 z_index = -1
 position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_2ee7r")
@@ -466,5 +460,5 @@ offset_bottom = 88.99997
 rotation = -0.8652173
 icon = ExtResource("8_m38iw")
 
-[connection signal="mouse_entered" from="Control/TabContainer/Inventory/Panel/GridContainer/InventorySlot" to="." method="_on_inventory_slot_mouse_entered"]
+[connection signal="mouse_entered" from="Control/Inventory/Panel/GridContainer/InventorySlot" to="." method="_on_inventory_slot_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

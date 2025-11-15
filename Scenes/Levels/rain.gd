@@ -18,11 +18,11 @@ func _ready() -> void :
 func _on_timer_timeout() -> void :
 	if current_weather == "None" :
 		current_weather = "Rain"
-		timer.wait_time = randi_range( 10, 30 ) # 10 seconds to 30 seconds
+		timer.wait_time = randi_range( 10, 120 ) # 10 seconds to 2 minutes
 		timer.start()
 	elif current_weather == "Rain" : 
 		current_weather = "None"
-		timer.wait_time = randi_range( 30, 60 ) #20 seconds to 60 seconds
+		timer.wait_time = randi_range( 300, 600 ) #5 minutes to 10 minutes
 		timer.start()
 	pass # Replace with function body.
 

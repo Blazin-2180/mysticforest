@@ -42,7 +42,7 @@ curve_z = SubResource("Curve_dehmj")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w7afh"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(700, 400, 0)
+emission_box_extents = Vector3(1280, 720, 0)
 gravity = Vector3(0, 3000, 0)
 scale_min = 0.19999999
 scale_over_velocity_curve = SubResource("CurveXYZTexture_wuihu")
@@ -52,26 +52,26 @@ alpha_curve = SubResource("CurveTexture_ikohj")
 [node name="Rain" type="GPUParticles2D"]
 z_index = 1
 material = SubResource("CanvasItemMaterial_nfdua")
-position = Vector2(40, 1)
+position = Vector2(1008, 477)
 amount = 1000
 lifetime = 0.5
 preprocess = 0.5
-visibility_rect = Rect2(-400, 0, 700, 700)
+visibility_rect = Rect2(-1000, -480, 1280, 720)
 process_material = SubResource("ParticleProcessMaterial_w7afh")
 script = ExtResource("1_i6pwh")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 1
-custom_minimum_size = Vector2(1280, 720)
+custom_minimum_size = Vector2(3840, 2160)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -358.0
-offset_top = -1.0
-offset_right = 282.0
-offset_bottom = 359.0
+offset_left = -1297.0
+offset_top = -610.0
+offset_right = 623.0
+offset_bottom = 470.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.05882353, 0, 0.54509807, 0.1764706)

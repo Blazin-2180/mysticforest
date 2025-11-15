@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqnutdbcsmtbt"]
 
 [ext_resource type="Script" uid="uid://ol6gmfuk1ysl" path="res://GUI/Inventory/Quests/quest_item.gd" id="1_jle2u"]
-[ext_resource type="FontFile" uid="uid://bcnxlrpjp5myd" path="res://Fonts/m5x7.ttf" id="2_js22w"]
+[ext_resource type="FontFile" uid="uid://calu4nwskqgpo" path="res://Fonts/Goodlight.otf" id="2_pjaic"]
 
 [node name="QuestItem" type="Button"]
 custom_minimum_size = Vector2(50, 20)
@@ -10,6 +10,7 @@ offset_bottom = 100.0
 script = ExtResource("1_jle2u")
 
 [node name="TitleLabel" type="Label" parent="."]
+modulate = Color(1, 0.72156864, 0.41568628, 1)
 layout_mode = 0
 offset_left = 5.0
 offset_top = 1.0
@@ -17,23 +18,10 @@ offset_right = 186.0
 offset_bottom = 22.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-theme_override_font_sizes/font_size = 11
+theme_override_fonts/font = ExtResource("2_pjaic")
+theme_override_font_sizes/font_size = 8
 text = "Quest Title"
 vertical_alignment = 1
 clip_text = true
 text_overrun_behavior = 4
 uppercase = true
-
-[node name="StepLabel" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 5.0
-offset_top = 24.0
-offset_right = 186.0
-offset_bottom = 96.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_js22w")
-theme_override_font_sizes/font_size = 16
-autowrap_mode = 3
-clip_text = true
-text_overrun_behavior = 4

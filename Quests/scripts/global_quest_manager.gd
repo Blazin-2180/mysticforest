@@ -13,20 +13,6 @@ func _ready() -> void:
 	gather_quest_data()
 	pass
 
-#Test Key
-#func _unhandled_input( event : InputEvent ) -> void:
-	#if event.is_action_pressed("test"):
-		##print(find_quest(load("res://Quests/quest_001.tres") as Quest ) )
-		##print(find_quest_by_title("tray-zurr"))
-		##print("get_quest_index_by_title : ", get_quest_index_by_title( "Tray-zurr" ))
-		##print("get_quest_index_by_title : ", get_quest_index_by_title( "Recover lost Tray-zurr" ))
-		##print("Before : ", current_quests )
-		#update_quest( "Tray-zurr", "Complete Quest", true )
-		##update_quest ("Recover lost Tray-zurr", "Step 1")
-		##print("After : ", current_quests )
-		##print ("================================")
-		#pass
-	#pass
 
 func gather_quest_data() -> void : 
 	#Gather all quest resources and add quests to array.
@@ -35,7 +21,6 @@ func gather_quest_data() -> void :
 	for q in quest_files :
 		quests.append( load(QUEST_DATA_LOCATION + "/" + q) as Quest )
 		pass
-	print( "Number of quests : ", quests.size() )
 
 
 #Update the status of a quest. !!! Give the quests an id instead of a title ?? !!!
@@ -72,6 +57,7 @@ func update_quest( _title : String, _completed_step : String = "", _is_complete 
 		else :
 			PlayerHud.queue_notification( "Quest Updated ", _title + " : " + _completed_step )
 	pass
+
 
 #Give exp and item rewards to player.
 func give_quest_rewards( _q : Quest ) -> void :

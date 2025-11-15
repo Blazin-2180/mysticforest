@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=5 format=3 uid="uid://bu03wy8r55wxe"]
+
+[ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_yi5lh"]
+[ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_7jvl8"]
+[ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_pdscs"]
+[ext_resource type="Texture2D" uid="uid://beql3lpiv6aoj" path="res://Sprites/items/test_armour.png" id="4_7jvl8"]
+
+[resource]
+script = ExtResource("3_pdscs")
+type = 11
+sprite_texture = ExtResource("4_7jvl8")
+metadata/_custom_type_script = "uid://cfxo73une4mka"

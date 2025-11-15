@@ -28,6 +28,7 @@ func _on_visible_changed() -> void :
 			# Connect to the focus entered of each quest
 			new_q_item.focus_entered.connect ( update_quest_details.bind( new_q_item.quest ) )
 			quest_item_container.get_child(0).grab_focus()
+			PlayerHud.quest_step_label.text = str(new_q_item)
 	pass
 
 func update_quest_details( q : Quest ) -> void :
@@ -35,6 +36,7 @@ func update_quest_details( q : Quest ) -> void :
 	clear_quest_details()
 	
 	title_label.text = q.title
+	PlayerHud.quest_title_label.text = q.title
 	description_label.text = q.description
 	
 	var quest_save = QuestManager.find_quest( q )

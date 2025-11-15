@@ -309,9 +309,9 @@ offset_right = 1215.0
 offset_bottom = 207.0
 theme_override_colors/font_color = Color(1, 0.72156864, 0.41568628, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("9_epht0")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 8
 text = "Quest Title"
 
 [node name="HSeparator" type="HSeparator" parent="."]
@@ -327,9 +327,8 @@ offset_right = 1272.0
 offset_bottom = 239.0
 theme_override_colors/font_color = Color(1, 0.72156864, 0.41568628, 1)
 theme_override_colors/font_outline_color = Color(0.9335894, 0.5779985, 3.85046e-07, 1)
-theme_override_constants/outline_size = 1
 theme_override_fonts/font = ExtResource("9_epht0")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 6
 text = "Quest Current Step"
 autowrap_mode = 3
 

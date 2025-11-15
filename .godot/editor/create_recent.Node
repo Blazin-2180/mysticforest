@@ -1,4 +1,5 @@
 Sprite2D
+NPC
 AudioStreamPlayer2D
 MarginContainer
 HBoxContainer
@@ -11,4 +12,3 @@ Button
 TextureRect
 TextureButton
 GridContainer
-Panel

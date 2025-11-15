@@ -1,7 +1,7 @@
-[gd_scene load_steps=51 format=3 uid="uid://d3qi426qtce4j"]
+[gd_scene load_steps=52 format=3 uid="uid://d3qi426qtce4j"]
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://qwbqcrr2manx" path="res://Sprites/characters/character_body.png" id="2_rcvs5"]
+[ext_resource type="Texture2D" uid="uid://cpxaena3qsbiq" path="res://Scenes/Player/00_character_body.png" id="2_h8ma5"]
 [ext_resource type="AudioStream" uid="uid://bxxt437inie8m" path="res://Audio/attack_swoosh.wav" id="3_06tpx"]
 [ext_resource type="Script" uid="uid://bjktkindt8svp" path="res://Scripts/Player/sprite.gd" id="3_rcvs5"]
 [ext_resource type="Script" uid="uid://di2d8abdhau6n" path="res://Scripts/Player/player_state_machine.gd" id="3_vgqql"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://brxrr4qykfen4" path="res://Scripts/Player/state_walk.gd" id="5_fkybt"]
 [ext_resource type="Texture2D" uid="uid://mwym77qlv1a4" path="res://Sprites/items/character_hands.png" id="5_h8ma5"]
 [ext_resource type="Script" uid="uid://b0q88dv6he4lg" path="res://Scripts/Player/state_attack.gd" id="6_3smsa"]
+[ext_resource type="Texture2D" uid="uid://bllf03jxyg0hm" path="res://Sprites/items/w_leather_belt.png" id="6_eksi1"]
 [ext_resource type="Texture2D" uid="uid://dciuf7kirykd2" path="res://Sprites/items/character_feet.png" id="6_jincj"]
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="7_8erm5"]
 [ext_resource type="Script" uid="uid://bdu7hwutibfjb" path="res://Scripts/Player/state_stun.gd" id="7_74mp2"]
@@ -291,7 +292,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_gymyn"]
 resource_name = "walk_down"
-length = 0.6
+length = 0.3
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -300,15 +301,15 @@ tracks/0/path = NodePath("Player_Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0, 2]
+"values": [9, 11]
 }
 
 [sub_resource type="Animation" id="Animation_pu2lt"]
 resource_name = "walk_side"
-length = 0.6
+length = 0.3
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -317,15 +318,15 @@ tracks/0/path = NodePath("Player_Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [6, 8]
+"values": [15, 17]
 }
 
 [sub_resource type="Animation" id="Animation_ukyrk"]
 resource_name = "walk_up"
-length = 0.6
+length = 0.3
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -334,10 +335,10 @@ tracks/0/path = NodePath("Player_Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [3, 5]
+"values": [12, 14]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_igrcy"]
@@ -613,9 +614,9 @@ script = ExtResource("1_cvnsp")
 
 [node name="Player_Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -21)
-texture = ExtResource("2_rcvs5")
+texture = ExtResource("2_h8ma5")
 hframes = 3
-vframes = 5
+vframes = 10
 script = ExtResource("3_rcvs5")
 
 [node name="head_sprite" type="Sprite2D" parent="Player_Sprite"]
@@ -625,16 +626,24 @@ script = ExtResource("3_rcvs5")
 [node name="back_sprite" type="Sprite2D" parent="Player_Sprite"]
 
 [node name="chest_sprite" type="Sprite2D" parent="Player_Sprite"]
+position = Vector2(1, 0)
 texture = ExtResource("4_h8ma5")
 hframes = 3
 vframes = 5
 
 [node name="hands_sprite" type="Sprite2D" parent="Player_Sprite"]
+position = Vector2(1, 0)
 texture = ExtResource("5_h8ma5")
 hframes = 3
 vframes = 5
 
+[node name="waist_sprite" type="Sprite2D" parent="Player_Sprite"]
+texture = ExtResource("6_eksi1")
+hframes = 3
+vframes = 10
+
 [node name="legs_sprite" type="Sprite2D" parent="Player_Sprite"]
+position = Vector2(1, 0)
 texture = ExtResource("5_eksi1")
 hframes = 3
 vframes = 5
@@ -644,6 +653,7 @@ vframes = 5
 [node name="mainhand_below_sprite" type="Sprite2D" parent="Player_Sprite"]
 
 [node name="feet_sprite" type="Sprite2D" parent="Player_Sprite"]
+position = Vector2(1, 0)
 texture = ExtResource("6_jincj")
 hframes = 3
 vframes = 5

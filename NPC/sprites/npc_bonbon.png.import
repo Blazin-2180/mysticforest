@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ndhmr6g2whvg"
-path="res://.godot/imported/player_levelup.png-4008ba04c0849da591cdb8cccf51ed13.ctex"
+uid="uid://bmurq1yv7css3"
+path="res://.godot/imported/npc_bonbon.png-ee428f32c044826e2c189d28847d68ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Player/player_levelup.png"
-dest_files=["res://.godot/imported/player_levelup.png-4008ba04c0849da591cdb8cccf51ed13.ctex"]
+source_file="res://NPC/sprites/npc_bonbon.png"
+dest_files=["res://.godot/imported/npc_bonbon.png-ee428f32c044826e2c189d28847d68ea.ctex"]
 
 [params]
 

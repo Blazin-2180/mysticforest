@@ -17,6 +17,7 @@ var focus_index : int = 0
 @onready var hand_slot: InventorySlotUI = %HandSlot
 @onready var chest_slot: InventorySlotUI = %ChestSlot
 @onready var ring_1_slot: InventorySlotUI = %Ring1Slot
+@onready var waist_slot: InventorySlotUI = %WaistSlot
 @onready var leg_slot: InventorySlotUI = %LegSlot
 @onready var ring_2_slot: InventorySlotUI = %Ring2Slot
 @onready var main_hand_slot: InventorySlotUI = %MainHandSlot
@@ -56,11 +57,12 @@ func update_inventory( apply_focus : bool = true ) -> void :
 	hand_slot.set_slot_data( e_slots[ 4 ])
 	chest_slot.set_slot_data( e_slots[ 5 ])
 	ring_1_slot.set_slot_data( e_slots[ 6 ])
-	leg_slot.set_slot_data( e_slots[ 7 ])
-	ring_2_slot.set_slot_data( e_slots[ 8 ])
-	main_hand_slot.set_slot_data( e_slots[ 9 ])
-	feet_slot.set_slot_data( e_slots[ 10 ])
-	off_hand_slot.set_slot_data( e_slots[ 11 ])
+	waist_slot.set_slot_data( e_slots [ 7 ])
+	leg_slot.set_slot_data( e_slots[ 8 ])
+	ring_2_slot.set_slot_data( e_slots[ 9 ])
+	main_hand_slot.set_slot_data( e_slots[ 10 ])
+	feet_slot.set_slot_data( e_slots[ 11 ])
+	off_hand_slot.set_slot_data( e_slots[ 12 ])
 		
 	if apply_focus :
 		get_child( 0 ).grab_focus()

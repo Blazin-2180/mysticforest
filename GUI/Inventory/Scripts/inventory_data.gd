@@ -3,7 +3,7 @@ class_name InventoryData extends Resource
 signal equipment_changed
 
 @export var slots : Array[ SlotData ]
-var equipment_slot_count : int = 12
+var equipment_slot_count : int = 13
 
 func _init() -> void:
 	connect_slots()

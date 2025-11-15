@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://d4cn8uy2jbf8v" path="res://NPC/npc.tscn" id="21_mn84x"]
 [ext_resource type="PackedScene" uid="uid://bvla1al4urdab" path="res://Interactables/dialog/dialog_interaction.tscn" id="27_a7186"]
 [ext_resource type="Resource" uid="uid://c0g726g2mb7u4" path="res://NPC/00_npcs/npc_sammy.tres" id="27_w5vv1"]
-[ext_resource type="PackedScene" uid="uid://w4wsau01imdh" path="res://Scenes/Bonbon/bonbon.tscn" id="28_4uyou"]
 [ext_resource type="Script" uid="uid://barr8eqv2majo" path="res://Interactables/dialog/scripts/dialog_choice.gd" id="28_v60p0"]
 [ext_resource type="Script" uid="uid://dmcfkt87u7iu5" path="res://Interactables/dialog/scripts/dialog_text.gd" id="28_w5vv1"]
 [ext_resource type="Script" uid="uid://csvjnhbmc8yd0" path="res://Interactables/dialog/scripts/dialog_branch.gd" id="29_d00wu"]
@@ -41,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://cwo4g57s01qrs" path="res://GeneralNodes/ItemDropper/ItemDropper.tscn" id="38_ddrdp"]
 [ext_resource type="Resource" uid="uid://44ymrr1jotwi" path="res://NPC/00_npcs/npc_blacksmith.tres" id="38_gppk4"]
 [ext_resource type="PackedScene" uid="uid://cvsou8yj36hxd" path="res://Scenes/torch.tscn" id="40_qp42o"]
+[ext_resource type="Resource" uid="uid://oljmr2chdqxc" path="res://NPC/00_npcs/npc_bonbon.tres" id="41_xvepx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cww87"]
 texture = ExtResource("4_gppk4")
@@ -1080,9 +1080,6 @@ item_data = ExtResource("20_ddrdp")
 position = Vector2(472, 159)
 item_data = ExtResource("20_gppk4")
 
-[node name="Bonbon" parent="." instance=ExtResource("28_4uyou")]
-position = Vector2(251, 216)
-
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
 position = Vector2(697, 179)
@@ -1118,6 +1115,7 @@ tile_map_data = PackedByteArray("AAD+/wAAAAAAAAUAAAAAAAAAAAAAAAUAAAA=")
 tile_set = SubResource("TileSet_d00wu")
 
 [node name="Sammy" parent="." instance=ExtResource("21_mn84x")]
+visible = false
 position = Vector2(343.3369, 133.58524)
 npc_resource = ExtResource("27_w5vv1")
 
@@ -1490,6 +1488,10 @@ Complete : false"
 [node name="ItemDropper" parent="." instance=ExtResource("38_ddrdp")]
 position = Vector2(330, 330)
 item_data = ExtResource("20_6a6p3")
+
+[node name="Bonbon" parent="." instance=ExtResource("21_mn84x")]
+position = Vector2(165, 252)
+npc_resource = ExtResource("41_xvepx")
 
 [connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]
 [connection signal="area_entered" from="Area2D" to="Area2D/QuestAdvanceTrigger" method="_on_area_2d_area_entered"]

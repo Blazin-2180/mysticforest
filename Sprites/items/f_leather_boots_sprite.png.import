@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc1ap7edafihq"
-path="res://.godot/imported/npc_vagabond.png-172be27ec217cfe56758082f17c56217.ctex"
+uid="uid://xg4w5hg3hujg"
+path="res://.godot/imported/f_leather_boots_sprite.png-34ba1f12e173aee9f4f39b03ae4aa48f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NPC/sprites/npc_vagabond.png"
-dest_files=["res://.godot/imported/npc_vagabond.png-172be27ec217cfe56758082f17c56217.ctex"]
+source_file="res://Sprites/items/f_leather_boots_sprite.png"
+dest_files=["res://.godot/imported/f_leather_boots_sprite.png-34ba1f12e173aee9f4f39b03ae4aa48f.ctex"]
 
 [params]
 

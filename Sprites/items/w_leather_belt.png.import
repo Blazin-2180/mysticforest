@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kr6jwob2b63n"
-path="res://.godot/imported/Sammy 2.png-f7925325488623bd8b4839cbf38e10d7.ctex"
+uid="uid://bllf03jxyg0hm"
+path="res://.godot/imported/w_leather_belt.png-0e53255c1897986976ab5e3d7bdebcc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NPC/sprites/Sammy 2.png"
-dest_files=["res://.godot/imported/Sammy 2.png-f7925325488623bd8b4839cbf38e10d7.ctex"]
+source_file="res://Sprites/items/w_leather_belt.png"
+dest_files=["res://.godot/imported/w_leather_belt.png-0e53255c1897986976ab5e3d7bdebcc3.ctex"]
 
 [params]
 

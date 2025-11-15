@@ -1,12 +1,17 @@
-[gd_scene load_steps=46 format=3 uid="uid://d3qi426qtce4j"]
+[gd_scene load_steps=51 format=3 uid="uid://d3qi426qtce4j"]
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://664eei4uv5rc" path="res://Scenes/Player/player_large.png" id="2_7g0yx"]
+[ext_resource type="Texture2D" uid="uid://qwbqcrr2manx" path="res://Sprites/characters/character_body.png" id="2_rcvs5"]
 [ext_resource type="AudioStream" uid="uid://bxxt437inie8m" path="res://Audio/attack_swoosh.wav" id="3_06tpx"]
+[ext_resource type="Script" uid="uid://bjktkindt8svp" path="res://Scripts/Player/sprite.gd" id="3_rcvs5"]
 [ext_resource type="Script" uid="uid://di2d8abdhau6n" path="res://Scripts/Player/player_state_machine.gd" id="3_vgqql"]
 [ext_resource type="Script" uid="uid://pdebiy7r1fvw" path="res://Scripts/Player/state_idle.gd" id="4_fkybt"]
+[ext_resource type="Texture2D" uid="uid://c88pewbtwki7b" path="res://Sprites/items/character_chest.png" id="4_h8ma5"]
+[ext_resource type="Texture2D" uid="uid://dry2hoajvpdwk" path="res://Sprites/items/character_legs.png" id="5_eksi1"]
 [ext_resource type="Script" uid="uid://brxrr4qykfen4" path="res://Scripts/Player/state_walk.gd" id="5_fkybt"]
+[ext_resource type="Texture2D" uid="uid://mwym77qlv1a4" path="res://Sprites/items/character_hands.png" id="5_h8ma5"]
 [ext_resource type="Script" uid="uid://b0q88dv6he4lg" path="res://Scripts/Player/state_attack.gd" id="6_3smsa"]
+[ext_resource type="Texture2D" uid="uid://dciuf7kirykd2" path="res://Sprites/items/character_feet.png" id="6_jincj"]
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="7_8erm5"]
 [ext_resource type="Script" uid="uid://bdu7hwutibfjb" path="res://Scripts/Player/state_stun.gd" id="7_74mp2"]
 [ext_resource type="Script" uid="uid://brnei34e0nbiu" path="res://Scripts/Player/player_interactions.gd" id="7_f1ek2"]
@@ -298,7 +303,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [9, 12]
+"values": [0, 2]
 }
 
 [sub_resource type="Animation" id="Animation_pu2lt"]
@@ -315,7 +320,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [17, 20]
+"values": [6, 8]
 }
 
 [sub_resource type="Animation" id="Animation_ukyrk"]
@@ -332,7 +337,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [13, 16]
+"values": [3, 5]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_igrcy"]
@@ -608,9 +613,44 @@ script = ExtResource("1_cvnsp")
 
 [node name="Player_Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -21)
-texture = ExtResource("2_7g0yx")
-hframes = 6
+texture = ExtResource("2_rcvs5")
+hframes = 3
 vframes = 5
+script = ExtResource("3_rcvs5")
+
+[node name="head_sprite" type="Sprite2D" parent="Player_Sprite"]
+
+[node name="shoulder_sprite" type="Sprite2D" parent="Player_Sprite"]
+
+[node name="back_sprite" type="Sprite2D" parent="Player_Sprite"]
+
+[node name="chest_sprite" type="Sprite2D" parent="Player_Sprite"]
+texture = ExtResource("4_h8ma5")
+hframes = 3
+vframes = 5
+
+[node name="hands_sprite" type="Sprite2D" parent="Player_Sprite"]
+texture = ExtResource("5_h8ma5")
+hframes = 3
+vframes = 5
+
+[node name="legs_sprite" type="Sprite2D" parent="Player_Sprite"]
+texture = ExtResource("5_eksi1")
+hframes = 3
+vframes = 5
+
+[node name="mainhand_above_sprite" type="Sprite2D" parent="Player_Sprite"]
+
+[node name="mainhand_below_sprite" type="Sprite2D" parent="Player_Sprite"]
+
+[node name="feet_sprite" type="Sprite2D" parent="Player_Sprite"]
+texture = ExtResource("6_jincj")
+hframes = 3
+vframes = 5
+
+[node name="offhand_above_sprite" type="Sprite2D" parent="Player_Sprite"]
+
+[node name="offhand_below_sprite" type="Sprite2D" parent="Player_Sprite"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Player_Sprite"]
 root_node = NodePath("../..")

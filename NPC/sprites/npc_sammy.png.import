@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci2n6nxhe2flf"
-path="res://.godot/imported/npc_sammy.png-3028eff0ed20b15f459ed24ec211eb86.ctex"
+uid="uid://n7i0isorcx1w"
+path="res://.godot/imported/npc_sammy.png-443cd210b1cfb2f921cc377b55c12c6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NPC/sprites/npc_sammy.png"
-dest_files=["res://.godot/imported/npc_sammy.png-3028eff0ed20b15f459ed24ec211eb86.ctex"]
+source_file="res://NPC/00_npcs/npc_sammy.png"
+dest_files=["res://.godot/imported/npc_sammy.png-443cd210b1cfb2f921cc377b55c12c6d.ctex"]
 
 [params]
 

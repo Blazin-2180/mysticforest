@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b5dvvx5p3kq2g" path="res://Scripts/Enemies/enemy.gd" id="1_wohw0"]
 [ext_resource type="Texture2D" uid="uid://0qh1wqvewbvb" path="res://Sprites/characters/Shadow.png" id="2_w6e41"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="2_wohw0"]
-[ext_resource type="Texture2D" uid="uid://or7hg5s6ftf5" path="res://Sprites/characters/Angryfloofs2.png" id="4_fkw3n"]
+[ext_resource type="Texture2D" uid="uid://or7hg5s6ftf5" path="res://Sprites/enemies/e_angry_floof.png" id="4_fkw3n"]
 [ext_resource type="Script" uid="uid://bb2jhgt0uk7te" path="res://Scripts/Enemies/enemy_state_machine.gd" id="5_1du7y"]
 [ext_resource type="Script" uid="uid://bohona2q58fhi" path="res://Scripts/Enemies/enemy_state_idle.gd" id="6_fkw3n"]
 [ext_resource type="Script" uid="uid://cuo1rq0p738w0" path="res://Scripts/Enemies/enemy_state_wander.gd" id="7_62558"]

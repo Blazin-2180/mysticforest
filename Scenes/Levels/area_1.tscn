@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://bpvi0vlqqdiw1"]
+[gd_scene load_steps=54 format=4 uid="uid://bpvi0vlqqdiw1"]
 
 [ext_resource type="Script" uid="uid://cgber4d504wqr" path="res://Scripts/Levels/level.gd" id="1_nwo41"]
 [ext_resource type="Texture2D" uid="uid://cl4halcwdd6mt" path="res://Sprites/tilesets/plains_large.png" id="4_gppk4"]
@@ -14,8 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://bfw0dhtlicetb" path="res://Scenes/Levels/save_point.tscn" id="17_bl5d6"]
 [ext_resource type="PackedScene" uid="uid://ko0e6lwp7y65" path="res://Scenes/Enemies/green_gloop.tscn" id="18_30j8n"]
 [ext_resource type="Resource" uid="uid://bbsj5phjad5en" path="res://Items/potion.tres" id="18_boegt"]
+[ext_resource type="Resource" uid="uid://d138oqediy1g" path="res://Items/l_test_trousers.tres" id="18_xvepx"]
 [ext_resource type="PackedScene" uid="uid://dqe5flm3nfmwm" path="res://Interactables/TreasureChest/treasure_chest.tscn" id="19_boegt"]
+[ext_resource type="Resource" uid="uid://dbmroypdyotsf" path="res://Items/c_test_chest.tres" id="19_nfdua"]
 [ext_resource type="Resource" uid="uid://bd5tv50ifyd54" path="res://Items/sammys_treasure.tres" id="20_6a6p3"]
+[ext_resource type="Resource" uid="uid://cbofep0m8opll" path="res://Items/h_test_gloves.tres" id="20_ddrdp"]
+[ext_resource type="Resource" uid="uid://5s78epld1wp" path="res://Items/f_test_boots.tres" id="20_gppk4"]
 [ext_resource type="PackedScene" uid="uid://d4cn8uy2jbf8v" path="res://NPC/npc.tscn" id="21_mn84x"]
 [ext_resource type="PackedScene" uid="uid://bvla1al4urdab" path="res://Interactables/dialog/dialog_interaction.tscn" id="27_a7186"]
 [ext_resource type="Resource" uid="uid://c0g726g2mb7u4" path="res://NPC/00_npcs/npc_sammy.tres" id="27_w5vv1"]
@@ -28,7 +32,6 @@
 [ext_resource type="Script" uid="uid://bjn2dibwtkeq1" path="res://Quests/utility_nodes/quest_activated_switch.gd" id="32_p87po"]
 [ext_resource type="AudioStream" uid="uid://p3geyldqfb3s" path="res://Audio/example_music_01.ogg" id="33_p87po"]
 [ext_resource type="Resource" uid="uid://8d3h5a02wpms" path="res://Quests/quest_002.tres" id="33_v60p0"]
-[ext_resource type="Resource" uid="uid://dcjnbduc0kgal" path="res://Items/b_cloak.tres" id="34_v60p0"]
 [ext_resource type="PackedScene" uid="uid://c7mmiy5ff1i6o" path="res://Quests/utility_nodes/quest_activated_switch.tscn" id="34_xkhu6"]
 [ext_resource type="Resource" uid="uid://d0idvs68ca4tk" path="res://Items/b_cloak_dark.tres" id="35_v60p0"]
 [ext_resource type="Script" uid="uid://cmfd1h7if1agl" path="res://GeneralNodes/EnemyCounter/enemy_counter.gd" id="36_cww87"]
@@ -1037,8 +1040,24 @@ position = Vector2(594, 147)
 item_data = ExtResource("18_boegt")
 
 [node name="ItemPickup2" parent="." instance=ExtResource("17_30j8n")]
-position = Vector2(224, 163)
+position = Vector2(366, 382)
 item_data = ExtResource("18_boegt")
+
+[node name="Gloves" parent="." instance=ExtResource("17_30j8n")]
+position = Vector2(113, 117)
+item_data = ExtResource("20_ddrdp")
+
+[node name="Boots" parent="." instance=ExtResource("17_30j8n")]
+position = Vector2(177, 116)
+item_data = ExtResource("20_gppk4")
+
+[node name="Legs" parent="." instance=ExtResource("17_30j8n")]
+position = Vector2(144, 116)
+item_data = ExtResource("18_xvepx")
+
+[node name="Chest" parent="." instance=ExtResource("17_30j8n")]
+position = Vector2(204, 116)
+item_data = ExtResource("19_nfdua")
 
 [node name="treasure_chest" parent="." instance=ExtResource("19_boegt")]
 position = Vector2(705, 159)
@@ -1055,11 +1074,11 @@ Complete : false"
 
 [node name="treasure_chest2" parent="." instance=ExtResource("19_boegt")]
 position = Vector2(402, 159)
-item_data = ExtResource("18_boegt")
+item_data = ExtResource("20_ddrdp")
 
 [node name="treasure_chest3" parent="." instance=ExtResource("19_boegt")]
 position = Vector2(472, 159)
-item_data = ExtResource("34_v60p0")
+item_data = ExtResource("20_gppk4")
 
 [node name="Bonbon" parent="." instance=ExtResource("28_4uyou")]
 position = Vector2(251, 216)

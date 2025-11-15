@@ -1,3 +1,4 @@
+Sprite2D
 AudioStreamPlayer2D
 MarginContainer
 HBoxContainer
@@ -9,7 +10,5 @@ HSeparator
 Button
 TextureRect
 TextureButton
-Sprite2D
 GridContainer
 Panel
-VBoxContainer

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://d1h4nx8w8rrnp"]
+
+[ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_q7d7v"]
+[ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_afjol"]
+[ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_coq0o"]
+[ext_resource type="Texture2D" uid="uid://dry2hoajvpdwk" path="res://Sprites/items/character_legs.png" id="4_afjol"]
+
+[sub_resource type="Resource" id="Resource_coq0o"]
+script = ExtResource("2_afjol")
+type = 1
+metadata/_custom_type_script = "uid://bp4smcxq30eoh"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_biqdl"]
+atlas = ExtResource("4_afjol")
+region = Rect2(16, 24, 32, 32)
+
+[resource]
+script = ExtResource("3_coq0o")
+type = 7
+modifiers = Array[ExtResource("2_afjol")]([SubResource("Resource_coq0o")])
+sprite_texture = ExtResource("4_afjol")
+name = "Test Trousers"
+description = "Test"
+texture = SubResource("AtlasTexture_biqdl")
+metadata/_custom_type_script = "uid://cfxo73une4mka"

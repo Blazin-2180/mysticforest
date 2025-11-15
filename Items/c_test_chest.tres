@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://dbmroypdyotsf"]
+
+[ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_i7f7l"]
+[ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_oioqa"]
+[ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_xja3k"]
+[ext_resource type="Texture2D" uid="uid://b8wjfvapneo8b" path="res://Sprites/items/c_test_chest.png" id="4_i7f7l"]
+
+[sub_resource type="Resource" id="Resource_ynjsa"]
+script = ExtResource("2_oioqa")
+type = 1
+value = 2
+metadata/_custom_type_script = "uid://bp4smcxq30eoh"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnqxo"]
+atlas = ExtResource("4_i7f7l")
+region = Rect2(16, 16, 32, 32)
+
+[resource]
+script = ExtResource("3_xja3k")
+type = 5
+modifiers = Array[ExtResource("2_oioqa")]([SubResource("Resource_ynjsa")])
+sprite_texture = ExtResource("4_i7f7l")
+name = "Leather Chest"
+description = "Basic leather chest"
+texture = SubResource("AtlasTexture_mnqxo")
+metadata/_custom_type_script = "uid://cfxo73une4mka"

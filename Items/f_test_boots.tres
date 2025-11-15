@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_m8ck3"]
 [ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_glcxp"]
 [ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_weqc8"]
-[ext_resource type="Texture2D" uid="uid://djrws1d7tmv4m" path="res://Sprites/items/character_feet_test.png" id="4_glcxp"]
+[ext_resource type="Texture2D" uid="uid://b7womftip0j3d" path="res://Sprites/items/f_test_boots.png" id="4_glcxp"]
 
 [sub_resource type="Resource" id="Resource_weqc8"]
 script = ExtResource("2_glcxp")
@@ -15,7 +15,7 @@ region = Rect2(16, 32, 32, 32)
 
 [resource]
 script = ExtResource("3_weqc8")
-type = 10
+type = 11
 modifiers = Array[ExtResource("2_glcxp")]([SubResource("Resource_weqc8")])
 sprite_texture = ExtResource("4_glcxp")
 name = "Test Boots"

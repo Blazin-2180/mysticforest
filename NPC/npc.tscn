@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://d4cn8uy2jbf8v"]
 
 [ext_resource type="Script" uid="uid://b67kv4oru7vil" path="res://NPC/scripts/npc.gd" id="1_asys0"]
-[ext_resource type="Texture2D" uid="uid://bmurq1yv7css3" path="res://NPC/sprites/npc_bonbon.png" id="2_3etx6"]
+[ext_resource type="Texture2D" uid="uid://bpf84hq7kmruv" path="res://NPC/sprites/npc_sammy_large.png" id="2_3etx6"]
 [ext_resource type="Texture2D" uid="uid://0qh1wqvewbvb" path="res://Sprites/characters/Shadow.png" id="3_k1h6f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6swda"]

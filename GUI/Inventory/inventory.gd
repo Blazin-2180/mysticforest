@@ -77,16 +77,6 @@ func play_audio( audio : AudioStream ) -> void :
 	pass
 
 
-#func change_tab( _i : int = 1 ) -> void :
-	#tab_container.current_tab = wrapi(
-		#tab_container.current_tab + _i,
-		#0,
-		#tab_container.get_tab_count()
-	#)
-	#tab_container.get_tab_bar().grab_focus()
-	#pass
-
-
 func preview_stats( item : ItemData) -> void : 
 	preview_stats_changed.emit( item )
 	pass

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://sx10ttkyxwwi"]
 
 [ext_resource type="Script" uid="uid://b5fndcile2ur2" path="res://Scripts/Levels/player_spawn.gd" id="1_lyuil"]
-[ext_resource type="Texture2D" uid="uid://664eei4uv5rc" path="res://Scenes/Player/player_large.png" id="2_2ydhn"]
+[ext_resource type="Texture2D" uid="uid://cpxaena3qsbiq" path="res://Scenes/Player/00_character_body.png" id="2_2ydhn"]
 
 [node name="PlayerSpawn" type="Node2D"]
 script = ExtResource("1_lyuil")

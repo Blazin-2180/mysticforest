@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dg5ste7ke42e0" path="res://NPC/scripts/npc_resource.gd" id="1_lyti6"]
 [ext_resource type="Texture2D" uid="uid://isepk5tn0sc3" path="res://GUI/dialog_system/sprites/sammy_portrait.png" id="1_mo7ix"]
-[ext_resource type="Texture2D" uid="uid://ci2n6nxhe2flf" path="res://NPC/sprites/npc_sammy.png" id="3_mo7ix"]
+
+[sub_resource type="Resource" id="Resource_lyti6"]
+metadata/__load_path__ = "res://NPC/sprites/npc_sammy.png"
 
 [resource]
 script = ExtResource("1_lyti6")
 npc_name = "Sammy"
-sprite = ExtResource("3_mo7ix")
+sprite = SubResource("Resource_lyti6")
 portrait = ExtResource("1_mo7ix")
 metadata/_custom_type_script = "uid://dg5ste7ke42e0"

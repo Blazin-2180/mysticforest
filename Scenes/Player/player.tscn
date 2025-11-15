@@ -5,16 +5,16 @@
 [ext_resource type="AudioStream" uid="uid://bxxt437inie8m" path="res://Audio/attack_swoosh.wav" id="3_06tpx"]
 [ext_resource type="Script" uid="uid://bjktkindt8svp" path="res://Scripts/Player/sprite.gd" id="3_rcvs5"]
 [ext_resource type="Script" uid="uid://di2d8abdhau6n" path="res://Scripts/Player/player_state_machine.gd" id="3_vgqql"]
+[ext_resource type="Texture2D" uid="uid://b15jfr821rohw" path="res://Sprites/items/c_cloth_tunic.png" id="4_eksi1"]
 [ext_resource type="Script" uid="uid://pdebiy7r1fvw" path="res://Scripts/Player/state_idle.gd" id="4_fkybt"]
-[ext_resource type="Texture2D" uid="uid://c88pewbtwki7b" path="res://Sprites/items/character_chest.png" id="4_h8ma5"]
-[ext_resource type="Texture2D" uid="uid://dry2hoajvpdwk" path="res://Sprites/items/character_legs.png" id="5_eksi1"]
+[ext_resource type="Texture2D" uid="uid://bj7fsi3mh3ema" path="res://Sprites/items/h_leather_gloves.png" id="5_eksi1"]
 [ext_resource type="Script" uid="uid://brxrr4qykfen4" path="res://Scripts/Player/state_walk.gd" id="5_fkybt"]
-[ext_resource type="Texture2D" uid="uid://mwym77qlv1a4" path="res://Sprites/items/character_hands.png" id="5_h8ma5"]
 [ext_resource type="Script" uid="uid://b0q88dv6he4lg" path="res://Scripts/Player/state_attack.gd" id="6_3smsa"]
 [ext_resource type="Texture2D" uid="uid://bllf03jxyg0hm" path="res://Sprites/items/w_leather_belt.png" id="6_eksi1"]
-[ext_resource type="Texture2D" uid="uid://dciuf7kirykd2" path="res://Sprites/items/character_feet.png" id="6_jincj"]
+[ext_resource type="Texture2D" uid="uid://dciuf7kirykd2" path="res://Sprites/items/f_leather_boots.png" id="6_jincj"]
 [ext_resource type="PackedScene" uid="uid://ct2q7q6w76wi4" path="res://GeneralNodes/HurtBox/hurt_box.tscn" id="7_8erm5"]
 [ext_resource type="Script" uid="uid://bdu7hwutibfjb" path="res://Scripts/Player/state_stun.gd" id="7_74mp2"]
+[ext_resource type="Texture2D" uid="uid://cnqttdayapacn" path="res://Sprites/items/l_leather_trousers.png" id="7_eksi1"]
 [ext_resource type="Script" uid="uid://brnei34e0nbiu" path="res://Scripts/Player/player_interactions.gd" id="7_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="8_8erm5"]
 [ext_resource type="Script" uid="uid://c8xxiqc1vb6ht" path="res://Scripts/Player/state_death.gd" id="9_7g0yx"]
@@ -48,6 +48,54 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Sprite/chest_sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player_Sprite/legs_sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player_Sprite/hands_sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player_Sprite/feet_sprite:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_7dp3o"]
@@ -207,6 +255,54 @@ tracks/0/keys = {
 "update": 1,
 "values": [0, 1, 2]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite/chest_sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Sprite/legs_sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player_Sprite/feet_sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player_Sprite/hands_sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_f1ek2"]
 resource_name = "idle_side"
@@ -224,6 +320,54 @@ tracks/0/keys = {
 "update": 1,
 "values": [6, 7, 8]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite/chest_sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player_Sprite/legs_sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.04205659),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player_Sprite/hands_sprite:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.32021284),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player_Sprite/feet_sprite:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.042978313),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_tx1dd"]
 resource_name = "idle_up"
@@ -240,6 +384,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player_Sprite/chest_sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_06tpx"]
@@ -627,36 +783,34 @@ script = ExtResource("3_rcvs5")
 
 [node name="chest_sprite" type="Sprite2D" parent="Player_Sprite"]
 position = Vector2(1, 0)
-texture = ExtResource("4_h8ma5")
+texture = ExtResource("4_eksi1")
 hframes = 3
-vframes = 5
+vframes = 10
 
 [node name="hands_sprite" type="Sprite2D" parent="Player_Sprite"]
-position = Vector2(1, 0)
-texture = ExtResource("5_h8ma5")
-hframes = 3
-vframes = 5
-
-[node name="waist_sprite" type="Sprite2D" parent="Player_Sprite"]
-texture = ExtResource("6_eksi1")
+texture = ExtResource("5_eksi1")
 hframes = 3
 vframes = 10
 
 [node name="legs_sprite" type="Sprite2D" parent="Player_Sprite"]
-position = Vector2(1, 0)
-texture = ExtResource("5_eksi1")
+texture = ExtResource("7_eksi1")
 hframes = 3
-vframes = 5
+vframes = 10
+
+[node name="waist_sprite" type="Sprite2D" parent="Player_Sprite"]
+position = Vector2(1, 16)
+texture = ExtResource("6_eksi1")
+hframes = 3
+vframes = 10
 
 [node name="mainhand_above_sprite" type="Sprite2D" parent="Player_Sprite"]
 
 [node name="mainhand_below_sprite" type="Sprite2D" parent="Player_Sprite"]
 
 [node name="feet_sprite" type="Sprite2D" parent="Player_Sprite"]
-position = Vector2(1, 0)
 texture = ExtResource("6_jincj")
 hframes = 3
-vframes = 5
+vframes = 10
 
 [node name="offhand_above_sprite" type="Sprite2D" parent="Player_Sprite"]
 

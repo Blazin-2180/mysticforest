@@ -373,7 +373,7 @@ layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3/HandSlot"]
 z_index = -1
-position = Vector2(24, 23)
+position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_jggfy")
 
 [node name="ChestSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer3" instance=ExtResource("3_lgn1t")]
@@ -403,7 +403,7 @@ layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4/WaistSlot"]
 z_index = -1
-position = Vector2(24, 23)
+position = Vector2(24, 24)
 texture = SubResource("AtlasTexture_4b4r1")
 
 [node name="LegSlot" parent="Control/TabContainer/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer4" instance=ExtResource("3_lgn1t")]

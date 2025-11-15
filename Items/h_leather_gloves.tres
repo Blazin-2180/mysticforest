@@ -4,16 +4,13 @@
 [ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_nbvku"]
 [ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_tx8at"]
 [ext_resource type="Texture2D" uid="uid://mwym77qlv1a4" path="res://Sprites/items/character_hands.png" id="4_nbvku"]
+[ext_resource type="Texture2D" uid="uid://dkqcl5a6eajda" path="res://Sprites/items/h_leather_gloves_sprite.png" id="5_tx8at"]
 
 [sub_resource type="Resource" id="Resource_tx8at"]
 script = ExtResource("2_nbvku")
 type = 1
 value = 0
 metadata/_custom_type_script = "uid://bp4smcxq30eoh"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6fpko"]
-atlas = ExtResource("4_nbvku")
-region = Rect2(16, 24, 32, 32)
 
 [resource]
 script = ExtResource("3_tx8at")
@@ -22,5 +19,5 @@ modifiers = Array[ExtResource("2_nbvku")]([SubResource("Resource_tx8at")])
 sprite_texture = ExtResource("4_nbvku")
 name = "Leather Gloves"
 description = "So threadbare they are barely of any use."
-texture = SubResource("AtlasTexture_6fpko")
+texture = ExtResource("5_tx8at")
 metadata/_custom_type_script = "uid://cfxo73une4mka"

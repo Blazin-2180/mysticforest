@@ -131,20 +131,23 @@ func equip_item ( slot : SlotData ) -> void :
 		EquipableItemData.Type.RING1 :
 			equipment_index += 6
 			pass
-		EquipableItemData.Type.LEGS :
-			equipment_index += 7
+		EquipableItemData.Type.WAIST:
+			equipment_index = 7
 			pass
-		EquipableItemData.Type.RING2 :
+		EquipableItemData.Type.LEGS :
 			equipment_index += 8
 			pass
-		EquipableItemData.Type.MAINHAND :
+		EquipableItemData.Type.RING2 :
 			equipment_index += 9
 			pass
-		EquipableItemData.Type.FEET :
+		EquipableItemData.Type.MAINHAND :
 			equipment_index += 10
 			pass
-		EquipableItemData.Type.OFFHAND :
+		EquipableItemData.Type.FEET :
 			equipment_index += 11
+			pass
+		EquipableItemData.Type.OFFHAND :
+			equipment_index += 12
 			pass
 
 	var unequiped_slot : SlotData = slots[ equipment_index ]

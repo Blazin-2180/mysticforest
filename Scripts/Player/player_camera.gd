@@ -23,6 +23,7 @@ func update_limits ( bounds  : Array [ Vector2 ]) -> void :
 	pass
 
 func _physics_process( delta : float) -> void:
+	zoom()
 	if shake_trauma > 0 :
 		shake_trauma = max( shake_trauma - shake_decay * delta, 0 )
 		shake()
@@ -37,3 +38,9 @@ func shake() -> void :
 	var amount : float = pow( shake_trauma * shake_power, 2 )
 	offset = Vector2( randf_range( -1, 1), randf_range( -1, 1) ) * shake_max_offset * amount
 	pass
+
+func zoom():
+	if Input.is_action_just_released("wheel_down"):
+		set_zoom(get_zoom() - Vector2(0.25, 0.25))
+	if Input.is_action_just_released("wheel_up"): #and get_zoom() > Vector2.ONE:
+		set_zoom(get_zoom() + Vector2(0.25, 0.25))

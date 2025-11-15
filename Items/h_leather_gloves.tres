@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_ajsfe"]
 [ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_nbvku"]
 [ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_tx8at"]
-[ext_resource type="Texture2D" uid="uid://mwym77qlv1a4" path="res://Sprites/items/character_hands.png" id="4_nbvku"]
+[ext_resource type="Texture2D" uid="uid://bj7fsi3mh3ema" path="res://Sprites/items/h_leather_gloves.png" id="4_tx8at"]
 [ext_resource type="Texture2D" uid="uid://dkqcl5a6eajda" path="res://Sprites/items/h_leather_gloves_sprite.png" id="5_tx8at"]
 
 [sub_resource type="Resource" id="Resource_tx8at"]
@@ -16,7 +16,7 @@ metadata/_custom_type_script = "uid://bp4smcxq30eoh"
 script = ExtResource("3_tx8at")
 type = 4
 modifiers = Array[ExtResource("2_nbvku")]([SubResource("Resource_tx8at")])
-sprite_texture = ExtResource("4_nbvku")
+sprite_texture = ExtResource("4_tx8at")
 name = "Leather Gloves"
 description = "So threadbare they are barely of any use."
 texture = ExtResource("5_tx8at")

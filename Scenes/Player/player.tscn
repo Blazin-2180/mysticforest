@@ -115,7 +115,7 @@ tracks/6/keys = {
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Player_Sprite/back_sprite:position")
+tracks/7/path = NodePath("Player_Sprite/back_below_sprite:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
@@ -345,7 +345,7 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Player_Sprite/back_sprite:position")
+tracks/6/path = NodePath("Player_Sprite/back_below_sprite:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
@@ -830,11 +830,6 @@ script = ExtResource("3_rcvs5")
 
 [node name="shoulder_sprite" type="Sprite2D" parent="Player_Sprite"]
 
-[node name="back_sprite" type="Sprite2D" parent="Player_Sprite"]
-texture = ExtResource("4_qr1w5")
-hframes = 3
-vframes = 10
-
 [node name="chest_sprite" type="Sprite2D" parent="Player_Sprite"]
 texture = ExtResource("4_eksi1")
 hframes = 3
@@ -845,6 +840,11 @@ texture = ExtResource("5_eksi1")
 hframes = 3
 vframes = 10
 
+[node name="back_above_sprite" type="Sprite2D" parent="Player_Sprite"]
+texture = ExtResource("4_qr1w5")
+hframes = 3
+vframes = 10
+
 [node name="legs_sprite" type="Sprite2D" parent="Player_Sprite"]
 texture = ExtResource("7_eksi1")
 hframes = 3
@@ -852,6 +852,11 @@ vframes = 10
 
 [node name="waist_sprite" type="Sprite2D" parent="Player_Sprite"]
 texture = ExtResource("6_eksi1")
+hframes = 3
+vframes = 10
+
+[node name="back_below_sprite" type="Sprite2D" parent="Player_Sprite"]
+texture = ExtResource("4_qr1w5")
 hframes = 3
 vframes = 10
 

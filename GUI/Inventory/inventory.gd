@@ -2,11 +2,12 @@ extends CanvasLayer
 
 #region /// Variables
 var inventory_show : bool = false
+
 #endregion
 
 #region /// On Ready Variables
 @onready var inventory_slot: Button = $Control/Inventory/Panel/GridContainer/InventorySlot
-@onready var item_description: Label = $Control/Inventory/ItemDescription	
+@onready var item_description: Label = $Control/Inventory/ItemDescription
 @onready var tab_container: TabContainer = $Control/TabContainer
 @onready var audio_stream : AudioStreamPlayer = $AudioStreamPlayer
 @onready var character_name: Label = $Control/Inventory/CharacterName
@@ -16,6 +17,8 @@ var inventory_show : bool = false
 signal shown
 signal hidden
 signal preview_stats_changed ( item : ItemData )
+#Dragable Inventory Items
+
 #endregion
 
 func _ready() -> void:
@@ -36,6 +39,7 @@ func show_inventory () -> void :
 	visible = true
 	inventory_show = true
 	character_name.text = GlobalPlayerManager.character_name
+	Inventory.process_mode = Node.PROCESS_MODE_ALWAYS
 	shown.emit()
 
 
@@ -59,15 +63,6 @@ func focus_item_changed( slot : SlotData ) -> void :
 		preview_stats( null )
 	pass
 
-
-func _on_load_pressed () -> void :
-	GlobalSaveManager.load_game()
-	await GlobalLevelManager.level_load_started
-	pass
-
-
-func _on_button_exit_pressed() -> void:
-	get_tree().quit()
 
 
 func play_audio( audio : AudioStream ) -> void :

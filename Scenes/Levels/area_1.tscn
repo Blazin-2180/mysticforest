@@ -976,7 +976,6 @@ script = ExtResource("1_nwo41")
 music = ExtResource("33_p87po")
 
 [node name="DayNight" parent="." instance=ExtResource("42_nfdua")]
-visible = false
 position = Vector2(14, -47)
 
 [node name="Ground" type="TileMapLayer" parent="."]

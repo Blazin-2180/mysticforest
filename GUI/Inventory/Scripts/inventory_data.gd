@@ -101,6 +101,13 @@ func use_item( item : ItemData, count : int = 1) -> bool :
 	return false
 
 
+func swap_items_by_index( index1 : int, index2 : int ) -> void :
+	var temp : SlotData = slots[ index1 ]
+	slots[ index1 ] = slots[ index2 ]
+	slots[ index2 ] = temp
+	pass
+
+
 func equip_item ( slot : SlotData ) -> void :
 	if slot == null || !slot.item_data is EquipableItemData :
 		return

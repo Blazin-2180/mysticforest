@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://buj7g0kdkywyt"]
+[gd_scene load_steps=27 format=3 uid="uid://buj7g0kdkywyt"]
 
 [ext_resource type="Script" uid="uid://b4h3excicddvf" path="res://GUI/Inventory/inventory.gd" id="1_btv15"]
 [ext_resource type="Texture2D" uid="uid://doxp5pfvb3mja" path="res://GUI/Sprites/Panel.png" id="2_nebwj"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://cqeukq4gf601u" path="res://GUI/Inventory/player_inventory.tres" id="4_wlp85"]
 [ext_resource type="PackedScene" uid="uid://bx3h406wgpg83" path="res://GUI/Inventory/Stats/stats.tscn" id="6_58q36"]
 [ext_resource type="Texture2D" uid="uid://ca13qmgad2skr" path="res://GUI/Sprites/inventory_icons.png" id="7_s6ihr"]
+[ext_resource type="Script" uid="uid://bkwgtq33bnvfx" path="res://GUI/Inventory/hover_item_description.gd" id="8_25srg"]
 [ext_resource type="Texture2D" uid="uid://dyc6o5fjjpch2" path="res://GUI/Sprites/Close_Button.png" id="8_m38iw"]
 [ext_resource type="FontFile" uid="uid://bcnxlrpjp5myd" path="res://Fonts/m5x7.ttf" id="12_75gpt"]
 
@@ -84,20 +85,16 @@ atlas = ExtResource("7_s6ihr")
 region = Rect2(0, 32, 32, 32)
 
 [node name="Inventory" type="CanvasLayer"]
-process_mode = 3
-layer = 2
+layer = 3
 script = ExtResource("1_btv15")
 
 [node name="Control" type="Control" parent="."]
-process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-mouse_behavior_recursive = 1
 
 [node name="SidePanel" type="TextureRect" parent="Control"]
 y_sort_enabled = true
@@ -141,8 +138,7 @@ offset_right = -28.0
 offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-mouse_behavior_recursive = 1
+mouse_filter = 1
 
 [node name="CharacterName" type="Label" parent="Control/Inventory"]
 layout_mode = 1
@@ -169,7 +165,6 @@ offset_left = -138.214
 offset_top = 80.0
 offset_right = 132.786
 offset_bottom = 298.0
-mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_2cw0n")
 
 [node name="GridContainer" type="GridContainer" parent="Control/Inventory/Panel"]
@@ -180,8 +175,6 @@ data = ExtResource("4_wlp85")
 
 [node name="InventorySlot" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
-focus_mode = 1
-mouse_filter = 2
 
 [node name="InventorySlot2" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
@@ -192,6 +185,20 @@ layout_mode = 2
 
 [node name="InventorySlot4" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
+
+[node name="ItemDescription2" type="Label" parent="Control/Inventory/Panel/GridContainer/InventorySlot4"]
+layout_mode = 0
+offset_left = -363.51807
+offset_top = -4.0
+offset_right = -219.51807
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(1, 0.7227015, 0.41414726, 1)
+theme_override_fonts/font = ExtResource("12_75gpt")
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 3
+autowrap_mode = 3
+justification_flags = 161
+script = ExtResource("8_25srg")
 
 [node name="InventorySlot5" parent="Control/Inventory/Panel/GridContainer" instance=ExtResource("3_lgn1t")]
 layout_mode = 2
@@ -253,6 +260,7 @@ theme_override_font_sizes/font_size = 20
 horizontal_alignment = 3
 autowrap_mode = 3
 justification_flags = 161
+script = ExtResource("8_25srg")
 
 [node name="Label2" type="Label" parent="Control/Inventory"]
 layout_mode = 1
@@ -311,7 +319,6 @@ disabled = true
 unique_name_in_owner = true
 layout_mode = 2
 focus_mode = 1
-mouse_filter = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/Inventory/EquipmentPanel/GridContainer/VBoxContainer/HBoxContainer/HeadSlot"]
 z_index = -1

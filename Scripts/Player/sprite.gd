@@ -4,7 +4,8 @@ const FRAME_COUNT : int = 10
 
 #@onready var head_sprite: Sprite2D = $head_sprite
 #@onready var shoulder_sprite: Sprite2D = $shoulder_sprite
-@onready var back_sprite: Sprite2D = $back_sprite
+@onready var back_above_sprite: Sprite2D = $back_above_sprite
+@onready var back_below_sprite: Sprite2D = $back_below_sprite
 @onready var hands_sprite: Sprite2D = $hands_sprite
 @onready var chest_sprite: Sprite2D = $chest_sprite
 @onready var waist_sprite : Sprite2D = $waist_sprite
@@ -24,7 +25,8 @@ func _ready() -> void:
 func _process( _delta : float ) -> void:
 	#head_sprite.frame = frame
 	#shoulder_sprite.frame = frame
-	back_sprite.frame = frame
+	back_above_sprite.frame = frame
+	back_below_sprite.frame = frame
 	hands_sprite.frame = frame
 	chest_sprite.frame = frame
 	waist_sprite.frame = frame
@@ -40,7 +42,8 @@ func _on_equipment_changed() -> void :
 	var equipment : Array[ SlotData ] = GlobalPlayerManager.INVENTORY_DATA.equipment_slots()
 	#head_sprite.texture = equipment[ 0 ].item_data.sprite_texture
 	#shoulder_sprite.texture = equipment[ 1 ].item_data.sprite_texture
-	back_sprite.texture = equipment[ 3 ].item_data.sprite_texture
+	back_above_sprite.texture = equipment[ 3 ].item_data.sprite_texture
+	back_below_sprite.texture = equipment[ 3 ].item_data.sprite_texture
 	hands_sprite.texture = equipment[ 4 ].item_data.sprite_texture
 	chest_sprite.texture = equipment[ 5 ].item_data.sprite_texture
 	waist_sprite.texture = equipment[ 7 ].item_data.sprite_texture

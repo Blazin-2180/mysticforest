@@ -7,6 +7,8 @@ const INVENTORY_SLOT = preload("res://GUI/Inventory/inventory_slot.tscn")
 #region // Export and Standard Variables
 @export var data : InventoryData
 var focus_index : int = 0
+#Dragable Inventory Items
+var hovered_item : InventorySlotUI
 #endregion
 
 #region /// On Ready Variables
@@ -25,6 +27,10 @@ var focus_index : int = 0
 @onready var off_hand_slot: InventorySlotUI = %OffHandSlot
 #endregion
 
+#region /// Signals
+#endregion
+
+
 func _ready() -> void:
 	Inventory.shown.connect ( update_inventory )
 	Inventory.hidden.connect ( clear_inventory )
@@ -32,6 +38,7 @@ func _ready() -> void:
 	data.changed.connect( on_inventory_changed )
 	data.equipment_changed.connect( on_inventory_changed )
 	pass
+
 
 func clear_inventory () -> void :
 	for c in get_children():
@@ -47,6 +54,7 @@ func update_inventory( apply_focus : bool = true ) -> void :
 	for i in inventory_slots.size() :
 		var slot : InventorySlotUI = get_child( i )
 		slot.set_slot_data( inventory_slots [ i ] )
+		connect_item_signals( slot )
 
 	# Update Equipment Slots
 	var e_slots : Array[ SlotData ] = data.equipment_slots()
@@ -63,9 +71,10 @@ func update_inventory( apply_focus : bool = true ) -> void :
 	main_hand_slot.set_slot_data( e_slots[ 10 ])
 	feet_slot.set_slot_data( e_slots[ 11 ])
 	off_hand_slot.set_slot_data( e_slots[ 12 ])
-		
-	if apply_focus :
-		get_child( 0 ).grab_focus()
+
+	#if apply_focus :
+		#get_child( 0 ).grab_focus()
+
 
 func item_focused() -> void :
 	for i in get_child_count() :
@@ -74,6 +83,40 @@ func item_focused() -> void :
 			return
 	pass
 
+
 func on_inventory_changed () -> void :
 	update_inventory( false )
+	pass
+
+
+##Dragable Inventory Items
+
+func connect_item_signals( item : InventorySlotUI ) -> void :
+	if !item.button_up.is_connected( _on_item_drop ) :
+		item.button_up.connect( _on_item_drop.bind( item ) )
+	
+	if !item.mouse_entered.is_connected( _on_item_mouse_entered) :
+		item.mouse_entered.connect(_on_item_mouse_entered.bind( item ))
+	
+	if !item.mouse_exited.is_connected( _on_item_mouse_exited ) :
+		item.mouse_exited.connect(_on_item_mouse_exited)
+	pass
+
+
+func _on_item_drop( item : InventorySlotUI ) -> void : 
+	if item == null or item == hovered_item or hovered_item == null :
+		return
+	# Connect to data
+	data.swap_items_by_index( item.get_index(), hovered_item.get_index() )
+	update_inventory( false )
+	pass
+
+
+func _on_item_mouse_entered( item : InventorySlotUI ) -> void :
+	hovered_item = item
+	pass
+
+
+func _on_item_mouse_exited() -> void :
+	hovered_item = null
 	pass

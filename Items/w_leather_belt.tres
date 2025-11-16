@@ -17,5 +17,7 @@ script = ExtResource("3_m722o")
 type = 7
 modifiers = Array[ExtResource("2_qlo43")]([SubResource("Resource_m722o")])
 sprite_texture = ExtResource("4_qlo43")
+name = "Leather Belt"
+description = "Test Belt"
 texture = ExtResource("5_m722o")
 metadata/_custom_type_script = "uid://cfxo73une4mka"

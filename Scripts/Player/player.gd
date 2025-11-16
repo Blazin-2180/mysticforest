@@ -16,7 +16,6 @@ var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
 var invulnerable = false
 var level : int = 1
-#var experience : int = 0
 var attack : int = 1 :
 	set ( v ) : 
 		attack = v

@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://d3qi426qtce4j"]
+[gd_scene load_steps=55 format=3 uid="uid://d3qi426qtce4j"]
 
 [ext_resource type="Script" uid="uid://cxhkxcxap15bd" path="res://Scripts/Player/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://cpxaena3qsbiq" path="res://Scenes/Player/00_character_body.png" id="2_h8ma5"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://di2d8abdhau6n" path="res://Scripts/Player/player_state_machine.gd" id="3_vgqql"]
 [ext_resource type="Texture2D" uid="uid://b15jfr821rohw" path="res://Sprites/items/c_cloth_tunic.png" id="4_eksi1"]
 [ext_resource type="Script" uid="uid://pdebiy7r1fvw" path="res://Scripts/Player/state_idle.gd" id="4_fkybt"]
+[ext_resource type="Texture2D" uid="uid://cf3a82isju5rv" path="res://Sprites/items/b_basic_cloak.png" id="4_qr1w5"]
 [ext_resource type="Texture2D" uid="uid://bj7fsi3mh3ema" path="res://Sprites/items/h_leather_gloves.png" id="5_eksi1"]
 [ext_resource type="Script" uid="uid://brxrr4qykfen4" path="res://Scripts/Player/state_walk.gd" id="5_fkybt"]
 [ext_resource type="Script" uid="uid://b0q88dv6he4lg" path="res://Scripts/Player/state_attack.gd" id="6_3smsa"]
@@ -18,6 +19,7 @@
 [ext_resource type="Script" uid="uid://brnei34e0nbiu" path="res://Scripts/Player/player_interactions.gd" id="7_f1ek2"]
 [ext_resource type="PackedScene" uid="uid://dmywvab54r883" path="res://GeneralNodes/HitBox/hit_box.tscn" id="8_8erm5"]
 [ext_resource type="Script" uid="uid://c8xxiqc1vb6ht" path="res://Scripts/Player/state_death.gd" id="9_7g0yx"]
+[ext_resource type="Texture2D" uid="uid://de0dmgdcae1at" path="res://Sprites/objects/Shadow.png" id="10_rqdc0"]
 [ext_resource type="AudioStream" uid="uid://cfw3oxul2l2r4" path="res://Audio/player_hit.wav" id="11_oikmp"]
 [ext_resource type="Script" uid="uid://cct2yg7bmbj1i" path="res://Scripts/Player/player_camera.gd" id="12_06tpx"]
 [ext_resource type="AudioStream" uid="uid://cydig10jmwmm7" path="res://Audio/level_up_jingle.wav" id="16_ks1b7"]
@@ -60,7 +62,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 0)]
+"values": [Vector2(0, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -93,6 +95,30 @@ tracks/5/path = NodePath("Player_Sprite/feet_sprite:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player_Sprite/waist_sprite:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Player_Sprite/back_sprite:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -299,6 +325,30 @@ tracks/4/path = NodePath("Player_Sprite/hands_sprite:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player_Sprite/waist_sprite:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player_Sprite/back_sprite:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -781,9 +831,11 @@ script = ExtResource("3_rcvs5")
 [node name="shoulder_sprite" type="Sprite2D" parent="Player_Sprite"]
 
 [node name="back_sprite" type="Sprite2D" parent="Player_Sprite"]
+texture = ExtResource("4_qr1w5")
+hframes = 3
+vframes = 10
 
 [node name="chest_sprite" type="Sprite2D" parent="Player_Sprite"]
-position = Vector2(1, 0)
 texture = ExtResource("4_eksi1")
 hframes = 3
 vframes = 10
@@ -799,7 +851,6 @@ hframes = 3
 vframes = 10
 
 [node name="waist_sprite" type="Sprite2D" parent="Player_Sprite"]
-position = Vector2(1, 16)
 texture = ExtResource("6_eksi1")
 hframes = 3
 vframes = 10
@@ -822,6 +873,12 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_igrcy")
 }
+
+[node name="Shadow" type="Sprite2D" parent="Player_Sprite"]
+modulate = Color(0.1111969, 0.11119682, 0.11119684, 0.63529414)
+show_behind_parent = true
+position = Vector2(0, 24)
+texture = ExtResource("10_rqdc0")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

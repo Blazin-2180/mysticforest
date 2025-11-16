@@ -41,3 +41,5 @@ res://GUI/Player_HUD/player_hud.tscn
 res://GUI/Inventory/Quests/quest_item.tscn
 res://GUI/Inventory/Quests/quest_item.gd
 res://Items/b_test_boots_empty.tres
+res://Scripts/Player/player.gd
+res://Scripts/Player/sprite.gd

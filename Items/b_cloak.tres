@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="EquipableItemData" load_steps=6 format=3 uid="uid://dcjnbduc0kgal"]
+[gd_resource type="Resource" script_class="EquipableItemData" load_steps=7 format=3 uid="uid://dcjnbduc0kgal"]
 
 [ext_resource type="Script" uid="uid://b3t0mu0dn1vs6" path="res://Items/Item_Effects/item_effect.gd" id="1_yag0p"]
 [ext_resource type="Script" uid="uid://bp4smcxq30eoh" path="res://Items/Scripts/equipable_item_modifiers.gd" id="2_q18xr"]
 [ext_resource type="Script" uid="uid://cfxo73une4mka" path="res://Items/Scripts/equipable_item_data.gd" id="3_1bkbk"]
+[ext_resource type="Texture2D" uid="uid://cf3a82isju5rv" path="res://Sprites/items/b_basic_cloak.png" id="4_1bkbk"]
 [ext_resource type="Texture2D" uid="uid://befkh87ugythv" path="res://Items/Sprites/b_cloak.png" id="4_q18xr"]
 
 [sub_resource type="Resource" id="Resource_q18xr"]
@@ -15,6 +16,7 @@ metadata/_custom_type_script = "uid://bp4smcxq30eoh"
 script = ExtResource("3_1bkbk")
 type = 3
 modifiers = Array[ExtResource("2_q18xr")]([SubResource("Resource_q18xr")])
+sprite_texture = ExtResource("4_1bkbk")
 name = "Rough Cloak"
 description = "An old worn out cloak. Not sure it will protect against the wind much, but worth a shot. "
 texture = ExtResource("4_q18xr")

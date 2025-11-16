@@ -976,7 +976,7 @@ script = ExtResource("1_nwo41")
 music = ExtResource("33_p87po")
 
 [node name="DayNight" parent="." instance=ExtResource("42_nfdua")]
-position = Vector2(14, -47)
+position = Vector2(260, 115)
 
 [node name="Ground" type="TileMapLayer" parent="."]
 z_index = -3

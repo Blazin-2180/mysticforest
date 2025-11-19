@@ -19,3 +19,4 @@ res://Quests/utility_nodes/quest_advance_trigger.gd
 res://Interactables/TreasureChest/chest_quest_treasure.tscn
 res://Scenes/Levels/area_1.tscn
 res://GUI/Player_HUD/player_hud.tscn
+res://GUI/Inventory/inventory_slot.tscn

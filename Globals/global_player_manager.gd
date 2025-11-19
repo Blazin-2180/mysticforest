@@ -97,5 +97,5 @@ func play_audio( _audio : AudioStream ) -> void :
 	player.audio.play()
 
 
-func shake_camera( trauma : float = 1 ) -> void :
+func shake_camera( trauma : int = 1 ) -> void :
 	camera_shook.emit( clampi ( trauma, 0, 1 ) )

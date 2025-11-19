@@ -1,14 +1,14 @@
+Button
+HBoxContainer
 Sprite2D
 NPC
 AudioStreamPlayer2D
 MarginContainer
-HBoxContainer
 CanvasLayer
 DialogText
 EnemyCounter
 Label
 HSeparator
-Button
 TextureRect
 TextureButton
 GridContainer

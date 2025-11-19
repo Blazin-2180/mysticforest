@@ -42,7 +42,7 @@
 [ext_resource type="Resource" uid="uid://44ymrr1jotwi" path="res://NPC/00_npcs/npc_blacksmith.tres" id="38_gppk4"]
 [ext_resource type="PackedScene" uid="uid://cvsou8yj36hxd" path="res://Scenes/torch.tscn" id="40_qp42o"]
 [ext_resource type="Resource" uid="uid://oljmr2chdqxc" path="res://NPC/00_npcs/npc_bonbon.tres" id="41_xvepx"]
-[ext_resource type="PackedScene" uid="uid://gy443neity85" path="res://DayNightCycle/day_night.tscn" id="42_nfdua"]
+[ext_resource type="PackedScene" uid="uid://7v8xuwby1eb3" path="res://Interactables/TreasureChest/chest_quest_treasure.tscn" id="43_pjqs8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cww87"]
 texture = ExtResource("4_gppk4")
@@ -975,9 +975,6 @@ y_sort_enabled = true
 script = ExtResource("1_nwo41")
 music = ExtResource("33_p87po")
 
-[node name="DayNight" parent="." instance=ExtResource("42_nfdua")]
-position = Vector2(260, 115)
-
 [node name="Ground" type="TileMapLayer" parent="."]
 z_index = -3
 y_sort_enabled = true
@@ -1041,7 +1038,7 @@ position = Vector2(693, 382)
 experience_reward = 5
 
 [node name="ItemPickup" parent="." instance=ExtResource("17_30j8n")]
-position = Vector2(594, 147)
+position = Vector2(594, 136.05385)
 item_data = ExtResource("18_boegt")
 
 [node name="ItemPickup2" parent="." instance=ExtResource("17_30j8n")]
@@ -1063,19 +1060,6 @@ item_data = ExtResource("18_xvepx")
 [node name="Chest" parent="." instance=ExtResource("17_30j8n")]
 position = Vector2(204, 116)
 item_data = ExtResource("19_nfdua")
-
-[node name="treasure_chest" parent="." instance=ExtResource("19_boegt")]
-position = Vector2(705, 159)
-item_data = ExtResource("20_6a6p3")
-
-[node name="QuestAdvanceTrigger" parent="treasure_chest" instance=ExtResource("36_d00wu")]
-position = Vector2(-1, -11.550842)
-linked_quest = ExtResource("31_p87po")
-quest_step = 2
-settings_summary = "UPDATE QUEST : 
-Quest : Tray-zurr
-Step : 2 find the chest containing sammy's treasure
-Complete : false"
 
 [node name="treasure_chest2" parent="." instance=ExtResource("19_boegt")]
 position = Vector2(402, 159)
@@ -1496,6 +1480,19 @@ item_data = ExtResource("20_6a6p3")
 position = Vector2(563, 309)
 npc_resource = ExtResource("41_xvepx")
 
-[connection signal="chest_opened" from="treasure_chest" to="treasure_chest/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]
+[node name="chest_quest_treasure" parent="." instance=ExtResource("43_pjqs8")]
+position = Vector2(703, 142)
+item_data = ExtResource("20_6a6p3")
+
+[node name="QuestAdvanceTrigger" parent="chest_quest_treasure" instance=ExtResource("36_d00wu")]
+position = Vector2(704, 147.44916)
+linked_quest = ExtResource("31_p87po")
+quest_step = 2
+settings_summary = "UPDATE QUEST : 
+Quest : Tray-zurr
+Step : 2 find the chest containing sammy's treasure
+Complete : false"
+
 [connection signal="area_entered" from="Area2D" to="Area2D/QuestAdvanceTrigger" method="_on_area_2d_area_entered"]
 [connection signal="enemies_defeated" from="EnemyCounter" to="ItemDropper" method="drop_item"]
+[connection signal="chest_opened" from="chest_quest_treasure" to="chest_quest_treasure/QuestAdvanceTrigger" method="_on_treasure_chest_chest_opened"]

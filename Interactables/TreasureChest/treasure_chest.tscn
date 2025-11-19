@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqe5flm3nfmwm"]
+[gd_scene load_steps=14 format=3 uid="uid://dqe5flm3nfmwm"]
 
 [ext_resource type="Script" uid="uid://6vawilxtlrgu" path="res://Interactables/TreasureChest/treasure_chest.gd" id="1_e0gtp"]
-[ext_resource type="Texture2D" uid="uid://ob8ngenog7yv" path="res://Interactables/TreasureChest/chest_01.png" id="2_km1n8"]
+[ext_resource type="Texture2D" uid="uid://h7s1no2f37jv" path="res://Sprites/objects/chests/chest_wooden_sprite.png" id="2_dhxp7"]
 [ext_resource type="Texture2D" uid="uid://cx6h3sbqktrvg" path="res://Items/Sprites/Potion.png" id="3_dhxp7"]
 [ext_resource type="AudioStream" uid="uid://c4dftttrhfv4h" path="res://Audio/chest_open.wav" id="4_km1n8"]
+[ext_resource type="Texture2D" uid="uid://de0dmgdcae1at" path="res://Sprites/objects/Shadow.png" id="4_nceft"]
 [ext_resource type="PackedScene" uid="uid://2kxe0hv0aq0m" path="res://GeneralNodes/PresistentDataHandler/presistent_data_handler.tscn" id="5_dhxp7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nceft"]
@@ -97,7 +98,7 @@ tracks/0/path = NodePath("chest_sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
@@ -126,7 +127,7 @@ tracks/2/keys = {
 "start_offset": 0.0,
 "stream": ExtResource("4_km1n8")
 }],
-"times": PackedFloat32Array(0.6666667)
+"times": PackedFloat32Array(0)
 }
 tracks/2/use_blend = true
 tracks/3/type = "value"
@@ -196,11 +197,18 @@ size = Vector2(14, 9)
 script = ExtResource("1_e0gtp")
 
 [node name="chest_sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_km1n8")
+texture = ExtResource("2_dhxp7")
 hframes = 4
 
 [node name="item_sprite" type="Sprite2D" parent="."]
 texture = SubResource("AtlasTexture_nceft")
+
+[node name="shadow_sprite" type="Sprite2D" parent="."]
+modulate = Color(0.15294118, 0.15294118, 0.15294118, 0.54509807)
+show_behind_parent = true
+position = Vector2(-4.7683716e-07, 10)
+scale = Vector2(1.3125, 1)
+texture = ExtResource("4_nceft")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

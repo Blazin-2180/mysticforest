@@ -7,8 +7,7 @@ var inventory_show : bool = false
 
 #region /// On Ready Variables
 @onready var inventory_slot: Button = $Control/Inventory/Panel/GridContainer/InventorySlot
-@onready var item_description: Label = $Control/Inventory/ItemDescription
-@onready var tab_container: TabContainer = $Control/TabContainer
+@onready var item_description: Label = $Control/Inventory/ItemDescriptionS
 @onready var audio_stream : AudioStreamPlayer = $AudioStreamPlayer
 @onready var character_name: Label = $Control/Inventory/CharacterName
 #endregion

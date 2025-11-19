@@ -45,7 +45,7 @@ func clear_inventory () -> void :
 		c.set_slot_data( null )
 
 
-func update_inventory( apply_focus : bool = true ) -> void :
+func update_inventory( _apply_focus : bool = true ) -> void :
 	clear_inventory()
 
 	var inventory_slots : Array[ SlotData ] = data.inventory_slots()
